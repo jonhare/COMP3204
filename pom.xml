@@ -8,7 +8,7 @@
   <name>COMP3005</name>
   <url>http://www.openimaj.org</url>
   <properties>
-    <openimaj.version>1.1</openimaj.version>
+    <openimaj.version>1.1.1-SNAPSHOT</openimaj.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
   <dependencies>
@@ -25,8 +25,8 @@
       <scope>compile</scope>
     </dependency>
     <dependency>
-      <groupId>org.openimaj</groupId>
-      <artifactId>core-hadoop</artifactId>
+      <groupId>org.openimaj.content</groupId>
+      <artifactId>slideshow</artifactId>
       <version>${openimaj.version}</version>
       <scope>compile</scope>
     </dependency>
