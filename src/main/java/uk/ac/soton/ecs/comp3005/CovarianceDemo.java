@@ -8,6 +8,7 @@ import java.awt.GridBagLayout;
 import java.awt.TextField;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
+import java.util.Random;
 
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -24,8 +25,11 @@ import org.openimaj.image.MBFImage;
 import org.openimaj.image.colour.ColourSpace;
 import org.openimaj.image.colour.RGBColour;
 import org.openimaj.image.renderer.RenderHints;
+import org.openimaj.math.geometry.point.Point2dImpl;
 import org.openimaj.math.geometry.shape.Ellipse;
 import org.openimaj.math.geometry.shape.EllipseUtilities;
+import org.openimaj.math.geometry.transforms.TransformUtilities;
+import org.openimaj.math.statistics.distribution.CachingMultivariateGaussian;
 
 import Jama.Matrix;
 
@@ -144,16 +148,35 @@ public class CovarianceDemo implements Slide {
 	}
 
 	private void updateImage() {
-		xxField.setText(String.format("%2.3f", covariance.get(0, 0)));
-		xyField.setText(String.format("%2.3f", covariance.get(0, 1)));
-		yxField.setText(String.format("%2.3f", covariance.get(1, 0)));
-		yyField.setText(String.format("%2.3f", covariance.get(1, 1)));
+		xxField.setText(String.format("%2.2f", covariance.get(0, 0)));
+		xyField.setText(String.format("%2.2f", covariance.get(0, 1)));
+		yxField.setText(String.format("%2.2f", covariance.get(1, 0)));
+		yyField.setText(String.format("%2.2f", covariance.get(1, 1)));
 
 		image.fill(RGBColour.WHITE);
 
-		final Ellipse e = EllipseUtilities.ellipseFromCovariance(image.getWidth() / 2, image.getHeight() / 2, covariance,
+		image.drawLine(image.getWidth() / 2, 0, image.getWidth() / 2, image.getHeight(), 3, RGBColour.BLACK);
+		image.drawLine(0, image.getHeight() / 2, image.getWidth(), image.getHeight() / 2, 3, RGBColour.BLACK);
+
+		Ellipse e = EllipseUtilities.ellipseFromCovariance(image.getWidth() / 2, image.getHeight() / 2, covariance,
 				100);
-		image.createRenderer(RenderHints.ANTI_ALIASED).drawShape(e, 3, RGBColour.RED);
+		e = e.transformAffine(TransformUtilities.scaleMatrixAboutPoint(1, -1, image.getWidth() / 2, image.getHeight() / 2));
+
+		if (!Double.isNaN(e.getMajor()) && !Double.isNaN(e.getMinor()) && covariance.rank() == 2) {
+			final Matrix mean = new Matrix(new double[][] { { image.getWidth() / 2, image.getHeight() / 2 } });
+			final CachingMultivariateGaussian gauss = new CachingMultivariateGaussian(mean, covariance);
+
+			final Random rng = new Random();
+			for (int i = 0; i < 1000; i++) {
+				final double[] sample = gauss.sample(rng);
+				Point2dImpl pt = new Point2dImpl((float) sample[0], (float) sample[1]);
+				pt = pt.transform(TransformUtilities.scaleMatrixAboutPoint(40, -40, image.getWidth() / 2,
+						image.getHeight() / 2));
+				image.drawPoint(pt, RGBColour.BLUE, 3);
+			}
+
+			image.createRenderer(RenderHints.ANTI_ALIASED).drawShape(e, 3, RGBColour.RED);
+		}
 
 		this.imageComp.setImage(bimg = ImageUtilities.createBufferedImageForDisplay(image, bimg));
 	}
