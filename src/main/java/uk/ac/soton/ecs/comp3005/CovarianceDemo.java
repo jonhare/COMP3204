@@ -33,6 +33,11 @@ import org.openimaj.math.statistics.distribution.CachingMultivariateGaussian;
 
 import Jama.Matrix;
 
+/**
+ * Demonstration of 2D covariance
+ * 
+ * @author Jonathon Hare (jsh2@ecs.soton.ac.uk)
+ */
 public class CovarianceDemo implements Slide {
 	private Matrix covariance;
 	private BufferedImage bimg;
