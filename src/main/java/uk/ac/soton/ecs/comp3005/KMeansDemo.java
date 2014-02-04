@@ -20,7 +20,9 @@ import javax.swing.JComboBox;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;
+import javax.swing.JSpinner;
 import javax.swing.JTextField;
+import javax.swing.SpinnerNumberModel;
 
 import org.openimaj.content.slideshow.Slide;
 import org.openimaj.content.slideshow.SlideshowApplication;
@@ -51,7 +53,7 @@ public class KMeansDemo implements Slide, ActionListener, VideoDisplayListener<M
 	private MBFImage image;
 	private ImageComponent imageComp;
 	private BufferedImage bimg;
-	private JTextField kField;
+	private JSpinner kField;
 	private List<double[]> points = new ArrayList<double[]>();
 	private List<Integer> classes = new ArrayList<Integer>();
 	private JComboBox<String> classType;
@@ -89,7 +91,6 @@ public class KMeansDemo implements Slide, ActionListener, VideoDisplayListener<M
 		imageComp.setShowXYPosition(false);
 		imageComp.setAllowZoom(false);
 		imageComp.setAllowPanning(false);
-		redraw();
 		rightPanel.add(imageComp);
 		final JPanel classCtrlsCnt = new JPanel(new GridLayout(1, 2));
 
@@ -109,8 +110,7 @@ public class KMeansDemo implements Slide, ActionListener, VideoDisplayListener<M
 		final JPanel classCtrls = new JPanel(new GridLayout(0, 1));
 		final JPanel cnt = new JPanel();
 		cnt.add(new JLabel("K:"));
-		cnt.add(kField = new JTextField(2));
-		kField.setText("1");
+		cnt.add(kField = new JSpinner(new SpinnerNumberModel(1, 1, 10, 1)));
 		classCtrls.add(cnt);
 		guess = new JTextField(8);
 		guess.setFont(Font.decode("Monaco-24"));
@@ -123,6 +123,7 @@ public class KMeansDemo implements Slide, ActionListener, VideoDisplayListener<M
 
 		base.add(rightPanel);
 
+		redraw();
 		return base;
 	}
 
@@ -187,7 +188,7 @@ public class KMeansDemo implements Slide, ActionListener, VideoDisplayListener<M
 
 	private void doClassify(double[] mean) {
 		if (points.size() > 0) {
-			final int k = Integer.parseInt(kField.getText());
+			final int k = (Integer) kField.getValue();
 
 			final DoubleNearestNeighboursExact nn = new DoubleNearestNeighboursExact(
 					points.toArray(new double[points.size()][]));
@@ -202,6 +203,8 @@ public class KMeansDemo implements Slide, ActionListener, VideoDisplayListener<M
 				pti.x = 50 + (float) (300 * pt[0]);
 				if (pt.length == 2)
 					pti.y = 350 - (float) (300 * pt[1]);
+				else
+					pti.y = 350;
 				image.drawPoint(pti, RGBColour.MAGENTA, 3);
 
 				image.drawShape(new Circle(pti, 5), RGBColour.GREEN);
@@ -236,6 +239,8 @@ public class KMeansDemo implements Slide, ActionListener, VideoDisplayListener<M
 			pti.x = 50f + (float) (300 * pt[0]);
 			if (pt.length == 2)
 				pti.y = 350 - (float) (300 * pt[1]);
+			else
+				pti.y = 350;
 
 			image.drawPoint(pti, COLOURS[classes.get(i)], 3);
 		}
@@ -245,6 +250,9 @@ public class KMeansDemo implements Slide, ActionListener, VideoDisplayListener<M
 			pti.x = 50 + (float) (300 * lastMean[0]);
 			if (lastMean.length == 2)
 				pti.y = 350 - (float) (300 * lastMean[1]);
+			else
+				pti.y = 350;
+
 			image.drawPoint(pti, RGBColour.MAGENTA, 3);
 		}
 
