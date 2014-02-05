@@ -23,6 +23,8 @@ import javax.swing.JRadioButton;
 import javax.swing.JSpinner;
 import javax.swing.JTextField;
 import javax.swing.SpinnerNumberModel;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
 
 import org.openimaj.content.slideshow.Slide;
 import org.openimaj.content.slideshow.SlideshowApplication;
@@ -42,10 +44,24 @@ import org.openimaj.video.VideoDisplayListener;
 
 import uk.ac.soton.ecs.comp3005.utils.VideoCaptureComponent;
 
-public class KMeansDemo implements Slide, ActionListener, VideoDisplayListener<MBFImage> {
+public class KMeansDemo implements Slide, ActionListener, VideoDisplayListener<MBFImage>, ChangeListener {
+
+	private static final int CIRCLE_THICKNESS = 4;
+	private static final int CIRCLE_SIZE = 15;
+	private static final int POINT_SIZE = 10;
+	private static final int VIDEO_HEIGHT = 240;
+	private static final int VIDEO_WIDTH = 320;
+
+	private static final int GRAPH_WIDTH = 600;
+	private static final int GRAPH_HEIGHT = 600;
+	private static final int AXIS_WIDTH = 500;
+	private static final int AXIS_HEIGHT = 500;
+	private static final int AXIS_OFFSET_X = 50;
+	private static final int AXIS_OFFSET_Y = 50;
+	private static final int AXIS_EXTENSION = 5;
 
 	private static final String[] CLASSES = { "RED", "BLUE" };
-	private Float[][] COLOURS = { RGBColour.RED, RGBColour.BLUE };
+	private static final Float[][] COLOURS = { RGBColour.RED, RGBColour.BLUE };
 
 	private VideoCaptureComponent vc;
 	private ColourSpace colourSpace = ColourSpace.HS;
@@ -53,16 +69,17 @@ public class KMeansDemo implements Slide, ActionListener, VideoDisplayListener<M
 	private MBFImage image;
 	private ImageComponent imageComp;
 	private BufferedImage bimg;
-	private JSpinner kField;
-	private List<double[]> points = new ArrayList<double[]>();
-	private List<Integer> classes = new ArrayList<Integer>();
 	private JComboBox<String> classType;
 	private double[] lastMean;
 	private JTextField guess;
 
+	private volatile List<double[]> points = new ArrayList<double[]>();
+	private volatile List<Integer> classes = new ArrayList<Integer>();
+	private volatile int k = 1;
+
 	@Override
 	public Component getComponent(int width, int height) throws IOException {
-		vc = new VideoCaptureComponent(320, 240);
+		vc = new VideoCaptureComponent(VIDEO_WIDTH, VIDEO_HEIGHT);
 		vc.getDisplay().addVideoListener(this);
 
 		// the main panel
@@ -84,7 +101,7 @@ public class KMeansDemo implements Slide, ActionListener, VideoDisplayListener<M
 
 		// right hand box
 		final Box rightPanel = Box.createVerticalBox();
-		image = new MBFImage(400, 400, ColourSpace.RGB);
+		image = new MBFImage(GRAPH_WIDTH, GRAPH_HEIGHT, ColourSpace.RGB);
 		image.fill(RGBColour.WHITE);
 		imageComp = new DisplayUtilities.ImageComponent(true);
 		imageComp.setShowPixelColours(false);
@@ -110,7 +127,9 @@ public class KMeansDemo implements Slide, ActionListener, VideoDisplayListener<M
 		final JPanel classCtrls = new JPanel(new GridLayout(0, 1));
 		final JPanel cnt = new JPanel();
 		cnt.add(new JLabel("K:"));
-		cnt.add(kField = new JSpinner(new SpinnerNumberModel(1, 1, 10, 1)));
+		final JSpinner kField = new JSpinner(new SpinnerNumberModel(k, 1, 10, 1));
+		kField.addChangeListener(this);
+		cnt.add(kField);
 		classCtrls.add(cnt);
 		guess = new JTextField(8);
 		guess.setFont(Font.decode("Monaco-24"));
@@ -179,6 +198,8 @@ public class KMeansDemo implements Slide, ActionListener, VideoDisplayListener<M
 		if (rawcmd.startsWith("ColourSpace.")) {
 			// change the colour space to the one selected
 			this.colourSpace = ColourSpace.valueOf(cmd);
+			this.classes.clear();
+			this.points.clear();
 		} else if (rawcmd.startsWith("button.")) {
 			if (cmd.equals("learn")) {
 				doLearn(lastMean, this.classType.getSelectedIndex());
@@ -188,8 +209,6 @@ public class KMeansDemo implements Slide, ActionListener, VideoDisplayListener<M
 
 	private void doClassify(double[] mean) {
 		if (points.size() > 0) {
-			final int k = (Integer) kField.getValue();
-
 			final DoubleNearestNeighboursExact nn = new DoubleNearestNeighboursExact(
 					points.toArray(new double[points.size()][]));
 			final List<IntDoublePair> neighbours = nn.searchKNN(mean, k);
@@ -199,15 +218,10 @@ public class KMeansDemo implements Slide, ActionListener, VideoDisplayListener<M
 				counts[this.classes.get(p.first)]++;
 
 				final double[] pt = this.points.get(p.first);
-				final Point2dImpl pti = new Point2dImpl();
-				pti.x = 50 + (float) (300 * pt[0]);
-				if (pt.length == 2)
-					pti.y = 350 - (float) (300 * pt[1]);
-				else
-					pti.y = 350;
-				image.drawPoint(pti, RGBColour.MAGENTA, 3);
+				final Point2dImpl pti = projectPoint(pt);
+				image.drawPoint(pti, RGBColour.MAGENTA, POINT_SIZE);
 
-				image.drawShape(new Circle(pti, 5), RGBColour.GREEN);
+				image.drawShape(new Circle(pti, CIRCLE_SIZE), CIRCLE_THICKNESS, RGBColour.GREEN);
 			}
 			imageComp.setImage(bimg = ImageUtilities.createBufferedImageForDisplay(image, bimg));
 
@@ -222,6 +236,25 @@ public class KMeansDemo implements Slide, ActionListener, VideoDisplayListener<M
 		guess.setText("unknown");
 	}
 
+	/**
+	 * Project a point to draw it on the graph
+	 * 
+	 * @param pt
+	 *            the point
+	 * @return the projected point in image coords
+	 */
+	private Point2dImpl projectPoint(final double[] pt) {
+		final Point2dImpl pti = new Point2dImpl();
+
+		pti.x = AXIS_OFFSET_X + (float) (AXIS_WIDTH * pt[0]);
+		if (pt.length == 2)
+			pti.y = (AXIS_OFFSET_Y + AXIS_HEIGHT) - (float) (AXIS_HEIGHT * pt[1]);
+		else
+			pti.y = AXIS_OFFSET_Y + AXIS_HEIGHT;
+
+		return pti;
+	}
+
 	private void doLearn(double[] mean, int clazz) {
 		this.points.add(mean);
 		this.classes.add(clazz);
@@ -232,41 +265,41 @@ public class KMeansDemo implements Slide, ActionListener, VideoDisplayListener<M
 		this.image.fill(RGBColour.WHITE);
 
 		// draw saved points
-		final Point2dImpl pti = new Point2dImpl();
 		for (int i = 0; i < points.size(); i++) {
 			final double[] pt = points.get(i);
-
-			pti.x = 50f + (float) (300 * pt[0]);
-			if (pt.length == 2)
-				pti.y = 350 - (float) (300 * pt[1]);
-			else
-				pti.y = 350;
-
-			image.drawPoint(pti, COLOURS[classes.get(i)], 3);
+			image.drawPoint(projectPoint(pt), COLOURS[classes.get(i)], POINT_SIZE);
 		}
 
 		// draw current point
 		if (lastMean != null) {
-			pti.x = 50 + (float) (300 * lastMean[0]);
-			if (lastMean.length == 2)
-				pti.y = 350 - (float) (300 * lastMean[1]);
-			else
-				pti.y = 350;
-
-			image.drawPoint(pti, RGBColour.MAGENTA, 3);
+			image.drawPoint(projectPoint(lastMean), RGBColour.MAGENTA, POINT_SIZE);
 		}
 
-		image.drawLine(50, 45, 50, 355, RGBColour.BLACK);
-		image.drawLine(125, 50, 125, 355, RGBColour.GRAY);
-		image.drawLine(200, 50, 200, 355, RGBColour.GRAY);
-		image.drawLine(275, 50, 275, 355, RGBColour.GRAY);
-		image.drawLine(350, 50, 350, 355, RGBColour.GRAY);
-		image.drawLine(45, 350, 355, 350, RGBColour.BLACK);
-		image.drawLine(45, 50, 350, 50, RGBColour.GRAY);
-		image.drawLine(45, 125, 350, 125, RGBColour.GRAY);
-		image.drawLine(45, 200, 350, 200, RGBColour.GRAY);
-		image.drawLine(45, 275, 350, 275, RGBColour.GRAY);
+		// draw y-axes
+		image.drawLine(AXIS_OFFSET_X, AXIS_OFFSET_Y - AXIS_EXTENSION, AXIS_OFFSET_X, AXIS_OFFSET_Y + AXIS_HEIGHT
+				+ AXIS_EXTENSION, RGBColour.BLACK);
+		image.drawLine(AXIS_OFFSET_X + 1 * AXIS_WIDTH / 4, AXIS_OFFSET_Y - AXIS_EXTENSION, AXIS_OFFSET_X + 1 * AXIS_WIDTH
+				/ 4, AXIS_OFFSET_Y + AXIS_HEIGHT + AXIS_EXTENSION, RGBColour.GRAY);
+		image.drawLine(AXIS_OFFSET_X + 2 * AXIS_WIDTH / 4, AXIS_OFFSET_Y - AXIS_EXTENSION, AXIS_OFFSET_X + 2 * AXIS_WIDTH
+				/ 4, AXIS_OFFSET_Y + AXIS_HEIGHT + AXIS_EXTENSION, RGBColour.GRAY);
+		image.drawLine(AXIS_OFFSET_X + 3 * AXIS_WIDTH / 4, AXIS_OFFSET_Y - AXIS_EXTENSION, AXIS_OFFSET_X + 3 * AXIS_WIDTH
+				/ 4, AXIS_OFFSET_Y + AXIS_HEIGHT + AXIS_EXTENSION, RGBColour.GRAY);
+		image.drawLine(AXIS_OFFSET_X + 4 * AXIS_WIDTH / 4, AXIS_OFFSET_Y - AXIS_EXTENSION, AXIS_OFFSET_X + 4 * AXIS_WIDTH
+				/ 4, AXIS_OFFSET_Y + AXIS_HEIGHT + AXIS_EXTENSION, RGBColour.GRAY);
 
+		// draw x-axes
+		image.drawLine(AXIS_OFFSET_X - AXIS_EXTENSION, AXIS_OFFSET_Y + AXIS_HEIGHT,
+				AXIS_OFFSET_X + AXIS_WIDTH + AXIS_EXTENSION, AXIS_OFFSET_Y + AXIS_HEIGHT, RGBColour.BLACK);
+		image.drawLine(AXIS_OFFSET_X - AXIS_EXTENSION, AXIS_OFFSET_Y + 0 * AXIS_HEIGHT / 4,
+				AXIS_OFFSET_X + AXIS_WIDTH + AXIS_EXTENSION, AXIS_OFFSET_Y + 0 * AXIS_HEIGHT / 4, RGBColour.GRAY);
+		image.drawLine(AXIS_OFFSET_X - AXIS_EXTENSION, AXIS_OFFSET_Y + 1 * AXIS_HEIGHT / 4,
+				AXIS_OFFSET_X + AXIS_WIDTH + AXIS_EXTENSION, AXIS_OFFSET_Y + 1 * AXIS_HEIGHT / 4, RGBColour.GRAY);
+		image.drawLine(AXIS_OFFSET_X - AXIS_EXTENSION, AXIS_OFFSET_Y + 2 * AXIS_HEIGHT / 4,
+				AXIS_OFFSET_X + AXIS_WIDTH + AXIS_EXTENSION, AXIS_OFFSET_Y + 2 * AXIS_HEIGHT / 4, RGBColour.GRAY);
+		image.drawLine(AXIS_OFFSET_X - AXIS_EXTENSION, AXIS_OFFSET_Y + 3 * AXIS_HEIGHT / 4,
+				AXIS_OFFSET_X + AXIS_WIDTH + AXIS_EXTENSION, AXIS_OFFSET_Y + 3 * AXIS_HEIGHT / 4, RGBColour.GRAY);
+
+		// update the image
 		imageComp.setImage(bimg = ImageUtilities.createBufferedImageForDisplay(image, bimg));
 	}
 
@@ -284,6 +317,11 @@ public class KMeansDemo implements Slide, ActionListener, VideoDisplayListener<M
 
 		redraw();
 		doClassify(lastMean);
+	}
+
+	@Override
+	public void stateChanged(ChangeEvent e) {
+		this.k = (Integer) ((JSpinner) e.getSource()).getValue();
 	}
 
 	public static void main(String[] args) throws IOException {
