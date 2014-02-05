@@ -1,4 +1,4 @@
-package uk.ac.soton.ecs.comp3005;
+package uk.ac.soton.ecs.comp3005.l2;
 
 import java.awt.Component;
 import java.awt.Dimension;
@@ -10,6 +10,7 @@ import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 
 import javax.swing.Box;
@@ -17,14 +18,9 @@ import javax.swing.BoxLayout;
 import javax.swing.ButtonGroup;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
-import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;
-import javax.swing.JSpinner;
 import javax.swing.JTextField;
-import javax.swing.SpinnerNumberModel;
-import javax.swing.event.ChangeEvent;
-import javax.swing.event.ChangeListener;
 
 import org.openimaj.content.slideshow.Slide;
 import org.openimaj.content.slideshow.SlideshowApplication;
@@ -34,20 +30,96 @@ import org.openimaj.image.ImageUtilities;
 import org.openimaj.image.MBFImage;
 import org.openimaj.image.colour.ColourSpace;
 import org.openimaj.image.colour.RGBColour;
-import org.openimaj.knn.DoubleNearestNeighboursExact;
 import org.openimaj.math.geometry.point.Point2dImpl;
-import org.openimaj.math.geometry.shape.Circle;
-import org.openimaj.util.array.ArrayUtils;
-import org.openimaj.util.pair.IntDoublePair;
 import org.openimaj.video.VideoDisplay;
 import org.openimaj.video.VideoDisplayListener;
 
+import uk.ac.soton.ecs.comp3005.l1.ColourSpacesDemo;
 import uk.ac.soton.ecs.comp3005.utils.VideoCaptureComponent;
 
-public class KMeansDemo implements Slide, ActionListener, VideoDisplayListener<MBFImage>, ChangeListener {
+/**
+ * Demonstration of Linear classification (with the Perceptron) using simple
+ * average colour features
+ * 
+ * @author Jonathon Hare (jsh2@ecs.soton.ac.uk)
+ */
+public class LinearClassifierDemo implements Slide, ActionListener, VideoDisplayListener<MBFImage> {
+	/**
+	 * A really simple perceptron
+	 * 
+	 * @author Jonathon Hare (jsh2@ecs.soton.ac.uk)
+	 * 
+	 */
+	private static class SimplePerceptron {
+		double alpha = 0.01;
+		double[] w;
 
-	private static final int CIRCLE_THICKNESS = 4;
-	private static final int CIRCLE_SIZE = 15;
+		/**
+		 * Train the perceptron
+		 * 
+		 * @param pts
+		 *            the data points (2d)
+		 * @param classes
+		 *            the classes (0/1)
+		 */
+		public void train(List<double[]> pts, List<Integer> classes) {
+			this.w = new double[] { 1, 0, 0 };
+
+			for (int i = 0; i < 1000; i++) {
+				iteration(pts, classes);
+
+				final double error = error(pts, classes);
+				if (error < 0.01)
+					break;
+			}
+		}
+
+		private double error(List<double[]> pts, List<Integer> classes) {
+			double error = 0;
+
+			for (int i = 0; i < pts.size(); i++) {
+				error += Math.abs(predict(pts.get(i)) - classes.get(i));
+			}
+
+			return error / pts.size();
+		}
+
+		private void iteration(List<double[]> pts, List<Integer> classes) {
+			for (int i = 0; i < pts.size(); i++)
+				update(pts.get(i), classes.get(i));
+		}
+
+		private void update(double[] pt, int clazz) {
+			final int y = predict(pt);
+
+			w[0] = w[0] + alpha * (clazz - y);
+			w[1] = w[1] + alpha * (clazz - y) * pt[0];
+			w[2] = w[2] + alpha * (clazz - y) * pt[1];
+		}
+
+		/**
+		 * Predict the class of the given point
+		 * 
+		 * @param pt
+		 *            the point
+		 * @return 0 or 1
+		 */
+		public int predict(double[] pt) {
+			return w[0] + pt[0] * w[1] + pt[1] * w[2] > 0 ? 1 : 0;
+		}
+
+		/**
+		 * Compute y-ordinate of a point on the hyperplane given the x-ordinate
+		 * 
+		 * @param x
+		 *            the x-ordinate
+		 * @return the y-ordinate
+		 */
+		public double computeHyperplanePoint(double x) {
+			return (w[0] + w[1] * x) / -w[2];
+		}
+	}
+
 	private static final int POINT_SIZE = 10;
 	private static final int VIDEO_HEIGHT = 240;
 	private static final int VIDEO_WIDTH = 320;
@@ -75,7 +147,7 @@ public class KMeansDemo implements Slide, ActionListener, VideoDisplayListener<M
 
 	private volatile List<double[]> points = new ArrayList<double[]>();
 	private volatile List<Integer> classes = new ArrayList<Integer>();
-	private volatile int k = 1;
+	private volatile SimplePerceptron classifier = new SimplePerceptron();
 
 	@Override
 	public Component getComponent(int width, int height) throws IOException {
@@ -125,12 +197,6 @@ public class KMeansDemo implements Slide, ActionListener, VideoDisplayListener<M
 
 		// classification controls
 		final JPanel classCtrls = new JPanel(new GridLayout(0, 1));
-		final JPanel cnt = new JPanel();
-		cnt.add(new JLabel("K:"));
-		final JSpinner kField = new JSpinner(new SpinnerNumberModel(k, 1, 10, 1));
-		kField.addChangeListener(this);
-		cnt.add(kField);
-		classCtrls.add(cnt);
 		guess = new JTextField(8);
 		guess.setFont(Font.decode("Monaco-24"));
 		guess.setHorizontalAlignment(JTextField.CENTER);
@@ -208,30 +274,22 @@ public class KMeansDemo implements Slide, ActionListener, VideoDisplayListener<M
 	}
 
 	private void doClassify(double[] mean) {
-		if (points.size() > 0) {
-			final DoubleNearestNeighboursExact nn = new DoubleNearestNeighboursExact(
-					points.toArray(new double[points.size()][]));
-			final List<IntDoublePair> neighbours = nn.searchKNN(mean, k);
+		final HashSet<Integer> clzCount = new HashSet<Integer>();
+		clzCount.addAll(classes);
 
-			final int[] counts = new int[CLASSES.length];
-			for (final IntDoublePair p : neighbours) {
-				counts[this.classes.get(p.first)]++;
+		if (points.size() > 0 && clzCount.size() == 2) {
+			final double[] p1 = new double[] { 0, 0 };
+			p1[1] = (float) classifier.computeHyperplanePoint(0);
 
-				final double[] pt = this.points.get(p.first);
-				final Point2dImpl pti = projectPoint(pt);
-				image.drawPoint(pti, RGBColour.MAGENTA, POINT_SIZE);
+			final double[] p2 = new double[] { 1, 0 };
+			p2[1] = (float) classifier.computeHyperplanePoint(1);
 
-				image.drawShape(new Circle(pti, CIRCLE_SIZE), CIRCLE_THICKNESS, RGBColour.GREEN);
-			}
+			image.drawLine(projectPoint(p1), projectPoint(p2), 3, RGBColour.BLACK);
+
 			imageComp.setImage(bimg = ImageUtilities.createBufferedImageForDisplay(image, bimg));
 
-			final int[] indices = ArrayUtils.range(0, counts.length - 1);
-			ArrayUtils.parallelQuicksortDescending(counts, indices);
-
-			if (counts.length == 1 || counts[0] > counts[1]) {
-				guess.setText(this.classType.getItemAt(indices[0]));
-				return;
-			}
+			guess.setText(this.classType.getItemAt(classifier.predict(mean)));
+			return;
 		}
 		guess.setText("unknown");
 	}
@@ -258,6 +316,14 @@ public class KMeansDemo implements Slide, ActionListener, VideoDisplayListener<M
 	private void doLearn(double[] mean, int clazz) {
 		this.points.add(mean);
 		this.classes.add(clazz);
+
+		final HashSet<Integer> clzCount = new HashSet<Integer>();
+		clzCount.addAll(classes);
+
+		if (points.size() > 0 && clzCount.size() == 2) {
+			classifier.train(points, classes);
+		}
+
 		redraw();
 	}
 
@@ -319,12 +385,7 @@ public class KMeansDemo implements Slide, ActionListener, VideoDisplayListener<M
 		doClassify(lastMean);
 	}
 
-	@Override
-	public void stateChanged(ChangeEvent e) {
-		this.k = (Integer) ((JSpinner) e.getSource()).getValue();
-	}
-
 	public static void main(String[] args) throws IOException {
-		new SlideshowApplication(new KMeansDemo(), 1024, 768);
+		new SlideshowApplication(new LinearClassifierDemo(), 1024, 768);
 	}
 }
