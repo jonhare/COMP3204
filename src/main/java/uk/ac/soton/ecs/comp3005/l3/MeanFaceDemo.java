@@ -20,8 +20,7 @@ public class MeanFaceDemo implements Slide {
 	@Override
 	public Component getComponent(int width, int height) throws IOException {
 		final VFSGroupDataset<FImage> dataset = new VFSGroupDataset<FImage>("zip:"
-				+ getClass().getResource("att_faces.zip"),
-				ImageUtilities.FIMAGE_READER);
+				+ getClass().getResource("att_faces.zip"), ImageUtilities.FIMAGE_READER);
 
 		final FImage img = dataset.getRandomInstance().fill(0f);
 		for (final FImage i : dataset) {
