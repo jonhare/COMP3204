@@ -15,6 +15,12 @@ import org.openimaj.image.DisplayUtilities.ImageComponent;
 import org.openimaj.image.FImage;
 import org.openimaj.image.ImageUtilities;
 
+/**
+ * Visualise the ATT face dataset
+ * 
+ * @author Jonathon Hare (jsh2@ecs.soton.ac.uk)
+ * 
+ */
 public class FaceDatasetDemo implements Slide {
 
 	@Override
@@ -34,7 +40,6 @@ public class FaceDatasetDemo implements Slide {
 		base.setLayout(new FlowLayout());
 
 		for (int i = 0; i < 60; i++) {
-			System.out.println("here");
 			final FImage img = dataset.getRandomInstance();
 			final ImageComponent ic = new ImageComponent(true);
 			ic.setAllowPanning(false);

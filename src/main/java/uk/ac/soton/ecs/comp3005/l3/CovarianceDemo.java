@@ -10,8 +10,10 @@ import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.util.Random;
 
+import javax.swing.JCheckBox;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JSeparator;
 import javax.swing.JSlider;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
@@ -39,17 +41,20 @@ import Jama.Matrix;
  * @author Jonathon Hare (jsh2@ecs.soton.ac.uk)
  */
 public class CovarianceDemo implements Slide {
-	private Matrix covariance;
-	private BufferedImage bimg;
-	private MBFImage image;
-	private ImageComponent imageComp;
-	private JSlider xxSlider;
-	private JSlider yySlider;
-	private JSlider xySlider;
-	private TextField xxField;
-	private TextField xyField;
-	private TextField yxField;
-	private TextField yyField;
+	protected static final Font FONT = Font.decode("Monaco-48");
+
+	protected Matrix covariance;
+	protected BufferedImage bimg;
+	protected MBFImage image;
+	protected ImageComponent imageComp;
+	protected JSlider xxSlider;
+	protected JSlider yySlider;
+	protected JSlider xySlider;
+	protected TextField xxField;
+	protected TextField xyField;
+	protected TextField yxField;
+	protected TextField yyField;
+	protected boolean drawData = false;
 
 	@Override
 	public Component getComponent(int width, int height) throws IOException {
@@ -68,12 +73,18 @@ public class CovarianceDemo implements Slide {
 		imageComp.setAllowPanning(false);
 		base.add(imageComp);
 
+		final JPanel sep = new JPanel();
+		sep.setPreferredSize(new Dimension(80, 450));
+		base.add(sep);
+
 		xxSlider = new JSlider();
 		yySlider = new JSlider();
 		xySlider = new JSlider();
 		xySlider.setMinimum(-50);
 		xySlider.setMaximum(50);
+		xxSlider.setValue(100);
 		xySlider.setValue(0);
+		yySlider.setValue(100);
 
 		xxSlider.addChangeListener(new ChangeListener() {
 			@Override
@@ -96,8 +107,6 @@ public class CovarianceDemo implements Slide {
 			}
 		});
 
-		final Font fnt = Font.decode("Monaco-48");
-
 		final GridBagConstraints c = new GridBagConstraints();
 		final JPanel matrix = new JPanel(new GridBagLayout());
 		c.gridwidth = 1;
@@ -105,46 +114,85 @@ public class CovarianceDemo implements Slide {
 		c.gridy = 0;
 		c.gridx = 0;
 		matrix.add(xxField = new TextField(5), c);
-		xxField.setFont(fnt);
+		xxField.setFont(FONT);
 		xxField.setEditable(false);
 		c.gridx = 1;
 		matrix.add(xyField = new TextField(5), c);
-		xyField.setFont(fnt);
+		xyField.setFont(FONT);
 		xyField.setEditable(false);
 		c.gridy = 1;
 		c.gridx = 0;
 		matrix.add(yxField = new TextField(5), c);
-		yxField.setFont(fnt);
+		yxField.setFont(FONT);
 		yxField.setEditable(false);
 		c.gridx = 1;
 		matrix.add(yyField = new TextField(5), c);
-		yyField.setFont(fnt);
+		yyField.setFont(FONT);
 		yyField.setEditable(false);
 
 		final JPanel controls = new JPanel(new GridBagLayout());
-		c.gridwidth = 1;
+		c.gridwidth = 2;
 		c.gridheight = 1;
 		c.gridy = 0;
+		c.gridx = 0;
 		controls.add(matrix, c);
 
-		c.gridy = 1;
+		c.gridwidth = 2;
+		c.gridy = 2;
 		c.gridx = 0;
-		controls.add(new JLabel("XX"), c);
+		controls.add(new JSeparator(), c);
+		c.gridy = 3;
+		c.gridx = 0;
+		controls.add(new JSeparator(), c);
+		c.gridwidth = 1;
+
+		c.gridy = 4;
+		c.gridx = 0;
+		final JLabel xxLabel = new JLabel("XX:");
+		xxLabel.setFont(FONT);
+		controls.add(xxLabel, c);
 		c.gridx = 1;
 		controls.add(xxSlider, c);
 
-		c.gridy = 2;
+		c.gridy = 5;
 		c.gridx = 0;
-		controls.add(new JLabel("YY"), c);
+		final JLabel yyLabel = new JLabel("YY:");
+		yyLabel.setFont(FONT);
+		controls.add(yyLabel, c);
 		c.gridx = 1;
 		controls.add(yySlider, c);
 
-		c.gridy = 3;
+		c.gridy = 6;
 		c.gridx = 0;
-		controls.add(new JLabel("XY"), c);
+		final JLabel xyLabel = new JLabel("XY:");
+		xyLabel.setFont(FONT);
+		xyLabel.setHorizontalAlignment(JLabel.RIGHT);
+		controls.add(xyLabel, c);
 		c.gridx = 1;
 		controls.add(xySlider, c);
 
+		c.gridwidth = 2;
+		c.gridy = 7;
+		c.gridx = 0;
+		controls.add(new JSeparator(), c);
+		c.gridy = 5;
+		c.gridx = 0;
+		controls.add(new JSeparator(), c);
+
+		c.gridwidth = 1;
+		c.gridy = 8;
+		c.gridx = 0;
+		controls.add(new JLabel("Show data points:"), c);
+		c.gridx = 1;
+		final JCheckBox checkBox = new JCheckBox();
+		checkBox.addChangeListener(new ChangeListener() {
+			@Override
+			public void stateChanged(ChangeEvent e) {
+				drawData = ((JCheckBox) e.getSource()).isSelected();
+				updateImage();
+			}
+		});
+		controls.add(checkBox, c);
 		base.add(controls);
 
 		updateImage();
@@ -152,7 +200,7 @@ public class CovarianceDemo implements Slide {
 		return base;
 	}
 
-	private void updateImage() {
+	protected void updateImage() {
 		xxField.setText(String.format("%2.2f", covariance.get(0, 0)));
 		xyField.setText(String.format("%2.2f", covariance.get(0, 1)));
 		yxField.setText(String.format("%2.2f", covariance.get(1, 0)));
@@ -171,13 +219,15 @@ public class CovarianceDemo implements Slide {
 			final Matrix mean = new Matrix(new double[][] { { image.getWidth() / 2, image.getHeight() / 2 } });
 			final CachingMultivariateGaussian gauss = new CachingMultivariateGaussian(mean, covariance);
 
-			final Random rng = new Random();
-			for (int i = 0; i < 1000; i++) {
-				final double[] sample = gauss.sample(rng);
-				Point2dImpl pt = new Point2dImpl((float) sample[0], (float) sample[1]);
-				pt = pt.transform(TransformUtilities.scaleMatrixAboutPoint(40, -40, image.getWidth() / 2,
-						image.getHeight() / 2));
-				image.drawPoint(pt, RGBColour.BLUE, 3);
+			if (drawData) {
+				final Random rng = new Random();
+				for (int i = 0; i < 1000; i++) {
+					final double[] sample = gauss.sample(rng);
+					Point2dImpl pt = new Point2dImpl((float) sample[0], (float) sample[1]);
+					pt = pt.transform(TransformUtilities.scaleMatrixAboutPoint(40, -40, image.getWidth() / 2,
+							image.getHeight() / 2));
+					image.drawPoint(pt, RGBColour.BLUE, 3);
+				}
 			}
 
 			image.createRenderer(RenderHints.ANTI_ALIASED).drawShape(e, 3, RGBColour.RED);

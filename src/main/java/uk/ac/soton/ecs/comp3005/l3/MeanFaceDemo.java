@@ -15,6 +15,12 @@ import org.openimaj.image.FImage;
 import org.openimaj.image.ImageUtilities;
 import org.openimaj.image.processing.resize.ResizeProcessor;
 
+/**
+ * Visualise the mean face
+ * 
+ * @author Jonathon Hare (jsh2@ecs.soton.ac.uk)
+ * 
+ */
 public class MeanFaceDemo implements Slide {
 
 	@Override
