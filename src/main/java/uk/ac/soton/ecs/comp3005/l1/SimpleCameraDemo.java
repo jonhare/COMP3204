@@ -10,6 +10,7 @@ import org.openimaj.content.slideshow.Slide;
 import org.openimaj.content.slideshow.SlideshowApplication;
 
 import uk.ac.soton.ecs.comp3005.utils.VideoCaptureComponent;
+import uk.ac.soton.ecs.comp3005.utils.annotations.Demonstration;
 
 /**
  * Slide showing simple video capture and display
@@ -17,6 +18,7 @@ import uk.ac.soton.ecs.comp3005.utils.VideoCaptureComponent;
  * @author Jonathon Hare (jsh2@ecs.soton.ac.uk)
  * 
  */
+@Demonstration(title = "Simple Camera Demo")
 public class SimpleCameraDemo implements Slide {
 	protected VideoCaptureComponent vc;
 

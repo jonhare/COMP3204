@@ -36,6 +36,7 @@ import org.openimaj.video.VideoDisplayListener;
 
 import uk.ac.soton.ecs.comp3005.l1.ColourSpacesDemo;
 import uk.ac.soton.ecs.comp3005.utils.VideoCaptureComponent;
+import uk.ac.soton.ecs.comp3005.utils.annotations.Demonstration;
 
 /**
  * Demonstration of Linear classification (with the Perceptron) using simple
@@ -43,6 +44,7 @@ import uk.ac.soton.ecs.comp3005.utils.VideoCaptureComponent;
  * 
  * @author Jonathon Hare (jsh2@ecs.soton.ac.uk)
  */
+@Demonstration(title = "Perceptron Linear Classification Demo")
 public class LinearClassifierDemo implements Slide, ActionListener, VideoDisplayListener<MBFImage> {
 	/**
 	 * A really simple perceptron

@@ -17,12 +17,14 @@ import org.openimaj.image.colour.ColourSpace;
 import org.openimaj.video.VideoDisplay;
 import org.openimaj.video.VideoDisplayListener;
 
+import uk.ac.soton.ecs.comp3005.utils.annotations.Demonstration;
 
 /**
  * Demonstrate different colour spaces
  * 
  * @author Jonathon Hare (jsh2@ecs.soton.ac.uk)
  */
+@Demonstration(title = "Colour Spaces Demo")
 public class ColourSpacesDemo extends SimpleCameraDemo implements Slide, VideoDisplayListener<MBFImage>, ActionListener {
 	protected ColourSpace[] colourSpaces;
 	protected volatile ColourSpace colourSpace = ColourSpace.RGB;

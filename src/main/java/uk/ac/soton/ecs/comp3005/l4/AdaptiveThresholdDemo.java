@@ -27,7 +27,7 @@ import org.openimaj.image.ImageUtilities;
  * @author Jonathon Hare (jsh2@ecs.soton.ac.uk)
  * 
  */
-public class GlobalThresholdDemo implements Slide {
+public class AdaptiveThresholdDemo implements Slide {
 	final static Font FONT = Font.decode("Monaco-28");
 	private FImage oimage;
 	private BufferedImage bimg;
@@ -122,6 +122,6 @@ public class GlobalThresholdDemo implements Slide {
 	}
 
 	public static void main(String[] args) throws IOException {
-		new SlideshowApplication(new GlobalThresholdDemo(), 1024, 768);
+		new SlideshowApplication(new AdaptiveThresholdDemo(), 1024, 768);
 	}
 }

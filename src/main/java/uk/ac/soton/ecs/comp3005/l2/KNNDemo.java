@@ -44,12 +44,14 @@ import org.openimaj.video.VideoDisplayListener;
 
 import uk.ac.soton.ecs.comp3005.l1.ColourSpacesDemo;
 import uk.ac.soton.ecs.comp3005.utils.VideoCaptureComponent;
+import uk.ac.soton.ecs.comp3005.utils.annotations.Demonstration;
 
 /**
  * Demonstration of KNN classification using simple average colour features
  * 
  * @author Jonathon Hare (jsh2@ecs.soton.ac.uk)
  */
+@Demonstration(title = "K-Nearest-Neighbour Classification Demo")
 public class KNNDemo implements Slide, ActionListener, VideoDisplayListener<MBFImage>, ChangeListener {
 	private static final int CIRCLE_THICKNESS = 4;
 	private static final int CIRCLE_SIZE = 15;

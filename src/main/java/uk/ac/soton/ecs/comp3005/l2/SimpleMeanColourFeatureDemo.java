@@ -13,12 +13,14 @@ import org.openimaj.image.colour.ColourSpace;
 import org.openimaj.math.util.FloatArrayStatsUtils;
 
 import uk.ac.soton.ecs.comp3005.l1.ColourSpacesDemo;
+import uk.ac.soton.ecs.comp3005.utils.annotations.Demonstration;
 
 /**
  * Demonstrate different colour spaces
  * 
  * @author Jonathon Hare (jsh2@ecs.soton.ac.uk)
  */
+@Demonstration(title = "Simple Mean Colour Feature")
 public class SimpleMeanColourFeatureDemo extends ColourSpacesDemo
 {
 	private JTextField featureField;

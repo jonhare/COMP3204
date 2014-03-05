@@ -38,11 +38,14 @@ import org.openimaj.math.geometry.point.Point2dImpl;
 import org.openimaj.math.geometry.shape.Circle;
 import org.openimaj.math.geometry.triangulation.Voronoi;
 
+import uk.ac.soton.ecs.comp3005.utils.annotations.Demonstration;
+
 /**
  * Demo showing K-Means clustering
  * 
  * @author Jonathon Hare (jsh2@ecs.soton.ac.uk)
  */
+@Demonstration(title = "K Means Clustering Demo")
 public class KMeansDemo extends MouseAdapter implements Slide, ActionListener {
 
 	private MBFImage image;
