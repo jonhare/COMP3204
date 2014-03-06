@@ -16,6 +16,8 @@ import org.openimaj.image.FImage;
 import org.openimaj.image.ImageUtilities;
 import org.openimaj.image.model.EigenImages;
 
+import uk.ac.soton.ecs.comp3005.utils.Utils;
+
 /**
  * Visualise the first principle components of a face image
  * 
@@ -62,6 +64,6 @@ public class FacePrincipleComponentsDemo implements Slide {
 	}
 
 	public static void main(String[] args) throws IOException {
-		new SlideshowApplication(new FacePrincipleComponentsDemo(), 1024, 768);
+		new SlideshowApplication(new FacePrincipleComponentsDemo(), 1024, 768, Utils.BACKGROUND_IMAGE);
 	}
 }

@@ -25,7 +25,7 @@ import org.openimaj.video.capture.VideoCaptureException;
 public class VideoCaptureComponent extends Box implements ItemListener, Closeable {
 	private static final long serialVersionUID = 1L;
 	private VideoDisplay<MBFImage> display;
-	private JComboBox<String> sources;
+	private JComboBox sources;
 	private int width;
 	private int height;
 	private Device currentDevice;
@@ -42,6 +42,8 @@ public class VideoCaptureComponent extends Box implements ItemListener, Closeabl
 	public VideoCaptureComponent(int width, int height) throws VideoCaptureException {
 		super(BoxLayout.Y_AXIS);
 
+		this.setOpaque(false);
+
 		this.width = width;
 		this.height = height;
 		final List<Device> devices = VideoCapture.getVideoDevices();
@@ -49,11 +51,13 @@ public class VideoCaptureComponent extends Box implements ItemListener, Closeabl
 
 		final VideoCapture vc = new VideoCapture(width, height, currentDevice);
 		final JPanel videoDisplayPanel = new JPanel();
+		videoDisplayPanel.setOpaque(false);
 		display = VideoDisplay.createVideoDisplay(vc, videoDisplayPanel);
 		add(videoDisplayPanel);
 
 		final JPanel sourcesPanel = new JPanel();
-		sources = new JComboBox<String>();
+		sourcesPanel.setOpaque(false);
+		sources = new JComboBox();
 		sources.setOpaque(false);
 		for (final Device s : devices)
 			sources.addItem(s.getNameStr());

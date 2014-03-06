@@ -38,6 +38,7 @@ import org.openimaj.math.geometry.point.Point2dImpl;
 import org.openimaj.math.geometry.shape.Circle;
 import org.openimaj.math.geometry.triangulation.Voronoi;
 
+import uk.ac.soton.ecs.comp3005.utils.Utils;
 import uk.ac.soton.ecs.comp3005.utils.annotations.Demonstration;
 
 /**
@@ -305,6 +306,6 @@ public class KMeansDemo extends MouseAdapter implements Slide, ActionListener {
 	}
 
 	public static void main(String[] args) throws IOException {
-		new SlideshowApplication(new KMeansDemo(), 1024, 768);
+		new SlideshowApplication(new KMeansDemo(), 1024, 768, Utils.BACKGROUND_IMAGE);
 	}
 }

@@ -31,6 +31,8 @@ import org.openimaj.image.ImageUtilities;
 import org.openimaj.image.model.EigenImages;
 import org.openimaj.image.processing.resize.ResizeProcessor;
 
+import uk.ac.soton.ecs.comp3005.utils.Utils;
+
 /**
  * Demonstration of the effect of changing weights on principal components.
  * 
@@ -68,6 +70,7 @@ public class EigenFaceReconstructionDemo implements Slide {
 		outer.add(ic);
 
 		final JPanel controls = new JPanel();
+		controls.setOpaque(false);
 		final Dimension dim = new Dimension(width - image.width, height);
 		controls.setPreferredSize(dim);
 		controls.setSize(dim);
@@ -75,6 +78,7 @@ public class EigenFaceReconstructionDemo implements Slide {
 		final List<JSlider> sliders = new ArrayList<JSlider>();
 		for (int i = 0; i < vector.length; i++) {
 			final JPanel container = new JPanel();
+			container.setOpaque(false);
 			container.setLayout(new GridBagLayout());
 
 			final JLabel label = new JLabel("PC " + i + ":");
@@ -82,6 +86,7 @@ public class EigenFaceReconstructionDemo implements Slide {
 			container.add(label);
 
 			final JTextField valField = new JTextField(6);
+			valField.setOpaque(false);
 			valField.setFont(FONT);
 			valField.setBorder(null);
 			valField.setEditable(false);
@@ -105,7 +110,7 @@ public class EigenFaceReconstructionDemo implements Slide {
 			container.add(valField);
 			controls.add(container);
 		}
-		controls.add(new JSeparator(JSeparator.VERTICAL));
+		controls.add(new JSeparator(JSeparator.HORIZONTAL));
 		final JButton reset = new JButton("Reset");
 		reset.setFont(FONT);
 		reset.addActionListener(new ActionListener() {
@@ -127,6 +132,6 @@ public class EigenFaceReconstructionDemo implements Slide {
 	}
 
 	public static void main(String[] args) throws IOException {
-		new SlideshowApplication(new EigenFaceReconstructionDemo(), 1024, 768);
+		new SlideshowApplication(new EigenFaceReconstructionDemo(), 1024, 768, Utils.BACKGROUND_IMAGE);
 	}
 }

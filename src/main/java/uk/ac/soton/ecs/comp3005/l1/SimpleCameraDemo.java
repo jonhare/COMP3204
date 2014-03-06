@@ -9,6 +9,7 @@ import javax.swing.JPanel;
 import org.openimaj.content.slideshow.Slide;
 import org.openimaj.content.slideshow.SlideshowApplication;
 
+import uk.ac.soton.ecs.comp3005.utils.Utils;
 import uk.ac.soton.ecs.comp3005.utils.VideoCaptureComponent;
 import uk.ac.soton.ecs.comp3005.utils.annotations.Demonstration;
 
@@ -41,6 +42,6 @@ public class SimpleCameraDemo implements Slide {
 	}
 
 	public static void main(String[] args) throws IOException {
-		new SlideshowApplication(new SimpleCameraDemo(), 1024, 768);
+		new SlideshowApplication(new SimpleCameraDemo(), 1024, 768, Utils.BACKGROUND_IMAGE);
 	}
 }

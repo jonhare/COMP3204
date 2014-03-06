@@ -24,6 +24,8 @@ import org.openimaj.math.geometry.shape.PointList;
 import org.openimaj.math.geometry.shape.PointListConnections;
 import org.openimaj.math.geometry.shape.algorithm.GeneralisedProcrustesAnalysis;
 
+import uk.ac.soton.ecs.comp3005.utils.Utils;
+
 public class AlignmentDemo implements Slide {
 	@Override
 	public Component getComponent(int width, int height) throws IOException {
@@ -95,6 +97,6 @@ public class AlignmentDemo implements Slide {
 	}
 
 	public static void main(String[] args) throws IOException {
-		new SlideshowApplication(new AlignmentDemo(), 1024, 768);
+		new SlideshowApplication(new AlignmentDemo(), 1024, 768, Utils.BACKGROUND_IMAGE);
 	}
 }

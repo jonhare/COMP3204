@@ -35,6 +35,7 @@ import org.openimaj.video.VideoDisplay;
 import org.openimaj.video.VideoDisplayListener;
 
 import uk.ac.soton.ecs.comp3005.l1.ColourSpacesDemo;
+import uk.ac.soton.ecs.comp3005.utils.Utils;
 import uk.ac.soton.ecs.comp3005.utils.VideoCaptureComponent;
 import uk.ac.soton.ecs.comp3005.utils.annotations.Demonstration;
 
@@ -143,7 +144,7 @@ public class LinearClassifierDemo implements Slide, ActionListener, VideoDisplay
 	private MBFImage image;
 	private ImageComponent imageComp;
 	private BufferedImage bimg;
-	private JComboBox<String> classType;
+	private JComboBox classType;
 	private double[] lastMean;
 	private JTextField guess;
 
@@ -164,6 +165,7 @@ public class LinearClassifierDemo implements Slide, ActionListener, VideoDisplay
 
 		// left hand side (video, features)
 		final Box videoCtrls = Box.createVerticalBox();
+		videoCtrls.setOpaque(false);
 		videoCtrls.add(vc);
 		videoCtrls.add(Box.createVerticalStrut(10));
 		final JPanel colourspacesPanel = createColourSpaceButtons();
@@ -175,6 +177,7 @@ public class LinearClassifierDemo implements Slide, ActionListener, VideoDisplay
 
 		// right hand box
 		final Box rightPanel = Box.createVerticalBox();
+		rightPanel.setOpaque(false);
 		image = new MBFImage(GRAPH_WIDTH, GRAPH_HEIGHT, ColourSpace.RGB);
 		image.fill(RGBColour.WHITE);
 		imageComp = new DisplayUtilities.ImageComponent(true);
@@ -187,7 +190,7 @@ public class LinearClassifierDemo implements Slide, ActionListener, VideoDisplay
 
 		// learning controls
 		final JPanel learnCtrls = new JPanel(new GridLayout(0, 1));
-		classType = new JComboBox<String>();
+		classType = new JComboBox();
 		for (final String c : CLASSES)
 			classType.addItem(c);
 		learnCtrls.add(classType);
@@ -199,7 +202,9 @@ public class LinearClassifierDemo implements Slide, ActionListener, VideoDisplay
 
 		// classification controls
 		final JPanel classCtrls = new JPanel(new GridLayout(0, 1));
+		classCtrls.setOpaque(false);
 		guess = new JTextField(8);
+		guess.setOpaque(false);
 		guess.setFont(Font.decode("Monaco-24"));
 		guess.setHorizontalAlignment(JTextField.CENTER);
 		guess.setEditable(false);
@@ -216,6 +221,7 @@ public class LinearClassifierDemo implements Slide, ActionListener, VideoDisplay
 
 	private void createFeatureField() {
 		featureField = new JTextField();
+		featureField.setOpaque(false);
 		featureField.setFont(Font.decode("Monaco-24"));
 		featureField.setHorizontalAlignment(JTextField.CENTER);
 		featureField.setEditable(false);
@@ -224,6 +230,7 @@ public class LinearClassifierDemo implements Slide, ActionListener, VideoDisplay
 
 	private JPanel createColourSpaceButtons() {
 		final JPanel colourspacesPanel = new JPanel();
+		colourspacesPanel.setOpaque(false);
 		colourspacesPanel.setLayout(new BoxLayout(colourspacesPanel, BoxLayout.X_AXIS));
 		colourspacesPanel.setAlignmentX(Component.CENTER_ALIGNMENT);
 		final ButtonGroup group = new ButtonGroup();
@@ -290,7 +297,7 @@ public class LinearClassifierDemo implements Slide, ActionListener, VideoDisplay
 
 			imageComp.setImage(bimg = ImageUtilities.createBufferedImageForDisplay(image, bimg));
 
-			guess.setText(this.classType.getItemAt(classifier.predict(mean)));
+			guess.setText((String) this.classType.getItemAt(classifier.predict(mean)));
 			return;
 		}
 		guess.setText("unknown");
@@ -388,6 +395,6 @@ public class LinearClassifierDemo implements Slide, ActionListener, VideoDisplay
 	}
 
 	public static void main(String[] args) throws IOException {
-		new SlideshowApplication(new LinearClassifierDemo(), 1024, 768);
+		new SlideshowApplication(new LinearClassifierDemo(), 1024, 768, Utils.BACKGROUND_IMAGE);
 	}
 }

@@ -15,6 +15,8 @@ import org.openimaj.image.DisplayUtilities.ImageComponent;
 import org.openimaj.image.FImage;
 import org.openimaj.image.ImageUtilities;
 
+import uk.ac.soton.ecs.comp3005.utils.Utils;
+
 /**
  * Visualise the ATT face dataset
  * 
@@ -60,6 +62,6 @@ public class FaceDatasetDemo implements Slide {
 	}
 
 	public static void main(String[] args) throws IOException {
-		new SlideshowApplication(new FaceDatasetDemo(), 1024, 768);
+		new SlideshowApplication(new FaceDatasetDemo(), 1024, 768, Utils.BACKGROUND_IMAGE);
 	}
 }

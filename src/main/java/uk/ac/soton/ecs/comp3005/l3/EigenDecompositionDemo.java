@@ -11,7 +11,6 @@ import java.util.Random;
 import javax.swing.BoxLayout;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.JSeparator;
 import javax.swing.JTextField;
 
 import org.openimaj.content.slideshow.SlideshowApplication;
@@ -25,6 +24,7 @@ import org.openimaj.math.geometry.shape.EllipseUtilities;
 import org.openimaj.math.geometry.transforms.TransformUtilities;
 import org.openimaj.math.statistics.distribution.CachingMultivariateGaussian;
 
+import uk.ac.soton.ecs.comp3005.utils.Utils;
 import Jama.EigenvalueDecomposition;
 import Jama.Matrix;
 
@@ -101,15 +101,17 @@ public class EigenDecompositionDemo extends CovarianceDemo {
 		base.add(super.getComponent(width, height - 400));
 
 		final JPanel p = new JPanel();
+		p.setOpaque(false);
 		p.setLayout(new GridBagLayout());
 		final JLabel vecLabel = new JLabel("v = ");
 		vecLabel.setFont(Font.decode("Times-58"));
 		p.add(vecLabel);
 		p.add(matrix1);
-		final JSeparator sep = new JSeparator();
+		final JPanel sep = new JPanel();
+		sep.setOpaque(false);
 		sep.setPreferredSize(new Dimension(100, 10));
 		p.add(sep);
-		final JLabel valLabel = new JLabel("λ=");
+		final JLabel valLabel = new JLabel("λ = ");
 		valLabel.setFont(Font.decode("Times-58"));
 		p.add(valLabel);
 		p.add(matrix2);
@@ -162,7 +164,8 @@ public class EigenDecompositionDemo extends CovarianceDemo {
 			}
 
 			final MBFImageRenderer renderer = image.createRenderer(RenderHints.ANTI_ALIASED);
-			renderer.drawShape(e, 3, RGBColour.RED);
+			if (drawEllipse)
+				renderer.drawShape(e, 3, RGBColour.RED);
 			int x = (int) (100 * decomp.getV().get(0, 0) * Math.sqrt(decomp.getRealEigenvalues()[0]));
 			int y = (int) (100 * decomp.getV().get(1, 0) * Math.sqrt(decomp.getRealEigenvalues()[0]));
 			renderer.drawLine(image.getWidth() / 2, image.getHeight() / 2, x + image.getWidth() / 2,
@@ -188,6 +191,6 @@ public class EigenDecompositionDemo extends CovarianceDemo {
 	}
 
 	public static void main(String[] args) throws IOException {
-		new SlideshowApplication(new EigenDecompositionDemo(), 1024, 768);
+		new SlideshowApplication(new EigenDecompositionDemo(), 1024, 768, Utils.BACKGROUND_IMAGE);
 	}
 }

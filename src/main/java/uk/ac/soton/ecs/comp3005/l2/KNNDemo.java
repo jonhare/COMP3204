@@ -43,6 +43,7 @@ import org.openimaj.video.VideoDisplay;
 import org.openimaj.video.VideoDisplayListener;
 
 import uk.ac.soton.ecs.comp3005.l1.ColourSpacesDemo;
+import uk.ac.soton.ecs.comp3005.utils.Utils;
 import uk.ac.soton.ecs.comp3005.utils.VideoCaptureComponent;
 import uk.ac.soton.ecs.comp3005.utils.annotations.Demonstration;
 
@@ -76,7 +77,7 @@ public class KNNDemo implements Slide, ActionListener, VideoDisplayListener<MBFI
 	private MBFImage image;
 	private ImageComponent imageComp;
 	private BufferedImage bimg;
-	private JComboBox<String> classType;
+	private JComboBox classType;
 	private double[] lastMean;
 	private JTextField guess;
 
@@ -108,6 +109,7 @@ public class KNNDemo implements Slide, ActionListener, VideoDisplayListener<MBFI
 
 		// right hand box
 		final Box rightPanel = Box.createVerticalBox();
+		rightPanel.setOpaque(false);
 		image = new MBFImage(GRAPH_WIDTH, GRAPH_HEIGHT, ColourSpace.RGB);
 		image.fill(RGBColour.WHITE);
 		imageComp = new DisplayUtilities.ImageComponent(true);
@@ -120,7 +122,8 @@ public class KNNDemo implements Slide, ActionListener, VideoDisplayListener<MBFI
 
 		// learning controls
 		final JPanel learnCtrls = new JPanel(new GridLayout(0, 1));
-		classType = new JComboBox<String>();
+		learnCtrls.setOpaque(false);
+		classType = new JComboBox();
 		for (final String c : CLASSES)
 			classType.addItem(c);
 		learnCtrls.add(classType);
@@ -132,6 +135,7 @@ public class KNNDemo implements Slide, ActionListener, VideoDisplayListener<MBFI
 
 		// classification controls
 		final JPanel classCtrls = new JPanel(new GridLayout(0, 1));
+		classCtrls.setOpaque(false);
 		final JPanel cnt = new JPanel();
 		cnt.add(new JLabel("K:"));
 		final JSpinner kField = new JSpinner(new SpinnerNumberModel(k, 1, 10, 1));
@@ -139,6 +143,7 @@ public class KNNDemo implements Slide, ActionListener, VideoDisplayListener<MBFI
 		cnt.add(kField);
 		classCtrls.add(cnt);
 		guess = new JTextField(8);
+		guess.setOpaque(false);
 		guess.setFont(Font.decode("Monaco-24"));
 		guess.setHorizontalAlignment(JTextField.CENTER);
 		guess.setEditable(false);
@@ -155,6 +160,7 @@ public class KNNDemo implements Slide, ActionListener, VideoDisplayListener<MBFI
 
 	private void createFeatureField() {
 		featureField = new JTextField();
+		featureField.setOpaque(false);
 		featureField.setFont(Font.decode("Monaco-24"));
 		featureField.setHorizontalAlignment(JTextField.CENTER);
 		featureField.setEditable(false);
@@ -163,6 +169,7 @@ public class KNNDemo implements Slide, ActionListener, VideoDisplayListener<MBFI
 
 	private JPanel createColourSpaceButtons() {
 		final JPanel colourspacesPanel = new JPanel();
+		colourspacesPanel.setOpaque(false);
 		colourspacesPanel.setLayout(new BoxLayout(colourspacesPanel, BoxLayout.X_AXIS));
 		colourspacesPanel.setAlignmentX(Component.CENTER_ALIGNMENT);
 		final ButtonGroup group = new ButtonGroup();
@@ -236,7 +243,7 @@ public class KNNDemo implements Slide, ActionListener, VideoDisplayListener<MBFI
 			ArrayUtils.parallelQuicksortDescending(counts, indices);
 
 			if (counts.length == 1 || counts[0] > counts[1]) {
-				guess.setText(this.classType.getItemAt(indices[0]));
+				guess.setText((String) this.classType.getItemAt(indices[0]));
 				return;
 			}
 		}
@@ -332,6 +339,6 @@ public class KNNDemo implements Slide, ActionListener, VideoDisplayListener<MBFI
 	}
 
 	public static void main(String[] args) throws IOException {
-		new SlideshowApplication(new KNNDemo(), 1024, 768);
+		new SlideshowApplication(new KNNDemo(), 1024, 768, Utils.BACKGROUND_IMAGE);
 	}
 }

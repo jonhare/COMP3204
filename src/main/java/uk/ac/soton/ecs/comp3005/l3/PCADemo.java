@@ -30,6 +30,7 @@ import org.openimaj.video.VideoDisplay.Mode;
 import uk.ac.soton.ecs.comp3005.utils.Simple3D;
 import uk.ac.soton.ecs.comp3005.utils.Simple3D.Line3D;
 import uk.ac.soton.ecs.comp3005.utils.Simple3D.Scene;
+import uk.ac.soton.ecs.comp3005.utils.Utils;
 import Jama.Matrix;
 
 public class PCADemo implements Slide {
@@ -50,23 +51,23 @@ public class PCADemo implements Slide {
 		return data;
 	}
 
-	Scene makeScene(double[][] data) {
+	Scene makeScene(double[][] data, String[] labels) {
 		final Scene scene = new Scene();
 
 		scene.addPrimative(new Line3D(-200, 0, 0, 200, 0, 0, RGBColour.RED, 3));
 		scene.addPrimative(new Line3D(180, 10, 0, 200, 0, 0, RGBColour.RED, 3));
 		scene.addPrimative(new Line3D(180, -10, 0, 200, 0, 0, RGBColour.RED, 3));
-		scene.addPrimative(new Simple3D.Text3D(200, -50, 0, RGBColour.RED, 40, "x"));
+		scene.addPrimative(new Simple3D.Text3D(200, -50, 0, RGBColour.RED, 40, labels[0]));
 
 		scene.addPrimative(new Line3D(0, -200, 0, 0, 200, 0, RGBColour.RED, 3));
 		scene.addPrimative(new Line3D(10, 180, 0, 0, 200, 0, RGBColour.RED, 3));
 		scene.addPrimative(new Line3D(-10, 180, 0, 0, 200, 0, RGBColour.RED, 3));
-		scene.addPrimative(new Simple3D.Text3D(-30, 180, 0, RGBColour.RED, 40, "y"));
+		scene.addPrimative(new Simple3D.Text3D(-30, 180, 0, RGBColour.RED, 40, labels[1]));
 
 		scene.addPrimative(new Line3D(0, 0, -200, 0, 0, 200, RGBColour.RED, 3));
 		scene.addPrimative(new Line3D(0, 10, 180, 0, 0, 200, RGBColour.RED, 3));
 		scene.addPrimative(new Line3D(0, -10, 180, 0, 0, 200, RGBColour.RED, 3));
-		scene.addPrimative(new Simple3D.Text3D(0, -70, 180, RGBColour.RED, 40, "z"));
+		scene.addPrimative(new Simple3D.Text3D(0, -70, 180, RGBColour.RED, 40, labels[2]));
 
 		for (int i = 0; i < data.length; i++) {
 			scene.addPrimative(new Simple3D.Point3D(data[i][0], data[i][1], data[i][2], RGBColour.GREEN, 3));
@@ -98,14 +99,14 @@ public class PCADemo implements Slide {
 		img.drawLine(img.getWidth() / 2, img.getHeight() - 50, img.getWidth() / 2, 50, 3, RGBColour.RED);
 		img.drawLine(img.getWidth() / 2 - 10, 70, img.getWidth() / 2, 50, 3, RGBColour.RED);
 		img.drawLine(img.getWidth() / 2 + 10, 70, img.getWidth() / 2, 50, 3, RGBColour.RED);
-		img.drawText("y", img.getWidth() / 2 - 30, 70, HersheyFont.ROMAN_DUPLEX, 40, RGBColour.RED);
+		img.drawText("EV2", img.getWidth() / 2 - 80, 70, HersheyFont.ROMAN_DUPLEX, 40, RGBColour.RED);
 
 		img.drawLine(50, img.getHeight() / 2, img.getWidth() - 50, img.getHeight() / 2, 3, RGBColour.RED);
 		img.drawLine(img.getWidth() - 70, img.getHeight() / 2 + 10, img.getWidth() - 50, img.getHeight() / 2, 3,
 				RGBColour.RED);
 		img.drawLine(img.getWidth() - 70, img.getHeight() / 2 - 10, img.getWidth() - 50, img.getHeight() / 2, 3,
 				RGBColour.RED);
-		img.drawText("x", img.getWidth() - 70, img.getHeight() / 2 + 45, HersheyFont.ROMAN_DUPLEX, 40, RGBColour.RED);
+		img.drawText("EV1", img.getWidth() - 70, img.getHeight() / 2 + 50, HersheyFont.ROMAN_DUPLEX, 40, RGBColour.RED);
 
 		for (final double[] d : data) {
 			img.drawPoint(new Point2dImpl(img.getWidth() / 2 - (float) d[0], img.getHeight() / 2 - (float) d[1]),
@@ -123,7 +124,7 @@ public class PCADemo implements Slide {
 				RGBColour.RED);
 		img.drawLine(img.getWidth() - 70, img.getHeight() / 2 - 10, img.getWidth() - 50, img.getHeight() / 2, 3,
 				RGBColour.RED);
-		img.drawText("x", img.getWidth() - 70, img.getHeight() / 2 + 45, HersheyFont.ROMAN_DUPLEX, 40, RGBColour.RED);
+		img.drawText("EV1", img.getWidth() - 70, img.getHeight() / 2 + 50, HersheyFont.ROMAN_DUPLEX, 40, RGBColour.RED);
 
 		for (final double[] d : data) {
 			img.drawPoint(new Point2dImpl(img.getWidth() / 2 - (float) d[0], img.getHeight() / 2),
@@ -141,12 +142,12 @@ public class PCADemo implements Slide {
 		base.setLayout(new GridBagLayout());
 
 		final double[][] data = createData(1000);
-		final Scene scene = makeScene(data);
+		final Scene scene = makeScene(data, new String[] { "x", "y", "z" });
 		final Matrix datam = new Matrix(data);
 		final CovarPrincipalComponentAnalysis pca = new CovarPrincipalComponentAnalysis(3);
 		pca.learnBasis(datam);
 		final double[][] pdata = pca.project(datam).getArray();
-		final Scene pscene = makeScene(pdata);
+		final Scene pscene = makeScene(pdata, new String[] { "EV1", "EV2", "EV3" });
 
 		final JPanel dataPanel = new JPanel();
 		dataPanel.setLayout(new BoxLayout(dataPanel, BoxLayout.Y_AXIS));
@@ -199,22 +200,6 @@ public class PCADemo implements Slide {
 	}
 
 	public static void main(String[] args) throws IOException {
-		new SlideshowApplication(new PCADemo(), 1024, 768);
-		// final PCADemo d = new PCADemo();
-		// final double[][] data = d.createData(1000);
-		// final Scene s = d.makeScene(data);
-		//
-		// final Matrix datam = new Matrix(data);
-		// final CovarPrincipalComponentAnalysis pca = new
-		// CovarPrincipalComponentAnalysis(3);
-		// pca.learnBasis(datam);
-		//
-		// final double[][] pdata = pca.project(datam).getArray();
-		// final Scene pscene = d.makeScene(pdata);
-		//
-		// // VideoDisplay.createVideoDisplay(d.makeVideo(s));
-		// // VideoDisplay.createVideoDisplay(d.makeVideo(pscene));
-		// DisplayUtilities.display(d.plot2d(pdata));
-		// DisplayUtilities.display(d.plot1d(pdata));
+		new SlideshowApplication(new PCADemo(), 1024, 768, Utils.BACKGROUND_IMAGE);
 	}
 }

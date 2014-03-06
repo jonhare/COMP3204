@@ -20,6 +20,8 @@ import org.openimaj.util.pair.IndependentPair;
 import org.openimaj.video.ArrayBackedVideo;
 import org.openimaj.video.VideoDisplay;
 
+import uk.ac.soton.ecs.comp3005.utils.Utils;
+
 public class PDMDatasetVideoDemo implements Slide {
 	private VideoDisplay<MBFImage> display;
 
@@ -27,6 +29,7 @@ public class PDMDatasetVideoDemo implements Slide {
 	public Component getComponent(int width, int height) throws IOException {
 		// the main panel
 		final JPanel base = new JPanel();
+		base.setOpaque(false);
 		base.setPreferredSize(new Dimension(width, height));
 		base.setLayout(new GridBagLayout());
 
@@ -55,6 +58,6 @@ public class PDMDatasetVideoDemo implements Slide {
 	}
 
 	public static void main(String[] args) throws IOException {
-		new SlideshowApplication(new PDMDatasetVideoDemo(), 1024, 768);
+		new SlideshowApplication(new PDMDatasetVideoDemo(), 1024, 768, Utils.BACKGROUND_IMAGE);
 	}
 }

@@ -15,6 +15,8 @@ import org.openimaj.image.FImage;
 import org.openimaj.image.ImageUtilities;
 import org.openimaj.image.processing.resize.ResizeProcessor;
 
+import uk.ac.soton.ecs.comp3005.utils.Utils;
+
 /**
  * Visualise the mean face
  * 
@@ -56,6 +58,6 @@ public class MeanFaceDemo implements Slide {
 	}
 
 	public static void main(String[] args) throws IOException {
-		new SlideshowApplication(new MeanFaceDemo(), 1024, 768);
+		new SlideshowApplication(new MeanFaceDemo(), 1024, 768, Utils.BACKGROUND_IMAGE);
 	}
 }

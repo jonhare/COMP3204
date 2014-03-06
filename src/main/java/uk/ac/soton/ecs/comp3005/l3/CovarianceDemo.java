@@ -33,6 +33,7 @@ import org.openimaj.math.geometry.shape.EllipseUtilities;
 import org.openimaj.math.geometry.transforms.TransformUtilities;
 import org.openimaj.math.statistics.distribution.CachingMultivariateGaussian;
 
+import uk.ac.soton.ecs.comp3005.utils.Utils;
 import Jama.Matrix;
 
 /**
@@ -54,7 +55,8 @@ public class CovarianceDemo implements Slide {
 	protected TextField xyField;
 	protected TextField yxField;
 	protected TextField yyField;
-	protected boolean drawData = false;
+	protected boolean drawData = true;
+	protected boolean drawEllipse = false;
 
 	@Override
 	public Component getComponent(int width, int height) throws IOException {
@@ -74,6 +76,7 @@ public class CovarianceDemo implements Slide {
 		base.add(imageComp);
 
 		final JPanel sep = new JPanel();
+		sep.setOpaque(false);
 		sep.setPreferredSize(new Dimension(80, 450));
 		base.add(sep);
 
@@ -131,6 +134,7 @@ public class CovarianceDemo implements Slide {
 		yyField.setEditable(false);
 
 		final JPanel controls = new JPanel(new GridBagLayout());
+		controls.setOpaque(false);
 		c.gridwidth = 2;
 		c.gridheight = 1;
 		c.gridy = 0;
@@ -192,7 +196,24 @@ public class CovarianceDemo implements Slide {
 				updateImage();
 			}
 		});
+		checkBox.setSelected(drawData);
 		controls.add(checkBox, c);
+
+		c.gridwidth = 1;
+		c.gridy = 9;
+		c.gridx = 0;
+		controls.add(new JLabel("Show ellipse:"), c);
+		c.gridx = 1;
+		final JCheckBox checkBox2 = new JCheckBox();
+		checkBox2.addChangeListener(new ChangeListener() {
+			@Override
+			public void stateChanged(ChangeEvent e) {
+				drawEllipse = ((JCheckBox) e.getSource()).isSelected();
+				updateImage();
+			}
+		});
+		checkBox2.setSelected(drawEllipse);
+		controls.add(checkBox2, c);
 		base.add(controls);
 
 		updateImage();
@@ -230,7 +251,8 @@ public class CovarianceDemo implements Slide {
 				}
 			}
 
-			image.createRenderer(RenderHints.ANTI_ALIASED).drawShape(e, 3, RGBColour.RED);
+			if (drawEllipse)
+				image.createRenderer(RenderHints.ANTI_ALIASED).drawShape(e, 3, RGBColour.RED);
 		}
 
 		this.imageComp.setImage(bimg = ImageUtilities.createBufferedImageForDisplay(image, bimg));
@@ -258,6 +280,6 @@ public class CovarianceDemo implements Slide {
 	}
 
 	public static void main(String[] args) throws IOException {
-		new SlideshowApplication(new CovarianceDemo(), 1024, 768);
+		new SlideshowApplication(new CovarianceDemo(), 1024, 768, Utils.BACKGROUND_IMAGE);
 	}
 }

@@ -34,6 +34,8 @@ import org.openimaj.math.geometry.transforms.TransformUtilities;
 import org.openimaj.video.AnimatedVideo;
 import org.openimaj.video.VideoDisplay;
 
+import uk.ac.soton.ecs.comp3005.utils.Utils;
+
 public class PDMDemo implements Slide {
 
 	private VideoDisplay<FImage> display;
@@ -45,6 +47,7 @@ public class PDMDemo implements Slide {
 	public Component getComponent(int width, int height) throws IOException {
 		// the main panel
 		final JPanel base = new JPanel();
+		base.setOpaque(false);
 		base.setPreferredSize(new Dimension(width, height));
 		base.setLayout(new GridBagLayout());
 
@@ -57,6 +60,7 @@ public class PDMDemo implements Slide {
 		pdm.setNumComponents(10);
 
 		final JPanel sliderPanel = new JPanel();
+		sliderPanel.setOpaque(false);
 		sliderPanel.setLayout(new GridLayout(0, 1));
 		final JSlider[] sliders = new JSlider[10];
 		for (int i = 0; i < sliders.length; i++) {
@@ -100,6 +104,7 @@ public class PDMDemo implements Slide {
 		}, base);
 
 		final JPanel p = new JPanel();
+		p.setOpaque(false);
 		final JCheckBox cb = new JCheckBox();
 		cb.addChangeListener(new ChangeListener() {
 			@Override
@@ -140,6 +145,6 @@ public class PDMDemo implements Slide {
 	}
 
 	public static void main(String[] args) throws IOException {
-		new SlideshowApplication(new PDMDemo(), 1024, 768);
+		new SlideshowApplication(new PDMDemo(), 1024, 768, Utils.BACKGROUND_IMAGE);
 	}
 }

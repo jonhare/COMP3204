@@ -21,6 +21,8 @@ import org.openimaj.image.DisplayUtilities.ImageComponent;
 import org.openimaj.image.FImage;
 import org.openimaj.image.ImageUtilities;
 
+import uk.ac.soton.ecs.comp3005.utils.Utils;
+
 /**
  * Simple global thresholding
  * 
@@ -63,8 +65,10 @@ public class AdaptiveThresholdDemo implements Slide {
 		base.add(ic);
 
 		final JPanel container = new JPanel();
+		container.setOpaque(false);
 
 		final JTextField valueField = new JTextField(4);
+		valueField.setOpaque(false);
 		valueField.setHorizontalAlignment(JTextField.RIGHT);
 		valueField.setFont(FONT);
 		valueField.setEditable(false);
@@ -122,6 +126,6 @@ public class AdaptiveThresholdDemo implements Slide {
 	}
 
 	public static void main(String[] args) throws IOException {
-		new SlideshowApplication(new AdaptiveThresholdDemo(), 1024, 768);
+		new SlideshowApplication(new AdaptiveThresholdDemo(), 1024, 768, Utils.BACKGROUND_IMAGE);
 	}
 }

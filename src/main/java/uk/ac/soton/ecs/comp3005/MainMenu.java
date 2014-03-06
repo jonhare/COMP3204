@@ -68,17 +68,17 @@ public class MainMenu extends JPanel {
 	private Component createLecturePanel(LectureObject l) {
 		final JPanel p = new JPanel();
 
-		final DefaultListModel<RunnableObject> model = new DefaultListModel<RunnableObject>();
+		final DefaultListModel model = new DefaultListModel();
 		model.addElement(l);
 		for (final DemoObject i : l.demos)
 			model.addElement(i);
 
-		final JList<RunnableObject> list = new JList<RunnableObject>(model);
+		final JList list = new JList(model);
 		list.setCellRenderer(new DefaultListCellRenderer() {
 			private static final long serialVersionUID = 1L;
 
 			@Override
-			public Component getListCellRendererComponent(JList<?> list, Object value, int index, boolean isSelected,
+			public Component getListCellRendererComponent(JList list, Object value, int index, boolean isSelected,
 					boolean cellHasFocus)
 			{
 				final JLabel label = (JLabel) super.getListCellRendererComponent(list,

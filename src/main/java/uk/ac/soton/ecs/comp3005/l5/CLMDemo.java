@@ -25,6 +25,7 @@ import org.openimaj.video.VideoDisplay;
 import org.openimaj.video.VideoDisplayListener;
 
 import uk.ac.soton.ecs.comp3005.utils.Simple3D;
+import uk.ac.soton.ecs.comp3005.utils.Utils;
 import uk.ac.soton.ecs.comp3005.utils.VideoCaptureComponent;
 import Jama.Matrix;
 
@@ -143,6 +144,6 @@ public class CLMDemo implements Slide, VideoDisplayListener<MBFImage> {
 	}
 
 	public static void main(String[] args) throws IOException {
-		new SlideshowApplication(new CLMDemo(), 1024, 768);
+		new SlideshowApplication(new CLMDemo(), 1024, 768, Utils.BACKGROUND_IMAGE);
 	}
 }

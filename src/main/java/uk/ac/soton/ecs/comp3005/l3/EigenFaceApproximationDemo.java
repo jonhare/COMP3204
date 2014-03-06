@@ -28,6 +28,8 @@ import org.openimaj.image.ImageUtilities;
 import org.openimaj.image.model.EigenImages;
 import org.openimaj.io.IOUtils;
 
+import uk.ac.soton.ecs.comp3005.utils.Utils;
+
 /**
  * Demonstrate the effect of low-dimensional approximation.
  * 
@@ -69,6 +71,7 @@ public class EigenFaceApproximationDemo implements Slide {
 		outer.add(base);
 
 		final JPanel controls = new JPanel();
+		controls.setOpaque(false);
 		final JLabel label = new JLabel("Number of dimensions:");
 		label.setFont(FONT);
 		controls.add(label);
@@ -174,6 +177,6 @@ public class EigenFaceApproximationDemo implements Slide {
 	}
 
 	public static void main(String[] args) throws Exception {
-		new SlideshowApplication(new EigenFaceApproximationDemo(), 1024, 768);
+		new SlideshowApplication(new EigenFaceApproximationDemo(), 1024, 768, Utils.BACKGROUND_IMAGE);
 	}
 }
