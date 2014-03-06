@@ -8,6 +8,7 @@ import org.openimaj.image.DisplayUtilities;
 import org.openimaj.image.MBFImage;
 import org.openimaj.image.colour.ColourSpace;
 import org.openimaj.image.colour.RGBColour;
+import org.openimaj.image.typography.hershey.HersheyFont;
 import org.openimaj.math.geometry.point.Point2dImpl;
 
 import Jama.Matrix;
@@ -20,7 +21,7 @@ import Jama.Matrix;
  */
 public class Simple3D {
 	public static interface Primative {
-		public void renderOrtho(Matrix transform, MBFImage image);
+		public void renderOrtho(Matrix transform, int tx, int ty, MBFImage image);
 	}
 
 	public static class Point3D implements Primative {
@@ -38,8 +39,38 @@ public class Simple3D {
 		}
 
 		@Override
-		public void renderOrtho(Matrix transform, MBFImage image) {
-			image.drawPoint(projectOrtho(transform.times(pt)), colour, size);
+		public void renderOrtho(Matrix transform, int tx, int ty, MBFImage image) {
+			final Point2dImpl pt1 = projectOrtho(transform.times(pt));
+			pt1.x += tx;
+			pt1.y += ty;
+			pt1.y = image.getHeight() - pt1.y;
+			image.drawPoint(pt1, colour, size);
+		}
+	}
+
+	public static class Text3D implements Primative {
+		Matrix pt;
+		private Float[] colour;
+		private int size;
+		private String text;
+
+		public Text3D(double x, double y, double z, Float[] colour, int size, String text) {
+			pt = new Matrix(3, 1);
+			pt.set(0, 0, x);
+			pt.set(1, 0, y);
+			pt.set(2, 0, z);
+			this.colour = colour;
+			this.size = size;
+			this.text = text;
+		}
+
+		@Override
+		public void renderOrtho(Matrix transform, int tx, int ty, MBFImage image) {
+			final Point2dImpl pt1 = projectOrtho(transform.times(pt));
+			pt1.x += tx;
+			pt1.y += ty;
+			pt1.y = image.getHeight() - pt1.y;
+			image.drawText(text, pt1, HersheyFont.ROMAN_DUPLEX, size, colour);
 		}
 	}
 
@@ -63,9 +94,14 @@ public class Simple3D {
 		}
 
 		@Override
-		public void renderOrtho(Matrix transform, MBFImage image) {
+		public void renderOrtho(Matrix transform, int tx, int ty, MBFImage image) {
 			final Point2dImpl p1 = projectOrtho(transform.times(pt1));
+			p1.translate(tx, ty);
+			p1.y = image.getHeight() - p1.y;
+
 			final Point2dImpl p2 = projectOrtho(transform.times(pt2));
+			p2.translate(tx, ty);
+			p2.y = image.getHeight() - p2.y;
 
 			image.drawLine(p1, p2, thickness, colour);
 		}
@@ -92,7 +128,7 @@ public class Simple3D {
 
 		public void renderOrtho(Matrix transform, MBFImage image) {
 			for (final Primative p : primatives)
-				p.renderOrtho(transform, image);
+				p.renderOrtho(transform, image.getWidth() / 2, image.getHeight() / 2, image);
 		}
 	}
 
