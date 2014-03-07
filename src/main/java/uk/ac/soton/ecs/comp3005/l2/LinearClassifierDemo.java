@@ -148,12 +148,16 @@ public class LinearClassifierDemo implements Slide, ActionListener, VideoDisplay
 	private double[] lastMean;
 	private JTextField guess;
 
-	private volatile List<double[]> points = new ArrayList<double[]>();
-	private volatile List<Integer> classes = new ArrayList<Integer>();
-	private volatile SimplePerceptron classifier = new SimplePerceptron();
+	private volatile List<double[]> points;
+	private volatile List<Integer> classes;
+	private volatile SimplePerceptron classifier;
 
 	@Override
 	public Component getComponent(int width, int height) throws IOException {
+		points = new ArrayList<double[]>();
+		classes = new ArrayList<Integer>();
+		classifier = new SimplePerceptron();
+
 		vc = new VideoCaptureComponent(VIDEO_WIDTH, VIDEO_HEIGHT);
 		vc.getDisplay().addVideoListener(this);
 
@@ -180,7 +184,7 @@ public class LinearClassifierDemo implements Slide, ActionListener, VideoDisplay
 		rightPanel.setOpaque(false);
 		image = new MBFImage(GRAPH_WIDTH, GRAPH_HEIGHT, ColourSpace.RGB);
 		image.fill(RGBColour.WHITE);
-		imageComp = new DisplayUtilities.ImageComponent(true);
+		imageComp = new DisplayUtilities.ImageComponent(true, false);
 		imageComp.setShowPixelColours(false);
 		imageComp.setShowXYPosition(false);
 		imageComp.setAllowZoom(false);

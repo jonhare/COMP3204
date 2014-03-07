@@ -41,7 +41,7 @@ public class MeanFaceDemo implements Slide {
 		outer.setPreferredSize(new Dimension(width, height));
 		outer.setLayout(new GridBagLayout());
 
-		final ImageComponent ic = new ImageComponent(true);
+		final ImageComponent ic = new ImageComponent(true, false);
 		ic.setAllowPanning(false);
 		ic.setAllowZoom(false);
 		ic.setShowPixelColours(false);

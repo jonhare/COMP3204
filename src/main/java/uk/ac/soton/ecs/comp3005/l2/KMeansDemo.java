@@ -74,7 +74,7 @@ public class KMeansDemo extends MouseAdapter implements Slide, ActionListener {
 		renderer = image.createRenderer(RenderHints.ANTI_ALIASED);
 		resetImage();
 
-		ic = new DisplayUtilities.ImageComponent();
+		ic = new DisplayUtilities.ImageComponent(true, false);
 		ic.setShowPixelColours(false);
 		ic.setShowXYPosition(false);
 		ic.setAllowPanning(false);
@@ -257,7 +257,7 @@ public class KMeansDemo extends MouseAdapter implements Slide, ActionListener {
 
 	@Override
 	public void close() {
-		isRunning = true;
+		isRunning = false;
 	}
 
 	@Override

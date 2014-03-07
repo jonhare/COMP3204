@@ -43,7 +43,7 @@ public class FaceDatasetDemo implements Slide {
 
 		for (int i = 0; i < 60; i++) {
 			final FImage img = dataset.getRandomInstance();
-			final ImageComponent ic = new ImageComponent(true);
+			final ImageComponent ic = new ImageComponent(true, false);
 			ic.setAllowPanning(false);
 			ic.setAllowZoom(false);
 			ic.setShowPixelColours(false);

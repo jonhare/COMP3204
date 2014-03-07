@@ -68,7 +68,7 @@ public class CovarianceDemo implements Slide {
 		base.setLayout(new GridBagLayout());
 
 		image = new MBFImage(400, 400, ColourSpace.RGB);
-		imageComp = new DisplayUtilities.ImageComponent(true);
+		imageComp = new DisplayUtilities.ImageComponent(true, false);
 		imageComp.setShowPixelColours(false);
 		imageComp.setShowXYPosition(false);
 		imageComp.setAllowZoom(false);

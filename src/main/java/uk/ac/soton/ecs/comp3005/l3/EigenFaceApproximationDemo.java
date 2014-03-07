@@ -160,7 +160,7 @@ public class EigenFaceApproximationDemo implements Slide {
 
 	private void createImageComponents(JPanel base) {
 		for (int i = 0; i < components.length; i++) {
-			final ImageComponent ic = new ImageComponent(true);
+			final ImageComponent ic = new ImageComponent(true, false);
 			ic.setAllowPanning(false);
 			ic.setAllowZoom(false);
 			ic.setShowPixelColours(false);

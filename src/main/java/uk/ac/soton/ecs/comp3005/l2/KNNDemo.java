@@ -81,12 +81,16 @@ public class KNNDemo implements Slide, ActionListener, VideoDisplayListener<MBFI
 	private double[] lastMean;
 	private JTextField guess;
 
-	private volatile List<double[]> points = new ArrayList<double[]>();
-	private volatile List<Integer> classes = new ArrayList<Integer>();
-	private volatile int k = 1;
+	private volatile List<double[]> points;
+	private volatile List<Integer> classes;
+	private volatile int k;
 
 	@Override
 	public Component getComponent(int width, int height) throws IOException {
+		points = new ArrayList<double[]>();
+		classes = new ArrayList<Integer>();
+		k = 1;
+
 		vc = new VideoCaptureComponent(VIDEO_WIDTH, VIDEO_HEIGHT);
 		vc.getDisplay().addVideoListener(this);
 
@@ -112,7 +116,7 @@ public class KNNDemo implements Slide, ActionListener, VideoDisplayListener<MBFI
 		rightPanel.setOpaque(false);
 		image = new MBFImage(GRAPH_WIDTH, GRAPH_HEIGHT, ColourSpace.RGB);
 		image.fill(RGBColour.WHITE);
-		imageComp = new DisplayUtilities.ImageComponent(true);
+		imageComp = new DisplayUtilities.ImageComponent(true, false);
 		imageComp.setShowPixelColours(false);
 		imageComp.setShowXYPosition(false);
 		imageComp.setAllowZoom(false);

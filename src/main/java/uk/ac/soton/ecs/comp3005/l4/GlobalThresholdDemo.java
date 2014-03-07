@@ -126,6 +126,7 @@ public class GlobalThresholdDemo implements Slide {
 	}
 
 	public static void main(String[] args) throws IOException {
-		new SlideshowApplication(new GlobalThresholdDemo(), 1024, 768, Utils.BACKGROUND_IMAGE);
+		new SlideshowApplication(new GlobalThresholdDemo(), 1024, 768,
+				Utils.BACKGROUND_IMAGE);
 	}
 }

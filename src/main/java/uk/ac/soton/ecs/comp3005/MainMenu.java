@@ -1,23 +1,33 @@
 package uk.ac.soton.ecs.comp3005;
 
 import java.awt.Component;
+import java.awt.Dimension;
+import java.awt.Font;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
 import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
 import javax.swing.DefaultListCellRenderer;
 import javax.swing.DefaultListModel;
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JList;
 import javax.swing.JPanel;
 import javax.swing.JTabbedPane;
+import javax.swing.event.ListSelectionEvent;
+import javax.swing.event.ListSelectionListener;
 
 import org.openimaj.util.processes.JavaProcess;
 import org.openimaj.util.processes.ProcessException;
 import org.reflections.Reflections;
 
+import uk.ac.soton.ecs.comp3005.utils.Utils;
 import uk.ac.soton.ecs.comp3005.utils.annotations.Demonstration;
 import uk.ac.soton.ecs.comp3005.utils.annotations.JvmArgs;
 import uk.ac.soton.ecs.comp3005.utils.annotations.Lecture;
@@ -26,12 +36,19 @@ public class MainMenu extends JPanel {
 
 	private abstract static class RunnableObject {
 		Class<?> mainClass;
+		JvmArgs args;
 
-		abstract String getTitle();
+		public abstract String getTitle();
 
 		@Override
 		public String toString() {
 			return getTitle();
+		}
+
+		public abstract String getAuthor();
+
+		public JvmArgs getJvmArgs() {
+			return args;
 		}
 	}
 
@@ -39,8 +56,13 @@ public class MainMenu extends JPanel {
 		Demonstration demo;
 
 		@Override
-		String getTitle() {
+		public String getTitle() {
 			return demo.title();
+		}
+
+		@Override
+		public String getAuthor() {
+			return demo.author();
 		}
 	}
 
@@ -49,8 +71,13 @@ public class MainMenu extends JPanel {
 		List<DemoObject> demos = new ArrayList<DemoObject>();
 
 		@Override
-		String getTitle() {
+		public String getTitle() {
 			return lecture.title();
+		}
+
+		@Override
+		public String getAuthor() {
+			return lecture.author();
 		}
 	}
 
@@ -60,13 +87,57 @@ public class MainMenu extends JPanel {
 		this.setLayout(new GridLayout(1, 1));
 		final JTabbedPane tabs = new JTabbedPane();
 		for (final LectureObject l : lectures) {
-			tabs.addTab(l.lecture.title(), createLecturePanel(l));
+			final Component lp = createLecturePanel(l);
+			tabs.addTab(l.lecture.title(), lp);
 		}
 		add(tabs);
 	}
 
 	private Component createLecturePanel(LectureObject l) {
 		final JPanel p = new JPanel();
+		p.setLayout(new GridLayout(1, 2));
+
+		final JPanel controls = new JPanel(new GridBagLayout());
+		final GridBagConstraints gbc = new GridBagConstraints();
+
+		final JLabel titleField = new JLabel();
+		gbc.gridx = 0;
+		gbc.gridy = 0;
+		controls.add(titleField, gbc);
+
+		final JPanel spacer = new JPanel();
+		spacer.setPreferredSize(new Dimension(100, 10));
+		gbc.gridx = 0;
+		gbc.gridy = 1;
+		controls.add(spacer, gbc);
+
+		final JLabel authorField = new JLabel();
+		gbc.gridx = 0;
+		gbc.gridy = 2;
+		controls.add(authorField, gbc);
+
+		final JPanel spacer2 = new JPanel();
+		spacer2.setPreferredSize(new Dimension(100, 50));
+		gbc.gridx = 0;
+		gbc.gridy = 3;
+		controls.add(spacer2, gbc);
+
+		final JPanel details = new JPanel(new GridBagLayout());
+		gbc.gridx = 0;
+		gbc.gridy = 4;
+		controls.add(details, gbc);
+
+		final JPanel spacer3 = new JPanel();
+		spacer3.setPreferredSize(new Dimension(100, 100));
+		gbc.gridx = 0;
+		gbc.gridy = 5;
+		controls.add(spacer3, gbc);
+
+		final JButton runBtn = new JButton("Load");
+		runBtn.setFont(Font.decode(runBtn.getFont().getFontName() + "-48"));
+		gbc.gridx = 0;
+		gbc.gridy = 6;
+		controls.add(runBtn, gbc);
 
 		final DefaultListModel model = new DefaultListModel();
 		model.addElement(l);
@@ -87,8 +158,53 @@ public class MainMenu extends JPanel {
 				return label;
 			}
 		});
+		list.addListSelectionListener(new ListSelectionListener() {
+
+			@Override
+			public void valueChanged(ListSelectionEvent e) {
+				if (!e.getValueIsAdjusting()) {
+					details.removeAll();
+
+					final RunnableObject ro = ((RunnableObject) model.get(list.getSelectedIndex()));
+
+					authorField.setText(ro.getAuthor());
+					titleField.setText(ro.getTitle());
+
+					if (ro instanceof LectureObject) {
+						final LectureObject leo = (LectureObject) ro;
+
+						final GridBagConstraints gbc = new GridBagConstraints();
+						gbc.gridy = 0;
+						details.add(Utils.linkify("• View the lecture slides PDF",
+								leo.lecture.slidesURL(), "View the lecture slides PDF"), gbc);
+
+						gbc.gridy = 1;
+						details.add(Utils.linkify("• Open the handouts PDF",
+								leo.lecture.handoutsURL(), "Open the handouts PDF"), gbc);
+						spacer2.setPreferredSize(new Dimension(100, 100 - details.getPreferredSize().height));
+					} else {
+						spacer2.setPreferredSize(new Dimension(100, 100));
+					}
+				}
+			}
+		});
+
+		runBtn.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				final RunnableObject ro = (RunnableObject) list.getSelectedValue();
+				try {
+					MainMenu.this.runDemoOrPresentationNewJVM(ro.mainClass, ro.getJvmArgs());
+				} catch (final Exception e1) {
+					e1.printStackTrace();
+				}
+			}
+		});
+
+		list.setSelectedIndex(0);
 
 		p.add(list);
+		p.add(controls);
 
 		return p;
 	}
@@ -102,12 +218,14 @@ public class MainMenu extends JPanel {
 			final LectureObject lo = new LectureObject();
 			lo.lecture = c.getAnnotation(Lecture.class);
 			lo.mainClass = c;
+			lo.args = c.getAnnotation(JvmArgs.class);
 
 			for (final Class<?> d : demos) {
 				if (d.getPackage().getName().equals(lo.mainClass.getPackage().getName())) {
 					final DemoObject demo = new DemoObject();
 					demo.demo = d.getAnnotation(Demonstration.class);
 					demo.mainClass = d;
+					demo.args = c.getAnnotation(JvmArgs.class);
 					lo.demos.add(demo);
 				}
 			}
