@@ -11,6 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
+import javax.swing.BoxLayout;
 import javax.swing.DefaultListCellRenderer;
 import javax.swing.DefaultListModel;
 import javax.swing.JButton;
@@ -20,6 +21,7 @@ import javax.swing.JList;
 import javax.swing.JPanel;
 import javax.swing.JRootPane;
 import javax.swing.JTabbedPane;
+import javax.swing.SwingConstants;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 import javax.swing.event.ListSelectionEvent;
@@ -98,7 +100,7 @@ public class MainMenu extends JPanel {
 	public MainMenu() {
 		final List<LectureObject> lectures = getLectures();
 
-		this.setLayout(new GridLayout(1, 1));
+		this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
 		tabs = new JTabbedPane();
 		final List<JButton> runBtns = new ArrayList<JButton>();
 		for (final LectureObject l : lectures) {
@@ -118,6 +120,21 @@ public class MainMenu extends JPanel {
 		});
 
 		add(tabs);
+
+		final JPanel info = new JPanel(new GridLayout(0, 1));
+		info.setPreferredSize(new Dimension(800, 30));
+		info.setSize(info.getPreferredSize());
+		info.setMaximumSize(info.getPreferredSize());
+
+		final JLabel link = Utils.linkify("http://jonhare.github.io/COMP3005", "http://jonhare.github.io/COMP3005",
+				"Go to the course web site");
+		link.setHorizontalAlignment(SwingConstants.CENTER);
+		info.add(link);
+
+		// info.add(Utils.linkify("http://jonhare.github.io/COMP3005",
+		// "http://jonhare.github.io/COMP3005",
+		// "Go to the course web site"));
+		add(info);
 	}
 
 	/**
