@@ -7,6 +7,7 @@ import java.awt.event.MouseListener;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.net.URI;
+import java.net.URL;
 
 import javax.imageio.ImageIO;
 import javax.swing.JDialog;
@@ -15,10 +16,11 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 
 public class Utils {
+	public static URL BACKGROUND_IMAGE_URL = Utils.class.getResource("/uk/ac/soton/ecs/comp3005/background.png");
 	public static BufferedImage BACKGROUND_IMAGE = null;
 	static {
 		try {
-			BACKGROUND_IMAGE = ImageIO.read(Utils.class.getResource("/uk/ac/soton/ecs/comp3005/background.png"));
+			BACKGROUND_IMAGE = ImageIO.read(BACKGROUND_IMAGE_URL);
 		} catch (final IOException e) {
 		}
 	}

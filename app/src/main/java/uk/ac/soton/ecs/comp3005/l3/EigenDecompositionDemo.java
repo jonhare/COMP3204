@@ -22,6 +22,7 @@ import org.openimaj.math.geometry.point.Point2dImpl;
 import org.openimaj.math.geometry.shape.Ellipse;
 import org.openimaj.math.geometry.shape.EllipseUtilities;
 import org.openimaj.math.geometry.transforms.TransformUtilities;
+import org.openimaj.math.matrix.MatrixUtils;
 import org.openimaj.math.statistics.distribution.CachingMultivariateGaussian;
 
 import uk.ac.soton.ecs.comp3005.utils.Utils;
@@ -103,7 +104,7 @@ public class EigenDecompositionDemo extends CovarianceDemo {
 		final JPanel p = new JPanel();
 		p.setOpaque(false);
 		p.setLayout(new GridBagLayout());
-		final JLabel vecLabel = new JLabel("v = ");
+		final JLabel vecLabel = new JLabel("Q = ");
 		vecLabel.setFont(Font.decode("Times-58"));
 		p.add(vecLabel);
 		p.add(matrix1);
@@ -111,7 +112,7 @@ public class EigenDecompositionDemo extends CovarianceDemo {
 		sep.setOpaque(false);
 		sep.setPreferredSize(new Dimension(100, 10));
 		p.add(sep);
-		final JLabel valLabel = new JLabel("λ = ");
+		final JLabel valLabel = new JLabel("𝚲 = ");
 		valLabel.setFont(Font.decode("Times-58"));
 		p.add(valLabel);
 		p.add(matrix2);
@@ -138,16 +139,23 @@ public class EigenDecompositionDemo extends CovarianceDemo {
 
 		if (!Double.isNaN(e.getMajor()) && !Double.isNaN(e.getMinor()) && covariance.rank() == 2) {
 			final EigenvalueDecomposition decomp = this.covariance.eig();
+			final Matrix evecm = decomp.getV().copy();
+			final Matrix evalm = decomp.getD().copy();
 
-			evec00.setText(String.format("%2.2f", decomp.getV().get(0, 0)));
-			evec01.setText(String.format("%2.2f", decomp.getV().get(0, 1)));
-			evec10.setText(String.format("%2.2f", decomp.getV().get(1, 0)));
-			evec11.setText(String.format("%2.2f", decomp.getV().get(1, 1)));
+			// flip so biggest ev is first
+			MatrixUtils.reverseColumnsInplace(evecm);
+			MatrixUtils.reverseColumnsInplace(evalm);
+			MatrixUtils.reverseRowsInplace(evalm);
 
-			eval00.setText(String.format("%2.2f", decomp.getD().get(0, 0)));
-			eval01.setText(String.format("%2.2f", decomp.getD().get(0, 1)));
-			eval10.setText(String.format("%2.2f", decomp.getD().get(1, 0)));
-			eval11.setText(String.format("%2.2f", decomp.getD().get(1, 1)));
+			evec00.setText(String.format("%2.2f", evecm.get(0, 0)));
+			evec01.setText(String.format("%2.2f", evecm.get(0, 1)));
+			evec10.setText(String.format("%2.2f", evecm.get(1, 0)));
+			evec11.setText(String.format("%2.2f", evecm.get(1, 1)));
+
+			eval00.setText(String.format("%2.2f", evalm.get(0, 0)));
+			eval01.setText(String.format("%2.2f", evalm.get(0, 1)));
+			eval10.setText(String.format("%2.2f", evalm.get(1, 0)));
+			eval11.setText(String.format("%2.2f", evalm.get(1, 1)));
 
 			final Matrix mean = new Matrix(new double[][] { { image.getWidth() / 2, image.getHeight() / 2 } });
 			final CachingMultivariateGaussian gauss = new CachingMultivariateGaussian(mean, covariance);

@@ -2,7 +2,6 @@ package uk.ac.soton.ecs.comp3005;
 
 import java.awt.Component;
 import java.awt.Dimension;
-import java.awt.Font;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.GridLayout;
@@ -19,7 +18,10 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JList;
 import javax.swing.JPanel;
+import javax.swing.JRootPane;
 import javax.swing.JTabbedPane;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 
@@ -32,7 +34,14 @@ import uk.ac.soton.ecs.comp3005.utils.annotations.Demonstration;
 import uk.ac.soton.ecs.comp3005.utils.annotations.JvmArgs;
 import uk.ac.soton.ecs.comp3005.utils.annotations.Lecture;
 
+/**
+ * Main menu interface to all the lectures and demos
+ * 
+ * @author Jonathon Hare (jsh2@ecs.soton.ac.uk)
+ * 
+ */
 public class MainMenu extends JPanel {
+	private static final long serialVersionUID = 1L;
 
 	private abstract static class RunnableObject {
 		Class<?> mainClass;
@@ -81,19 +90,43 @@ public class MainMenu extends JPanel {
 		}
 	}
 
+	private JTabbedPane tabs;
+
+	/**
+	 * Construct the UI
+	 */
 	public MainMenu() {
 		final List<LectureObject> lectures = getLectures();
 
 		this.setLayout(new GridLayout(1, 1));
-		final JTabbedPane tabs = new JTabbedPane();
+		tabs = new JTabbedPane();
+		final List<JButton> runBtns = new ArrayList<JButton>();
 		for (final LectureObject l : lectures) {
-			final Component lp = createLecturePanel(l);
+			final Component lp = createLecturePanel(l, runBtns);
 			tabs.addTab(l.lecture.title(), lp);
 		}
+
+		tabs.addChangeListener(new ChangeListener() {
+			@Override
+			public void stateChanged(ChangeEvent e) {
+				final int idx = tabs.getSelectedIndex();
+				final JRootPane root = MainMenu.this.getRootPane();
+
+				if (root != null && idx >= 0)
+					root.setDefaultButton(runBtns.get(idx));
+			}
+		});
+
 		add(tabs);
 	}
 
-	private Component createLecturePanel(LectureObject l) {
+	/**
+	 * Create a tabbed panel for each lecture
+	 * 
+	 * @param l
+	 * @return the panel
+	 */
+	private Component createLecturePanel(LectureObject l, List<JButton> runBtns) {
 		final JPanel p = new JPanel();
 		p.setLayout(new GridLayout(1, 2));
 
@@ -134,10 +167,11 @@ public class MainMenu extends JPanel {
 		controls.add(spacer3, gbc);
 
 		final JButton runBtn = new JButton("Load");
-		runBtn.setFont(Font.decode(runBtn.getFont().getFontName() + "-48"));
+		// runBtn.setFont(Font.decode(runBtn.getFont().getFontName() + "-48"));
 		gbc.gridx = 0;
 		gbc.gridy = 6;
 		controls.add(runBtn, gbc);
+		runBtns.add(runBtn);
 
 		final DefaultListModel model = new DefaultListModel();
 		model.addElement(l);
@@ -178,9 +212,11 @@ public class MainMenu extends JPanel {
 						details.add(Utils.linkify("• View the lecture slides PDF",
 								leo.lecture.slidesURL(), "View the lecture slides PDF"), gbc);
 
-						gbc.gridy = 1;
-						details.add(Utils.linkify("• Open the handouts PDF",
-								leo.lecture.handoutsURL(), "Open the handouts PDF"), gbc);
+						if (!leo.lecture.handoutsURL().equals("")) {
+							gbc.gridy = 1;
+							details.add(Utils.linkify("• Open the handouts PDF",
+									leo.lecture.handoutsURL(), "Open the handouts PDF"), gbc);
+						}
 						spacer2.setPreferredSize(new Dimension(100, 100 - details.getPreferredSize().height));
 					} else {
 						spacer2.setPreferredSize(new Dimension(100, 100));
@@ -209,6 +245,11 @@ public class MainMenu extends JPanel {
 		return p;
 	}
 
+	/**
+	 * Find all the lectures on the classpath
+	 * 
+	 * @return the lectures
+	 */
 	private List<LectureObject> getLectures() {
 		final Set<Class<?>> lectures = findLectures();
 		final Set<Class<?>> demos = findDemonstrations();
@@ -277,11 +318,19 @@ public class MainMenu extends JPanel {
 		}.start();
 	}
 
+	/**
+	 * Run the menu app
+	 * 
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		final JFrame f = new JFrame();
-		f.getContentPane().add(new MainMenu());
+		final MainMenu mm = new MainMenu();
+		f.getContentPane().add(mm);
 		f.setSize(800, 600);
 		f.setLocationRelativeTo(null);
+		mm.tabs.setSelectedIndex(1);
+		mm.tabs.setSelectedIndex(0);
 		f.setVisible(true);
 		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
