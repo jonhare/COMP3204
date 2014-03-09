@@ -144,7 +144,7 @@
           </descriptorRefs>
           <archive>
             <manifest>
-              <mainClass>uk.ac.soton.ecs.comp3005.App</mainClass>
+              <mainClass>uk.ac.soton.ecs.comp3005.MainMenu</mainClass>
             </manifest>
           </archive>
         </configuration>
