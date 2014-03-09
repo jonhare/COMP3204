@@ -6,6 +6,7 @@ import java.awt.GridBagLayout;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 
+import javax.swing.Box;
 import javax.swing.BoxLayout;
 import javax.swing.JCheckBox;
 import javax.swing.JLabel;
@@ -20,6 +21,7 @@ import org.openimaj.content.slideshow.SlideshowApplication;
 import org.openimaj.image.DisplayUtilities.ImageComponent;
 import org.openimaj.image.FImage;
 import org.openimaj.image.ImageUtilities;
+import org.openimaj.image.processing.threshold.AdaptiveLocalThresholdMean;
 
 import uk.ac.soton.ecs.comp3005.utils.Utils;
 
@@ -64,36 +66,92 @@ public class AdaptiveThresholdDemo implements Slide {
 		ic.setImage(bimg);
 		base.add(ic);
 
-		final JPanel container = new JPanel();
+		final Box container = new Box(BoxLayout.Y_AXIS);
 		container.setOpaque(false);
 
-		final JTextField valueField = new JTextField(4);
-		valueField.setOpaque(false);
-		valueField.setHorizontalAlignment(JTextField.RIGHT);
-		valueField.setFont(FONT);
-		valueField.setEditable(false);
-		valueField.setBorder(null);
-		valueField.setText("0.50");
-
+		// threshold
+		final JPanel threshPanel = new JPanel();
+		threshPanel.setOpaque(false);
 		final JLabel label = new JLabel("Threshold:");
 		label.setFont(FONT);
-		container.add(label);
+		threshPanel.add(label);
 
 		cb = new JCheckBox();
-		container.add(cb);
+		threshPanel.add(cb);
+		container.add(threshPanel);
 
-		final JSlider slider = new JSlider(0, 255, 128);
-		slider.setPreferredSize(new Dimension(slider.getPreferredSize().width + 250, slider.getPreferredSize().height));
+		// size
+		final JPanel sizePanel = new JPanel();
+		sizePanel.setOpaque(false);
 
-		slider.addChangeListener(new ChangeListener() {
+		final JLabel label2 = new JLabel("  Size:");
+		label2.setFont(FONT);
+		sizePanel.add(label2);
+
+		final JSlider sizeSlider = new JSlider(2, 50, 5);
+		sizeSlider.setPreferredSize(new Dimension(sizeSlider.getPreferredSize().width + 250, sizeSlider
+				.getPreferredSize().height));
+		sizePanel.add(sizeSlider);
+
+		final JTextField sizeField = new JTextField(5);
+		sizeField.setOpaque(false);
+		sizeField.setHorizontalAlignment(JTextField.RIGHT);
+		sizeField.setFont(FONT);
+		sizeField.setEditable(false);
+		sizeField.setBorder(null);
+		sizeField.setText("5");
+		sizePanel.add(sizeField);
+		container.add(sizePanel);
+
+		// offset
+		final JPanel offsetPanel = new JPanel();
+		offsetPanel.setOpaque(false);
+
+		final JLabel label3 = new JLabel("Offset:");
+		label3.setFont(FONT);
+		offsetPanel.add(label3);
+
+		final JSlider offsetSlider = new JSlider(0, 100, 0);
+		offsetSlider.setPreferredSize(new Dimension(offsetSlider.getPreferredSize().width + 250, offsetSlider
+				.getPreferredSize().height));
+		offsetPanel.add(offsetSlider);
+
+		final JTextField offsetField = new JTextField(5);
+		offsetField.setOpaque(false);
+		offsetField.setHorizontalAlignment(JTextField.RIGHT);
+		offsetField.setFont(FONT);
+		offsetField.setEditable(false);
+		offsetField.setBorder(null);
+		offsetField.setText("0.000");
+		offsetPanel.add(offsetField);
+
+		container.add(offsetPanel);
+
+		// listeners...
+		sizeSlider.addChangeListener(new ChangeListener() {
 			@Override
 			public void stateChanged(ChangeEvent e) {
-				final float threshold = slider.getValue() / 255f;
-				valueField.setText(String.format("%1.2f", threshold));
+				final int size = sizeSlider.getValue();
+				final float offset = (float) (offsetSlider.getValue() / 1000.0);
+				sizeField.setText(String.format("%d", size));
 
 				if (cb.isSelected()) {
 					ic.setImage(bimg = ImageUtilities
-							.createBufferedImageForDisplay(oimage.clone().threshold(threshold), bimg));
+							.createBufferedImageForDisplay(threshold(oimage, size, offset), bimg));
+				}
+			}
+		});
+
+		offsetSlider.addChangeListener(new ChangeListener() {
+			@Override
+			public void stateChanged(ChangeEvent e) {
+				final int size = sizeSlider.getValue();
+				final float offset = (float) (offsetSlider.getValue() / 1000.0);
+				offsetField.setText(String.format("%1.3f", offset));
+
+				if (cb.isSelected()) {
+					ic.setImage(bimg = ImageUtilities
+							.createBufferedImageForDisplay(threshold(oimage, size, offset), bimg));
 				}
 			}
 		});
@@ -102,22 +160,25 @@ public class AdaptiveThresholdDemo implements Slide {
 			@Override
 			public void stateChanged(ChangeEvent e) {
 				if (cb.isSelected()) {
-					final float threshold = slider.getValue() / 255f;
+					final int size = sizeSlider.getValue();
+					final float offset = (float) (offsetSlider.getValue() / 1000.0);
+
 					ic.setImage(bimg = ImageUtilities
-							.createBufferedImageForDisplay(oimage.clone().threshold(threshold), bimg));
+							.createBufferedImageForDisplay(threshold(oimage, size, offset), bimg));
 				} else {
 					ic.setImage(bimg = ImageUtilities.createBufferedImageForDisplay(oimage, bimg));
 				}
 			}
 		});
 
-		container.add(slider);
-		container.add(valueField);
-
 		base.add(container);
 		outer.add(base);
 
 		return outer;
+	}
+
+	private FImage threshold(FImage oimage, int size, float offset) {
+		return oimage.process(new AdaptiveLocalThresholdMean(size, offset));
 	}
 
 	@Override
