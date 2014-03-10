@@ -11,6 +11,10 @@ import javax.swing.JComboBox;
 import javax.swing.JPanel;
 
 import org.openimaj.image.MBFImage;
+import org.openimaj.image.colour.ColourSpace;
+import org.openimaj.image.colour.RGBColour;
+import org.openimaj.video.ArrayBackedVideo;
+import org.openimaj.video.Video;
 import org.openimaj.video.VideoDisplay;
 import org.openimaj.video.VideoDisplay.Mode;
 import org.openimaj.video.capture.Device;
@@ -31,7 +35,7 @@ public class VideoCaptureComponent extends Box implements ItemListener, Closeabl
 	private Device currentDevice;
 
 	/**
-	 * Cosntruct with the given dimensions
+	 * Construct with the given dimensions
 	 * 
 	 * @param width
 	 *            the width
@@ -47,9 +51,20 @@ public class VideoCaptureComponent extends Box implements ItemListener, Closeabl
 		this.width = width;
 		this.height = height;
 		final List<Device> devices = VideoCapture.getVideoDevices();
-		currentDevice = devices.get(0);
 
-		final VideoCapture vc = new VideoCapture(width, height, currentDevice);
+		Video<MBFImage> vc = null;
+		if (devices == null || devices.size() == 0) {
+			currentDevice = null;
+
+			final MBFImage[] frames = { new MBFImage(width, height, ColourSpace.RGB) };
+			frames[0].fill(RGBColour.RED);
+			vc = new ArrayBackedVideo<MBFImage>(frames);
+		} else {
+			currentDevice = devices.get(0);
+
+			vc = new VideoCapture(width, height, currentDevice);
+		}
+
 		final JPanel videoDisplayPanel = new JPanel();
 		videoDisplayPanel.setOpaque(false);
 		display = VideoDisplay.createVideoDisplay(vc, videoDisplayPanel);
@@ -59,8 +74,14 @@ public class VideoCaptureComponent extends Box implements ItemListener, Closeabl
 		sourcesPanel.setOpaque(false);
 		sources = new JComboBox();
 		sources.setOpaque(false);
-		for (final Device s : devices)
-			sources.addItem(s.getNameStr());
+		if (devices == null || devices.size() == 0) {
+			sources.addItem("No cameras found");
+			sources.setEnabled(false);
+		} else {
+			for (final Device s : devices)
+				sources.addItem(s.getNameStr());
+		}
+
 		sources.addItemListener(this);
 		sourcesPanel.add(sources);
 		add(sourcesPanel);
