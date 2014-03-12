@@ -5,7 +5,6 @@ import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
-import java.awt.TextField;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.util.Random;
@@ -15,6 +14,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JSeparator;
 import javax.swing.JSlider;
+import javax.swing.JTextField;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 
@@ -53,10 +53,10 @@ public class CovarianceDemo implements Slide {
 	protected JSlider xxSlider;
 	protected JSlider yySlider;
 	protected JSlider xySlider;
-	protected TextField xxField;
-	protected TextField xyField;
-	protected TextField yxField;
-	protected TextField yyField;
+	protected JTextField xxField;
+	protected JTextField xyField;
+	protected JTextField yxField;
+	protected JTextField yyField;
 	protected boolean drawData = true;
 	protected boolean drawEllipse = false;
 
@@ -118,20 +118,20 @@ public class CovarianceDemo implements Slide {
 		c.gridheight = 1;
 		c.gridy = 0;
 		c.gridx = 0;
-		matrix.add(xxField = new TextField(5), c);
+		matrix.add(xxField = new JTextField(5), c);
 		xxField.setFont(FONT);
 		xxField.setEditable(false);
 		c.gridx = 1;
-		matrix.add(xyField = new TextField(5), c);
+		matrix.add(xyField = new JTextField(5), c);
 		xyField.setFont(FONT);
 		xyField.setEditable(false);
 		c.gridy = 1;
 		c.gridx = 0;
-		matrix.add(yxField = new TextField(5), c);
+		matrix.add(yxField = new JTextField(5), c);
 		yxField.setFont(FONT);
 		yxField.setEditable(false);
 		c.gridx = 1;
-		matrix.add(yyField = new TextField(5), c);
+		matrix.add(yyField = new JTextField(5), c);
 		yyField.setFont(FONT);
 		yyField.setEditable(false);
 
