@@ -34,6 +34,7 @@ import org.openimaj.math.geometry.transforms.TransformUtilities;
 import org.openimaj.math.statistics.distribution.CachingMultivariateGaussian;
 
 import uk.ac.soton.ecs.comp3005.utils.Utils;
+import uk.ac.soton.ecs.comp3005.utils.annotations.Demonstration;
 import Jama.Matrix;
 
 /**
@@ -41,6 +42,7 @@ import Jama.Matrix;
  * 
  * @author Jonathon Hare (jsh2@ecs.soton.ac.uk)
  */
+@Demonstration(title = "2D Covariance Matrix Demo")
 public class CovarianceDemo implements Slide {
 	protected static final Font FONT = Font.decode("Monaco-48");
 
@@ -189,6 +191,7 @@ public class CovarianceDemo implements Slide {
 		controls.add(new JLabel("Show data points:"), c);
 		c.gridx = 1;
 		final JCheckBox checkBox = new JCheckBox();
+		checkBox.setSelected(drawData);
 		checkBox.addChangeListener(new ChangeListener() {
 			@Override
 			public void stateChanged(ChangeEvent e) {
@@ -196,7 +199,6 @@ public class CovarianceDemo implements Slide {
 				updateImage();
 			}
 		});
-		checkBox.setSelected(drawData);
 		controls.add(checkBox, c);
 
 		c.gridwidth = 1;
@@ -205,6 +207,7 @@ public class CovarianceDemo implements Slide {
 		controls.add(new JLabel("Show ellipse:"), c);
 		c.gridx = 1;
 		final JCheckBox checkBox2 = new JCheckBox();
+		checkBox2.setSelected(drawEllipse);
 		checkBox2.addChangeListener(new ChangeListener() {
 			@Override
 			public void stateChanged(ChangeEvent e) {
@@ -212,7 +215,6 @@ public class CovarianceDemo implements Slide {
 				updateImage();
 			}
 		});
-		checkBox2.setSelected(drawEllipse);
 		controls.add(checkBox2, c);
 		base.add(controls);
 

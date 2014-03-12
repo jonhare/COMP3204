@@ -16,6 +16,7 @@ import org.openimaj.image.FImage;
 import org.openimaj.image.ImageUtilities;
 
 import uk.ac.soton.ecs.comp3005.utils.Utils;
+import uk.ac.soton.ecs.comp3005.utils.annotations.Demonstration;
 
 /**
  * Visualise mean-centered face images
@@ -23,6 +24,7 @@ import uk.ac.soton.ecs.comp3005.utils.Utils;
  * @author Jonathon Hare (jsh2@ecs.soton.ac.uk)
  * 
  */
+@Demonstration(title = "Mean-centred faces demo")
 public class MeanCenteredFacesDemo implements Slide {
 
 	@Override

@@ -32,6 +32,7 @@ import org.openimaj.image.model.EigenImages;
 import org.openimaj.image.processing.resize.ResizeProcessor;
 
 import uk.ac.soton.ecs.comp3005.utils.Utils;
+import uk.ac.soton.ecs.comp3005.utils.annotations.Demonstration;
 
 /**
  * Demonstration of the effect of changing weights on principal components.
@@ -39,6 +40,7 @@ import uk.ac.soton.ecs.comp3005.utils.Utils;
  * @author Jonathon Hare (jsh2@ecs.soton.ac.uk)
  * 
  */
+@Demonstration(title = "Eigenface reconstruction demo")
 public class EigenFaceReconstructionDemo implements Slide {
 	private static final Font FONT = Font.decode("Monaco-28");
 

@@ -29,6 +29,7 @@ import org.openimaj.image.model.EigenImages;
 import org.openimaj.io.IOUtils;
 
 import uk.ac.soton.ecs.comp3005.utils.Utils;
+import uk.ac.soton.ecs.comp3005.utils.annotations.Demonstration;
 
 /**
  * Demonstrate the effect of low-dimensional approximation.
@@ -36,6 +37,7 @@ import uk.ac.soton.ecs.comp3005.utils.Utils;
  * @author Jonathon Hare (jsh2@ecs.soton.ac.uk)
  * 
  */
+@Demonstration(title = "Eigenface approximation demo ")
 public class EigenFaceApproximationDemo implements Slide {
 	private static final int NUM_IMAGES = 30;
 	private static final Font FONT = Font.decode("Monaco-28");

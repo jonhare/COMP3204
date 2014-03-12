@@ -16,6 +16,7 @@ import org.openimaj.image.ImageUtilities;
 import org.openimaj.image.processing.resize.ResizeProcessor;
 
 import uk.ac.soton.ecs.comp3005.utils.Utils;
+import uk.ac.soton.ecs.comp3005.utils.annotations.Demonstration;
 
 /**
  * Visualise the mean face
@@ -23,6 +24,7 @@ import uk.ac.soton.ecs.comp3005.utils.Utils;
  * @author Jonathon Hare (jsh2@ecs.soton.ac.uk)
  * 
  */
+@Demonstration(title = "Mean face demo")
 public class MeanFaceDemo implements Slide {
 
 	@Override

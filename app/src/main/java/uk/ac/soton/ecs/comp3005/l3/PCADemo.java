@@ -31,8 +31,10 @@ import uk.ac.soton.ecs.comp3005.utils.Simple3D;
 import uk.ac.soton.ecs.comp3005.utils.Simple3D.Line3D;
 import uk.ac.soton.ecs.comp3005.utils.Simple3D.Scene;
 import uk.ac.soton.ecs.comp3005.utils.Utils;
+import uk.ac.soton.ecs.comp3005.utils.annotations.Demonstration;
 import Jama.Matrix;
 
+@Demonstration(title = "PCA Dimensionality reduction demo")
 public class PCADemo implements Slide {
 	double[][] createData(int nsamples) {
 		final Random rng = new Random();

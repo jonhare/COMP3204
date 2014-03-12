@@ -17,6 +17,7 @@ import org.openimaj.image.ImageUtilities;
 import org.openimaj.image.model.EigenImages;
 
 import uk.ac.soton.ecs.comp3005.utils.Utils;
+import uk.ac.soton.ecs.comp3005.utils.annotations.Demonstration;
 
 /**
  * Visualise the first principle components of a face image
@@ -24,6 +25,7 @@ import uk.ac.soton.ecs.comp3005.utils.Utils;
  * @author Jonathon Hare (jsh2@ecs.soton.ac.uk)
  * 
  */
+@Demonstration(title = "Face image principal components")
 public class FacePrincipleComponentsDemo implements Slide {
 
 	@Override

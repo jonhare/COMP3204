@@ -26,9 +26,11 @@ import org.openimaj.math.matrix.MatrixUtils;
 import org.openimaj.math.statistics.distribution.CachingMultivariateGaussian;
 
 import uk.ac.soton.ecs.comp3005.utils.Utils;
+import uk.ac.soton.ecs.comp3005.utils.annotations.Demonstration;
 import Jama.EigenvalueDecomposition;
 import Jama.Matrix;
 
+@Demonstration(title = "Eigendecompostion and principal axes demo")
 public class EigenDecompositionDemo extends CovarianceDemo {
 	private JTextField evec11;
 	private JTextField evec10;

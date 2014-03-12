@@ -22,6 +22,8 @@ import Jama.Matrix;
 public class Simple3D {
 	public static interface Primative {
 		public void renderOrtho(Matrix transform, int tx, int ty, MBFImage image);
+
+		public void translate(int x, int y, int z);
 	}
 
 	public static class Point3D implements Primative {
@@ -45,6 +47,13 @@ public class Simple3D {
 			pt1.y += ty;
 			pt1.y = image.getHeight() - pt1.y;
 			image.drawPoint(pt1, colour, size);
+		}
+
+		@Override
+		public void translate(int x, int y, int z) {
+			pt.set(0, 0, pt.get(0, 0) + x);
+			pt.set(1, 0, pt.get(1, 0) + y);
+			pt.set(2, 0, pt.get(2, 0) + z);
 		}
 	}
 
@@ -71,6 +80,13 @@ public class Simple3D {
 			pt1.y += ty;
 			pt1.y = image.getHeight() - pt1.y;
 			image.drawText(text, pt1, HersheyFont.ROMAN_DUPLEX, size, colour);
+		}
+
+		@Override
+		public void translate(int x, int y, int z) {
+			pt.set(0, 0, pt.get(0, 0) + x);
+			pt.set(1, 0, pt.get(1, 0) + y);
+			pt.set(2, 0, pt.get(2, 0) + z);
 		}
 	}
 
@@ -105,6 +121,16 @@ public class Simple3D {
 
 			image.drawLine(p1, p2, thickness, colour);
 		}
+
+		@Override
+		public void translate(int x, int y, int z) {
+			pt1.set(0, 0, pt1.get(0, 0) + x);
+			pt1.set(1, 0, pt1.get(1, 0) + y);
+			pt1.set(2, 0, pt1.get(2, 0) + z);
+			pt2.set(0, 0, pt2.get(0, 0) + x);
+			pt2.set(1, 0, pt2.get(1, 0) + y);
+			pt2.set(2, 0, pt2.get(2, 0) + z);
+		}
 	}
 
 	public static class Scene {
@@ -129,6 +155,12 @@ public class Simple3D {
 		public void renderOrtho(Matrix transform, MBFImage image) {
 			for (final Primative p : primatives)
 				p.renderOrtho(transform, image.getWidth() / 2, image.getHeight() / 2, image);
+		}
+
+		public void translate(int x, int y, int z) {
+			for (final Primative p : primatives) {
+				p.translate(x, y, z);
+			}
 		}
 	}
 
