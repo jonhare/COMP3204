@@ -68,8 +68,8 @@ public class KNNDemo implements Slide, ActionListener, VideoDisplayListener<MBFI
 	private static final int AXIS_OFFSET_Y = 50;
 	private static final int AXIS_EXTENSION = 5;
 
-	private static final String[] CLASSES = { "RED", "BLUE" };
-	private static final Float[][] COLOURS = { RGBColour.RED, RGBColour.BLUE };
+	private static final String[] CLASSES = { "RED", "BLUE", "GREEN", "YELLOW", "ORANGE" };
+	private static final Float[][] COLOURS = { RGBColour.RED, RGBColour.BLUE, RGBColour.GREEN, RGBColour.YELLOW, RGBColour.ORANGE };
 
 	private VideoCaptureComponent vc;
 	private ColourSpace colourSpace = ColourSpace.HS;
