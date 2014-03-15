@@ -22,6 +22,7 @@ import org.openimaj.image.FImage;
 import org.openimaj.image.ImageUtilities;
 
 import uk.ac.soton.ecs.comp3005.utils.Utils;
+import uk.ac.soton.ecs.comp3005.utils.annotations.Demonstration;
 
 /**
  * Simple global thresholding
@@ -29,6 +30,7 @@ import uk.ac.soton.ecs.comp3005.utils.Utils;
  * @author Jonathon Hare (jsh2@ecs.soton.ac.uk)
  * 
  */
+@Demonstration(title = "Global thresholding on a still image")
 public class GlobalThresholdDemo implements Slide {
 	final static Font FONT = Font.decode("Monaco-28");
 	private FImage oimage;

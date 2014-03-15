@@ -28,9 +28,10 @@ import org.openimaj.image.segmentation.KMSpatialColourSegmenter;
 import org.openimaj.image.segmentation.SegmentationUtilities;
 
 import uk.ac.soton.ecs.comp3005.utils.Utils;
+import uk.ac.soton.ecs.comp3005.utils.annotations.Demonstration;
 
+@Demonstration(title = "Image segmentation with K-Means applied to the colours and pixel positions")
 public class KMeansSpatialSegmentationDemo implements Slide {
-
 	private MBFImage oimage;
 	private BufferedImage bimg;
 	private ImageComponent ic;

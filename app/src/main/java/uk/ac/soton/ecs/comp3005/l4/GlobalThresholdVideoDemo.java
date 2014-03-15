@@ -26,6 +26,7 @@ import org.openimaj.video.VideoDisplayListener;
 
 import uk.ac.soton.ecs.comp3005.utils.Utils;
 import uk.ac.soton.ecs.comp3005.utils.VideoCaptureComponent;
+import uk.ac.soton.ecs.comp3005.utils.annotations.Demonstration;
 
 /**
  * Simple global thresholding
@@ -33,6 +34,7 @@ import uk.ac.soton.ecs.comp3005.utils.VideoCaptureComponent;
  * @author Jonathon Hare (jsh2@ecs.soton.ac.uk)
  * 
  */
+@Demonstration(title = "Global thresholding on a video")
 public class GlobalThresholdVideoDemo implements Slide {
 	final static Font FONT = Font.decode("Monaco-28");
 	protected VideoCaptureComponent vc;

@@ -23,7 +23,9 @@ import uk.ac.soton.ecs.comp3005.utils.Simple3D;
 import uk.ac.soton.ecs.comp3005.utils.Simple3D.Scene;
 import uk.ac.soton.ecs.comp3005.utils.Utils;
 import uk.ac.soton.ecs.comp3005.utils.VideoCaptureComponent;
+import uk.ac.soton.ecs.comp3005.utils.annotations.Demonstration;
 
+@Demonstration(title = "RGB Colour Histogram demo")
 public class ImageHistogramDemo implements Slide, VideoDisplayListener<MBFImage> {
 
 	private VideoCaptureComponent vc;
@@ -96,7 +98,8 @@ public class ImageHistogramDemo implements Slide, VideoDisplayListener<MBFImage>
 		for (int i = 0; i < 64; i++) {
 			final int h = (int) (imHeight * hm.histogram.values[i] / max);
 			final int[] coords = hm.histogram.getCoordinates(i);
-			final Float[] colour = new Float[] { coords[0] / 4f + 0.125f, coords[1] / 4f + 0.125f, coords[2] / 4f + 0.125f };
+			final Float[] colour = new Float[] { coords[0] / 4f + 0.125f, coords[1] / 4f + 0.125f,
+					coords[2] / 4f + 0.125f };
 
 			histogramImage.drawShapeFilled(new Rectangle(32 * i, imHeight - h, 32, imHeight), colour);
 

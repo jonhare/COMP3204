@@ -23,9 +23,10 @@ import org.openimaj.image.segmentation.FelzenszwalbHuttenlocherSegmenter;
 import org.openimaj.image.segmentation.SegmentationUtilities;
 
 import uk.ac.soton.ecs.comp3005.utils.Utils;
+import uk.ac.soton.ecs.comp3005.utils.annotations.Demonstration;
 
+@Demonstration(title = "Felzenswalb-Huttenlocher segmentation demo")
 public class FHSegmentationDemo implements Slide {
-
 	private MBFImage oimage;
 	private BufferedImage bimg;
 	private ImageComponent ic;
