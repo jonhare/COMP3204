@@ -12,7 +12,7 @@ import uk.ac.soton.ecs.comp3005.utils.Utils;
 import uk.ac.soton.ecs.comp3005.utils.annotations.JvmArgs;
 import uk.ac.soton.ecs.comp3005.utils.annotations.Lecture;
 
-@Lecture(title = "Types of image feature and segmentation",
+@Lecture(title = "L4: Types of image feature and segmentation",
 		handoutsURL = "http://jonhare.github.io/COMP3005/handouts/pdf/L4-imagefeatures.pdf",
 		slidesURL = "http://jonhare.github.io/COMP3005/lectures/pdf/L4-imagefeatures.pdf")
 @JvmArgs(vmArguments = "-Xmx1G")

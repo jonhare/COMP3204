@@ -14,7 +14,7 @@ import uk.ac.soton.ecs.comp3005.utils.Utils;
 import uk.ac.soton.ecs.comp3005.utils.annotations.JvmArgs;
 import uk.ac.soton.ecs.comp3005.utils.annotations.Lecture;
 
-@Lecture(title = "Machine Learning for Pattern Recognition",
+@Lecture(title = "L2: Machine Learning for Pattern Recognition",
 		handoutsURL = "http://jonhare.github.io/COMP3005/handouts/pdf/L2-machine-learning.pdf",
 		slidesURL = "http://jonhare.github.io/COMP3005/lectures/pdf/L2-machine-learning.pdf")
 @JvmArgs(vmArguments = "-Xmx1G")

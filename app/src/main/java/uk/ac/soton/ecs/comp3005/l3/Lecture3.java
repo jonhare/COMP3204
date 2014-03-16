@@ -12,7 +12,7 @@ import uk.ac.soton.ecs.comp3005.utils.Utils;
 import uk.ac.soton.ecs.comp3005.utils.annotations.JvmArgs;
 import uk.ac.soton.ecs.comp3005.utils.annotations.Lecture;
 
-@Lecture(title = "Covariance and Principal Components",
+@Lecture(title = "L3: Covariance and Principal Components",
 		handoutsURL = "http://jonhare.github.io/COMP3005/handouts/pdf/L3-covariance.pdf",
 		slidesURL = "http://jonhare.github.io/COMP3005/lectures/pdf/L3-covariance.pdf")
 @JvmArgs(vmArguments = "-Xmx1G")

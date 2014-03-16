@@ -8,6 +8,7 @@ import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Set;
 
@@ -77,7 +78,7 @@ public class MainMenu extends JPanel {
 		}
 	}
 
-	private static class LectureObject extends RunnableObject {
+	private static class LectureObject extends RunnableObject implements Comparable<LectureObject> {
 		Lecture lecture;
 		List<DemoObject> demos = new ArrayList<DemoObject>();
 
@@ -89,6 +90,11 @@ public class MainMenu extends JPanel {
 		@Override
 		public String getAuthor() {
 			return lecture.author();
+		}
+
+		@Override
+		public int compareTo(LectureObject o) {
+			return this.lecture.title().compareTo(o.getTitle());
 		}
 	}
 
@@ -290,6 +296,8 @@ public class MainMenu extends JPanel {
 
 			los.add(lo);
 		}
+
+		Collections.sort(los);
 
 		return los;
 	}

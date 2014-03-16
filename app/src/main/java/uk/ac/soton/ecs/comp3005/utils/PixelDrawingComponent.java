@@ -6,6 +6,8 @@ import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.swing.Box;
 import javax.swing.BoxLayout;
@@ -17,6 +19,7 @@ import org.openimaj.image.DisplayUtilities.ImageComponent;
 import org.openimaj.image.FImage;
 import org.openimaj.image.ImageUtilities;
 import org.openimaj.image.pixel.FValuePixel;
+import org.openimaj.util.function.Operation;
 
 /**
  * A reusable swing component for video input
@@ -29,6 +32,7 @@ public class PixelDrawingComponent extends Box {
 	private FImage image;
 	private BufferedImage bimage;
 	private int sf;
+	private List<Operation<FImage>> actionListeners = new ArrayList<Operation<FImage>>();
 
 	public PixelDrawingComponent(int displaywidth, int imwidth) {
 		super(BoxLayout.Y_AXIS);
@@ -60,6 +64,7 @@ public class PixelDrawingComponent extends Box {
 
 				display.setImage(bimage = ImageUtilities.createBufferedImageForDisplay(image, bimage));
 				lastDragged = null;
+				fire();
 			}
 
 			@Override
@@ -80,6 +85,7 @@ public class PixelDrawingComponent extends Box {
 
 				display.setImage(bimage = ImageUtilities.createBufferedImageForDisplay(image, bimage));
 				lastDragged = new FValuePixel(x, y, c);
+				fire();
 			}
 
 			@Override
@@ -101,6 +107,7 @@ public class PixelDrawingComponent extends Box {
 			public void actionPerformed(ActionEvent e) {
 				image.fill(0);
 				display.setImage(bimage = ImageUtilities.createBufferedImageForDisplay(image, bimage));
+				fire();
 			}
 		});
 		ctrlsPanel.add(clrBtn);
@@ -118,6 +125,7 @@ public class PixelDrawingComponent extends Box {
 				}
 				image.flipX();
 				display.setImage(bimage = ImageUtilities.createBufferedImageForDisplay(image, bimage));
+				fire();
 			}
 		});
 		ctrlsPanel.add(rotBtn);
@@ -128,6 +136,7 @@ public class PixelDrawingComponent extends Box {
 			public void actionPerformed(ActionEvent e) {
 				image = image.shiftLeft();
 				display.setImage(bimage = ImageUtilities.createBufferedImageForDisplay(image, bimage));
+				fire();
 			}
 		});
 		ctrlsPanel.add(nlBtn);
@@ -138,11 +147,23 @@ public class PixelDrawingComponent extends Box {
 			public void actionPerformed(ActionEvent e) {
 				image = image.shiftRight();
 				display.setImage(bimage = ImageUtilities.createBufferedImageForDisplay(image, bimage));
+				fire();
 			}
+
 		});
 		ctrlsPanel.add(nrBtn);
 
 		add(ctrlsPanel);
+	}
+
+	private void fire() {
+		for (final Operation<FImage> op : actionListeners)
+			op.perform(image);
+
+	}
+
+	public void addActionListener(Operation<FImage> actionListener) {
+		this.actionListeners.add(actionListener);
 	}
 
 	public static void main(String[] args) {

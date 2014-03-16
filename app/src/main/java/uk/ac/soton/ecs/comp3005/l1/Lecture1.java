@@ -14,7 +14,7 @@ import uk.ac.soton.ecs.comp3005.utils.Utils;
 import uk.ac.soton.ecs.comp3005.utils.annotations.JvmArgs;
 import uk.ac.soton.ecs.comp3005.utils.annotations.Lecture;
 
-@Lecture(title = "Building machines that see",
+@Lecture(title = "L1: Building machines that see",
 		handoutsURL = "http://jonhare.github.io/COMP3005/handouts/pdf/L1-machines-that-see.pdf",
 		slidesURL = "http://jonhare.github.io/COMP3005/lectures/pdf/L1-machines-that-see.pdf")
 @JvmArgs(vmArguments = "-Xmx1G")
