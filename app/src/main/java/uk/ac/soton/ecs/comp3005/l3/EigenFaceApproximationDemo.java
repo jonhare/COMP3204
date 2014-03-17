@@ -28,6 +28,7 @@ import org.openimaj.image.ImageUtilities;
 import org.openimaj.image.model.EigenImages;
 import org.openimaj.io.IOUtils;
 
+import uk.ac.soton.ecs.comp3005.l3.FaceDatasetDemo.FaceDatasetProvider;
 import uk.ac.soton.ecs.comp3005.utils.Utils;
 import uk.ac.soton.ecs.comp3005.utils.annotations.Demonstration;
 
@@ -50,8 +51,7 @@ public class EigenFaceApproximationDemo implements Slide {
 	@Override
 	public Component getComponent(int width, int height) throws IOException {
 		// select random faces
-		final VFSGroupDataset<FImage> dataset = new VFSGroupDataset<FImage>("zip:"
-				+ getClass().getResource("att_faces.zip"), ImageUtilities.FIMAGE_READER);
+		final VFSGroupDataset<FImage> dataset = FaceDatasetProvider.getDataset();
 		for (int i = 0; i < faces.length; i++)
 			faces[i] = dataset.getRandomInstance();
 

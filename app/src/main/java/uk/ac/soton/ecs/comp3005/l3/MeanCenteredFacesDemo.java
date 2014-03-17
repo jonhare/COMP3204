@@ -15,6 +15,7 @@ import org.openimaj.image.DisplayUtilities.ImageComponent;
 import org.openimaj.image.FImage;
 import org.openimaj.image.ImageUtilities;
 
+import uk.ac.soton.ecs.comp3005.l3.FaceDatasetDemo.FaceDatasetProvider;
 import uk.ac.soton.ecs.comp3005.utils.Utils;
 import uk.ac.soton.ecs.comp3005.utils.annotations.Demonstration;
 
@@ -29,8 +30,7 @@ public class MeanCenteredFacesDemo implements Slide {
 
 	@Override
 	public Component getComponent(int width, int height) throws IOException {
-		final VFSGroupDataset<FImage> dataset = new VFSGroupDataset<FImage>("zip:"
-				+ getClass().getResource("att_faces.zip"), ImageUtilities.FIMAGE_READER);
+		final VFSGroupDataset<FImage> dataset = FaceDatasetProvider.getDataset();
 
 		final FImage mean = dataset.getRandomInstance().fill(0f);
 		for (final FImage i : dataset) {

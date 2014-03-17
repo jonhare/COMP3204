@@ -4,10 +4,13 @@ import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.GridBagLayout;
+import java.io.File;
 import java.io.IOException;
 
 import javax.swing.JPanel;
 
+import org.apache.commons.io.FileUtils;
+import org.apache.commons.vfs2.FileSystemException;
 import org.openimaj.content.slideshow.Slide;
 import org.openimaj.content.slideshow.SlideshowApplication;
 import org.openimaj.data.dataset.VFSGroupDataset;
@@ -26,12 +29,26 @@ import uk.ac.soton.ecs.comp3005.utils.annotations.Demonstration;
  */
 @Demonstration(title = "Face dataset demo")
 public class FaceDatasetDemo implements Slide {
+	public static class FaceDatasetProvider {
+		static File tmpFile;
+		static {
+			try {
+				tmpFile = File.createTempFile("faces", ".zip");
+				FileUtils.copyURLToFile(FaceDatasetDemo.class.getResource("att_faces.zip"), tmpFile);
+				tmpFile.deleteOnExit();
+			} catch (final Exception e) {
+				e.printStackTrace();
+			}
+		}
+
+		public static VFSGroupDataset<FImage> getDataset() throws FileSystemException {
+			return new VFSGroupDataset<FImage>("zip:" + tmpFile.toURI(), ImageUtilities.FIMAGE_READER);
+		}
+	}
 
 	@Override
 	public Component getComponent(int width, int height) throws IOException {
-		final VFSGroupDataset<FImage> dataset = new VFSGroupDataset<FImage>("zip:"
-				+ getClass().getResource("att_faces.zip"),
-				ImageUtilities.FIMAGE_READER);
+		final VFSGroupDataset<FImage> dataset = FaceDatasetProvider.getDataset();
 
 		final JPanel outer = new JPanel();
 		outer.setOpaque(false);
