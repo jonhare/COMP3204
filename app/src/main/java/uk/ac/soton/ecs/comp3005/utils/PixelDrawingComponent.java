@@ -34,7 +34,7 @@ public class PixelDrawingComponent extends Box {
 	private int sf;
 	private List<Operation<FImage>> actionListeners = new ArrayList<Operation<FImage>>();
 
-	public PixelDrawingComponent(int displaywidth, int imwidth) {
+	public PixelDrawingComponent(int displaywidth, final int imwidth) {
 		super(BoxLayout.Y_AXIS);
 		this.setOpaque(false);
 
@@ -60,6 +60,10 @@ public class PixelDrawingComponent extends Box {
 			public void mouseClicked(MouseEvent e) {
 				final int x = e.getX() / sf;
 				final int y = e.getY() / sf;
+
+				if (x < 0 || x >= image.width || y < 0 || y >= image.height)
+					return;
+
 				image.pixels[y][x] = image.pixels[y][x] == 0 ? 1 : 0;
 
 				display.setImage(bimage = ImageUtilities.createBufferedImageForDisplay(image, bimage));
@@ -71,6 +75,9 @@ public class PixelDrawingComponent extends Box {
 			public void mouseDragged(MouseEvent e) {
 				final int x = e.getX() / sf;
 				final int y = e.getY() / sf;
+
+				if (x < 0 || x >= image.width || y < 0 || y >= image.height)
+					return;
 
 				if (lastDragged != null && lastDragged.x == x && lastDragged.y == y)
 					return;
@@ -98,8 +105,9 @@ public class PixelDrawingComponent extends Box {
 		display.addMouseMotionListener(adaptor);
 		add(display);
 
-		final JPanel ctrlsPanel = new JPanel();
+		final JPanel ctrlsPanel = new JPanel(new WrapLayout());
 		ctrlsPanel.setOpaque(false);
+		ctrlsPanel.setSize(displaywidth + 100, 1);
 
 		final JButton clrBtn = new JButton("Clear");
 		clrBtn.addActionListener(new ActionListener() {
@@ -153,6 +161,29 @@ public class PixelDrawingComponent extends Box {
 		});
 		ctrlsPanel.add(nrBtn);
 
+		final JButton nuBtn = new JButton("Nudge Up");
+		nuBtn.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				image = image.shiftUp();
+				display.setImage(bimage = ImageUtilities.createBufferedImageForDisplay(image, bimage));
+				fire();
+			}
+		});
+		ctrlsPanel.add(nuBtn);
+
+		final JButton ndBtn = new JButton("Nudge Down");
+		ndBtn.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				image = image.shiftDown();
+				display.setImage(bimage = ImageUtilities.createBufferedImageForDisplay(image, bimage));
+				fire();
+			}
+
+		});
+		ctrlsPanel.add(ndBtn);
+
 		add(ctrlsPanel);
 	}
 
@@ -164,6 +195,10 @@ public class PixelDrawingComponent extends Box {
 
 	public void addActionListener(Operation<FImage> actionListener) {
 		this.actionListeners.add(actionListener);
+	}
+
+	public FImage getImage() {
+		return this.image;
 	}
 
 	public static void main(String[] args) {
