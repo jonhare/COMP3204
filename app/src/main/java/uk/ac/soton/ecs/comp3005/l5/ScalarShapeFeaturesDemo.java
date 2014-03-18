@@ -42,7 +42,7 @@ public class ScalarShapeFeaturesDemo implements Slide, Operation<FImage> {
 		base.setPreferredSize(new Dimension(width, height));
 		base.setLayout(new GridBagLayout());
 
-		pdc = new PixelDrawingComponent(400, 10);
+		pdc = new PixelDrawingComponent(400, 20);
 		pdc.addActionListener(this);
 		base.add(pdc);
 
