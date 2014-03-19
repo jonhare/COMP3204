@@ -26,7 +26,9 @@ import org.openimaj.util.function.Operation;
 
 import uk.ac.soton.ecs.comp3005.utils.PixelDrawingComponent;
 import uk.ac.soton.ecs.comp3005.utils.Utils;
+import uk.ac.soton.ecs.comp3005.utils.annotations.Demonstration;
 
+@Demonstration(title = "Moment features demo")
 public class MomentFeaturesDemo implements Slide, Operation<FImage>, ChangeListener {
 	static Font FONT = Font.decode("Monaco-30");
 

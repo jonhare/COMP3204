@@ -27,8 +27,10 @@ import org.openimaj.video.VideoDisplayListener;
 import uk.ac.soton.ecs.comp3005.utils.Simple3D;
 import uk.ac.soton.ecs.comp3005.utils.Utils;
 import uk.ac.soton.ecs.comp3005.utils.VideoCaptureComponent;
+import uk.ac.soton.ecs.comp3005.utils.annotations.Demonstration;
 import Jama.Matrix;
 
+@Demonstration(title = "Fitting a Constrained Local Model")
 public class CLMDemo implements Slide, VideoDisplayListener<MBFImage> {
 	CLMFaceTracker tracker = new CLMFaceTracker();
 	protected VideoCaptureComponent vc;

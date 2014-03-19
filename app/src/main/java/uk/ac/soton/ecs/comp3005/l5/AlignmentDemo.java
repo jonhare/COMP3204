@@ -25,7 +25,9 @@ import org.openimaj.math.geometry.shape.PointListConnections;
 import org.openimaj.math.geometry.shape.algorithm.GeneralisedProcrustesAnalysis;
 
 import uk.ac.soton.ecs.comp3005.utils.Utils;
+import uk.ac.soton.ecs.comp3005.utils.annotations.Demonstration;
 
+@Demonstration(title = "Shape alignment using Procrustes Analysis")
 public class AlignmentDemo implements Slide {
 	@Override
 	public Component getComponent(int width, int height) throws IOException {

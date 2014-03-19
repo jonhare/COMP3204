@@ -35,7 +35,9 @@ import org.openimaj.video.AnimatedVideo;
 import org.openimaj.video.VideoDisplay;
 
 import uk.ac.soton.ecs.comp3005.utils.Utils;
+import uk.ac.soton.ecs.comp3005.utils.annotations.Demonstration;
 
+@Demonstration(title = "Point Distribution Model demo")
 public class PDMDemo implements Slide {
 
 	private VideoDisplay<FImage> display;
