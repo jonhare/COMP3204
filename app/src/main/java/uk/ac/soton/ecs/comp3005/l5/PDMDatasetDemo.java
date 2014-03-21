@@ -22,7 +22,9 @@ import org.openimaj.math.geometry.shape.PointList;
 import org.openimaj.util.pair.IndependentPair;
 
 import uk.ac.soton.ecs.comp3005.utils.Utils;
+import uk.ac.soton.ecs.comp3005.utils.annotations.Demonstration;
 
+@Demonstration(title = "Dataset for building a shape model")
 public class PDMDatasetDemo implements Slide {
 	@Override
 	public Component getComponent(int width, int height) throws IOException {
