@@ -17,7 +17,9 @@ import org.openimaj.video.tracking.klt.TrackingContext;
 
 import uk.ac.soton.ecs.comp3005.l1.SimpleCameraDemo;
 import uk.ac.soton.ecs.comp3005.utils.Utils;
+import uk.ac.soton.ecs.comp3005.utils.annotations.Demonstration;
 
+@Demonstration(title = "Features that stick")
 public class StickyFeaturesDemo extends SimpleCameraDemo implements VideoDisplayListener<MBFImage> {
 	private KLTTracker tracker;
 	private boolean firstframe = true;
