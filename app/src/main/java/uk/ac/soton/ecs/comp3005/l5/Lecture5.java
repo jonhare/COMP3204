@@ -46,10 +46,15 @@ public class Lecture5 {
 		slides.add(new PDMDatasetDemo());
 		slides.add(new PDMDatasetVideoDemo());
 
-		for (int i = 44; i <= 48; i++)
+		for (int i = 44; i <= 45; i++)
 			slides.add(new PictureSlide(Lecture5.class.getResource(String.format("l5.%03d.jpg", i))));
 
 		slides.add(new AlignmentDemo());
+
+		for (int i = 46; i <= 48; i++)
+			slides.add(new PictureSlide(Lecture5.class.getResource(String.format("l5.%03d.jpg", i))));
+
+		slides.add(new PDMDemo());
 
 		for (int i = 49; i <= 50; i++)
 			slides.add(new PictureSlide(Lecture5.class.getResource(String.format("l5.%03d.jpg", i))));
