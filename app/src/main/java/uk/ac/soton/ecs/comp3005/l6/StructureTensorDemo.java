@@ -167,6 +167,12 @@ public class StructureTensorDemo implements Slide {
 		owindow.addMouseListener(ml);
 		owindow.addMouseMotionListener(ml);
 
+		dxwindow.addMouseListener(ml);
+		dxwindow.addMouseMotionListener(ml);
+
+		dywindow.addMouseListener(ml);
+		dywindow.addMouseMotionListener(ml);
+
 		update();
 
 		return base;
@@ -174,6 +180,7 @@ public class StructureTensorDemo implements Slide {
 
 	private void update() {
 		final Rectangle rect = owindow.getRect();
+		owindow.setRect(rect);
 		dxwindow.setRect(rect);
 		dywindow.setRect(rect);
 
