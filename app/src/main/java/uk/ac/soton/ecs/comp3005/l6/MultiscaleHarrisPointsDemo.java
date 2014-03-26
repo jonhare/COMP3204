@@ -60,7 +60,6 @@ public class MultiscaleHarrisPointsDemo extends SimpleCameraDemo implements Vide
 			final float samplesize = 4 * iscale + 1;
 
 			for (final InterestPointData ipd : harris.getInterestPoints((float) (1e-5))) {
-				System.out.println(ipd.score);
 				ipd.x *= sf;
 				ipd.y *= sf;
 				frame.drawShape(new Circle(ipd, sf * samplesize), RGBColour.RED);

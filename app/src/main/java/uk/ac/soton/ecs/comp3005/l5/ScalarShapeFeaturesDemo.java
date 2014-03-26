@@ -141,8 +141,6 @@ public class ScalarShapeFeaturesDemo implements Slide, Operation<FImage> {
 			min = Math.min(Math.sqrt(dx * dx + dy * dy), min);
 		}
 
-		System.out.println(max + " " + min);
-
 		return min == 0 ? 0 : max / min;
 	}
 
