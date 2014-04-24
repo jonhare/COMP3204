@@ -4,6 +4,8 @@ import java.awt.Dimension;
 import java.awt.Point;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.swing.JFrame;
 
@@ -14,8 +16,10 @@ import org.openimaj.image.MBFImage;
 import org.openimaj.image.colour.RGBColour;
 import org.openimaj.math.geometry.point.Point2dImpl;
 import org.openimaj.math.geometry.shape.Rectangle;
+import org.openimaj.util.function.Operation;
 
 public class SlidingWindowComponent extends ImageComponent implements MouseListener {
+	private List<Operation<Rectangle>> rectMoveListeners = new ArrayList<Operation<Rectangle>>();
 	private static final long serialVersionUID = 1L;
 	private Rectangle rect;
 	private FImage bg;
@@ -40,6 +44,10 @@ public class SlidingWindowComponent extends ImageComponent implements MouseListe
 
 		this.addMouseListener(this);
 		this.addMouseMotionListener(this);
+	}
+
+	public void addRectangleMoveListener(Operation<Rectangle> listener) {
+		this.rectMoveListeners.add(listener);
 	}
 
 	private void updateImage() {
@@ -69,7 +77,13 @@ public class SlidingWindowComponent extends ImageComponent implements MouseListe
 			this.rect.translate(current.x - last.x, current.y - last.y);
 			this.updateImage();
 			last = current;
+			fireRectMoved();
 		}
+	}
+
+	private void fireRectMoved() {
+		for (final Operation<Rectangle> op : rectMoveListeners)
+			op.perform(rect);
 	}
 
 	@Override
@@ -98,12 +112,14 @@ public class SlidingWindowComponent extends ImageComponent implements MouseListe
 
 		this.rect.x = e.getX() - rect.width / 2;
 		this.rect.y = e.getY() - rect.height / 2;
+		fireRectMoved();
 		this.updateImage();
 	}
 
 	public void setRect(Rectangle rect) {
 		this.rect = rect;
 		this.updateImage();
+		fireRectMoved();
 	}
 
 	public Rectangle getRect() {
