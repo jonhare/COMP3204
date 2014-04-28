@@ -41,7 +41,9 @@ import org.openimaj.content.slideshow.SlideshowApplication;
 import org.openimaj.vis.audio.AudioSpectrogram;
 
 import uk.ac.soton.ecs.comp3005.utils.Utils;
+import uk.ac.soton.ecs.comp3005.utils.annotations.Demonstration;
 
+@Demonstration(title = "Spectrogram")
 public class SpectrogramDemo implements Slide, AudioGrabberListener {
 	private AudioSpectrogram spectrogram;
 	private JavaSoundAudioGrabber grabber;

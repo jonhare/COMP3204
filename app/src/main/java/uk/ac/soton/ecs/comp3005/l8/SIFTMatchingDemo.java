@@ -50,8 +50,10 @@ import org.openimaj.video.xuggle.XuggleVideo;
 
 import uk.ac.soton.ecs.comp3005.utils.Utils;
 import uk.ac.soton.ecs.comp3005.utils.VideoCaptureComponent;
+import uk.ac.soton.ecs.comp3005.utils.annotations.Demonstration;
 import Jama.Matrix;
 
+@Demonstration(title = "SIFT Matching")
 public class SIFTMatchingDemo implements ActionListener, VideoDisplayListener<MBFImage>, Slide {
 	enum RenderMode {
 		SQUARE {
