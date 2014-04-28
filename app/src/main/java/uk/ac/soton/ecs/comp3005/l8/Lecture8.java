@@ -21,7 +21,7 @@ public class Lecture8 {
 		final List<Slide> slides = new ArrayList<Slide>();
 
 		for (int i = 1; i <= 24; i++)
-			slides.add(new PictureSlide(Lecture7.class.getResource(String.format("l8.%03d.jpg", i))));
+			slides.add(new PictureSlide(Lecture8.class.getResource(String.format("l8.%03d.jpg", i))));
 
 		// slides.add(new NarrowBaselineTemplatesDemo());
 
