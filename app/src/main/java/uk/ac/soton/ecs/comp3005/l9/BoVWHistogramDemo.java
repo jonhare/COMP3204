@@ -63,7 +63,14 @@ import org.openimaj.video.VideoDisplayListener;
 
 import uk.ac.soton.ecs.comp3005.utils.Utils;
 import uk.ac.soton.ecs.comp3005.utils.VideoCaptureComponent;
+import uk.ac.soton.ecs.comp3005.utils.annotations.Demonstration;
 
+/**
+ * Demo showing SIFT BoVW histograms
+ * 
+ * @author Jonathon Hare (jsh2@ecs.soton.ac.uk)
+ */
+@Demonstration(title = "SIFT BoVW Histograms")
 public class BoVWHistogramDemo implements Slide, VideoDisplayListener<MBFImage> {
 
 	private VideoCaptureComponent capture;
