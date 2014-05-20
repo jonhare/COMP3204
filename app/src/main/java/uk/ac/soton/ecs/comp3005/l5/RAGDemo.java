@@ -13,8 +13,8 @@ import org.openimaj.content.slideshow.SlideshowApplication;
 import org.openimaj.image.FImage;
 import org.openimaj.image.MBFImage;
 import org.openimaj.image.colour.RGBColour;
+import org.openimaj.image.contour.Contour;
 import org.openimaj.image.contour.SuzukiContourProcessor;
-import org.openimaj.image.contour.SuzukiContourProcessor.Border;
 import org.openimaj.image.processing.threshold.OtsuThreshold;
 import org.openimaj.image.typography.FontStyle.HorizontalAlignment;
 import org.openimaj.image.typography.hershey.HersheyFont;
@@ -61,9 +61,9 @@ public class RAGDemo implements Slide, VideoDisplayListener<MBFImage> {
 
 		proc.analyseImage(grey);
 
-		final List<Border> targets = find(proc.root);
+		final List<Contour> targets = find(proc.root);
 
-		for (final Border t : targets) {
+		for (final Contour t : targets) {
 			frame.drawPolygon(t, 4, RGBColour.RED);
 			final Point2d centre = t.calculateCentroid();
 			final int size = (int) Math.sqrt(t.calculateArea());
@@ -81,37 +81,37 @@ public class RAGDemo implements Slide, VideoDisplayListener<MBFImage> {
 	private static final int MAX_CHILDREN = 5;
 	private static final int MIN_CHILDREN = 1;
 
-	public List<Border> find(Border in) {
-		final List<Border> found = new ArrayList<Border>();
+	public List<Contour> find(Contour in) {
+		final List<Contour> found = new ArrayList<Contour>();
 		detect(in, found);
 		return found;
 	}
 
-	private void detect(Border root, List<Border> found) {
+	private void detect(Contour root, List<Contour> found) {
 		if (test(root)) {
 			found.add(root);
 		}
 		else {
-			for (final Border child : root.children) {
+			for (final Contour child : root.children) {
 				detect(child, found);
 			}
 		}
 	}
 
-	public boolean test(Border in) {
+	public boolean test(Contour in) {
 		// has at least one child
 		if (in.children.size() < MIN_CHILDREN || in.children.size() > MAX_CHILDREN) {
 			return false;
 		}
 		int childlessChild = 0;
 		// all grandchildren have no children
-		for (final Border child : in.children) {
+		for (final Contour child : in.children) {
 			if (child.children.size() == 0)
 				childlessChild++;
 
 			if (childlessChild > MAX_CHILDLESS_CHILDREN)
 				return false;
-			for (final Border grandchildren : child.children) {
+			for (final Contour grandchildren : child.children) {
 				if (grandchildren.children.size() != 0)
 					return false;
 			}
