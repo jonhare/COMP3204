@@ -43,6 +43,7 @@ import org.openimaj.math.geometry.shape.Rectangle;
 import org.openimaj.math.geometry.transforms.HomographyModel;
 import org.openimaj.math.geometry.transforms.MatrixTransformProvider;
 import org.openimaj.math.geometry.transforms.TransformUtilities;
+import org.openimaj.math.geometry.transforms.error.TransformError2d;
 import org.openimaj.math.model.fit.RANSAC;
 import org.openimaj.video.VideoDisplay;
 import org.openimaj.video.VideoDisplayListener;
@@ -248,9 +249,9 @@ public class SIFTMatchingDemo implements ActionListener, VideoDisplayListener<MB
 
 				if (this.matcher == null) {
 					// configure the matcher
-					final HomographyModel model = new HomographyModel(10f);
+					final HomographyModel model = new HomographyModel();
 					final RANSAC<Point2d, Point2d> ransac = new RANSAC<Point2d,
-							Point2d>(model, 1500,
+							Point2d>(model, new TransformError2d(), 10, 1500,
 									new RANSAC.PercentageInliersStoppingCondition(0.6), true);
 					this.matcher = new ConsistentLocalFeatureMatcher2d<Keypoint>(
 							new FastBasicKeypointMatcher<Keypoint>(8));

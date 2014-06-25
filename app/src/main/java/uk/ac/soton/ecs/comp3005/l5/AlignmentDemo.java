@@ -49,13 +49,13 @@ public class AlignmentDemo implements Slide {
 		final PointList mean = GeneralisedProcrustesAnalysis.alignPoints(points, 5, 10);
 		for (final PointList pl : points) {
 			pl.translate(width / 3, height / 3);
-			pl.scaleCOG(100);
+			pl.scaleCentroid(100);
 		}
 		final ImageComponent aligned = createShapes(width, height, points, connections, colours);
 
 		final List<PointList> meanList = new ArrayList<PointList>(1);
 		mean.translate(width / 3, height / 3);
-		mean.scaleCOG(100);
+		mean.scaleCentroid(100);
 		meanList.add(mean);
 		final ImageComponent meanComp = createShapes(width, height, meanList, connections,
 				new Float[][] { RGBColour.WHITE });
