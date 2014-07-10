@@ -37,13 +37,14 @@ import org.openimaj.image.feature.local.engine.DoGSIFTEngine;
 import org.openimaj.image.feature.local.keypoints.Keypoint;
 import org.openimaj.image.processing.transform.MBFProjectionProcessor;
 import org.openimaj.image.renderer.MBFImageRenderer;
-import org.openimaj.math.geometry.point.Point2d;
 import org.openimaj.math.geometry.shape.Polygon;
 import org.openimaj.math.geometry.shape.Rectangle;
 import org.openimaj.math.geometry.transforms.HomographyModel;
+import org.openimaj.math.geometry.transforms.HomographyRefinement;
 import org.openimaj.math.geometry.transforms.MatrixTransformProvider;
 import org.openimaj.math.geometry.transforms.TransformUtilities;
-import org.openimaj.math.geometry.transforms.residuals.AlgebraicResidual2d;
+import org.openimaj.math.geometry.transforms.check.TransformMatrixConditionCheck;
+import org.openimaj.math.geometry.transforms.estimation.RobustHomographyEstimator;
 import org.openimaj.math.model.fit.RANSAC;
 import org.openimaj.video.VideoDisplay;
 import org.openimaj.video.VideoDisplayListener;
@@ -248,11 +249,10 @@ public class SIFTMatchingDemo implements ActionListener, VideoDisplayListener<MB
 								RGBColour.BLACK));
 
 				if (this.matcher == null) {
-					// configure the matcher
-					final HomographyModel model = new HomographyModel();
-					final RANSAC<Point2d, Point2d, HomographyModel> ransac = new RANSAC<Point2d,
-							Point2d, HomographyModel>(model, new AlgebraicResidual2d<HomographyModel>(), 10, 1500,
-									new RANSAC.PercentageInliersStoppingCondition(0.6), true);
+					final RobustHomographyEstimator ransac = new RobustHomographyEstimator(0.5, 1500,
+							new RANSAC.PercentageInliersStoppingCondition(0.6), HomographyRefinement.NONE,
+							new TransformMatrixConditionCheck<HomographyModel>(10000));
+
 					this.matcher = new ConsistentLocalFeatureMatcher2d<Keypoint>(
 							new FastBasicKeypointMatcher<Keypoint>(8));
 					this.matcher.setFittingModel(ransac);
@@ -290,15 +290,16 @@ public class SIFTMatchingDemo implements ActionListener, VideoDisplayListener<MB
 			renderer.drawPoints(kpl, RGBColour.MAGENTA, 3);
 
 			MBFImage matches;
-			if (this.matcher.findMatches(kpl)) {
+			if (this.matcher.findMatches(kpl)
+					&& ((MatrixTransformProvider) this.matcher.getModel()).getTransform().cond() < 1e6)
+			{
 				try {
-					// Shape sh =
-					// modelImage.getBounds().transform(((MatrixTransformProvider)
-					// matcher.getModel()).getTransform().inverse());
-					// renderer.drawShape(sh, 3, RGBColour.BLUE);
 					final Matrix boundsToPoly = ((MatrixTransformProvider) this.matcher.getModel()).getTransform()
 							.inverse();
-					this.renderMode.render(renderer, boundsToPoly, this.modelImage.getBounds());
+
+					if (modelImage.getBounds().transform(boundsToPoly).isConvex()) {
+						this.renderMode.render(renderer, boundsToPoly, this.modelImage.getBounds());
+					}
 				} catch (final RuntimeException e) {
 				}
 
