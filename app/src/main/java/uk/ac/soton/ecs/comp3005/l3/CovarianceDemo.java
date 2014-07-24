@@ -85,8 +85,8 @@ public class CovarianceDemo implements Slide {
 		xxSlider = new JSlider();
 		yySlider = new JSlider();
 		xySlider = new JSlider();
-		xySlider.setMinimum(-50);
-		xySlider.setMaximum(50);
+		xySlider.setMinimum(-100);
+		xySlider.setMaximum(100);
 		xxSlider.setValue(100);
 		xySlider.setValue(0);
 		yySlider.setValue(100);
