@@ -24,10 +24,10 @@ This coursework will run following the methodology used in many current scientif
 You will need to use [OpenIMAJ](http://www.openimaj.org) to write software that classifies scenes into one of 15 categories. We want you to implement three different classifiers as described below. You will then need to run each classifier against all the test images and provide a prediction of the class for each image. 
 
 ###Prerequisites 
-You'll need a good understanding of working with OpenIMAJ. [Chapter 12](http://www.openimaj.org/tutorial/classification101.html) of the tutorial will be a great help.
+You'll need a good understanding of working with OpenIMAJ. [Chapter 12 of the tutorial](http://www.openimaj.org/tutorial/classification101.html) will be a great help.
 
 ###Data
-The training data consists of 100 images for each of the 15 scene classes. These are arranged in directories named according to the class name. THe test data consists of 2985 images. All the images are provided in JPEG format. All the images are grey-scale, so you don't need to consider colour.
+The training data consists of 100 images for each of the 15 scene classes. These are arranged in directories named according to the class name. The test data consists of 2985 images. All the images are provided in JPEG format. All the images are grey-scale, so you don't need to consider colour.
 
 ###Objective measure
 The key classification performance indicator for this task is *average precision*; this is literally the proportion of number of correct classifications to the total number of predictions (i.e. 2985).
