@@ -75,7 +75,7 @@ The report must be no longer than 2 sides of A4, and must be submitted electroni
 You need to submit to ECS Handin the following items enclosed in a zip file:
 
 	* The report (as a PDF document; max 2 A4 sides)
-	* Your code (including everything required to train and use your classifiers); in a sub-directory called "code"
+	* Your code (including everything required to train and use your classifiers); in a sub-directory called "code" (note: please don't include the Maven 'target' directory or any of the images!)
 	* The run prediction files for your three runs (named "run1.txt", "run2.txt" and "run3.txt").
 
 ##Marking and feedback
