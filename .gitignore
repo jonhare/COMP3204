@@ -9,3 +9,5 @@ target
 *.jar
 *.war
 *.ear
+Gemfile.lock
+_site

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>COMP3204 Computer Vision by jonhare</title>
+    <title>{{page.title}}</title>
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
@@ -15,9 +15,9 @@
     <link rel="stylesheet" href="stylesheets/ie.css">
     <![endif]-->
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-
   </head>
   <body>
+      {% if page.githubHeader == "true" %}
       <div id="header">
         <nav>
           <li class="fork"><a href="https://github.com/jonhare/COMP3204">View On GitHub</a></li>
@@ -27,28 +27,24 @@
           <li class="title">DOWNLOADS</li>
         </nav>
       </div><!-- end header -->
-
+      {% endif %}
     <div class="wrapper">
-
       <section>
         <div id="title">
           <div style="background-image: url(images/johnny5.png); height: 329px; position: relative">
             <div style="position: absolute; bottom: 0; width: 650px; opacity:0.6; filter:alpha(opacity=60); background-color: #000000; padding-top:20px">
-              <h1>COMP3204/6223 Computer Vision</h1>
-              <p>Notes, Slides and Demos for COMP3204/COMP6223 Part II 2014-15</p>
+              <h1>{{page.title}}</h1>
+              <p>{{page.subtitle}}</p>
             </div>
           </div>
           <hr>
-          <span class="credits left">Maintained and taught by <a href="http://www.ecs.soton.ac.uk/people/jsh2">Dr Jonathon Hare</a> (<a href="https://github.com/jonhare">jonhare</a>)</span>
+          <span class="credits left">{{page.credits}}</span>
         </div>
-
         <div style="text-align: justify">
          {{content}}
         </div>
       </section>
-
     </div>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
-    
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->    
   </body>
 </html>

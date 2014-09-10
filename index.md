@@ -1,5 +1,9 @@
 ---
 layout: index
+title: "COMP3204/6223 Computer Vision"
+subtitle: "Notes, Slides and Demos for COMP3204/COMP6223 Part II 2014-15"
+githubHeader: "true"
+credits: Maintained and taught by <a href="http://www.ecs.soton.ac.uk/people/jsh2">Dr Jonathon Hare</a> (<a href="https://github.com/jonhare">jonhare</a>)
 ---
 
 Welcome to the homepage for the second half of [COMP3204](https://secure.ecs.soton.ac.uk/module/COMP3204) and [COMP6223](https://secure.ecs.soton.ac.uk/module/COMP6223).
