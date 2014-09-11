@@ -1,1 +1,13 @@
+*.class
+*.DS_Store
+*.classpath
+*.settings
+*.project
+target
+
+# Package Files #
+*.jar
+*.war
+*.ear
 Gemfile.lock
+_site
