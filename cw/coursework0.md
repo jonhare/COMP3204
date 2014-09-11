@@ -1,5 +1,6 @@
 ---
 layout: index
+rdir: "../"
 title: "COMP3204/6223 Computer Vision"
 subtitle: "Coursework 0: The OpenIMAJ Tutorial"
 githubHeader: "false"
@@ -28,12 +29,17 @@ Before starting the second coursework (i.e. do it immediately!):
 
 * [Chapter 1](http://www.openimaj.org/tutorial/getting-started-with-openimaj-using-maven.html)  
 * [Chapter 2](http://www.openimaj.org/tutorial/processing-your-first-image.html)
+* [Chapter 7]()
 
 Before starting the third coursework:
 
-* [Chapter 1](http://www.openimaj.org/tutorial/getting-started-with-openimaj-using-maven.html)  
-* [Chapter 2](http://www.openimaj.org/tutorial/processing-your-first-image.html)
-
+* [Chapter 3]() 
+* [Chapter 13]() 
+* [Chapter 4]() 
+* [Chapter 5]() 
+* [Chapter 6]() 
+* [Chapter 12]() 
+* [Chapter 14]() 
 
 ###What to hand in
 You need to submit to ECS Handin the following items enclosed in a zip file:

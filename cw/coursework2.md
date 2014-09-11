@@ -1,5 +1,6 @@
 ---
 layout: index
+rdir: "../"
 title: "COMP3204/6223 Computer Vision"
 subtitle: "Coursework 2: Scene Recognition"
 githubHeader: "false"
