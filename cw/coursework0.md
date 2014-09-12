@@ -25,28 +25,24 @@ In order to complete the second coursework (which will be announced during Mark'
 
 ###Summary of required tutorial chapters:
 
-Before starting the second coursework (i.e. do it immediately!):
+**Before starting the second coursework (i.e. do it as soon as possible!):**
 
 * [Chapter 1](http://www.openimaj.org/tutorial/getting-started-with-openimaj-using-maven.html)  
 * [Chapter 2](http://www.openimaj.org/tutorial/processing-your-first-image.html)
-* [Chapter 7]()
+* [Chapter 7](http://www.openimaj.org/tutorial/processing-video.html)
 
-Before starting the third coursework:
+**Before starting the third coursework (you can do these to follow along with the lectures):**
 
-* [Chapter 3]() 
-* [Chapter 13]() 
-* [Chapter 4]() 
-* [Chapter 5]() 
-* [Chapter 6]() 
-* [Chapter 12]() 
-* [Chapter 14]() 
+* [Chapter 3](http://www.openimaj.org/tutorial/introduction-to-clustering-segmentation-and-connected-components.html) 
+* [Chapter 13](http://www.openimaj.org/tutorial/eigenfaces.html) 
+* [Chapter 4](http://www.openimaj.org/tutorial/global-image-features.html) 
+* [Chapter 5](http://www.openimaj.org/tutorial/sift-and-feature-matching.html) 
+* [Chapter 6](http://www.openimaj.org/tutorial/image-datasets.html) 
+* [Chapter 12](http://www.openimaj.org/tutorial/classification101.html) 
+* [Chapter 14](http://www.openimaj.org/tutorial/parallel-processing.html) 
 
 ###What to hand in
-You need to submit to ECS Handin the following items enclosed in a zip file:
-
-* The report (as a PDF document; max 2 A4 sides)
-* Your code (including everything required to train and use your classifiers); in a sub-directory called "code" (note: please don't include the Maven 'target' directory or any of the images!)
-* The run prediction files for your three runs (named "run1.txt", "run2.txt" and "run3.txt").
+You need to submit via ECS Handin a zipped copy of your code. Specifically, you should submit a Maven project and accompanying Java source code which show that you have worked through the above chapters of the tutorial. We would recommend you structure your code so that each chapter of the tutorial is in a separate Java package (i.e. `uk.ac.soton.ecs.<userid>.ch1`, `uk.ac.soton.ecs.<userid>.ch2`, etc.). 
 
 ##Marking and feedback
 Marks will be awarded for:
@@ -55,9 +51,14 @@ Marks will be awarded for:
 * Good use of the OpenIMAJ library.
 * Well structured and commented code.
 * Good excellence of professionalism in implementation.
-* Quality and contents of the report.
-* The quality/soundness/complexity of approach used for run 3.
 
+Standard ECS late submission penalties apply.
+
+Individual feedback will be given covering the above points.
+
+##Useful links
+* [The OpenIMAJ Tutorial](http://openimaj.org/tutorial)
+* [The OpenIMAJ Javadocs](http://openimaj.org/apidocs/index.html)
 
 ##Questions
 If you have any problems/questions then [email](mailto:jsh2@ecs.soton.ac.uk) or speak to [Jon](http://ecs.soton.ac.uk/people/jsh2), either in his office, or in one of the drop-in sessions in the UG-lab we'll run during the course.

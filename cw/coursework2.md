@@ -91,7 +91,13 @@ Marks will be awarded for:
 
 Marks will not be based on the actual performance of your approach (although you can expect to lose marks if runs 1 and 2 are way off our expectations). There will however be a prize for the team with the best performing run 3. 
 
+Standard ECS late submission penalties apply.
+
 Individual feedback will be given to each team covering the above points. We will also give overall feedback on the approaches taken in class when we announce the winner!
+
+##Useful links
+* [The OpenIMAJ Tutorial](http://openimaj.org/tutorial)
+* [The OpenIMAJ Javadocs](http://openimaj.org/apidocs/index.html)
 
 ##Questions
 If you have any problems/questions then [email](mailto:jsh2@ecs.soton.ac.uk) or speak to [Jon](http://ecs.soton.ac.uk/people/jsh2), either in his office, or in one of the drop-in sessions in the UG-lab we'll run during the course.
