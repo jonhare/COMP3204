@@ -8,7 +8,7 @@
   <name>COMP3204</name>
   <url>http://www.openimaj.org</url>
   <properties>
-    <openimaj.version>1.3-SNAPSHOT</openimaj.version>
+    <openimaj.version>1.4-SNAPSHOT</openimaj.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
   <dependencies>
