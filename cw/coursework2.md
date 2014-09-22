@@ -2,102 +2,118 @@
 layout: index
 rdir: "../"
 title: "COMP3204/6223 Computer Vision"
-subtitle: "Coursework 2: Scene Recognition"
+subtitle: "Coursework 2: Image Filtering and Hybrid Images"
 githubHeader: "false"
-credits: Maintained by <a href="http://www.ecs.soton.ac.uk/people/msn">Professor Mark Nixon</a> and <a href="http://www.ecs.soton.ac.uk/people/jsh2">Dr Jonathon Hare</a>.
+credits: Maintained by <a href="http://www.ecs.soton.ac.uk/people/msn">Professor Mark Nixon</a> and <a href="http://www.ecs.soton.ac.uk/people/jsh2">Dr Jonathon Hare</a>. <br /> This coursework is based on the excellent <a href="http://cs.brown.edu/courses/cs143/proj1/">coursework for the CS143 Introduction to Computer Vision module</a> taught by James Hays at Brown University, but has been adapted to use OpenIMAJ.
 ---
 
 ##Brief
-**This is a group coursework: please work in pairs (teams of two people).**
-
 Due date: XXX  
-Development data download: [training.zip](./training.zip)    
-Testing data download: [testing.zip](./testing.zip)  
+Sample images: [cw1images.zip](./cw1images.zip)  
 Handin: XXX  
-Required files: report.pdf; code/; run1.txt; run2.txt; run3.txt
+Required files: report.pdf; code/*
 
 ##Overview
-The goal of this project is to introduce you to image recognition. Specifically, we will examine the task of scene recognition starting with very simple methods -- tiny images and nearest neighbour classification -- and then move on to techniques that resemble the state-of-the-art -- bags of quantized local features and linear classifiers learned by support vector machines. 
+The goal of this assignment is to write a basic image convolution function and use it to create [hybrid images](http://cvcl.mit.edu/hybridimage.htm) using a simplified version of the [SIGGRAPH 2006 paper by Oliva, Torralba, and Schyns](http://cvcl.mit.edu/publications/OlivaTorralb_Hybrid_Siggraph06.pdf). Hybrid images are static images that change in interpretation as a function of the viewing distance. The basic idea is that high frequency tends to dominate perception when it is available, but, at a distance, only the low frequency (smooth) part of the signal can be seen. By blending the high frequency portion of one image with the low-frequency portion of another, you get a hybrid image that leads to different interpretations at different distances. An example of a hybrid image is shown below.
 
-This coursework will run following the methodology used in many current scientific benchmarking competitions/evaluations. You will be provided with a set of labelled development images from which you are allowed to develop and tune your classifiers. You will also be provided with a set of unlabelled images for which you will be asked to produce predictions of the correct class. We will score your predictions and there will be a *prize* for the team producing the best classifier.
+<div style="text-align:center">
+<img src="hybrid_image.jpg"/> <br />
+Example hybrid image. Look at image from very close, then from far away.<br /><br />
+</div>
 
 ##Details
-You will need to use [OpenIMAJ](http://www.openimaj.org) to write software that classifies scenes into one of 15 categories. We want you to implement three different classifiers as described below. You will then need to run each classifier against all the test images and provide a prediction of the class for each image. 
+This project is intended to familiarise you with image filtering and the implementation of a convolution function in OpenIMAJ. Once you have created an image convolution function, it is relatively straightforward to construct hybrid images. You will need to have worked through [Chapter 1](http://www.openimaj.org/tutorial/getting-started-with-openimaj-using-maven.html), [Chapter 2](http://www.openimaj.org/tutorial/processing-your-first-image.html) and [Chapter 7](http://www.openimaj.org/tutorial/processing-video.html) of the [OpenIMAJ tutorial](http://www.openimaj.org/tutorial/) prior to starting this coursework.
 
-###Prerequisites 
-You'll need a good understanding of working with OpenIMAJ. [Chapter 12 of the tutorial](http://www.openimaj.org/tutorial/classification101.html) will be a great help.
+**Template convolution.** Template convolution is a fundamental image processing tool. Mark has covered convolution in detail in the lectures. See section 3.4.1 of Mark's book (Third Edition) ("Template Convolution") and the lecture materials for more information. 
 
-###Data
-The training data consists of 100 images for each of the 15 scene classes. These are arranged in directories named according to the class name. The test data consists of 2985 images. All the images are provided in JPEG format. All the images are grey-scale, so you don't need to consider colour.
 
-###Objective measure
-The key classification performance indicator for this task is *average precision*; this is literally the proportion of number of correct classifications to the total number of predictions (i.e. 2985).
+OpenIMAJ has numerous built in and highly efficient operators to perform convolution, but you will be writing your own such function from scratch for this assignment. More specifically, you will implement a class called `MyConvolution` that builds on this skeleton:
 
-###Run conditions
-As mentioned above, you need to develop and run three different classifiers. We'll refer to the application of a classifier to the test data as a "run".
+	import org.openimaj.image.FImage;
+	import org.openimaj.image.processor.SinglebandImageProcessor;
 
-**Run #1**: You should develop a simple k-nearest-neighbour classifier using the "tiny image" feature. The "tiny image" feature is one of the simplest possible image representations. One simply crops each image to a square about the centre, and then resizes it to a small, fixed resolution (we recommend 16x16). The pixel values can be packed into a vector by concatenating each image row. It tends to work slightly better if the tiny image is made to have zero mean and unit length. You can choose the optimal k-value for the classifier.
+	public class MyConvolution implements SinglebandImageProcessor<Float, FImage> {
+		private float[][] kernel;
 
-**Run #2**: You should develop a set of linear classifiers (use the `LiblinearAnnotator` class to automatically create 15 one-vs-all classifiers) using a bag-of-visual-words feature based on fixed size densely-sampled pixel patches. We recommend that you start with 8x8 patches, sampled every 4 pixels in the x and y directions. A sample of these should be clustered using K-Means to learn a vocabulary (try ~500 clusters to start). You might want to consider mean-centring and normalising each patch before clustering/quantisation.
+		public MyConvolution(float[][] kernel) {
+			this.kernel = kernel;
+		}
 
-**Run #3**: You should try to develop the best classifier you can! You can choose whatever feature, encoding and classifier you like. Potential features: the GIST feature (implemented in OpenIMAJ 1.3-SNAPSHOT); Dense SIFT; Dense SIFT in a Gaussian Pyramid; Dense SIFT with spatial pooling (i.e. *PHOW* as in the OpenIMAJ tutorial), etc. Potential classifiers: Naive bayes; non-linear SVM (perhaps using a linear classifier with a Homogeneous Kernel Map), ...
+		@Override
+		public void processImage(FImage image) {
+			// convolve image with kernel and store result back in image
+			//
+			// hint: use FImage#internalAssign(FImage) to set the contents
+			// of your temporary buffer image to the image.
+		}
+	}
 
-###Run prediction format
-The predictions for each run must be written to a text file named `runX.txt` (where `X` is the run number) with the following format:
+You will need to fill in the `processImage` method so that it performs convolution of the image with the kernel/template. Your implementation must support arbitrary shaped kernels, as long as both dimensions are odd (e.g. 7x9 kernels but not 4x5 kernels). The border pixels should be set to 0.
 
-	<image_name> <predicted_class>
-	<image_name> <predicted_class>
-	<image_name> <predicted_class>
-	...
+**Hybrid Images.** A hybrid image is the sum of a low-pass filtered version of the one image and a high-pass filtered version of a second image. There is a free parameter, which can be tuned for each image pair, which controls *how much* high frequency to remove from the first image and how much low frequency to leave in the second image. This is called the "cutoff-frequency". In the paper it is suggested to use two cutoff-frequencies (one tuned for each image) and you are free to try that, as well. 
 
-For example:
+Low pass filtering (removing all the high frequencies) can be achieved by convolving the image with a Gaussian filter. The cutoff-frequency is controlled by changing the standard deviation, sigma, of the Gaussian filter used in constructing the hybrid images. You can use the `Gaussian2D.createKernelImage(size, sigma)` method to create a image of a 2D Gaussian, and use the `pixels` field of the resultant image to get the 2D float array required for your `MyConvolution` constructor. The `size` parameter of `Gaussian2D.createKernelImage(size, sigma)` controls the width and height of the filter in pixels. It is standard practice for this to be set as a function of the sigma value as follows:
 
-	0.jpg tallbuilding
-	1.jpg forest
-	2.jpg mountain
-	3.jpg store
-	4.jpg store
-	5.jpg bedroom
-	...
+	int size = (int) (8.0f * sigma + 1.0f); // (this implies the window is +/- 4 sigmas from the centre of the Gaussian)
+	if (size % 2 == 0) size++; // size must be odd
 
-Each image can only appear once, and every test image *must* be present.
+High pass filtering (removing all the low frequencies) can be most easily achieved by subtracting a low-pass version of an image from itself.
 
-##Restrictions
-**You are not allowed to use the testing images for anything other than producing the final predictions.** They must not be used for either training or learning feature encoding.
+We have provided you with 5 pairs of aligned images (in the [cw1images.zip](./cw1images.zip) file) which can be merged reasonably well into hybrid images. The alignment is important because it affects the perceptual grouping (read the paper for details). We encourage you to create additional examples (e.g. change of expression, morph between different objects, change over time, etc.). See the [hybrid images project page](http://cvcl.mit.edu/hybridimage.htm) for some inspiration.
+
+For the example shown at the top of the page, the two original images look like this:
+
+<div style="text-align:center">
+<img src="dog.jpg" width="300"/> <img src="cat.jpg" width="300"/><br /><br />
+</div>
+
+The low-pass (blurred) and high-pass versions of these images look like this:
+
+<div style="text-align:center">
+<img src="low_frequencies.jpg" width="300"/> <img src="high_frequencies.jpg" width="300"/><br /><br />
+</div>
+
+The high frequency image is actually zero-mean with negative values so it is visualised by adding 0.5 to every pixel in each colour channel. In the resulting visualisation, bright values are positive and dark values are negative.
+
+Adding the high and low frequencies together gives you the image at the top of this page. If you're having trouble seeing the multiple interpretations of the image, a useful way to visualise the effect is by progressively down-sampling the hybrid image as is done below:
+
+<div style="text-align:center">
+<img src="cat_hybrid_image_scales.jpg" width="646"/><br /><br />
+</div>
+
+The OpenIMAJ [Image#drawImage](http://openimaj.org/apidocs/org/openimaj/image/Image.html#drawImage(I,%20int,%20int)) methods can be used in combination with the image resizing functionality found in the [ResizeProcessor](http://openimaj.org/apidocs/org/openimaj/image/processing/resize/ResizeProcessor.html) or [BilinearInterpolation](http://openimaj.org/apidocs/org/openimaj/image/processing/resize/BilinearInterpolation.html) classes to construct such a visualisation.
+
+###Restrictions
+You can use the convolution functions built in to OpenIMAJ for testing (e.g. [FGaussianConvolve](http://openimaj.org/apidocs/org/openimaj/image/processing/convolution/FGaussianConvolve.html), [FConvolution](http://openimaj.org/apidocs/org/openimaj/image/processing/convolution/FConvolution.html), etc), but do not use them in your implementation.
 
 ###The report
-The report must be no longer than 2 sides of A4, and must be submitted electronically as a PDF. The report must include:
-
-* The names and ECS user IDs of the team members
-* A description of the implementation of the classifiers for the three runs, including information on how they were trained and tuned, and the specific parameters used for configuring the feature extractors and classifiers. We expect that your "run 3" section will be considerably longer than the descriptions of runs 1 & 2.
-* A short statement detailing the individual contributions of the team members to the coursework.
+You need to prepare a short report (target length is ~2 sides of A4, although there won't be penalties for exceeding this). In the report you need to describe your convolution and hybrid images algorithms (in particular, please include your code for the convolution implementation) and any decisions you made to write your algorithms in a particular way. Then you should show and discuss the results of your algorithm, showing the results of your hybrid images algorithm (showing the image at a range of scales to show the effect) and show some of the intermediate images in the hybrid image pipeline (e.g. the low and high frequency images). Also, discuss anything extra you did. Feel free to add any other information you feel is relevant.
 
 ###What to hand in
 You need to submit to ECS Handin the following items enclosed in a zip file:
 
-* The report (as a PDF document; max 2 A4 sides)
-* Your code (including everything required to train and use your classifiers); in a sub-directory called "code" (note: please don't include the Maven 'target' directory or any of the images!)
-* The run prediction files for your three runs (named "run1.txt", "run2.txt" and "run3.txt").
+* The report (as a PDF document)
+* Your code (include everything we would need to build and run it); in a sub-directory called "code" (note: please don't include the Maven 'target' directory!)
 
 ##Marking and feedback
 Marks will be awarded for:
-	
-* Successful completion of the task.
+
+* Successful implementation of the convolution and hybrid images algorithms.
+* Providing a good demonstration of your hybrid images algorithm.
 * Good use of the OpenIMAJ library.
 * Well structured and commented code.
-* Good excellence of professionalism in implementation.
+* Excellence of professionalism in implementation and reporting.
 * Quality and contents of the report.
-* The quality/soundness/complexity of approach used for run 3.
-
-Marks will not be based on the actual performance of your approach (although you can expect to lose marks if runs 1 and 2 are way off our expectations). There will however be a prize for the team with the best performing run 3. 
 
 Standard ECS late submission penalties apply.
 
-Individual feedback will be given to each team covering the above points. We will also give overall feedback on the approaches taken in class when we announce the winner!
+Individual feedback will be given covering the above points.
 
 ##Useful links
 * [The OpenIMAJ Tutorial](http://openimaj.org/tutorial)
 * [The OpenIMAJ Javadocs](http://openimaj.org/apidocs/index.html)
+* [SIGGRAPH Hybrid Images Paper](http://cvcl.mit.edu/publications/OlivaTorralb_Hybrid_Siggraph06.pdf)
+* [The Hybrid Images project page](http://cvcl.mit.edu/hybridimage.htm)
 
 ##Questions
 If you have any problems/questions then [email](mailto:jsh2@ecs.soton.ac.uk) or speak to [Jon](http://ecs.soton.ac.uk/people/jsh2), either in his office, or in one of the drop-in sessions in the UG-lab we'll run during the course.

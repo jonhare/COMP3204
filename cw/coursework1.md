@@ -2,108 +2,55 @@
 layout: index
 rdir: "../"
 title: "COMP3204/6223 Computer Vision"
-subtitle: "Coursework 1: Image Filtering and Hybrid Images"
+subtitle: "Coursework 1: The OpenIMAJ Tutorial"
 githubHeader: "false"
-credits: Maintained by <a href="http://www.ecs.soton.ac.uk/people/msn">Professor Mark Nixon</a> and <a href="http://www.ecs.soton.ac.uk/people/jsh2">Dr Jonathon Hare</a>. <br /> This coursework is based on the excellent <a href="http://cs.brown.edu/courses/cs143/proj1/">coursework for the CS143 Introduction to Computer Vision module</a> taught by James Hays at Brown University, but has been adapted to use OpenIMAJ.
+credits: Maintained by <a href="http://www.ecs.soton.ac.uk/people/msn">Professor Mark Nixon</a> and <a href="http://www.ecs.soton.ac.uk/people/jsh2">Dr Jonathon Hare</a>.
 ---
 
 ##Brief
 Due date: XXX  
-Sample images: [cw1images.zip](./cw1images.zip)  
+Link to the tutorial: [html](http://www.openimaj.org/tutorial) or [pdf](http://www.openimaj.org/tutorial-pdf.pdf)  
 Handin: XXX  
-Required files: report.pdf; code/
+Required files: code/*
 
 ##Overview
-The goal of this assignment is to write a basic image convolution function and use it to create [hybrid images](http://cvcl.mit.edu/hybridimage.htm) using a simplified version of the [SIGGRAPH 2006 paper by Oliva, Torralba, and Schyns](http://cvcl.mit.edu/publications/OlivaTorralb_Hybrid_Siggraph06.pdf). Hybrid images are static images that change in interpretation as a function of the viewing distance. The basic idea is that high frequency tends to dominate perception when it is available, but, at a distance, only the low frequency (smooth) part of the signal can be seen. By blending the high frequency portion of one image with the low-frequency portion of another, you get a hybrid image that leads to different interpretations at different distances. An example of a hybrid image is shown below.
+OpenIMAJ is a set of open-source libraries and tools for multimedia content analysis and content generation that has been written for research projects at Southampton over many years. OpenIMAJ is very broad and contains everything from state-of-the-art computer vision and advanced data clustering, through to software that performs analysis on the content, layout and structure of webpages. You will need to use OpenIMAJ for all the COMP3204/6223 courseworks.
 
-<div style="text-align:center">
-<img src="hybrid_image.jpg"/> <br />
-Example hybrid image. Look at image from very close, then from far away.<br /><br />
-</div>
+For this coursework, we want you to work through a portion of the [OpenIMAJ tutorial](http://www.openimaj.org/tutorial) in order to get a grasp of the underlying functionality and gain some experience in practical image processing and computer vision. Even though this is the first coursework to be set, the deadline is deliberately late in order to allow you to work through the tutorial in line with the underlying computer vision techniques as they are introduced in the lectures. 
+
+You can consider this coursework to be like a set of labs in that the only requirement to get credit is that you provide us with evidence (i.e. code) that you have completed the relevant sections of the tutorial.
 
 ##Details
-This project is intended to familiarise you with image filtering and the implementation of a convolution function in OpenIMAJ. Once you have created an image convolution function, it is relatively straightforward to construct hybrid images. You will need to have worked through [Chapter 1](http://www.openimaj.org/tutorial/getting-started-with-openimaj-using-maven.html), [Chapter 2](http://www.openimaj.org/tutorial/processing-your-first-image.html) and [Chapter 7](http://www.openimaj.org/tutorial/processing-video.html) of the [OpenIMAJ tutorial](http://www.openimaj.org/tutorial/) prior to starting this coursework.
+In order to complete the second coursework (which will be announced during Mark's lectures) you will need to have worked through [Chapter 1](http://www.openimaj.org/tutorial/getting-started-with-openimaj-using-maven.html) and [Chapter 2](http://www.openimaj.org/tutorial/processing-your-first-image.html). During Jon's part of the course the handout's accompanying the lectures will highlight the relevant chapter of the tutorial that demonstrates the topic of that lecture; these chapters of the tutorial are a prerequisite to successfully completing the third coursework.
 
-**Template convolution.** Template convolution is a fundamental image processing tool. Mark has covered convolution in detail in the lectures. See section 3.4.1 of Mark's book (Third Edition) ("Template Convolution") and the lecture materials for more information. 
+###Summary of required tutorial chapters:
 
+**Before starting the second coursework (i.e. do it as soon as possible!):**
 
-OpenIMAJ has numerous built in and highly efficient operators to perform convolution, but you will be writing your own such function from scratch for this assignment. More specifically, you will implement a class called `MyConvolution` that builds on this skeleton:
+* [Chapter 1](http://www.openimaj.org/tutorial/getting-started-with-openimaj-using-maven.html)  
+* [Chapter 2](http://www.openimaj.org/tutorial/processing-your-first-image.html)
+* [Chapter 7](http://www.openimaj.org/tutorial/processing-video.html)
 
-	import org.openimaj.image.FImage;
-	import org.openimaj.image.processor.SinglebandImageProcessor;
+**Before starting the third coursework (you can do these to follow along with the lectures):**
 
-	public class MyConvolution implements SinglebandImageProcessor<Float, FImage> {
-		private float[][] kernel;
-
-		public MyConvolution(float[][] kernel) {
-			this.kernel = kernel;
-		}
-
-		@Override
-		public void processImage(FImage image) {
-			// convolve image with kernel and store result back in image
-			//
-			// hint: use FImage#internalAssign(FImage) to set the contents
-			// of your temporary buffer image to the image.
-		}
-	}
-
-You will need to fill in the `processImage` method so that it performs convolution of the image with the kernel/template. Your implementation must support arbitrary shaped kernels, as long as both dimensions are odd (e.g. 7x9 kernels but not 4x5 kernels). The border pixels should be set to 0.
-
-**Hybrid Images.** A hybrid image is the sum of a low-pass filtered version of the one image and a high-pass filtered version of a second image. There is a free parameter, which can be tuned for each image pair, which controls *how much* high frequency to remove from the first image and how much low frequency to leave in the second image. This is called the "cutoff-frequency". In the paper it is suggested to use two cutoff-frequencies (one tuned for each image) and you are free to try that, as well. 
-
-Low pass filtering (removing all the high frequencies) can be achieved by convolving the image with a Gaussian filter. The cutoff-frequency is controlled by changing the standard deviation, `sigma`, of the Gaussian filter used in constructing the hybrid images. You can use the `Gaussian2D.createKernelImage(size, sigma)` method to create a image of a 2D Gaussian, and use the `pixels` field of the resultant image to get the 2D float array required for your `MyConvolution` constructor. The `size` parameter of `Gaussian2D.createKernelImage(size, sigma)` controls the width and height of the filter in pixels. It is standard practice for this to be set as a function of the sigma value as follows:
-
-	int size = (int) (8.0f * sigma + 1.0f); // (this implies the window is +/- 4 sigmas from the centre of the Gaussian)
-	if (size % 2 == 0) size++; // size must be odd
-
-High pass filtering (removing all the low frequencies) can be most easily achieved by subtracting a low-pass version of an image from itself.
-
-We have provided you with 5 pairs of aligned images (in the [cw1images.zip](./cw1images.zip) file) which can be merged reasonably well into hybrid images. The alignment is important because it affects the perceptual grouping (read the paper for details). We encourage you to create additional examples (e.g. change of expression, morph between different objects, change over time, etc.). See the [hybrid images project page](http://cvcl.mit.edu/hybridimage.htm) for some inspiration.
-
-For the example shown at the top of the page, the two original images look like this:
-
-<div style="text-align:center">
-<img src="dog.jpg" width="300"/> <img src="cat.jpg" width="300"/><br /><br />
-</div>
-
-The low-pass (blurred) and high-pass versions of these images look like this:
-
-<div style="text-align:center">
-<img src="low_frequencies.jpg" width="300"/> <img src="high_frequencies.jpg" width="300"/><br /><br />
-</div>
-
-The high frequency image is actually zero-mean with negative values so it is visualised by adding 0.5 to every pixel in each colour channel. In the resulting visualisation, bright values are positive and dark values are negative.
-
-Adding the high and low frequencies together gives you the image at the top of this page. If you're having trouble seeing the multiple interpretations of the image, a useful way to visualise the effect is by progressively down-sampling the hybrid image as is done below:
-
-<div style="text-align:center">
-<img src="cat_hybrid_image_scales.jpg" width="646"/><br /><br />
-</div>
-
-The OpenIMAJ [Image#drawImage](http://openimaj.org/apidocs/org/openimaj/image/Image.html#drawImage(I,%20int,%20int)) methods can be used in combination with the image resizing functionality found in the [ResizeProcessor](http://openimaj.org/apidocs/org/openimaj/image/processing/resize/ResizeProcessor.html) or [BilinearInterpolation](http://openimaj.org/apidocs/org/openimaj/image/processing/resize/BilinearInterpolation.html) classes to construct such a visualisation.
-
-###Restrictions
-You can use the convolution functions built in to OpenIMAJ for testing (e.g. [FGaussianConvolve](http://openimaj.org/apidocs/org/openimaj/image/processing/convolution/FGaussianConvolve.html), [FConvolution](http://openimaj.org/apidocs/org/openimaj/image/processing/convolution/FConvolution.html), etc), but do not use them in your implementation.
-
-###The report
-You need to prepare a short report (target length is ~2 sides of A4, although there won't be penalties for exceeding this). In the report you need to describe your convolution and hybrid images algorithms (in particular, please include your code for the convolution implementation) and any decisions you made to write your algorithms in a particular way. Then you should show and discuss the results of your algorithm, showing the results of your hybrid images algorithm (showing the image at a range of scales to show the effect) and show some of the intermediate images in the hybrid image pipeline (e.g. the low and high frequency images). Also, discuss anything extra you did. Feel free to add any other information you feel is relevant.
+* [Chapter 3](http://www.openimaj.org/tutorial/introduction-to-clustering-segmentation-and-connected-components.html) 
+* [Chapter 13](http://www.openimaj.org/tutorial/eigenfaces.html) 
+* [Chapter 4](http://www.openimaj.org/tutorial/global-image-features.html) 
+* [Chapter 5](http://www.openimaj.org/tutorial/sift-and-feature-matching.html) 
+* [Chapter 6](http://www.openimaj.org/tutorial/image-datasets.html) 
+* [Chapter 12](http://www.openimaj.org/tutorial/classification101.html) 
+* [Chapter 14](http://www.openimaj.org/tutorial/parallel-processing.html) 
 
 ###What to hand in
-You need to submit to ECS Handin the following items enclosed in a zip file:
-
-* The report (as a PDF document)
-* Your code (include everything we would need to build and run it); in a sub-directory called "code" (note: please don't include the Maven 'target' directory!)
+You need to submit via ECS Handin a zipped copy of your code. Specifically, you should submit a Maven project and accompanying Java source code which show that you have worked through the above chapters of the tutorial. Please don't include the Maven 'target' directory. We would recommend you structure your code so that each chapter of the tutorial is in a separate Java package (i.e. `uk.ac.soton.ecs.<userid>.ch1`, `uk.ac.soton.ecs.<userid>.ch2`, etc.). 
 
 ##Marking and feedback
 Marks will be awarded for:
-
-* Successful implementation of the convolution and hybrid images algorithms.
-* Providing a good demonstration of your hybrid images algorithm.
+	
+* Successful completion of the task.
 * Good use of the OpenIMAJ library.
 * Well structured and commented code.
-* Good excellence of professionalism in implementation and reporting.
-* Quality and contents of the report.
+* Evidence of professionalism.
 
 Standard ECS late submission penalties apply.
 
@@ -112,8 +59,6 @@ Individual feedback will be given covering the above points.
 ##Useful links
 * [The OpenIMAJ Tutorial](http://openimaj.org/tutorial)
 * [The OpenIMAJ Javadocs](http://openimaj.org/apidocs/index.html)
-* [SIGGRAPH Hybrid Images Paper](http://cvcl.mit.edu/publications/OlivaTorralb_Hybrid_Siggraph06.pdf)
-* [The Hybrid Images project page](http://cvcl.mit.edu/hybridimage.htm)
 
 ##Questions
 If you have any problems/questions then [email](mailto:jsh2@ecs.soton.ac.uk) or speak to [Jon](http://ecs.soton.ac.uk/people/jsh2), either in his office, or in one of the drop-in sessions in the UG-lab we'll run during the course.
