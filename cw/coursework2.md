@@ -11,7 +11,7 @@ credits: Maintained by <a href="http://www.ecs.soton.ac.uk/people/msn">Professor
 Due date: XXX  
 Sample images: [cw1images.zip](./cw1images.zip)  
 Handin: XXX  
-Required files: report.pdf; code/*
+Required files: report.pdf; code.zip
 
 ##Overview
 The goal of this assignment is to write a basic image convolution function and use it to create [hybrid images](http://cvcl.mit.edu/hybridimage.htm) using a simplified version of the [SIGGRAPH 2006 paper by Oliva, Torralba, and Schyns](http://cvcl.mit.edu/publications/OlivaTorralb_Hybrid_Siggraph06.pdf). Hybrid images are static images that change in interpretation as a function of the viewing distance. The basic idea is that high frequency tends to dominate perception when it is available, but, at a distance, only the low frequency (smooth) part of the signal can be seen. By blending the high frequency portion of one image with the low-frequency portion of another, you get a hybrid image that leads to different interpretations at different distances. An example of a hybrid image is shown below.
@@ -90,10 +90,10 @@ You can use the convolution functions built in to OpenIMAJ for testing (e.g. [FG
 You need to prepare a short report (target length is ~2 sides of A4, although there won't be penalties for exceeding this). In the report you need to describe your convolution and hybrid images algorithms (in particular, please include your code for the convolution implementation) and any decisions you made to write your algorithms in a particular way. Then you should show and discuss the results of your algorithm, showing the results of your hybrid images algorithm (showing the image at a range of scales to show the effect) and show some of the intermediate images in the hybrid image pipeline (e.g. the low and high frequency images). Also, discuss anything extra you did. Feel free to add any other information you feel is relevant.
 
 ###What to hand in
-You need to submit to ECS Handin the following items enclosed in a zip file:
+You need to submit to ECS Handin the following items:
 
 * The report (as a PDF document)
-* Your code (include everything we would need to build and run it); in a sub-directory called "code" (note: please don't include the Maven 'target' directory!)
+* Your code enclosed in a zip file (include everything we would need to build and run it; please don't include the Maven 'target' directory!)
 
 ##Marking and feedback
 Marks will be awarded for:

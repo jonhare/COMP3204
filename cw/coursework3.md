@@ -14,7 +14,7 @@ Due date: XXX
 Development data download: [training.zip](./training.zip)    
 Testing data download: [testing.zip](./testing.zip)  
 Handin: XXX  
-Required files: report.pdf; code/*; run1.txt; run2.txt; run3.txt
+Required files: report.pdf; code.zip; run1.txt; run2.txt; run3.txt
 
 ##Overview
 The goal of this project is to introduce you to image recognition. Specifically, we will examine the task of scene recognition starting with very simple methods -- tiny images and nearest neighbour classification -- and then move on to techniques that resemble the state-of-the-art -- bags of quantized local features and linear classifiers learned by support vector machines. 
@@ -73,10 +73,10 @@ The report must be no longer than 2 sides of A4, and must be submitted electroni
 * A short statement detailing the individual contributions of the team members to the coursework.
 
 ###What to hand in
-You need to submit to ECS Handin the following items enclosed in a zip file:
+You need to submit to ECS Handin the following items:
 
 * The report (as a PDF document; max 2 A4 sides)
-* Your code (including everything required to train and use your classifiers); in a sub-directory called "code" (note: please don't include the Maven 'target' directory or any of the images!)
+* Your code enclosed in a zip file (including everything required to train and use your classifiers; please don't include the Maven 'target' directory or any of the images!)
 * The run prediction files for your three runs (named "run1.txt", "run2.txt" and "run3.txt").
 
 ##Marking and feedback

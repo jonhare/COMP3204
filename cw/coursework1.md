@@ -11,7 +11,7 @@ credits: Maintained by <a href="http://www.ecs.soton.ac.uk/people/msn">Professor
 Due date: XXX  
 Link to the tutorial: [html](http://www.openimaj.org/tutorial) or [pdf](http://www.openimaj.org/tutorial-pdf.pdf)  
 Handin: XXX  
-Required files: code/*
+Required files: code.zip
 
 ##Overview
 OpenIMAJ is a set of open-source libraries and tools for multimedia content analysis and content generation that has been written for research projects at Southampton over many years. OpenIMAJ is very broad and contains everything from state-of-the-art computer vision and advanced data clustering, through to software that performs analysis on the content, layout and structure of webpages. You will need to use OpenIMAJ for all the COMP3204/6223 courseworks.
