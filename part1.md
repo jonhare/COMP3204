@@ -10,7 +10,7 @@ Welcome to the homepage for the second half of [COMP3204](https://secure.ecs.sot
 
 Here is a list of materials available to you to complement the lectures in this half of the course:
 
-* [Opening lecture material](mark/http://www.ecs.soton.ac.uk/notes/comp3005/First_lecture.pdf)
+* [Opening lecture material](mark/First_lecture.pdf)
 * [A Framework for Computer Vision](mark/A%20Framework%20for%20Computer%20Vision-i.pdf)
 * [The book's website](http://www.ecs.soton.ac.uk/~msn/book/)
 * [The book's worksheets](http://www.ecs.soton.ac.uk/~msn/book/worksheets.html) (pull down the zip file or use the worksheets direct). There's a link to the Explorer programme which runs them, too.
