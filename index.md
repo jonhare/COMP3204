@@ -18,3 +18,18 @@ Materials to accompany the lectures can be found here:
 
 * [Part 1](part1.html) taught by Mark.
 * [Part 2](part2.html) taught by Jon.
+
+##Coursework
+The coursework for COMP3204 and COMP6223 will be slightly different. Details on each coursework below:
+
+###COMP3204
+
+* **Coursework 1**. Due Wed 26th November : [Specification](cw/coursework1.html) : [Handin Link](https://handin.ecs.soton.ac.uk/handin/1415/COMP3204/1/)
+* Coursework 2 - TBA
+* Coursework 3 - TBA
+
+###COMP6223
+
+* Coursework 1 - TBA
+* Coursework 2 - TBA
+* Coursework 3 - TBA
