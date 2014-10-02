@@ -16,7 +16,7 @@ Handin: [1415/COMP3204/1/](https://handin.ecs.soton.ac.uk/handin/1415/COMP3204/1
 Required files: code.zip
 
 ##Overview
-OpenIMAJ is a set of open-source libraries and tools for multimedia content analysis and content generation that has been written for research projects at Southampton over many years. OpenIMAJ is very broad and contains everything from state-of-the-art computer vision and advanced data clustering, through to software that performs analysis on the content, layout and structure of webpages. You will need to use OpenIMAJ for all the COMP3204/6223 courseworks.
+OpenIMAJ is a set of open-source libraries and tools for multimedia content analysis and content generation that has been written for research projects at Southampton over many years. OpenIMAJ is very broad and contains everything from state-of-the-art computer vision and advanced data clustering, through to software that performs analysis on the content, layout and structure of webpages. You will need to use OpenIMAJ for all the COMP3204 courseworks.
 
 For this coursework, we want you to work through a portion of the [OpenIMAJ tutorial](http://www.openimaj.org/tutorial) in order to get a grasp of the underlying functionality and gain some experience in practical image processing and computer vision. Even though this is the first coursework to be set, the deadline is deliberately late in order to allow you to work through the tutorial in line with the underlying computer vision techniques as they are introduced in the lectures. 
 
