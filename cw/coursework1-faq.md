@@ -37,6 +37,6 @@ If you get a error message saying there was an error building the pom that looks
 
 Then edit the pom.xml file in a text editor and comment out the xml block for the `common-stream` dependency. Maven should then run without issue. We're actively looking into why this happens (it doesn't happen on all machines, but was observed on a UG Lab linux box).
 
-##"mvn assembly:assembly" is really slow.
+###"mvn assembly:assembly" is really slow.
 We think this might be to do with the networked file-system housing your home areas on the UG lab machines. On a local disk, it runs within a few 10's of seconds. Fortunately, you don't need to do this often as you can run the code directly from Eclipse (or your IDE of choice) and so hopefully won't be too much of a problem in the long-run.
 
