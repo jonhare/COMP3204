@@ -7,7 +7,7 @@ githubHeader: "false"
 credits: Maintained by <a href="http://www.ecs.soton.ac.uk/people/msn">Professor Mark Nixon</a> and <a href="http://www.ecs.soton.ac.uk/people/jsh2">Dr Jonathon Hare</a>. <br /> This coursework is based on the excellent <a href="http://cs.brown.edu/courses/cs143/proj1/">coursework for the CS143 Introduction to Computer Vision module</a> taught by James Hays at Brown University, but has been adapted to use OpenIMAJ.
 ---
 
-**This coursework is only for students registered on the COMP3204 module, not the COMP6223 module**
+**This coursework is only for students registered on the COMP3204 module**
 
 ##Brief
 Due date: Thursday 6th November, 16:00.  

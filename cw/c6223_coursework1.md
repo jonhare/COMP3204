@@ -26,15 +26,13 @@ Example hybrid image. Look at image from very close, then from far away.<br /><b
 ##Details
 This project is intended to familiarise you with image filtering and the implementation of a convolution function in a language of your choice. Once you have created an image convolution function, it is relatively straightforward to construct hybrid images. 
 
-###Template convolution.
-Template convolution is a fundamental image processing tool. Mark has covered convolution in detail in the lectures. See section 3.4.1 of [Mark's book (Third Edition)](http://ecs.soton.ac.uk/~msn/book/worksheets.html) ("Template Convolution") and the lecture materials for more information. 
+**Template convolution.** Template convolution is a fundamental image processing tool. Mark has covered convolution in detail in the lectures. See section 3.4.1 of [Mark's book (Third Edition)](http://ecs.soton.ac.uk/~msn/book/worksheets.html) ("Template Convolution") and the lecture materials for more information. 
 
-For this assignment, we want you to hand-code your convolution operator function, and not make use of any built-in functions or libraries available to you for performing the convolution. 
+For this assignment, we want you to *hand-code* your convolution operator function using a programming language or environment of your choice. You not make use of any built-in functions or libraries available to you for performing the convolution. 
 
 Your implementation must support arbitrary shaped kernels, as long as both dimensions are odd (e.g. 7x9 kernels but not 4x5 kernels). The border pixels should be set to 0. The implementation must also support convolution of both grey-scale and colour images.
 
-###Hybrid Images.
-A hybrid image is the sum of a low-pass filtered version of the one image and a high-pass filtered version of a second image. There is a free parameter, which can be tuned for each image pair, which controls *how much* high frequency to remove from the first image and how much low frequency to leave in the second image. This is called the "cutoff-frequency". In the paper it is suggested to use two cutoff-frequencies (one tuned for each image) and you are free to try that, as well. 
+**Hybrid Images.** A hybrid image is the sum of a low-pass filtered version of the one image and a high-pass filtered version of a second image. There is a free parameter, which can be tuned for each image pair, which controls *how much* high frequency to remove from the first image and how much low frequency to leave in the second image. This is called the "cutoff-frequency". In the paper it is suggested to use two cutoff-frequencies (one tuned for each image) and you are free to try that, as well. 
 
 Low pass filtering (removing all the high frequencies) can be achieved by convolving the image with a Gaussian filter. The cutoff-frequency is controlled by changing the standard deviation, sigma, of the Gaussian filter used in constructing the hybrid images. You will need to implement a function to generate a 2D Gaussian convolution kernel of `size*size` pixels. The `size` is width and height of the filter in pixels. It is standard practice for this to be set as a function of the sigma value as follows:
 
