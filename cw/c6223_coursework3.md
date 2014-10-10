@@ -1,22 +1,22 @@
 ---
 layout: index
 rdir: "../"
-title: "COMP3204 Computer Vision"
+title: "COMP6223 Computer Vision (MSc)"
 subtitle: "Coursework 3: Scene Recognition"
 githubHeader: "false"
 credits: Maintained by <a href="http://www.ecs.soton.ac.uk/people/msn">Professor Mark Nixon</a> and <a href="http://www.ecs.soton.ac.uk/people/jsh2">Dr Jonathon Hare</a>.
 ---
 
-**This coursework is only for students registered on the COMP3204 module, not the COMP6223 module**
+**This coursework is only for students registered on the COMP6223 module, not the COMP3204 module**
 
 ##Brief
 **This is a group coursework: please work in pairs (teams of two people).**
 
-Due date: Thursday 11th December, 16:00.  
+Due date: Thursday 11th December, 16:00. 
 Development data download: [training.zip](./training.zip)    
 Testing data download: [testing.zip](./testing.zip)  
-Handin: [1415/COMP3204/3/](https://handin.ecs.soton.ac.uk/handin/1415/COMP3204/3/)   
-Required files: report.pdf; code.zip; run1.txt; run2.txt; run3.txt 
+Handin: 
+Required files: report.pdf; code.zip; run1.txt; run2.txt; run3.txt
 
 ##Overview
 The goal of this project is to introduce you to image recognition. Specifically, we will examine the task of scene recognition starting with very simple methods -- tiny images and nearest neighbour classification -- and then move on to techniques that resemble the state-of-the-art -- bags of quantized local features and linear classifiers learned by support vector machines. 

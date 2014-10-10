@@ -1,16 +1,18 @@
 ---
 layout: index
 rdir: "../"
-title: "COMP3204/6223 Computer Vision"
+title: "COMP3204 Computer Vision"
 subtitle: "Coursework 2: Image Filtering and Hybrid Images"
 githubHeader: "false"
 credits: Maintained by <a href="http://www.ecs.soton.ac.uk/people/msn">Professor Mark Nixon</a> and <a href="http://www.ecs.soton.ac.uk/people/jsh2">Dr Jonathon Hare</a>. <br /> This coursework is based on the excellent <a href="http://cs.brown.edu/courses/cs143/proj1/">coursework for the CS143 Introduction to Computer Vision module</a> taught by James Hays at Brown University, but has been adapted to use OpenIMAJ.
 ---
 
+**This coursework is only for students registered on the COMP3204 module, not the COMP6223 module**
+
 ##Brief
-Due date: XXX  
-Sample images: [cw1images.zip](./cw1images.zip)  
-Handin: XXX  
+Due date: Thursday 6th November, 16:00.  
+Sample images: [hybrid-images.zip](./hybrid-images.zip)  
+Handin: [1415/COMP3204/2/](https://handin.ecs.soton.ac.uk/handin/1415/COMP3204/2/)  
 Required files: report.pdf; code.zip
 
 ##Overview
@@ -24,7 +26,7 @@ Example hybrid image. Look at image from very close, then from far away.<br /><b
 ##Details
 This project is intended to familiarise you with image filtering and the implementation of a convolution function in OpenIMAJ. Once you have created an image convolution function, it is relatively straightforward to construct hybrid images. You will need to have worked through [Chapter 1](http://www.openimaj.org/tutorial/getting-started-with-openimaj-using-maven.html), [Chapter 2](http://www.openimaj.org/tutorial/processing-your-first-image.html) and [Chapter 7](http://www.openimaj.org/tutorial/processing-video.html) of the [OpenIMAJ tutorial](http://www.openimaj.org/tutorial/) prior to starting this coursework.
 
-**Template convolution.** Template convolution is a fundamental image processing tool. Mark has covered convolution in detail in the lectures. See section 3.4.1 of Mark's book (Third Edition) ("Template Convolution") and the lecture materials for more information. 
+**Template convolution.** Template convolution is a fundamental image processing tool. Mark has covered convolution in detail in the lectures. See section 3.4.1 of [Mark's book (Third Edition)](http://ecs.soton.ac.uk/~msn/book/worksheets.html) ("Template Convolution") and the lecture materials for more information. 
 
 
 OpenIMAJ has numerous built in and highly efficient operators to perform convolution, but you will be writing your own such function from scratch for this assignment. More specifically, you will implement a class called `MyConvolution` that builds on this skeleton:
@@ -59,7 +61,7 @@ Low pass filtering (removing all the high frequencies) can be achieved by convol
 
 High pass filtering (removing all the low frequencies) can be most easily achieved by subtracting a low-pass version of an image from itself.
 
-We have provided you with 5 pairs of aligned images (in the [cw1images.zip](./cw1images.zip) file) which can be merged reasonably well into hybrid images. The alignment is important because it affects the perceptual grouping (read the paper for details). We encourage you to create additional examples (e.g. change of expression, morph between different objects, change over time, etc.). See the [hybrid images project page](http://cvcl.mit.edu/hybridimage.htm) for some inspiration.
+We have provided you with 5 pairs of aligned images (in the [hybrid-images.zip](./hybrid-images.zip) file) which can be merged reasonably well into hybrid images. The alignment is important because it affects the perceptual grouping (read the paper for details). We encourage you to create additional examples (e.g. change of expression, morph between different objects, change over time, etc.). See the [hybrid images project page](http://cvcl.mit.edu/hybridimage.htm) for some inspiration.
 
 For the example shown at the top of the page, the two original images look like this:
 
@@ -102,7 +104,7 @@ Marks will be awarded for:
 * Providing a good demonstration of your hybrid images algorithm.
 * Good use of the OpenIMAJ library.
 * Well structured and commented code.
-* Excellence of professionalism in implementation and reporting.
+* Evidence of professionalism in implementation and reporting.
 * Quality and contents of the report.
 
 Standard ECS late submission penalties apply.
