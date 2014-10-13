@@ -13,7 +13,8 @@ credits: Maintained by <a href="http://www.ecs.soton.ac.uk/people/msn">Professor
 Due date: Thursday 6th November, 16:00.  
 Sample images: [hybrid-images.zip](./hybrid-images.zip)  
 Handin: [1415/COMP3204/2/](https://handin.ecs.soton.ac.uk/handin/1415/COMP3204/2/)  
-Required files: report.pdf; code.zip
+Required files: report.pdf; code.zip  
+Credit: 10% of overall module mark  
 
 ##Overview
 The goal of this assignment is to write a basic image convolution function and use it to create [hybrid images](http://cvcl.mit.edu/hybridimage.htm) using a simplified version of the [SIGGRAPH 2006 paper by Oliva, Torralba, and Schyns](http://cvcl.mit.edu/publications/OlivaTorralb_Hybrid_Siggraph06.pdf). Hybrid images are static images that change in interpretation as a function of the viewing distance. The basic idea is that high frequency tends to dominate perception when it is available, but, at a distance, only the low frequency (smooth) part of the signal can be seen. By blending the high frequency portion of one image with the low-frequency portion of another, you get a hybrid image that leads to different interpretations at different distances. An example of a hybrid image is shown below.
@@ -118,5 +119,5 @@ Individual feedback will be given covering the above points.
 * [The Hybrid Images project page](http://cvcl.mit.edu/hybridimage.htm)
 
 ##Questions
-If you have any problems/questions then [email](mailto:jsh2@ecs.soton.ac.uk) or speak to [Jon](http://ecs.soton.ac.uk/people/jsh2), either in his office, or in one of the drop-in sessions in the UG-lab we'll run during the course.
+If you have any problems/questions then [email](mailto:jsh2@ecs.soton.ac.uk) or speak to [Jon](http://ecs.soton.ac.uk/people/jsh2), either in his office, or in one of the drop-in sessions in the Zepler labs we'll run during the course.
 

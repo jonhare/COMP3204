@@ -13,7 +13,8 @@ credits: Maintained by <a href="http://www.ecs.soton.ac.uk/people/msn">Professor
 Due date: Thursday 6th November, 16:00.  
 Sample images: [hybrid-images.zip](./hybrid-images.zip)  
 Handin: [1415/COMP6223/3/](https://handin.ecs.soton.ac.uk/handin/1415/COMP6223/3/)  
-Required files: report.pdf; code.zip
+Required files: report.pdf; code.zip  
+Credit: 15% of overall module mark  
 
 ##Overview
 The goal of this assignment is to write a basic image convolution function and use it to create [hybrid images](http://cvcl.mit.edu/hybridimage.htm) using a simplified version of the [SIGGRAPH 2006 paper by Oliva, Torralba, and Schyns](http://cvcl.mit.edu/publications/OlivaTorralb_Hybrid_Siggraph06.pdf). Hybrid images are static images that change in interpretation as a function of the viewing distance. The basic idea is that high frequency tends to dominate perception when it is available, but, at a distance, only the low frequency (smooth) part of the signal can be seen. By blending the high frequency portion of one image with the low-frequency portion of another, you get a hybrid image that leads to different interpretations at different distances. An example of a hybrid image is shown below.
@@ -28,7 +29,7 @@ This project is intended to familiarise you with image filtering and the impleme
 
 **Template convolution.** Template convolution is a fundamental image processing tool. Mark has covered convolution in detail in the lectures. See section 3.4.1 of [Mark's book (Third Edition)](http://ecs.soton.ac.uk/~msn/book/worksheets.html) ("Template Convolution") and the lecture materials for more information. 
 
-For this assignment, we want you to *hand-code* your convolution operator function using a programming language or environment of your choice. You not make use of any built-in functions or libraries available to you for performing the convolution. 
+For this assignment, we want you to *hand-code* your own convolution operator function using a programming language or environment of your choice (Matlab, C, C++, etc). You should not make use of any built-in functions or libraries available to you for performing the convolution. 
 
 Your implementation must support arbitrary shaped kernels, as long as both dimensions are odd (e.g. 7x9 kernels but not 4x5 kernels). The border pixels should be set to 0. The implementation must also support convolution of both grey-scale and colour images.
 
@@ -66,7 +67,7 @@ Adding the high and low frequencies together gives you the image at the top of t
 **You should implement a function to create visualisations like the above to include in your report.**
 
 ###Restrictions
-You must not use any built-in or library functions for implementing the convolution. For example, use of the following Matlab functions are forbidden: `imfilter()`, `filter2()`, `conv2()`, `nlfilter()`, `colfilt()`. If you're using OpenCV, then use of `filter2D` and other provided convolution functions is forbidden. The same applies for other libraries.
+You must not use any built-in or library functions for implementing the convolution. For example, use of the following Matlab functions are forbidden: `imfilter()`, `filter2()`, `conv2()`, `nlfilter()`, `colfilt()`. If you're using OpenCV, then use of `filter2D` and other provided convolution functions is forbidden. The same applies for other libraries. You are allowed to use a Fourier transform operator, should you so wish (e.g Matlab's FFT, or (FFTW)[ http://www.fftw.org/]).
 
 ###The report
 You need to prepare a short report (target length is ~2 sides of A4, although there won't be penalties for exceeding this). In the report you need to describe your convolution and hybrid images algorithms (in particular, please include your code for the convolution implementation) and any decisions you made to write your algorithms in a particular way. Then you should show and discuss the results of your algorithm, showing the results of your hybrid images algorithm (showing the image at a range of scales to show the effect) and show some of the intermediate images in the hybrid image pipeline (e.g. the low and high frequency images). Also, discuss anything extra you did. Feel free to add any other information you feel is relevant.
@@ -104,5 +105,5 @@ Individual feedback will be given covering the above points.
  * [BoofCV](http://boofcv.org)
 
 ##Questions
-If you have any problems/questions then [email](mailto:jsh2@ecs.soton.ac.uk) or speak to [Jon](http://ecs.soton.ac.uk/people/jsh2), either in his office, or in one of the drop-in sessions in the UG-lab we'll run during the course.
+If you have any problems/questions then [email](mailto:jsh2@ecs.soton.ac.uk) or speak to [Jon](http://ecs.soton.ac.uk/people/jsh2), either in his office, or in one of the drop-in sessions in the Zepler labs we'll run during the course.
 

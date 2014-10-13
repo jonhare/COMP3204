@@ -13,7 +13,8 @@ credits: Maintained by <a href="http://www.ecs.soton.ac.uk/people/msn">Professor
 Due date: Wednesday 26th November, 16:00.   
 Link to the tutorial: [html](http://www.openimaj.org/tutorial) or [pdf](http://www.openimaj.org/tutorial-pdf.pdf)  
 Handin: [1415/COMP3204/1/](https://handin.ecs.soton.ac.uk/handin/1415/COMP3204/1/)  
-Required files: code.zip
+Required files: code.zip  
+Credit: 10% of overall module mark  
 
 ##Overview
 OpenIMAJ is a set of open-source libraries and tools for multimedia content analysis and content generation that has been written for research projects at Southampton over many years. OpenIMAJ is very broad and contains everything from state-of-the-art computer vision and advanced data clustering, through to software that performs analysis on the content, layout and structure of webpages. You will need to use OpenIMAJ for all the COMP3204 courseworks.
@@ -63,5 +64,5 @@ Individual feedback will be given covering the above points.
 * [The OpenIMAJ Javadocs](http://openimaj.org/apidocs/index.html)
 
 ##Questions
-If you have any problems/questions then [email](mailto:jsh2@ecs.soton.ac.uk) or speak to [Jon](http://ecs.soton.ac.uk/people/jsh2), either in his office, or in one of the drop-in sessions in the UG-lab we'll run during the course.
+If you have any problems/questions then [email](mailto:jsh2@ecs.soton.ac.uk) or speak to [Jon](http://ecs.soton.ac.uk/people/jsh2), either in his office, or in one of the drop-in sessions in the Zepler labs we'll run during the course.
 

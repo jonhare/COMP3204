@@ -16,7 +16,8 @@ Due date: Thursday 11th December, 16:00.
 Development data download: [training.zip](./training.zip)    
 Testing data download: [testing.zip](./testing.zip)  
 Handin: [1415/COMP3204/3/](https://handin.ecs.soton.ac.uk/handin/1415/COMP3204/3/)   
-Required files: report.pdf; code.zip; run1.txt; run2.txt; run3.txt 
+Required files: report.pdf; code.zip; run1.txt; run2.txt; run3.txt  
+Credit: 20% of overall module mark  
 
 ##Overview
 The goal of this project is to introduce you to image recognition. Specifically, we will examine the task of scene recognition starting with very simple methods -- tiny images and nearest neighbour classification -- and then move on to techniques that resemble the state-of-the-art -- bags of quantized local features and linear classifiers learned by support vector machines. 
@@ -102,5 +103,5 @@ Individual feedback will be given to each team covering the above points. We wil
 * [The OpenIMAJ Javadocs](http://openimaj.org/apidocs/index.html)
 
 ##Questions
-If you have any problems/questions then [email](mailto:jsh2@ecs.soton.ac.uk) or speak to [Jon](http://ecs.soton.ac.uk/people/jsh2), either in his office, or in one of the drop-in sessions in the UG-lab we'll run during the course.
+If you have any problems/questions then [email](mailto:jsh2@ecs.soton.ac.uk) or speak to [Jon](http://ecs.soton.ac.uk/people/jsh2), either in his office, or in one of the drop-in sessions in the Zepler labs we'll run during the course.
 
