@@ -12,7 +12,7 @@ credits: Maintained by <a href="http://www.ecs.soton.ac.uk/people/msn">Professor
 ##Brief
 **This is a group coursework: please work in pairs (teams of two people).**
 
-Due date: Thursday 11th December, 16:00. 
+Due date: Thursday 11th December, 16:00.  
 Development data download: [training.zip](./training.zip)    
 Testing data download: [testing.zip](./testing.zip)  
 Handin: 
