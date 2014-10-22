@@ -14,9 +14,11 @@ import uk.ac.soton.ecs.comp3204.utils.Utils;
 import uk.ac.soton.ecs.comp3204.utils.annotations.JvmArgs;
 import uk.ac.soton.ecs.comp3204.utils.annotations.Lecture;
 
+/*
 @Lecture(title = "L9: Image Search and Classification",
 		handoutsURL = "http://jonhare.github.io/COMP3204/handouts/pdf/L9-imagesearchclass.pdf",
 		slidesURL = "http://jonhare.github.io/COMP3204/lectures/pdf/L9-imagesearchclass.pdf")
+*/
 @JvmArgs(vmArguments = "-Xmx1G")
 public class Lecture9 {
 	public static void main(String[] args) throws IOException {
