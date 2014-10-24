@@ -105,6 +105,7 @@ Individual feedback will be given to each team covering the above points. We wil
      * [Example of using VLFeat to perform classification](http://www.vlfeat.org/applications/apps.html) (Note this code is Matlab, but most of the functionality is available in the C/C++ API)
 * **Libraries for Java programmers**
  * **Recommended:** [OpenIMAJ](http://openimaj.org) (note: this is what the COMP3204 students are using)
+     * [Chapter 12 of the tutorial deals with image classification](http://www.openimaj.org/tutorial/classification101.html)
  * [BoofCV](http://boofcv.org)
 
 
