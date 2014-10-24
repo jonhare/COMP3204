@@ -7,7 +7,7 @@ githubHeader: "false"
 credits: Maintained by <a href="http://www.ecs.soton.ac.uk/people/msn">Professor Mark Nixon</a> and <a href="http://www.ecs.soton.ac.uk/people/jsh2">Dr Jonathon Hare</a>.
 ---
 
-**This coursework is only for students registered on the COMP3204 module, not the COMP6223 module**
+**This coursework is only for students registered on the COMP3204 module**
 
 ##Brief
 **This is a group coursework: please work in pairs (teams of two people).**
@@ -69,7 +69,7 @@ Each image can only appear once, and every test image *must* be present.
 **You are not allowed to use the testing images for anything other than producing the final predictions.** They must not be used for either training or learning feature encoding.
 
 ###The report
-The report must be no longer than 2 sides of A4, and must be submitted electronically as a PDF. The report must include:
+The report must be no longer than 4 sides of A4, and must be submitted electronically as a PDF. The report must include:
 
 * The names and ECS user IDs of the team members
 * A description of the implementation of the classifiers for the three runs, including information on how they were trained and tuned, and the specific parameters used for configuring the feature extractors and classifiers. We expect that your "run 3" section will be considerably longer than the descriptions of runs 1 & 2.
@@ -78,7 +78,7 @@ The report must be no longer than 2 sides of A4, and must be submitted electroni
 ###What to hand in
 You need to submit to ECS Handin the following items:
 
-* The report (as a PDF document; max 2 A4 sides)
+* The report (as a PDF document; max 4 A4 sides)
 * Your code enclosed in a zip file (including everything required to train and use your classifiers; please don't include the Maven 'target' directory or any of the images!)
 * The run prediction files for your three runs (named "run1.txt", "run2.txt" and "run3.txt").
 
