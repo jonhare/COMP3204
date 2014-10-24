@@ -103,7 +103,6 @@ Individual feedback will be given to each team covering the above points. We wil
  * [OpenCV](http://opencv.org)
  * **Recommended:** [VLFeat](http://vlfeat.org)
      * [Example of using VLFeat to perform classification](http://www.vlfeat.org/applications/apps.html) (Note this code is Matlab, but most of the functionality is available in the C/C++ API)
-     * [Example of using VLFeat to perform classification](http://www.vlfeat.org/applications/apps.html)
 * **Libraries for Java programmers**
  * **Recommended:** [OpenIMAJ](http://openimaj.org) (note: this is what the COMP3204 students are using)
  * [BoofCV](http://boofcv.org)
