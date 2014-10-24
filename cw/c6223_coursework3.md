@@ -63,7 +63,7 @@ For example:
 Each image can only appear once, and every test image *must* be present.
 
 ##Restrictions
-**You are not allowed to use the testing images for anything other than producing the final predictions.** They must not be used for either training or learning feature encoding.
+* You are not allowed to use the testing images for anything other than producing the final predictions.  * They must not be used for either training or learning feature encoding.
 
 ###The report
 The report must be no longer than 4 sides of A4, and must be submitted electronically as a PDF. The report must include:
@@ -97,16 +97,16 @@ Individual feedback will be given to each team covering the above points. We wil
 
 * **Using Matlab:**
  * [Image processing toolbox tutorials](http://www.mathworks.co.uk/help/images/getting-started-with-image-processing-toolbox.html)
- * **Recommended** [VLFeat](http://vlfeat.org)
-   * [Example of using VLFeat to perform classification](http://www.vlfeat.org/applications/apps.html)
+ * **Recommended:** [VLFeat](http://vlfeat.org)
+     * [Example of using VLFeat to perform classification](http://www.vlfeat.org/applications/apps.html)
  * [Linear and non-linear SVMs](http://www.mathworks.co.uk/help/stats/svmtrain.html)
 * **Libraries for C and C++ programmers**
  * [OpenCV](http://opencv.org)
- * **Recommended** [VLFeat](http://vlfeat.org)
-   * * [Example of using VLFeat to perform classification](http://www.vlfeat.org/applications/apps.html) (Note this code is Matlab, but most of the functionality is available in the C/C++ API)
+ * **Recommended:** [VLFeat](http://vlfeat.org)
+     * [Example of using VLFeat to perform classification](http://www.vlfeat.org/applications/apps.html) (Note this code is Matlab, but most of the functionality is available in the C/C++ API)
  * [Example of using VLFeat to perform classification](http://www.vlfeat.org/applications/apps.html)
 * **Libraries for Java programmers**
- * **Recommended** [OpenIMAJ](http://openimaj.org) (note: this is what the COMP3204 students are using)
+ * **Recommended:** [OpenIMAJ](http://openimaj.org) (note: this is what the COMP3204 students are using)
  * [BoofCV](http://boofcv.org)
 
 
