@@ -63,7 +63,7 @@ For example:
 Each image can only appear once, and every test image *must* be present.
 
 ##Restrictions
-* You are not allowed to use the testing images for anything other than producing the final predictions.  * They must not be used for either training or learning feature encoding.
+* You are not allowed to use the testing images for anything other than producing the final predictions.    * They must not be used for either training or learning feature encoding.
 
 ###The report
 The report must be no longer than 4 sides of A4, and must be submitted electronically as a PDF. The report must include:
