@@ -40,7 +40,7 @@ As mentioned above, you need to develop and run three different classifiers. We'
 
 **Run #2**: You should develop a set of linear classifiers (an ensemble of 15 one-vs-all classifiers) using a bag-of-visual-words feature based on fixed size densely-sampled pixel patches. We recommend that you start with 8x8 patches, sampled every 4 pixels in the x and y directions. A sample of these should be clustered using K-Means to learn a vocabulary (try ~500 clusters to start). You might want to consider mean-centring and normalising each patch before clustering/quantisation.
 
-**Run #3**: You should try to develop the best classifiers you can! You can choose whatever feature, encoding and classifier you like. Potential features: the GIST feature; Dense SIFT; Dense SIFT in a Gaussian Pyramid; Dense SIFT with spatial pooling (i.e. *PHOW* as in the OpenIMAJ tutorial), etc. Potential classifiers: Naive bayes; non-linear SVM (perhaps using a linear classifier with a [Homogeneous Kernel Map](http://www.robots.ox.ac.uk/~vgg/software/homkermap/)), ...
+**Run #3**: You should try to develop the best classifiers you can! You can choose whatever feature, encoding and classifier you like. Potential features: the GIST feature; Dense SIFT; Dense SIFT in a Gaussian Pyramid; Dense SIFT with spatial pooling (commonly known as *PHOW* - Pyramid Histogram of Words), etc. Potential classifiers: Naive bayes; non-linear SVM (perhaps using a linear classifier with a [Homogeneous Kernel Map](http://www.robots.ox.ac.uk/~vgg/software/homkermap/)), ...
 
 ###Run prediction format
 The predictions for each run must be written to a text file named `runX.txt` (where `X` is the run number) with the following format:
