@@ -31,5 +31,5 @@ The coursework for COMP3204 and COMP6223 will be slightly different. Details on 
 ###COMP6223
 
 * **Coursework 1**. Due Thursday 6th November, 16:00 : [Specification](cw/c6223_coursework1.html) : [Handin Link](https://handin.ecs.soton.ac.uk/handin/1415/COMP6223/3/)
-* **Coursework 2** - Due Thursday 20th November, 16:00 : [Specification](cw/c6223_coursework2.html) : [Handin Link](https://handin.ecs.soton.ac.uk/handin/1415/COMP6223/1/)
+* **Coursework 2**. - Due Thursday 20th November, 16:00 : [Specification](cw/c6223_coursework2.html) : [Handin Link](https://handin.ecs.soton.ac.uk/handin/1415/COMP6223/1/)
 * Coursework 3 - TBA xx/11/2014 (handin 11/12/2014)
