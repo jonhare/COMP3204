@@ -40,12 +40,12 @@ public class Lecture2 {
 
 		slides.add(new KNNDemo());
 
-		for (int i = 30; i <= 34; i++)
+		for (int i = 30; i <= 35; i++)
 			slides.add(new PictureSlide(Lecture2.class.getResource(String.format("l2.%03d.jpg", i))));
 
 		slides.add(new KMeansDemo());
 
-		slides.add(new PictureSlide(Lecture2.class.getResource("l2.035.jpg")));
+		slides.add(new PictureSlide(Lecture2.class.getResource("l2.036.jpg")));
 
 		new SlideshowApplication(slides, 1024, 768, Utils.BACKGROUND_IMAGE);
 	}
