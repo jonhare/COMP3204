@@ -16,8 +16,8 @@ The launcher program that opens when you launch the jar is self explanatory, but
 
 Date     | Title        | Slides                             | Handouts
 ---------| ------------ | ---------------------------------- | ---------
-TBC      | L0. Fork Me! | [PDF](./lectures/pdf/L0-forkme.pdf) | N/A     
-TBC      | L1. Building machines that see | [PDF](./lectures/pdf/L1-machines-that-see.pdf) | [PDF](./handouts/pdf/L1-machines-that-see.pdf)
+30/10/14 | L0. Fork Me! | [PDF](./lectures/pdf/L0-forkme.pdf) | N/A     
+30/10/14 | L1. Building machines that see | [PDF](./lectures/pdf/L1-machines-that-see.pdf) | [PDF](./handouts/pdf/L1-machines-that-see.pdf)
 TBC      | L2. Machine learning for Pattern Recognition | |
 TBC      | L3. Covariance and Principal Components | |
 TBC      | L4. Types of image feature and segmentation | |
