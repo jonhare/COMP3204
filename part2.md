@@ -16,16 +16,16 @@ The launcher program that opens when you launch the jar is self explanatory, but
 
 Date     | Title        | Slides                             | Handouts
 ---------| ------------ | ---------------------------------- | ---------
-30/10/14 | L0. Fork Me! | [PDF](./lectures/pdf/L0-forkme.pdf) | N/A     
+30/10/14 | L0. Fork Me! | [PDF](./lectures/pdf/L0-forkme.pdf) | N/A
 30/10/14 | L1. Building machines that see | [PDF](./lectures/pdf/L1-machines-that-see.pdf) | [PDF](./handouts/pdf/L1-machines-that-see.pdf)
-TBC      | L2. Machine learning for Pattern Recognition | |
-TBC      | L3. Covariance and Principal Components | |
-TBC      | L4. Types of image feature and segmentation | |
-TBC      | L5. Shape description and modelling | |
-TBC      | L6. Local interest points | |
-TBC      | L7. Local features and matching | |
-TBC      | L8. Consistent matching | |
-TBC      | L9. Large-scale image search
-TBC      | L10. Image classification and auto-annotation
-TBC      | L11. Towards 3D vision
+31/10/14 | L2. Machine learning for Pattern Recognition | [PDF](./lectures/pdf/L2-machine-learning.pdf) | [PDF](./handouts/pdf/L2-machine-learning.pdf)
+03/11/14 | L3. Covariance and Principal Components | [PDF](./lectures/pdf/L3-covariance.pdf) | [PDF](./handouts/pdf/L3-covariance.pdf)
+06/11/14 | L4. Types of image feature and segmentation | [PDF](./lectures/pdf/L4-imagefeatures.pdf) | [PDF](./handouts/pdf/L4-imagefeatures.pdf)
+07/11/14 | L5. Shape description and modelling | [PDF](./lectures/pdf/L5-shapedescription.pdf) | [PDF](./handouts/pdf/L5-shapedescription.pdf)
+10/11/14 | L6. Local interest points | |
+13/11/14 | L7. Local features and matching | |
+14/11/14 | L8. Consistent matching | |
+17/11/14 | L9. Large-scale image search
+20/11/14 | L10. Image classification and auto-annotation | |
+TBC      | L11. Towards 3D vision | |
 TBC      | L12. Revision Lecture | |
