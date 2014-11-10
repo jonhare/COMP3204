@@ -22,9 +22,9 @@ Date     | Title        | Slides                             | Handouts
 03/11/14 | L3. Covariance and Principal Components | [PDF](./lectures/pdf/L3-covariance.pdf) | [PDF](./handouts/pdf/L3-covariance.pdf)
 06/11/14 | L4. Types of image feature and segmentation | [PDF](./lectures/pdf/L4-imagefeatures.pdf) | [PDF](./handouts/pdf/L4-imagefeatures.pdf)
 07/11/14 | L5. Shape description and modelling | [PDF](./lectures/pdf/L5-shapedescription.pdf) | [PDF](./handouts/pdf/L5-shapedescription.pdf)
-10/11/14 | L6. Local interest points | |
-13/11/14 | L7. Local features and matching | |
-14/11/14 | L8. Consistent matching | |
+10/11/14 | L6. Local interest points | [PDF](./lectures/pdf/L6-interestpoints.pdf) | [PDF](./handouts/pdf/L6-interestpoints.pdf)
+13/11/14 | L7. Local features and matching | [PDF](./lectures/pdf/L7-matching.pdf) | [PDF](./handouts/pdf/L7-matching.pdf)
+14/11/14 | L8. Consistent matching | [PDF](./lectures/pdf/L8-consistency.pdf) | [PDF](./handouts/pdf/L8-consistency.pdf)
 17/11/14 | L9. Large-scale image search
 20/11/14 | L10. Image classification and auto-annotation | |
 TBC      | L11. Towards 3D vision | |
