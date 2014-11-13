@@ -128,12 +128,12 @@ public class LineRANSACDemo extends MouseAdapter implements Slide, ActionListene
 		for (final Point2dImpl pti : points)
 			image.drawPoint(pti, RGBColour.MAGENTA, 10);
 
-		computeLS(points, RGBColour.RED);
+		computeLS(points, RGBColour.RED, 3);
 
 		updateImage();
 	}
 
-	private void computeLS(List<Point2dImpl> pts, Float[] col) {
+	private void computeLS(List<Point2dImpl> pts, Float[] col, int thickness) {
 		final LeastSquaresLinearModel model = new LeastSquaresLinearModel(0);
 		final ArrayList<Pair<Integer>> data = new ArrayList<Pair<Integer>>();
 		for (final Point2dImpl p : pts)
@@ -144,7 +144,7 @@ public class LineRANSACDemo extends MouseAdapter implements Slide, ActionListene
 		final double c = model.getC();
 		final Point2dImpl p1 = new Point2dImpl(0, c);
 		final Point2dImpl p2 = new Point2dImpl(image.getWidth(), m * image.getWidth() + c);
-		image.drawLine(p1, p2, col);
+		image.drawLine(p1, p2, thickness, col);
 	}
 
 	private void updateImage() {
@@ -170,6 +170,7 @@ public class LineRANSACDemo extends MouseAdapter implements Slide, ActionListene
 			new Thread(new Runnable() {
 				@Override
 				public void run() {
+					Point2dImpl m = null;
 					List<Point2dImpl> inliers = null;
 					for (int i = 0; i < 30 && isRunning; i++) {
 						Pair<Point2dImpl> p = null;
@@ -180,7 +181,6 @@ public class LineRANSACDemo extends MouseAdapter implements Slide, ActionListene
 							p = randomSelectStep(true); // select a pair of
 														// points
 
-						Point2dImpl m = null;
 						if (isRunning)
 							m = computeModelStep(p); // fit line to points
 
@@ -191,7 +191,10 @@ public class LineRANSACDemo extends MouseAdapter implements Slide, ActionListene
 							break;
 					}
 
-					computeLS(inliers, RGBColour.BLUE);
+					redrawImageClean();
+					computeInOutStep(m); // redraw inliers
+					computeLS(inliers, RGBColour.BLUE, 1);
+					updateImage();
 
 					runBtn.setEnabled(true);
 					clearBtn.setEnabled(true);
