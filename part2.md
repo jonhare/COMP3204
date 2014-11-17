@@ -25,7 +25,7 @@ Date     | Title        | Slides                             | Handouts
 10/11/14 | L6. Local interest points | [PDF](./lectures/pdf/L6-interestpoints.pdf) | [PDF](./handouts/pdf/L6-interestpoints.pdf)
 13/11/14 | L7. Local features and matching | [PDF](./lectures/pdf/L7-matching.pdf) | [PDF](./handouts/pdf/L7-matching.pdf)
 14/11/14 | L8. Consistent matching | [PDF](./lectures/pdf/L8-consistency.pdf) | [PDF](./handouts/pdf/L8-consistency.pdf)
-17/11/14 | L9. Large-scale image search
-20/11/14 | L10. Image classification and auto-annotation | |
-TBC      | L11. Towards 3D vision | |
-TBC      | L12. Revision Lecture | |
+17/11/14 | L9. Large-scale image search | [PDF](./lectures/pdf/L9-imagesearch.pdf) | [PDF](./handouts/pdf/L9-imagesearch.pdf)
+20/11/14 | L10. Image classification and auto-annotation | [PDF](./lectures/pdf/L10-classification.pdf) | [PDF](./handouts/pdf/L10-classification.pdf)
+21/11/14 | L11. Towards 3D vision | |
+TBC (Jan)| L12. Revision Lecture | |
