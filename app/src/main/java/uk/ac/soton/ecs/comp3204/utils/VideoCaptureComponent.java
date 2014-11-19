@@ -60,7 +60,15 @@ public class VideoCaptureComponent extends Box implements ItemListener, Closeabl
 			frames[0].fill(RGBColour.RED);
 			vc = new ArrayBackedVideo<MBFImage>(frames);
 		} else {
-			currentDevice = devices.get(0);
+			for (final Device d : devices) {
+				if (d.getNameStr().contains("FaceTime")) {
+					currentDevice = d;
+					break;
+				}
+			}
+
+			if (currentDevice == null)
+				currentDevice = devices.get(0);
 
 			vc = new VideoCapture(width, height, currentDevice);
 		}

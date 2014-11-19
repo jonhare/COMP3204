@@ -94,7 +94,12 @@ public class MainMenu extends JPanel {
 
 		@Override
 		public int compareTo(LectureObject o) {
-			return this.lecture.title().compareTo(o.getTitle());
+			final Integer thisNo = Integer.parseInt((String) this.lecture.title().subSequence(1,
+					this.lecture.title().indexOf(":")));
+			final Integer thatNo = Integer.parseInt((String) o.lecture.title().subSequence(1,
+					o.lecture.title().indexOf(":")));
+
+			return thisNo.compareTo(thatNo);
 		}
 	}
 

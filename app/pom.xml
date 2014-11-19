@@ -20,6 +20,12 @@
     </dependency>
     <dependency>
       <groupId>org.openimaj</groupId>
+      <artifactId>camera-calibration</artifactId>
+      <version>${openimaj.version}</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.openimaj</groupId>
       <artifactId>demos</artifactId>
       <version>${openimaj.version}</version>
       <scope>compile</scope>
