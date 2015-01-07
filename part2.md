@@ -27,5 +27,5 @@ Date     | Title        | Slides                             | Handouts
 14/11/14 | L8. Consistent matching | [PDF](./lectures/pdf/L8-consistency.pdf) | [PDF](./handouts/pdf/L8-consistency.pdf)
 17/11/14 | L9. Large-scale image search | [PDF](./lectures/pdf/L9-imagesearch.pdf) | [PDF](./handouts/pdf/L9-imagesearch.pdf)
 20/11/14 | L10. Image classification and auto-annotation | [PDF](./lectures/pdf/L10-classification.pdf) | [PDF](./handouts/pdf/L10-classification.pdf)
-21/11/14 | L11. Towards 3D vision | |
-TBC (Jan)| L12. Revision Lecture | |
+21/11/14 | L11. Towards 3D vision | [PDF](./lectures/pdf/L11-towards3d.pdf) | N/A |
+8/1/15   | L12. Revision Lecture | [PDF](./lectures/pdf/L12-Revision.pdf) | N/A |
