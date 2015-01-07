@@ -10,12 +10,12 @@ credits: Maintained by <a href="http://www.ecs.soton.ac.uk/people/msn">Professor
 **This coursework is only for students registered on the COMP6223 module**
 
 ##Brief
-**This is a group coursework: please work in pairs (teams of two people).**
+**This is a group coursework: please work in pairs (teams of two people). Teams of three are permitted (if necessary), but the expectations will be higher.**
 
 Due date: Thursday 11th December, 16:00.  
 Development data download: [training.zip](./training.zip)    
 Testing data download: [testing.zip](./testing.zip)  
-Handin: 
+Handin: [1415/COMP6223/4/](https://handin.ecs.soton.ac.uk/handin/1415/COMP6223/4/)   
 Required files: report.pdf; code.zip; run1.txt; run2.txt; run3.txt  
 Credit: 20% of overall module mark  
 

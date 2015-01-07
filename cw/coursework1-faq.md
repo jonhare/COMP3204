@@ -40,3 +40,10 @@ Then edit the pom.xml file in a text editor and comment out the xml block for th
 ###"mvn assembly:assembly" is really slow.
 We think this might be to do with the networked file-system housing your home areas on the Zepler lab machines. On a local disk, it runs within a few 10's of seconds. Fortunately, you don't need to do this often as you can run the code directly from Eclipse (or your IDE of choice) and so hopefully won't be too much of a problem in the long-run.
 
+##Problems with the FlickrImageDataset
+Unfortunately, we've just found out that Flickr has made a modification to their API which breaks compatibility with the FlickrJ library OpenIMAJ uses to access Flickr. This will require a bit of time to fix. You'll just have to skip using that for now. Note however, the BingImageDataset should work ok.
+
+##Out of heap space errors with the FelzenszwalbHuttenlocherSegmenter
+It's a rather memory hungry algorithm, so either reduce the image size or give java more heap space.
+
+
