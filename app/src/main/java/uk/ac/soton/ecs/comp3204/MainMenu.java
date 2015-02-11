@@ -39,9 +39,9 @@ import uk.ac.soton.ecs.comp3204.utils.annotations.Lecture;
 
 /**
  * Main menu interface to all the lectures and demos
- * 
+ *
  * @author Jonathon Hare (jsh2@ecs.soton.ac.uk)
- * 
+ *
  */
 public class MainMenu extends JPanel {
 	private static final long serialVersionUID = 1L;
@@ -147,7 +147,7 @@ public class MainMenu extends JPanel {
 
 	/**
 	 * Create a tabbed panel for each lecture
-	 * 
+	 *
 	 * @param l
 	 * @return the panel
 	 */
@@ -198,17 +198,17 @@ public class MainMenu extends JPanel {
 		controls.add(runBtn, gbc);
 		runBtns.add(runBtn);
 
-		final DefaultListModel model = new DefaultListModel();
+		final DefaultListModel<RunnableObject> model = new DefaultListModel<RunnableObject>();
 		model.addElement(l);
 		for (final DemoObject i : l.demos)
 			model.addElement(i);
 
-		final JList list = new JList(model);
+		final JList<RunnableObject> list = new JList<RunnableObject>(model);
 		list.setCellRenderer(new DefaultListCellRenderer() {
 			private static final long serialVersionUID = 1L;
 
 			@Override
-			public Component getListCellRendererComponent(JList list, Object value, int index, boolean isSelected,
+			public Component getListCellRendererComponent(JList<?> list, Object value, int index, boolean isSelected,
 					boolean cellHasFocus)
 			{
 				final JLabel label = (JLabel) super.getListCellRendererComponent(list,
@@ -224,7 +224,7 @@ public class MainMenu extends JPanel {
 				if (!e.getValueIsAdjusting()) {
 					details.removeAll();
 
-					final RunnableObject ro = ((RunnableObject) model.get(list.getSelectedIndex()));
+					final RunnableObject ro = (model.get(list.getSelectedIndex()));
 
 					authorField.setText(ro.getAuthor());
 					titleField.setText(ro.getTitle());
@@ -253,7 +253,7 @@ public class MainMenu extends JPanel {
 		runBtn.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				final RunnableObject ro = (RunnableObject) list.getSelectedValue();
+				final RunnableObject ro = list.getSelectedValue();
 				try {
 					MainMenu.this.runDemoOrPresentationNewJVM(ro.mainClass, ro.getJvmArgs());
 				} catch (final Exception e1) {
@@ -272,7 +272,7 @@ public class MainMenu extends JPanel {
 
 	/**
 	 * Find all the lectures on the classpath
-	 * 
+	 *
 	 * @return the lectures
 	 */
 	private List<LectureObject> getLectures() {
@@ -325,7 +325,7 @@ public class MainMenu extends JPanel {
 	/**
 	 * Given a presentation class file, instantiate the demo and run its main
 	 * method in a new JVM
-	 * 
+	 *
 	 * @param clazz
 	 *            The demo class file
 	 */
@@ -347,7 +347,7 @@ public class MainMenu extends JPanel {
 
 	/**
 	 * Run the menu app
-	 * 
+	 *
 	 * @param args
 	 */
 	public static void main(String[] args) {

@@ -49,7 +49,7 @@ import uk.ac.soton.ecs.comp3204.utils.annotations.Demonstration;
 
 /**
  * Demonstration of KNN classification using simple average colour features
- * 
+ *
  * @author Jonathon Hare (jsh2@ecs.soton.ac.uk)
  */
 @Demonstration(title = "K-Nearest-Neighbour Classification Demo")
@@ -69,7 +69,8 @@ public class KNNDemo implements Slide, ActionListener, VideoDisplayListener<MBFI
 	private static final int AXIS_EXTENSION = 5;
 
 	private static final String[] CLASSES = { "RED", "BLUE", "GREEN", "YELLOW", "ORANGE" };
-	private static final Float[][] COLOURS = { RGBColour.RED, RGBColour.BLUE, RGBColour.GREEN, RGBColour.YELLOW, RGBColour.ORANGE };
+	private static final Float[][] COLOURS = { RGBColour.RED, RGBColour.BLUE, RGBColour.GREEN, RGBColour.YELLOW,
+			RGBColour.ORANGE };
 
 	private VideoCaptureComponent vc;
 	private ColourSpace colourSpace = ColourSpace.HS;
@@ -77,7 +78,7 @@ public class KNNDemo implements Slide, ActionListener, VideoDisplayListener<MBFI
 	private MBFImage image;
 	private ImageComponent imageComp;
 	private BufferedImage bimg;
-	private JComboBox classType;
+	private JComboBox<String> classType;
 	private double[] lastMean;
 	private JTextField guess;
 
@@ -127,7 +128,7 @@ public class KNNDemo implements Slide, ActionListener, VideoDisplayListener<MBFI
 		// learning controls
 		final JPanel learnCtrls = new JPanel(new GridLayout(0, 1));
 		learnCtrls.setOpaque(false);
-		classType = new JComboBox();
+		classType = new JComboBox<String>();
 		for (final String c : CLASSES)
 			classType.addItem(c);
 		learnCtrls.add(classType);
@@ -185,7 +186,7 @@ public class KNNDemo implements Slide, ActionListener, VideoDisplayListener<MBFI
 
 	/**
 	 * Create a radio button
-	 * 
+	 *
 	 * @param colourspacesPanel
 	 *            the panel to add the button too
 	 * @param group
@@ -247,7 +248,7 @@ public class KNNDemo implements Slide, ActionListener, VideoDisplayListener<MBFI
 			ArrayUtils.parallelQuicksortDescending(counts, indices);
 
 			if (counts.length == 1 || counts[0] > counts[1]) {
-				guess.setText((String) this.classType.getItemAt(indices[0]));
+				guess.setText(this.classType.getItemAt(indices[0]));
 				return;
 			}
 		}
@@ -256,7 +257,7 @@ public class KNNDemo implements Slide, ActionListener, VideoDisplayListener<MBFI
 
 	/**
 	 * Project a point to draw it on the graph
-	 * 
+	 *
 	 * @param pt
 	 *            the point
 	 * @return the projected point in image coords

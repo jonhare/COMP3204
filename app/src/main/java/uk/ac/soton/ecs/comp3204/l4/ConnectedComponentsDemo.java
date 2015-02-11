@@ -45,7 +45,7 @@ public class ConnectedComponentsDemo implements Slide {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see org.openimaj.content.slideshow.Slide#getComponent(int, int)
 	 */
 	@Override
@@ -77,7 +77,7 @@ public class ConnectedComponentsDemo implements Slide {
 		colours.add(RGBColour.GRAY); // bg colour
 		ccimg = new MBFImage(oimage.width, oimage.height, ColourSpace.RGB);
 
-		final JComboBox modeCtl = new JComboBox();
+		final JComboBox<String> modeCtl = new JComboBox<String>();
 		modeCtl.setPreferredSize(new Dimension(200, modeCtl.getPreferredSize().height));
 		modeCtl.addItem("4-Connectivity");
 		modeCtl.addItem("8-Connectivity");

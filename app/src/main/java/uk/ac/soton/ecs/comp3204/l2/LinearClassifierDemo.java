@@ -42,16 +42,16 @@ import uk.ac.soton.ecs.comp3204.utils.annotations.Demonstration;
 /**
  * Demonstration of Linear classification (with the Perceptron) using simple
  * average colour features
- * 
+ *
  * @author Jonathon Hare (jsh2@ecs.soton.ac.uk)
  */
 @Demonstration(title = "Perceptron Linear Classification Demo")
 public class LinearClassifierDemo implements Slide, ActionListener, VideoDisplayListener<MBFImage> {
 	/**
 	 * A really simple perceptron
-	 * 
+	 *
 	 * @author Jonathon Hare (jsh2@ecs.soton.ac.uk)
-	 * 
+	 *
 	 */
 	private static class SimplePerceptron {
 		double alpha = 0.01;
@@ -59,7 +59,7 @@ public class LinearClassifierDemo implements Slide, ActionListener, VideoDisplay
 
 		/**
 		 * Train the perceptron
-		 * 
+		 *
 		 * @param pts
 		 *            the data points (2d)
 		 * @param classes
@@ -102,7 +102,7 @@ public class LinearClassifierDemo implements Slide, ActionListener, VideoDisplay
 
 		/**
 		 * Predict the class of the given point
-		 * 
+		 *
 		 * @param pt
 		 *            the point
 		 * @return 0 or 1
@@ -113,7 +113,7 @@ public class LinearClassifierDemo implements Slide, ActionListener, VideoDisplay
 
 		/**
 		 * Compute y-ordinate of a point on the hyperplane given the x-ordinate
-		 * 
+		 *
 		 * @param x
 		 *            the x-ordinate
 		 * @return the y-ordinate
@@ -144,7 +144,7 @@ public class LinearClassifierDemo implements Slide, ActionListener, VideoDisplay
 	private MBFImage image;
 	private ImageComponent imageComp;
 	private BufferedImage bimg;
-	private JComboBox classType;
+	private JComboBox<String> classType;
 	private double[] lastMean;
 	private JTextField guess;
 
@@ -194,7 +194,7 @@ public class LinearClassifierDemo implements Slide, ActionListener, VideoDisplay
 
 		// learning controls
 		final JPanel learnCtrls = new JPanel(new GridLayout(0, 1));
-		classType = new JComboBox();
+		classType = new JComboBox<String>();
 		for (final String c : CLASSES)
 			classType.addItem(c);
 		learnCtrls.add(classType);
@@ -246,7 +246,7 @@ public class LinearClassifierDemo implements Slide, ActionListener, VideoDisplay
 
 	/**
 	 * Create a radio button
-	 * 
+	 *
 	 * @param colourspacesPanel
 	 *            the panel to add the button too
 	 * @param group
@@ -301,7 +301,7 @@ public class LinearClassifierDemo implements Slide, ActionListener, VideoDisplay
 
 			imageComp.setImage(bimg = ImageUtilities.createBufferedImageForDisplay(image, bimg));
 
-			guess.setText((String) this.classType.getItemAt(classifier.predict(mean)));
+			guess.setText(this.classType.getItemAt(classifier.predict(mean)));
 			return;
 		}
 		guess.setText("unknown");
@@ -309,7 +309,7 @@ public class LinearClassifierDemo implements Slide, ActionListener, VideoDisplay
 
 	/**
 	 * Project a point to draw it on the graph
-	 * 
+	 *
 	 * @param pt
 	 *            the point
 	 * @return the projected point in image coords

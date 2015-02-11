@@ -23,20 +23,20 @@ import org.openimaj.video.capture.VideoCaptureException;
 
 /**
  * A reusable swing component for video input
- * 
+ *
  * @author Jonathon Hare (jsh2@ecs.soton.ac.uk)
  */
 public class VideoCaptureComponent extends Box implements ItemListener, Closeable {
 	private static final long serialVersionUID = 1L;
 	private VideoDisplay<MBFImage> display;
-	private JComboBox sources;
+	private JComboBox<String> sources;
 	private int width;
 	private int height;
 	private Device currentDevice;
 
 	/**
 	 * Construct with the given dimensions
-	 * 
+	 *
 	 * @param width
 	 *            the width
 	 * @param height
@@ -80,7 +80,7 @@ public class VideoCaptureComponent extends Box implements ItemListener, Closeabl
 
 		final JPanel sourcesPanel = new JPanel();
 		sourcesPanel.setOpaque(false);
-		sources = new JComboBox();
+		sources = new JComboBox<String>();
 		sources.setOpaque(false);
 		if (devices == null || devices.size() == 0) {
 			sources.addItem("No cameras found");
@@ -97,7 +97,7 @@ public class VideoCaptureComponent extends Box implements ItemListener, Closeabl
 
 	/**
 	 * Get the underlying video display
-	 * 
+	 *
 	 * @return the display
 	 */
 	public VideoDisplay<MBFImage> getDisplay() {
