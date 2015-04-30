@@ -15,7 +15,7 @@ import org.openimaj.image.colour.RGBColour;
 import org.openimaj.image.model.asm.datasets.AMToolsSampleDataset;
 import org.openimaj.image.model.asm.datasets.ShapeModelDataset;
 import org.openimaj.math.geometry.line.Line2d;
-import org.openimaj.math.geometry.shape.PointList;
+import org.openimaj.math.geometry.point.PointList;
 import org.openimaj.util.pair.IndependentPair;
 import org.openimaj.video.ArrayBackedVideo;
 import org.openimaj.video.VideoDisplay;

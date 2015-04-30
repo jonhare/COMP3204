@@ -20,8 +20,8 @@ import org.openimaj.image.colour.RGBColour;
 import org.openimaj.image.model.asm.datasets.AMToolsSampleDataset;
 import org.openimaj.image.model.asm.datasets.ShapeModelDataset;
 import org.openimaj.math.geometry.line.Line2d;
-import org.openimaj.math.geometry.shape.PointList;
-import org.openimaj.math.geometry.shape.PointListConnections;
+import org.openimaj.math.geometry.point.PointList;
+import org.openimaj.math.geometry.point.PointListConnections;
 import org.openimaj.math.geometry.shape.algorithm.GeneralisedProcrustesAnalysis;
 
 import uk.ac.soton.ecs.comp3204.utils.Utils;
