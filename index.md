@@ -1,7 +1,7 @@
 ---
 layout: index
 title: "COMP3204/6223 Computer Vision"
-subtitle: "2014-15"
+subtitle: "2015-16"
 githubHeader: "false"
 credits: Maintained by <a href="http://www.ecs.soton.ac.uk/people/msn">Professor Mark Nixon</a> and <a href="http://www.ecs.soton.ac.uk/people/jsh2">Dr Jonathon Hare</a>.
 ---
@@ -20,16 +20,19 @@ Materials to accompany the lectures can be found here:
 * [Part 2](part2.html) taught by Jon.
 
 ##Coursework
-The coursework for COMP3204 and COMP6223 will be slightly different. Details on each coursework below:
+The coursework for COMP3204 and COMP6223 will be slightly different. Details on each coursework will be available below as they are set:
 
 ###COMP3204
 
-* **Coursework 1**. Due Wednesday 26th November, 16:00 : [Specification](cw/coursework1.html) : [Handin Link](https://handin.ecs.soton.ac.uk/handin/1415/COMP3204/1/) : [FAQ](cw/coursework1-faq.html)
+<!-- * **Coursework 1**. Due Wednesday 26th November, 16:00 : [Specification](cw/coursework1.html) : [Handin Link](https://handin.ecs.soton.ac.uk/handin/1415/COMP3204/1/) : [FAQ](cw/coursework1-faq.html)
 * **Coursework 2**. Due Thursday 6th November, 16:00 : [Specification](cw/coursework2.html) : [Handin Link](https://handin.ecs.soton.ac.uk/handin/1415/COMP3204/2/)
 * **Coursework 3**. Due Thursday 11th December, 16:00 : [Specification](cw/coursework3.html) : [Handin Link](https://handin.ecs.soton.ac.uk/handin/1415/COMP3204/3/)
+ -->
 
 ###COMP6223
-
+<!--
 * **Coursework 1**. Due Thursday 6th November, 16:00 : [Specification](cw/c6223_coursework1.html) : [Handin Link](https://handin.ecs.soton.ac.uk/handin/1415/COMP6223/3/)
 * **Coursework 2**. Due Thursday 20th November, 16:00 : [Specification](cw/c6223_coursework2.html) : [Handin Link](https://handin.ecs.soton.ac.uk/handin/1415/COMP6223/1/)
 * **Coursework 3**. Due Thursday 11th December, 16:00 : [Specification](cw/c6223_coursework3.html) : [Handin Link](https://handin.ecs.soton.ac.uk/handin/1415/COMP6223/4/)
+-->
+

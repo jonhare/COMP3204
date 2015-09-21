@@ -1,7 +1,7 @@
 ---
 layout: index
 title: "COMP3204/6223 Computer Vision"
-subtitle: "Notes, Slides and Demos for COMP3204/COMP6223 Part II 2014-15"
+subtitle: "Notes, Slides and Demos for COMP3204/COMP6223 Part II 2015-16"
 githubHeader: "true"
 credits: Maintained and taught by <a href="http://www.ecs.soton.ac.uk/people/jsh2">Dr Jonathon Hare</a> (<a href="https://github.com/jonhare">jonhare</a>)
 ---
@@ -28,4 +28,4 @@ Date     | Title        | Slides                             | Handouts
 17/11/14 | L9. Large-scale image search | [PDF](./lectures/pdf/L9-imagesearch.pdf) | [PDF](./handouts/pdf/L9-imagesearch.pdf)
 20/11/14 | L10. Image classification and auto-annotation | [PDF](./lectures/pdf/L10-classification.pdf) | [PDF](./handouts/pdf/L10-classification.pdf)
 21/11/14 | L11. Towards 3D vision | [PDF](./lectures/pdf/L11-towards3d.pdf) | N/A |
-8/1/15   | L12. Revision Lecture | [PDF](./lectures/pdf/L12-Revision.pdf) | N/A |
+8/1/15   | L12. Revision Lecture | <!-- [PDF](./lectures/pdf/L12-Revision.pdf) --> | N/A |

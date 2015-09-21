@@ -1,7 +1,7 @@
 ---
 layout: index
 title: "COMP3204/6223 Computer Vision"
-subtitle: "Materials for COMP3204/COMP6223 Part I 2014-15"
+subtitle: "Materials for COMP3204/COMP6223 Part I 2015-16"
 githubHeader: "false"
 credits: Maintained and taught by <a href="http://www.ecs.soton.ac.uk/people/msn">Professor Mark Nixon</a>
 ---
