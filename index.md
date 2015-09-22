@@ -12,8 +12,20 @@ The challenge of computer vision is to develop a computer based system with the 
 
 This course will explore some of the basic principles and techniques from these areas which are currently being used in real-world computer vision systems and the research and development of new systems.
 
-The lectures for this course will be given by [Professor Mark Nixon](http://www.ecs.soton.ac.uk/people/msn) ([email](mailto:msn@ecs.soton.ac.uk)) and <a href="http://www.ecs.soton.ac.uk/people/jsh2">Dr Jonathon Hare</a> ([email](mailto:jsh2@ecs.soton.ac.uk)). Mark will give the lectures for the first part of the course, and Jon will finish with the second half.
+##Lectures
+The lectures for this course will be given by [Professor Mark Nixon](http://www.ecs.soton.ac.uk/people/msn) ([email](mailto:msn@ecs.soton.ac.uk)) and <a href="http://www.ecs.soton.ac.uk/people/jsh2">Dr Jonathon Hare</a> ([email](mailto:jsh2@ecs.soton.ac.uk)). Mark will give the lectures for the first part of the course, and Jon will finish with the second half. 
 
+There will be three lectures each week up to around week 9; you'll then have a couple of weeks to work on your coursework & Jon will make himself available in his office during the lecture slots for anyone looking for help or guidance. After the Christmas vacation we'll run a revision lecture and also give feedback on the group coursework. 
+
+The lecture slots are as follows:
+
+Day       | Time | Room   
+----------|------|-----------------------
+Tuesdays  | 3PM  | 5/2015 (Eustice LT/H)
+Thursdays | 11AM | 2/1085 (Law LT/C)
+Fridays   | 2PM  | 5/2017 (Eustice LT/J)
+
+##Lecture Materials
 Materials to accompany the lectures can be found here:
 
 * [Part 1](part1.html) taught by Mark.
@@ -24,15 +36,13 @@ The coursework for COMP3204 and COMP6223 will be slightly different. Details on 
 
 ###COMP3204
 
-<!-- * **Coursework 1**. Due Wednesday 26th November, 16:00 : [Specification](cw/coursework1.html) : [Handin Link](https://handin.ecs.soton.ac.uk/handin/1415/COMP3204/1/) : [FAQ](cw/coursework1-faq.html)
-* **Coursework 2**. Due Thursday 6th November, 16:00 : [Specification](cw/coursework2.html) : [Handin Link](https://handin.ecs.soton.ac.uk/handin/1415/COMP3204/2/)
-* **Coursework 3**. Due Thursday 11th December, 16:00 : [Specification](cw/coursework3.html) : [Handin Link](https://handin.ecs.soton.ac.uk/handin/1415/COMP3204/3/)
- -->
+* **Coursework 1**. Set XXX. Due Wednesday 26th November, 16:00 : <!--[Specification](cw/coursework1.html) : [Handin Link](https://handin.ecs.soton.ac.uk/handin/1415/COMP3204/1/) : [FAQ](cw/coursework1-faq.html) -->
+* **Coursework 2**. Set XXX. Due Thursday 6th November, 16:00 : <!--[Specification](cw/coursework2.html) : [Handin Link](https://handin.ecs.soton.ac.uk/handin/1415/COMP3204/2/) -->
+* **Coursework 3**. Set XXX. Due Thursday 11th December, 16:00 : <!--[Specification](cw/coursework3.html) : [Handin Link](https://handin.ecs.soton.ac.uk/handin/1415/COMP3204/3/) -->
 
 ###COMP6223
-<!--
-* **Coursework 1**. Due Thursday 6th November, 16:00 : [Specification](cw/c6223_coursework1.html) : [Handin Link](https://handin.ecs.soton.ac.uk/handin/1415/COMP6223/3/)
-* **Coursework 2**. Due Thursday 20th November, 16:00 : [Specification](cw/c6223_coursework2.html) : [Handin Link](https://handin.ecs.soton.ac.uk/handin/1415/COMP6223/1/)
-* **Coursework 3**. Due Thursday 11th December, 16:00 : [Specification](cw/c6223_coursework3.html) : [Handin Link](https://handin.ecs.soton.ac.uk/handin/1415/COMP6223/4/)
--->
+
+* **Coursework 1**. Set XXX. Due Thursday 6th November, 16:00 : <!--[Specification](cw/c6223_coursework1.html) : [Handin Link](https://handin.ecs.soton.ac.uk/handin/1415/COMP6223/3/) -->
+* **Coursework 2**. Set XXX. Due Thursday 20th November, 16:00 : <!--[Specification](cw/c6223_coursework2.html) : [Handin Link](https://handin.ecs.soton.ac.uk/handin/1415/COMP6223/1/) -->
+* **Coursework 3**. Set XXX. Due Thursday 11th December, 16:00 : <!--[Specification](cw/c6223_coursework3.html) : [Handin Link](https://handin.ecs.soton.ac.uk/handin/1415/COMP6223/4/) -->
 
