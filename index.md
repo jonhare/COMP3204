@@ -32,13 +32,13 @@ Materials to accompany the lectures can be found here:
 * [Part 2](part2.html) taught by Jon.
 
 ##Coursework
-The coursework for COMP3204 and COMP6223 will be slightly different. Details on each coursework will be available below as they are set:
+The coursework for COMP3204 and COMP6223 are slightly different. The schedule for each coursework is shown below, and details will become available below as each coursework is set:
 
 ###COMP3204
 
-* **Coursework 1**. Set XXX. Due Wednesday 26th November, 16:00 : 
-* **Coursework 2**. Set XXX. Due Thursday 6th November, 16:00 :
-* **Coursework 3**. Set XXX. Due Thursday 11th December, 16:00 :
+* **Coursework 1**. Set Tuesday 29th September. Due Thursday 26th November, 16:00 : 
+* **Coursework 2**. Set Tuesday 13th October. Due Thursday 5th November, 16:00 :
+* **Coursework 3**. Set Thursday 19th November. Due Thursday 10th December, 16:00 :
 
 <!--- [Specification](cw/coursework1.html) : [Handin Link](https://handin.ecs.soton.ac.uk/handin/1415/COMP3204/1/) : [FAQ](cw/coursework1-faq.html) -->
 <!--- [Specification](cw/coursework2.html) : [Handin Link](https://handin.ecs.soton.ac.uk/handin/1415/COMP3204/2/) -->
@@ -46,9 +46,9 @@ The coursework for COMP3204 and COMP6223 will be slightly different. Details on 
 
 ###COMP6223
 
-* **Coursework 1**. Set XXX. Due Thursday 6th November, 16:00 :
-* **Coursework 2**. Set XXX. Due Thursday 20th November, 16:00 :
-* **Coursework 3**. Set XXX. Due Thursday 11th December, 16:00 :
+* **Coursework 1**. Set Tuesday 13th October. Due Thursday 5th November, 16:00 :
+* **Coursework 2**. Set Tue 27th October. Due Thursday 19th November, 16:00 :
+* **Coursework 3**. Set Thursday 19th November. Due Thursday 10th December, 16:00 :
 
 <!--- [Specification](cw/c6223_coursework1.html) : [Handin Link](https://handin.ecs.soton.ac.uk/handin/1415/COMP6223/3/) -->
 <!--- [Specification](cw/c6223_coursework2.html) : [Handin Link](https://handin.ecs.soton.ac.uk/handin/1415/COMP6223/1/) -->
