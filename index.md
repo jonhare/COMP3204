@@ -15,7 +15,7 @@ This course will explore some of the basic principles and techniques from these 
 ##Lectures
 The lectures for this course will be given by [Professor Mark Nixon](http://www.ecs.soton.ac.uk/people/msn) ([email](mailto:msn@ecs.soton.ac.uk)) and <a href="http://www.ecs.soton.ac.uk/people/jsh2">Dr Jonathon Hare</a> ([email](mailto:jsh2@ecs.soton.ac.uk)). Mark will give the lectures for the first part of the course, and Jon will finish with the second half. 
 
-There will be three lectures each week up to around week 9; you'll then have a couple of weeks to work on your coursework & Jon will make himself available in his office during the lecture slots for anyone looking for help or guidance. After the Christmas vacation we'll run a revision lecture and also give feedback on the group coursework. 
+There will be three lectures each week up to around the end of week 8; you'll then have about three week to work on your final coursework & Jon will make himself available in his office during the lecture slots for anyone looking for help or guidance. After the Christmas vacation we'll run a revision lecture and also give feedback on the group coursework. 
 
 The lecture slots are as follows:
 
@@ -32,7 +32,7 @@ Materials to accompany the lectures can be found here:
 * [Part 2](part2.html) taught by Jon.
 
 ##Coursework
-The coursework for COMP3204 and COMP6223 are slightly different. The schedule for each coursework is shown below, and details will become available below as each coursework is set:
+The coursework assignments for COMP3204 and COMP6223 are slightly different. The schedule for each coursework is shown below, and details will become available below as each coursework is set:
 
 ###COMP3204
 
