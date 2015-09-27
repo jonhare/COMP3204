@@ -10,9 +10,9 @@ credits: Maintained by <a href="http://www.ecs.soton.ac.uk/people/msn">Professor
 **This coursework is only for students registered on the COMP3204 module, not the COMP6223 module**
 
 ##Brief
-Due date: Wednesday 26th November, 16:00.   
+Due date: Thursday 26th November 2015, 16:00.   
 Link to the tutorial: [html](http://www.openimaj.org/tutorial) or [pdf](http://www.openimaj.org/tutorial-pdf.pdf)  
-Handin: [1415/COMP3204/1/](https://handin.ecs.soton.ac.uk/handin/1415/COMP3204/1/)  
+Handin: [1516/COMP3204/7/](https://handin.ecs.soton.ac.uk/handin/1516/COMP3204/7/)  
 Required files: code.zip  
 Credit: 10% of overall module mark  
 
@@ -45,7 +45,7 @@ In order to complete the second coursework (which will be announced during Mark'
 * [Chapter 14](http://www.openimaj.org/tutorial/parallel-processing.html) 
 
 ###What to hand in
-You need to submit via ECS Handin a zipped copy of your code. Specifically, you should submit a Maven project and accompanying Java source code which show that you have worked through the above chapters of the tutorial. Please don't include the Maven 'target' directory. We would recommend you structure your code so that each chapter of the tutorial is in a separate Java package (i.e. `uk.ac.soton.ecs.<userid>.ch1`, `uk.ac.soton.ecs.<userid>.ch2`, etc.). 
+You need to submit via ECS Handin a zipped copy of your code. Specifically, you should submit a Maven project and accompanying Java source code which show that you have worked through the above chapters of the tutorial. Make sure you include evidence of have attempting the exercises associated with each tutorial - if an exercise asks a question or for reflection, make sure you leave this as a comment in the code. Please don't include the Maven 'target' directory in your submission. We would recommend you structure your code so that each chapter of the tutorial is in a separate Java package (i.e. `uk.ac.soton.ecs.<userid>.ch1`, `uk.ac.soton.ecs.<userid>.ch2`, etc.). 
 
 ##Marking and feedback
 Marks will be awarded for:

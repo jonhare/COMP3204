@@ -12,10 +12,10 @@ credits: Maintained by <a href="http://www.ecs.soton.ac.uk/people/msn">Professor
 ##Brief
 **This is a group coursework: please work in pairs (teams of two people). Teams of three are permitted (if necessary), but the expectations will be higher.**
 
-Due date: Thursday 11th December, 16:00.  
+Due date: Thursday 10th December, 16:00.  
 Development data download: [training.zip](./training.zip)    
 Testing data download: [testing.zip](./testing.zip)  
-Handin: [1415/COMP3204/3/](https://handin.ecs.soton.ac.uk/handin/1415/COMP3204/3/)   
+Handin: [1516/COMP3204/9/](https://handin.ecs.soton.ac.uk/handin/1516/COMP3204/9/)   
 Required files: report.pdf; code.zip; run1.txt; run2.txt; run3.txt  
 Credit: 20% of overall module mark  
 

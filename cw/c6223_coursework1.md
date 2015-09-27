@@ -10,14 +10,14 @@ credits: Maintained by <a href="http://www.ecs.soton.ac.uk/people/msn">Professor
 **This coursework is only for students registered on the COMP6223 module**
 
 ##Brief
-Due date: Thursday 6th November, 16:00.  
+Due date: Thursday 5th November, 16:00.  
 Sample images: [hybrid-images.zip](./hybrid-images.zip)  
-Handin: [1415/COMP6223/3/](https://handin.ecs.soton.ac.uk/handin/1415/COMP6223/3/)  
+Handin: [1516/COMP6223/1/](https://handin.ecs.soton.ac.uk/handin/1516/COMP6223/1/)  
 Required files: report.pdf; code.zip  
 Credit: 15% of overall module mark  
 
 ##Overview
-The goal of this assignment is to write a basic image convolution function and use it to create [hybrid images](http://cvcl.mit.edu/hybridimage.htm) using a simplified version of the [SIGGRAPH 2006 paper by Oliva, Torralba, and Schyns](http://cvcl.mit.edu/publications/OlivaTorralb_Hybrid_Siggraph06.pdf). Hybrid images are static images that change in interpretation as a function of the viewing distance. The basic idea is that high frequency tends to dominate perception when it is available, but, at a distance, only the low frequency (smooth) part of the signal can be seen. By blending the high frequency portion of one image with the low-frequency portion of another, you get a hybrid image that leads to different interpretations at different distances. An example of a hybrid image is shown below.
+The goal of this assignment is to write a basic image convolution function and use it to create [hybrid images](http://web.archive.org/web/20150321184824/http://cvcl.mit.edu/hybridimage.htm) using a simplified version of the [SIGGRAPH 2006 paper by Oliva, Torralba, and Schyns](http://cvcl.mit.edu/publications/OlivaTorralb_Hybrid_Siggraph06.pdf). Hybrid images are static images that change in interpretation as a function of the viewing distance. The basic idea is that high frequency tends to dominate perception when it is available, but, at a distance, only the low frequency (smooth) part of the signal can be seen. By blending the high frequency portion of one image with the low-frequency portion of another, you get a hybrid image that leads to different interpretations at different distances. An example of a hybrid image is shown below.
 
 <div style="text-align:center">
 <img src="hybrid_image.jpg"/> <br />
