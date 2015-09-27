@@ -51,6 +51,7 @@ You need to submit via ECS Handin a zipped copy of your code. Specifically, you 
 Marks will be awarded for:
 	
 * Successful completion of the task.
+* Evidence of understanding.
 * Good use of the OpenIMAJ library.
 * Well structured and commented code.
 * Evidence of professionalism.
