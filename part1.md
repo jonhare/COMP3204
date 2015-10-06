@@ -20,6 +20,19 @@ Lecture Slides:
 * [A Framework for Computer Vision (PDF)](mark/A%20Framework%20for%20Computer%20Vision-i.pdf)
 * [Lecture 1: Eye and Human Vision (PDF)](mark/Lecture 1.pdf)
 * [Lecture 2: Image Formation (PDF)](mark/Lecture 2.pdf)
+* [Lecture 3: Image Sampling (PDF)](mark/Lecture 3.pdf)
+* [Lecture 4: Point Operators (PDF)](mark/Lecture 4.pdf)
+* [Lecture 5: Group Operators (PDF)](mark/Lecture 5.pdf)
+
+<!---
+* [Lecture 6: XXX (PDF)](mark/Lecture 6.pdf)
+* [Lecture 7: XXX (PDF)](mark/Lecture 7.pdf)
+* [Lecture 8: XXX (PDF)](mark/Lecture 8.pdf)
+* [Lecture 9: XXX (PDF)](mark/Lecture 9.pdf)
+* [Lecture 10: xxx (PDF)](mark/Lecture 10.pdf)
+* [Lecture 11: xxx (PDF)](mark/Lecture 11.pdf)
+* [Lecture 12: xxx (PDF)](mark/Lecture 12.pdf) 
+-->
 
 The handout PDFs are also available directly:
 
