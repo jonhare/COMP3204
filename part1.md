@@ -23,12 +23,12 @@ Lecture Slides:
 * [Lecture 3: Image Sampling (PDF)](mark/Lecture 3.pdf)
 * [Lecture 4: Point Operators (PDF)](mark/Lecture 4.pdf)
 * [Lecture 5: Group Operators (PDF)](mark/Lecture 5.pdf)
+* [Lecture 6: Edge Detection (PDF)](mark/Lecture 6.pdf)
+* [Lecture 7: Further Edge Detection (PDF)](mark/Lecture 7.pdf)
+* [Lecture 8: Finding Shapes (PDF)](mark/Lecture 8.pdf)
+* [Lecture 9: Finding More Shapes (PDF)](mark/Lecture 9.pdf)
 
 <!---
-* [Lecture 6: XXX (PDF)](mark/Lecture 6.pdf)
-* [Lecture 7: XXX (PDF)](mark/Lecture 7.pdf)
-* [Lecture 8: XXX (PDF)](mark/Lecture 8.pdf)
-* [Lecture 9: XXX (PDF)](mark/Lecture 9.pdf)
 * [Lecture 10: xxx (PDF)](mark/Lecture 10.pdf)
 * [Lecture 11: xxx (PDF)](mark/Lecture 11.pdf)
 * [Lecture 12: xxx (PDF)](mark/Lecture 12.pdf) 
