@@ -9,6 +9,9 @@ credits: Maintained by <a href="http://www.ecs.soton.ac.uk/people/msn">Professor
 
 Let us know of any problems you encounter issues or have questions & we'll add them to the list below:
 
+##I've found a bug in the tutorial!
+Try looking in the development version here: http://openimaj.github.io/openimaj/tutorial and see if it has been fixed. If not, let us know via email or create a pull request on GitHub with a fix :)
+
 ##Problems with Maven:
 ###Error building pom:
 If you get a error message saying there was an error building the pom that looks like this:
@@ -46,4 +49,5 @@ Flickr changed how their API could be accessed a while back and the modification
 ##Out of heap space errors with the FelzenszwalbHuttenlocherSegmenter
 It's a rather memory hungry algorithm, so either reduce the image size or give java more heap space.
 
-
+##I can't load the image from the URL in the Chapter 2 tutorial
+Dropbox changed those URLs to redirects. Try "http://static.openimaj.org/media/tutorial/sinaface.jpg" instead. Note that the URLs are fixed in the development version of the tutorial here: http://openimaj.github.io/openimaj/tutorial
