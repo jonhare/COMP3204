@@ -42,7 +42,7 @@ Low pass filtering (removing all the high frequencies) can be achieved by convol
 
 High pass filtering (removing all the low frequencies) can be most easily achieved by subtracting a low-pass version of an image from itself.
 
-We have provided you with 5 pairs of aligned images (in the [hybrid-images.zip](./hybrid-images.zip) file) which can be merged reasonably well into hybrid images. The alignment is important because it affects the perceptual grouping (read the paper for details). We encourage you to create additional examples (e.g. change of expression, morph between different objects, change over time, etc.). See the [hybrid images project page](http://cvcl.mit.edu/hybridimage.htm) for some inspiration.
+We have provided you with 5 pairs of aligned images (in the [hybrid-images.zip](./hybrid-images.zip) file) which can be merged reasonably well into hybrid images. The alignment is important because it affects the perceptual grouping (read the paper for details). We encourage you to create additional examples (e.g. change of expression, morph between different objects, change over time, etc.). See the [hybrid images project page](http://web.archive.org/web/20150321184824/http://cvcl.mit.edu/hybridimage.htm) for some inspiration.
 
 For the example shown at the top of the page, the two original images look like this:
 
@@ -94,7 +94,7 @@ Individual feedback will be given covering the above points.
 
 ##Useful links
 * [SIGGRAPH Hybrid Images Paper](http://cvcl.mit.edu/publications/OlivaTorralb_Hybrid_Siggraph06.pdf)
-* [The Hybrid Images project page](http://cvcl.mit.edu/hybridimage.htm)
+* [The Hybrid Images project page](http://web.archive.org/web/20150321184824/http://cvcl.mit.edu/hybridimage.htm)
 * **Using Matlab:**
  * [Image processing toolbox tutorials](http://www.mathworks.co.uk/help/images/getting-started-with-image-processing-toolbox.html)
 * **Libraries for C and C++ programmers**
