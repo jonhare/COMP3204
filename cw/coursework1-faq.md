@@ -53,12 +53,12 @@ It's a rather memory hungry algorithm, so either reduce the image size or give j
 Dropbox changed those URLs to redirects. Try "http://static.openimaj.org/media/tutorial/sinaface.jpg" instead. Note that the URLs are fixed in the development version of the tutorial here: http://openimaj.github.io/openimaj/tutorial
 
 ##Maven is slow! 
-If you're trying to do development without an IDE Maven might be driving you insane with long build times; in particular, you're probably calling the `mvn assembly:assembly` command (or some variant with `package` included). The Maven assembly plugin does take a /long/ while to run, but it's not something you should normally use until you want to package up a jar file with all the dependencies - more specifically you should not be using it for development!
+If you're trying to do development without an IDE Maven might be driving you insane with long build times; in particular, you're probably calling the `mvn assembly:assembly` command (or some variant with `package` included). The Maven assembly plugin does take a *long* while to run, but it's not something you should normally use until you want to package up a jar file with all the dependencies - more specifically you should not be using it for development!
 
 Here are some hints that will help speed up your builds during development:
 * `mvn compile` will just build the class files
 * `mvn package` will compile the classes and create a jar that just contains your project's code - this should be very quick (I can build medium sized projects in less than 2 secs on my laptop)
-* the `-o` command line flag puts maven in offline mode - that means it won’t go away an look for new versions of snapshot dependencies and will just use the ones available locally (this will speed things up significantly if you have lots of dependencies)
+* the `-o` command line flag puts maven in offline mode - that means it will not go away and look for new versions of snapshot dependencies and will just use the ones available locally (this will speed things up significantly if you have lots of dependencies)
 * The Maven "exec" plugin can be used to run your code without packaging it, so for example if you were trying to do rapid development and test iterations you could do something like this: `mvn -o compile exec:java -Dexec.mainClass="uk.ac.soton.ecs.comp3204.MainMenu"`
 
 
