@@ -52,7 +52,7 @@ It's a rather memory hungry algorithm, so either reduce the image size or give j
 ##I can't load the image from the URL in the Chapter 2 tutorial
 Dropbox changed those URLs to redirects. Try "http://static.openimaj.org/media/tutorial/sinaface.jpg" instead. Note that the URLs are fixed in the development version of the tutorial here: http://openimaj.github.io/openimaj/tutorial
 
-##Maven is slow!
+##Maven is slow! 
 If you're trying to do development without an IDE Maven might be driving you insane with long build times; in particular, you're probably calling the `mvn assembly:assembly` command (or some variant with `package` included). The Maven assembly plugin does take a /long/ while to run, but it's not something you should normally use until you want to package up a jar file with all the dependencies - more specifically you should not be using it for development!
 
 Here are some hints that will help speed up your builds during development:
