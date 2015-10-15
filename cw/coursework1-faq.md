@@ -58,8 +58,11 @@ If you're trying to do development without an IDE Maven might be driving you ins
 Here are some hints that will help speed up your builds during development:
 
 * `mvn compile` will just build the class files
+
 * `mvn package` will compile the classes and create a jar that just contains your project's code - this should be very quick (I can build medium sized projects in less than 2 secs on my laptop)
+
 * the `-o` command line flag puts maven in offline mode - that means it will not go away and look for new versions of snapshot dependencies and will just use the ones available locally (this will speed things up significantly if you have lots of dependencies)
+
 * The Maven "exec" plugin can be used to run your code without packaging it, so for example if you were trying to do rapid development and test iterations you could do something like this: `mvn -o compile exec:java -Dexec.mainClass="uk.ac.soton.ecs.comp3204.MainMenu"`
 
 
