@@ -40,7 +40,7 @@ public class DoGResponseDemo extends SimpleCameraDemo implements VideoDisplayLis
 		final JPanel controls = new JPanel(new GridBagLayout());
 		controls.setOpaque(false);
 
-		final JLabel scaleLbl = new JLabel("<html>Scale (𝛔<sup>2</sup>): </html>");
+		final JLabel scaleLbl = new JLabel("<html>Scale (\u03C3<sup>2</sup>): </html>");
 		scaleLbl.setFont(FONT);
 		controls.add(scaleLbl);
 

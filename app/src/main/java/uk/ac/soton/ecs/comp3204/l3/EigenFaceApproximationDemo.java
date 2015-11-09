@@ -34,9 +34,9 @@ import uk.ac.soton.ecs.comp3204.utils.annotations.Demonstration;
 
 /**
  * Demonstrate the effect of low-dimensional approximation.
- * 
+ *
  * @author Jonathon Hare (jsh2@ecs.soton.ac.uk)
- * 
+ *
  */
 @Demonstration(title = "Eigenface approximation demo ")
 public class EigenFaceApproximationDemo implements Slide {
@@ -105,10 +105,10 @@ public class EigenFaceApproximationDemo implements Slide {
 
 	/**
 	 * Load an EigenImages from a resource, or generate it if necessary
-	 * 
+	 *
 	 * @param dataset
 	 * @param name
-	 * @return
+	 * @return the images
 	 * @throws IOException
 	 */
 	public static EigenImages loadEigen(final VFSGroupDataset<FImage> dataset, String name) throws IOException {

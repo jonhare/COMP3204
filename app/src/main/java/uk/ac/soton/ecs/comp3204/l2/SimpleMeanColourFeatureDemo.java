@@ -18,7 +18,7 @@ import uk.ac.soton.ecs.comp3204.utils.annotations.Demonstration;
 
 /**
  * Demonstrate different colour spaces
- * 
+ *
  * @author Jonathon Hare (jsh2@ecs.soton.ac.uk)
  */
 @Demonstration(title = "Simple Mean Colour Feature")
@@ -61,10 +61,10 @@ public class SimpleMeanColourFeatureDemo extends ColourSpacesDemo
 
 	/**
 	 * Compute the mean of the image
-	 * 
+	 *
 	 * @param frame
 	 * @param colourSpace
-	 * @return
+	 * @return the mean
 	 */
 	public static double[] computeMean(MBFImage frame, ColourSpace colourSpace) {
 		final double[] vector = new double[colourSpace.getNumBands()];
@@ -79,9 +79,9 @@ public class SimpleMeanColourFeatureDemo extends ColourSpacesDemo
 
 	/**
 	 * Format vector as a string
-	 * 
+	 *
 	 * @param vector
-	 * @return
+	 * @return the formatted vector
 	 */
 	public static String formatVector(double[] vector) {
 		final StringBuffer sb = new StringBuffer();
