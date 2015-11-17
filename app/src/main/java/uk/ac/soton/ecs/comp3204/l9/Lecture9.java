@@ -15,14 +15,17 @@ import uk.ac.soton.ecs.comp3204.utils.annotations.JvmArgs;
 import uk.ac.soton.ecs.comp3204.utils.annotations.Lecture;
 
 @Lecture(title = "L9: Image Search and Bags of Visual Words",
-		handoutsURL = "http://jonhare.github.io/COMP3204/handouts/pdf/L9-imagesearch.pdf",
-		slidesURL = "http://jonhare.github.io/COMP3204/lectures/pdf/L9-imagesearch.pdf")
+handoutsURL = "http://jonhare.github.io/COMP3204/handouts/pdf/L9-imagesearch.pdf",
+slidesURL = "http://jonhare.github.io/COMP3204/lectures/pdf/L9-imagesearch.pdf")
 @JvmArgs(vmArguments = "-Xmx1G")
 public class Lecture9 {
 	public static void main(String[] args) throws IOException {
 		final List<Slide> slides = new ArrayList<Slide>();
 
-		for (int i = 1; i <= 28; i++)
+		slides.add(new PictureSlide(Lecture9.class.getResource(String.format("l9.%03d.jpg", 1))));
+		slides.add(new ArtARDemo());
+
+		for (int i = 2; i <= 28; i++)
 			slides.add(new PictureSlide(Lecture9.class.getResource(String.format("l9.%03d.jpg", i))));
 
 		slides.add(new BoVWHistogramDemo());
