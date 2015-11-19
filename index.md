@@ -38,15 +38,14 @@ The coursework assignments for COMP3204 and COMP6223 are slightly different. The
 
 * **Coursework 1**. Set Tuesday 29th September. Due Thursday 26th November, 16:00. Feedback by 10th December : [Specification](cw/coursework1.html) : [Handin Link](https://handin.ecs.soton.ac.uk/handin/1516/COMP3204/7/) : [FAQ](cw/coursework1-faq.html) 
 * **Coursework 2**. Set Tuesday 13th October. Due Thursday 5th November, 16:00. Feedback by 3rd December : [Specification](cw/coursework2.html) : [Handin Link](https://handin.ecs.soton.ac.uk/handin/1516/COMP3204/8/)
-* **Coursework 3**. Set Thursday 19th November. Due Thursday 10th December, 16:00 Feedback 5th January : *Details coming soon*
+* **Coursework 3**. Set Thursday 19th November. Due Thursday 10th December, 16:00 Feedback 5th January : [Specification](cw/coursework3.html) : [Handin Link](https://handin.ecs.soton.ac.uk/handin/1516/COMP3204/9/)
 
-<!--- [Specification](cw/coursework3.html) : [Handin Link](https://handin.ecs.soton.ac.uk/handin/1516/COMP3204/9/) -->
 
 ###COMP6223
 
 * **Coursework 1**. Set Tuesday 13th October. Due Thursday 5th November, 16:00. Feedback by 3rd December : [Specification](cw/c6223_coursework1.html) : [Handin Link](https://handin.ecs.soton.ac.uk/handin/1516/COMP6223/1/)
 * **Coursework 2**. Set Tue 27th October. Due Thursday 19th November, 16:00. Feedback by 10th December : [Specification](cw/c6223_coursework2.html) : [Handin Link](https://handin.ecs.soton.ac.uk/handin/1516/COMP6223/2/)
-* **Coursework 3**. Set Thursday 19th November. Due Thursday 10th December, 16:00. Feedback 5th January : *Details coming soon*
+* **Coursework 3**. Set Thursday 19th November. Due Thursday 10th December, 16:00. Feedback 5th January : [Specification](cw/c6223_coursework3.html) : [Handin Link](https://handin.ecs.soton.ac.uk/handin/1516/COMP6223/3/)
 
-<!--- [Specification](cw/c6223_coursework3.html) : [Handin Link](https://handin.ecs.soton.ac.uk/handin/1516/COMP6223/3/) -->
+
 

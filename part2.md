@@ -28,4 +28,6 @@ Date     | Title        | Slides                             | Handouts
 17/11/15 | L9. Large-scale image search | [PDF](./lectures/pdf/L9-imagesearch.pdf) | [PDF](./handouts/pdf/L9-imagesearch.pdf)
 19/11/15 | L10. Image classification and auto-annotation | [PDF](./lectures/pdf/L10-classification.pdf) | [PDF](./handouts/pdf/L10-classification.pdf)
 20/11/15 | L11. Towards 3D vision | [PDF](./lectures/pdf/L11-towards3d.pdf) | N/A |
-5/1/16   | L12. Revision Lecture | Coming soon! <!--- [PDF](./lectures/pdf/L12-Revision.pdf) --> | N/A |
+5/1/16   | L12. Revision Lecture | Coming soon! | N/A |
+
+<!--- [PDF](./lectures/pdf/L12-Revision.pdf) -->
