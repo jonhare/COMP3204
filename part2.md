@@ -29,5 +29,5 @@ Date     | Title        | Slides                             | Handouts
 19/11/15 | L10. Image classification and auto-annotation | [PDF](./lectures/pdf/L10-classification.pdf) | [PDF](./handouts/pdf/L10-classification.pdf)
 20/11/15 | L11. Towards 3D vision | [PDF](./lectures/pdf/L11-towards3d.pdf) | N/A |
 1/12/15 | Bonus Lecture. Programming for computer vision & other musings related to the coursework | [PDF](./lectures/pdf/bonus-prog-conv.pdf) | N/A |
-5/1/16   | L12. Revision Lecture | Coming soon! | N/A |
+5/1/16   | L12. Revision Lecture | [PDF](./lectures/pdf/L12-Revision.pdf) | N/A |
 
