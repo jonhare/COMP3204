@@ -114,7 +114,7 @@ public class EigenDecompositionDemo extends CovarianceDemo {
 		sep.setOpaque(false);
 		sep.setPreferredSize(new Dimension(100, 10));
 		p.add(sep);
-		final JLabel valLabel = new JLabel("𝚲 = ");
+		final JLabel valLabel = new JLabel("Λ = ");
 		valLabel.setFont(Font.decode("Times-58"));
 		p.add(valLabel);
 		p.add(matrix2);
