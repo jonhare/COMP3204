@@ -1,7 +1,7 @@
 ---
 layout: index
 title: "COMP3204/6223 Computer Vision"
-subtitle: "Notes, Slides and Demos for COMP3204/COMP6223 Part II 2015-16"
+subtitle: "Notes, Slides and Demos for COMP3204/COMP6223 Part II 2016-17"
 githubHeader: "true"
 credits: Maintained and taught by <a href="http://www.ecs.soton.ac.uk/people/jsh2">Dr Jonathon Hare</a> (<a href="https://github.com/jonhare">jonhare</a>)
 ---
@@ -16,6 +16,7 @@ The launcher program that opens when you launch the jar is self explanatory, but
 
 Date     | Title        | Slides                             | Handouts
 ---------| ------------ | ---------------------------------- | ---------
+<!---
 29/10/15 | L0. Fork Me! | [PDF](./lectures/pdf/L0-forkme.pdf) | N/A
 29/10/15 | L1. Building machines that see | [PDF](./lectures/pdf/L1-machines-that-see.pdf) | [PDF](./handouts/pdf/L1-machines-that-see.pdf)
 30/10/15 | L2. Machine learning for Pattern Recognition | [PDF](./lectures/pdf/L2-machine-learning.pdf) | [PDF](./handouts/pdf/L2-machine-learning.pdf)
@@ -30,4 +31,4 @@ Date     | Title        | Slides                             | Handouts
 20/11/15 | L11. Towards 3D vision | [PDF](./lectures/pdf/L11-towards3d.pdf) | N/A |
 1/12/15 | Bonus Lecture. Programming for computer vision & other musings related to the coursework | [PDF](./lectures/pdf/bonus-prog-conv.pdf) | N/A |
 5/1/16   | L12. Revision Lecture | [PDF](./lectures/pdf/L12-Revision.pdf) | N/A |
-
+ -->
