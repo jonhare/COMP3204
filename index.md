@@ -12,7 +12,7 @@ The challenge of computer vision is to develop a computer based system with the 
 
 This course will explore some of the basic principles and techniques from these areas which are currently being used in real-world computer vision systems and the research and development of new systems.
 
-##Lectures
+## Lectures
 The lectures for this course will be given by [Professor Mark Nixon](http://www.ecs.soton.ac.uk/people/msn) ([email](mailto:msn@ecs.soton.ac.uk)) and <a href="http://www.ecs.soton.ac.uk/people/jsh2">Dr Jonathon Hare</a> ([email](mailto:jsh2@ecs.soton.ac.uk)). Mark will give the lectures for the first part of the course, and Jon will finish with the second half. 
 
 There will be three lectures each week up to around the end of week 8; you'll then have about three week to work on your final coursework & Jon will make himself available in his office during the lecture slots for anyone looking for help or guidance. After the Christmas vacation we'll run a revision lecture and also give feedback on the group coursework. 
@@ -31,10 +31,10 @@ Materials to accompany the lectures can be found here:
 * [Part 1](part1.html) taught by Mark.
 * [Part 2](part2.html) taught by Jon.
 
-##Coursework
+## Coursework
 The coursework assignments for COMP3204 and COMP6223 are slightly different. The schedule for each coursework is shown below, and details will become available below as each coursework is set:
 
-###COMP3204
+### COMP3204
 
 * **Coursework 1**. Set Monday 3rd October. Due Thursday 24th November, 16:00. Feedback by 10th December : 
 
@@ -48,7 +48,7 @@ The coursework assignments for COMP3204 and COMP6223 are slightly different. The
 
 <!--- [Specification](cw/coursework3.html) : [Handin Link](https://handin.ecs.soton.ac.uk/handin/1516/COMP3204/9/) -->
 
-###COMP6223
+### COMP6223
 
 * **Coursework 1**. Set Tuesday 13th October. Due Thursday 5th November, 16:00. Feedback by 3rd December : 
 <!--- [Specification](cw/c6223_coursework1.html) : [Handin Link](https://handin.ecs.soton.ac.uk/handin/1516/COMP6223/1/) -->
