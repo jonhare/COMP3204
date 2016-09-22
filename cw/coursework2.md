@@ -9,14 +9,14 @@ credits: Maintained by <a href="http://www.ecs.soton.ac.uk/people/msn">Professor
 
 **This coursework is only for students registered on the COMP3204 module**
 
-##Brief
-Due date: Thursday 5th November, 16:00.  
+## Brief
+Due date: Thursday 10th November, 16:00.  
 Sample images: [hybrid-images.zip](./hybrid-images.zip)  
-Handin: [1516/COMP3204/8/](https://handin.ecs.soton.ac.uk/handin/1516/COMP3204/8/)  
+Handin: [1617/COMP3204/2/](https://handin.ecs.soton.ac.uk/handin/1617/COMP3204/2/)  
 Required files: report.pdf; code.zip  
 Credit: 10% of overall module mark  
 
-##Overview
+## Overview
 The goal of this assignment is to write a basic image convolution function and use it to create [hybrid images](http://web.archive.org/web/20150321184824/http://cvcl.mit.edu/hybridimage.htm) using a simplified version of the [SIGGRAPH 2006 paper by Oliva, Torralba, and Schyns](http://cvcl.mit.edu/publications/OlivaTorralb_Hybrid_Siggraph06.pdf). Hybrid images are static images that change in interpretation as a function of the viewing distance. The basic idea is that high frequency tends to dominate perception when it is available, but, at a distance, only the low frequency (smooth) part of the signal can be seen. By blending the high frequency portion of one image with the low-frequency portion of another, you get a hybrid image that leads to different interpretations at different distances. An example of a hybrid image is shown below.
 
 <div style="text-align:center">
@@ -24,7 +24,7 @@ The goal of this assignment is to write a basic image convolution function and u
 Example hybrid image. Look at image from very close, then from far away.<br /><br />
 </div>
 
-##Details
+## Details
 This project is intended to familiarise you with image filtering and the implementation of a convolution function in OpenIMAJ. Once you have created an image convolution function, it is relatively straightforward to construct hybrid images. You will need to have worked through [Chapter 1](http://www.openimaj.org/tutorial/getting-started-with-openimaj-using-maven.html), [Chapter 2](http://www.openimaj.org/tutorial/processing-your-first-image.html) and [Chapter 7](http://www.openimaj.org/tutorial/processing-video.html) of the [OpenIMAJ tutorial](http://www.openimaj.org/tutorial/) prior to starting this coursework.
 
 **Template convolution.** Template convolution is a fundamental image processing tool. Mark has covered convolution in detail in the lectures. See section 3.4.1 of [Mark's book (Third Edition)](http://ecs.soton.ac.uk/~msn/book/worksheets.html) ("Template Convolution") and the lecture materials for more information. 
@@ -88,19 +88,19 @@ Adding the high and low frequencies together gives you the image at the top of t
 
 The OpenIMAJ [Image#drawImage](http://openimaj.org/apidocs/org/openimaj/image/Image.html#drawImage(I,%20int,%20int)) methods can be used in combination with the image resizing functionality found in the [ResizeProcessor](http://openimaj.org/apidocs/org/openimaj/image/processing/resize/ResizeProcessor.html) or [BilinearInterpolation](http://openimaj.org/apidocs/org/openimaj/image/processing/resize/BilinearInterpolation.html) classes to construct such a visualisation.
 
-###Restrictions
+### Restrictions
 You can use the convolution functions built in to OpenIMAJ for testing (e.g. [FGaussianConvolve](http://openimaj.org/apidocs/org/openimaj/image/processing/convolution/FGaussianConvolve.html), [FConvolution](http://openimaj.org/apidocs/org/openimaj/image/processing/convolution/FConvolution.html), etc), but do not use them in your implementation.
 
-###The report
+### The report
 You need to prepare a short report (target length is ~2 sides of A4, although there won't be penalties for exceeding this). In the report you need to describe your convolution and hybrid images algorithms (in particular, please include your code for the convolution implementation) and any decisions you made to write your algorithms in a particular way. Then you should show and discuss the results of your algorithm, showing the results of your hybrid images algorithm (showing the image at a range of scales to show the effect) and show some of the intermediate images in the hybrid image pipeline (e.g. the low and high frequency images). Also, discuss anything extra you did. Feel free to add any other information you feel is relevant.
 
-###What to hand in
+### What to hand in
 You need to submit to ECS Handin the following items:
 
 * The report (as a PDF document)
 * Your code enclosed in a zip file (include everything we would need to build and run it; please don't include the Maven 'target' directory!)
 
-##Marking and feedback
+## Marking and feedback
 Marks will be awarded for:
 
 * Successful implementation of the convolution and hybrid images algorithms.
@@ -114,12 +114,12 @@ Standard ECS late submission penalties apply.
 
 Individual feedback will be given covering the above points.
 
-##Useful links
+## Useful links
 * [The OpenIMAJ Tutorial](http://openimaj.org/tutorial)
 * [The OpenIMAJ Javadocs](http://openimaj.org/apidocs/index.html)
 * [SIGGRAPH Hybrid Images Paper](http://cvcl.mit.edu/publications/OlivaTorralb_Hybrid_Siggraph06.pdf)
 * [The Hybrid Images project page](http://web.archive.org/web/20150321184824/http://cvcl.mit.edu/hybridimage.htm)
 
-##Questions
+## Questions
 If you have any problems/questions then [email](mailto:jsh2@ecs.soton.ac.uk) or speak to [Jon](http://ecs.soton.ac.uk/people/jsh2), either in his office, or in one of the drop-in sessions in the Zepler labs we'll run during the course.
 

@@ -9,14 +9,14 @@ credits: Maintained by <a href="http://www.ecs.soton.ac.uk/people/msn">Professor
 
 **This coursework is only for students registered on the COMP6223 module**
 
-##Brief
-Due date: Thursday 5th November, 16:00.  
+## Brief
+Due date: Thursday 10th November, 16:00.  
 Sample images: [hybrid-images.zip](./hybrid-images.zip)  
-Handin: [1516/COMP6223/1/](https://handin.ecs.soton.ac.uk/handin/1516/COMP6223/1/)  
+Handin: [1617/COMP6223/1/](https://handin.ecs.soton.ac.uk/handin/1617/COMP6223/1/)  
 Required files: report.pdf; code.zip  
 Credit: 15% of overall module mark  
 
-##Overview
+## Overview
 The goal of this assignment is to write a basic image convolution function and use it to create [hybrid images](http://web.archive.org/web/20150321184824/http://cvcl.mit.edu/hybridimage.htm) using a simplified version of the [SIGGRAPH 2006 paper by Oliva, Torralba, and Schyns](http://cvcl.mit.edu/publications/OlivaTorralb_Hybrid_Siggraph06.pdf). Hybrid images are static images that change in interpretation as a function of the viewing distance. The basic idea is that high frequency tends to dominate perception when it is available, but, at a distance, only the low frequency (smooth) part of the signal can be seen. By blending the high frequency portion of one image with the low-frequency portion of another, you get a hybrid image that leads to different interpretations at different distances. An example of a hybrid image is shown below.
 
 <div style="text-align:center">
@@ -24,7 +24,7 @@ The goal of this assignment is to write a basic image convolution function and u
 Example hybrid image. Look at image from very close, then from far away.<br /><br />
 </div>
 
-##Details
+## Details
 This project is intended to familiarise you with image filtering and the implementation of a convolution function in a language of your choice. Once you have created an image convolution function, it is relatively straightforward to construct hybrid images. 
 
 **Template convolution.** Template convolution is a fundamental image processing tool. Mark has covered convolution in detail in the lectures. See section 3.4.1 of [Mark's book (Third Edition)](http://ecs.soton.ac.uk/~msn/book/worksheets.html) ("Template Convolution") and the lecture materials for more information. 
@@ -66,19 +66,19 @@ Adding the high and low frequencies together gives you the image at the top of t
 
 **You should implement a function to create visualisations like the above to include in your report.**
 
-###Restrictions
+### Restrictions
 You must not use any built-in or library functions for implementing the convolution. For example, use of the following Matlab functions are forbidden: `imfilter()`, `filter2()`, `conv2()`, `nlfilter()`, `colfilt()`. If you're using OpenCV, then use of `filter2D` and other provided convolution functions is forbidden. The same applies for other libraries. You are allowed to use a Fourier transform operator, should you so wish (e.g Matlab's FFT, or (FFTW)[ http://www.fftw.org/]).
 
-###The report
+### The report
 You need to prepare a short report (target length is ~2 sides of A4, although there won't be penalties for exceeding this). In the report you need to describe your convolution and hybrid images algorithms (in particular, please include your code for the convolution implementation) and any decisions you made to write your algorithms in a particular way. Then you should show and discuss the results of your algorithm, showing the results of your hybrid images algorithm (showing the image at a range of scales to show the effect) and show some of the intermediate images in the hybrid image pipeline (e.g. the low and high frequency images). Also, discuss anything extra you did. Feel free to add any other information you feel is relevant.
 
-###What to hand in
+### What to hand in
 You need to submit to ECS Handin the following items:
 
 * The report (as a PDF document)
 * Your code enclosed in a zip file (include everything we would need to build and run it, including instructions)
 
-##Marking and feedback
+## Marking and feedback
 Marks will be awarded for:
 
 * Successful implementation of the convolution and hybrid images algorithms.
@@ -92,7 +92,7 @@ Standard ECS late submission penalties apply.
 
 Individual feedback will be given covering the above points.
 
-##Useful links
+## Useful links
 * [SIGGRAPH Hybrid Images Paper](http://cvcl.mit.edu/publications/OlivaTorralb_Hybrid_Siggraph06.pdf)
 * [The Hybrid Images project page](http://web.archive.org/web/20150321184824/http://cvcl.mit.edu/hybridimage.htm)
 * **Using Matlab:**
@@ -104,6 +104,6 @@ Individual feedback will be given covering the above points.
  * [OpenIMAJ](http://openimaj.org) (note: this is what the COMP3204 students are using)
  * [BoofCV](http://boofcv.org)
 
-##Questions
+## Questions
 If you have any problems/questions then [email](mailto:jsh2@ecs.soton.ac.uk) or speak to [Jon](http://ecs.soton.ac.uk/people/jsh2), either in his office, or in one of the drop-in sessions in the Zepler labs we'll run during the course.
 

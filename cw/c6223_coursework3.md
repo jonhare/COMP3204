@@ -9,31 +9,31 @@ credits: Maintained by <a href="http://www.ecs.soton.ac.uk/people/msn">Professor
 
 **This coursework is only for students registered on the COMP6223 module**
 
-##Brief
+## Brief
 **This is a group coursework: please work in pairs (teams of two people). Teams of three are permitted (if necessary), but the expectations will be higher.**
 
-Due date: Thursday 10th December, 16:00.  
+Due date: Thursday 15th December, 16:00.  
 Development data download: [training.zip](./training.zip)    
 Testing data download: [testing.zip](./testing.zip)  
-Handin: [1516/COMP6223/3/](https://handin.ecs.soton.ac.uk/handin/1516/COMP6223/3/)   
+Handin: [1617/COMP6223/3/](https://handin.ecs.soton.ac.uk/handin/1617/COMP6223/3/)   
 Required files: report.pdf; code.zip; run1.txt; run2.txt; run3.txt  
 Credit: 20% of overall module mark  
 
-##Overview
+## Overview
 The goal of this project is to introduce you to image recognition. Specifically, we will examine the task of scene recognition starting with very simple methods -- tiny images and nearest neighbour classification -- and then move on to techniques that resemble the state-of-the-art. 
 
 This coursework will run following the methodology used in many current scientific benchmarking competitions/evaluations. You will be provided with a set of labelled development images from which you are allowed to develop and tune your classifiers. You will also be provided with a set of unlabelled images for which you will be asked to produce predictions of the correct class. We will score your predictions and there will be a *prize* for the team producing the best classifier.
 
-##Details
+## Details
 You will need to write software that classifies scenes into one of 15 categories. We want you to implement three different classifiers as described below. You will then need to run each classifier against all the test images and provide a prediction of the class for each image. 
 
-###Data
+### Data
 The training data consists of 100 images for each of the 15 scene classes. These are arranged in directories named according to the class name. The test data consists of 2985 images. All the images are provided in JPEG format. All the images are grey-scale, so you don't need to consider colour.
 
-###Objective measure
+### Objective measure
 The key classification performance indicator for this task is *average precision*; this is literally the proportion of number of correct classifications to the total number of predictions (i.e. 2985).
 
-###Run conditions
+### Run conditions
 As mentioned above, you need to develop and run three different classifiers. We'll refer to the application of a classifier to the test data as a "run".
 
 **Run #1**: You should develop a simple k-nearest-neighbour classifier using the "tiny image" feature. The "tiny image" feature is one of the simplest possible image representations. One simply crops each image to a square about the centre, and then resizes it to a small, fixed resolution (we recommend 16x16). The pixel values can be packed into a vector by concatenating each image row. It tends to work slightly better if the tiny image is made to have zero mean and unit length. You can choose the optimal k-value for the classifier.
@@ -42,7 +42,7 @@ As mentioned above, you need to develop and run three different classifiers. We'
 
 **Run #3**: You should try to develop the best classifiers you can! You can choose whatever feature, encoding and classifier you like. Potential features: the GIST feature; Dense SIFT; Dense SIFT in a Gaussian Pyramid; Dense SIFT with spatial pooling (commonly known as *PHOW* - Pyramid Histogram of Words), etc. Potential classifiers: Naive bayes; non-linear SVM (perhaps using a linear classifier with a [Homogeneous Kernel Map](http://www.robots.ox.ac.uk/~vgg/software/homkermap/)), ...
 
-###Run prediction format
+### Run prediction format
 The predictions for each run must be written to a text file named `runX.txt` (where `X` is the run number) with the following format:
 
 	<image_name> <predicted_class>
@@ -62,24 +62,24 @@ For example:
 
 Each image can only appear once, and every test image *must* be present.
 
-##Restrictions
+## Restrictions
 * You are not allowed to use the testing images for anything other than producing the final predictions **They must not be used for either training or learning feature encoding.**
 
-###The report
+### The report
 The report must be no longer than 4 sides of A4, and must be submitted electronically as a PDF. The report must include:
 
 * The names and ECS user IDs of the team members
 * A description of the implementation of the classifiers for the three runs, including information on how they were trained and tuned, and the specific parameters used for configuring the feature extractors and classifiers. We expect that your "run 3" section will be considerably longer than the descriptions of runs 1 & 2.
 * A short statement detailing the individual contributions of the team members to the coursework.
 
-###What to hand in
+### What to hand in
 You need to submit to ECS Handin the following items:
 
 * The report (as a PDF document; max 4 A4 sides)
 * Your code enclosed in a zip file (including everything required build/run you software and to train and use your classifiers; please don't include binaries or any of the images!)
 * The run prediction files for your three runs (named "run1.txt", "run2.txt" and "run3.txt").
 
-##Marking and feedback
+## Marking and feedback
 Marks will be awarded for:
 	
 * Successful completion of the task.
@@ -109,6 +109,6 @@ Individual feedback will be given to each team covering the above points. We wil
  * [BoofCV](http://boofcv.org)
 
 
-##Questions
+## Questions
 If you have any problems/questions then [email](mailto:jsh2@ecs.soton.ac.uk) or speak to [Jon](http://ecs.soton.ac.uk/people/jsh2), either in his office, or in one of the drop-in sessions in the Zepler labs we'll run during the course.
 
