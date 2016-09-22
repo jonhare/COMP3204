@@ -15,14 +15,14 @@ This course will explore some of the basic principles and techniques from these 
 ## Lectures
 The lectures for this course will be given by [Professor Mark Nixon](http://www.ecs.soton.ac.uk/people/msn) ([email](mailto:msn@ecs.soton.ac.uk)) and <a href="http://www.ecs.soton.ac.uk/people/jsh2">Dr Jonathon Hare</a> ([email](mailto:jsh2@ecs.soton.ac.uk)). Mark will give the lectures for the first part of the course, and Jon will finish with the second half. 
 
-There will be three lectures each week up to around the end of week 8; you'll then have about three week to work on your final coursework & Jon will make himself available in his office during the lecture slots for anyone looking for help or guidance. After the Christmas vacation we'll run a revision lecture and also give feedback on the group coursework. 
+There will be three lectures each week up to around the end of week 8; you'll then have about three weeks to work on your final coursework & Jon will make himself available in his office during the lecture slots for anyone looking for help or guidance. We'll likely throw in a couple of bonus lectures during the last weeks to cover additional material and give feedback. After the Christmas vacation we'll run a revision lecture and also give feedback (and prizes!) for the group coursework. 
 
 The lecture slots are as follows:
 
 Day       | Time | Room   
 ----------|------|-----------------------
 Mondays   | 5PM  | 7/3031 (Lanchester L/R F2)
-Tuesdays  | 5PM  | 35/1001 (David Kiddle [or "Old Zepler" if you've been around long enough!])
+Tuesdays  | 5PM  | 35/1001 (David Kiddle/"Old Zepler")
 Thursdays | 10AM | 13/3021 (Tizard)
 
 ## Lecture Materials
