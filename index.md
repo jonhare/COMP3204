@@ -21,7 +21,7 @@ The lecture slots are as follows:
 
 Day       | Time | Room   
 ----------|------|-----------------------
-Mondays   | 5PM  | 7/3031 (Lanchester L/R F2)
+Mondays   | 5PM  | 54/5025 (Maths 5B)
 Tuesdays  | 5PM  | 35/1001 (David Kiddle/"Old Zepler")
 Thursdays | 10AM | 58/1009 (Murray L/R D)
 
