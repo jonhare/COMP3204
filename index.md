@@ -23,7 +23,7 @@ Day       | Time | Room
 ----------|------|-----------------------
 Mondays   | 5PM  | 7/3031 (Lanchester L/R F2)
 Tuesdays  | 5PM  | 35/1001 (David Kiddle/"Old Zepler")
-Thursdays | 10AM | 13/3021 (Tizard)
+Thursdays | 10AM | 58/1009 (Murray L/R D)
 
 ## Lecture Materials
 Materials to accompany the lectures can be found here:
