@@ -10,7 +10,7 @@ credits: Maintained by <a href="http://www.ecs.soton.ac.uk/people/msn">Professor
 **This coursework is only for students registered on the COMP3204 module, not the COMP6223 module**
 
 ## Brief
-Due date: Thursday 1st December 2016, 16:00.   
+Due date: Wednesday 30th November 2016, 16:00.   
 Link to the tutorial: [html](http://www.openimaj.org/tutorial) or [pdf](http://www.openimaj.org/tutorial-pdf.pdf)  
 Handin: [1617/COMP3204/1/](https://handin.ecs.soton.ac.uk/handin/1617/COMP3204/1/)  
 Required files: code.zip  
