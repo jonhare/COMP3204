@@ -13,6 +13,7 @@ Let us know of any problems you encounter issues or have questions & we'll add t
 Try looking in the development version here: http://openimaj.github.io/openimaj/tutorial and see if it has been fixed. If not, let us know via email or create a pull request on GitHub with a fix :)
 
 ## Problems with Maven:
+
 ### Error building pom:
 If you get a error message saying there was an error building the pom that looks like this:
 	
