@@ -16,19 +16,18 @@ The launcher program that opens when you launch the jar is self explanatory, but
 
 Date     | Title        | Slides                             | Handouts
 ---------| ------------ | ---------------------------------- | ---------
-<!---
-29/10/15 | L0. Fork Me! | [PDF](./lectures/pdf/L0-forkme.pdf) | N/A
-29/10/15 | L1. Building machines that see | [PDF](./lectures/pdf/L1-machines-that-see.pdf) | [PDF](./handouts/pdf/L1-machines-that-see.pdf)
-30/10/15 | L2. Machine learning for Pattern Recognition | [PDF](./lectures/pdf/L2-machine-learning.pdf) | [PDF](./handouts/pdf/L2-machine-learning.pdf)
-03/11/15 | L3. Covariance and Principal Components | [PDF](./lectures/pdf/L3-covariance.pdf) | [PDF](./handouts/pdf/L3-covariance.pdf)
-05/11/15 | L4. Types of image feature and segmentation | [PDF](./lectures/pdf/L4-imagefeatures.pdf) | [PDF](./handouts/pdf/L4-imagefeatures.pdf)
-06/11/15 | L5. Shape description and modelling | [PDF](./lectures/pdf/L5-shapedescription.pdf) | [PDF](./handouts/pdf/L5-shapedescription.pdf)
-10/11/15 | L6. Local interest points | [PDF](./lectures/pdf/L6-interestpoints.pdf) | [PDF](./handouts/pdf/L6-interestpoints.pdf)
-12/11/15 | L7. Local features and matching | [PDF](./lectures/pdf/L7-matching.pdf) | [PDF](./handouts/pdf/L7-matching.pdf)
-13/11/15 | L8. Consistent matching | [PDF](./lectures/pdf/L8-consistency.pdf) | [PDF](./handouts/pdf/L8-consistency.pdf)
-17/11/15 | L9. Large-scale image search | [PDF](./lectures/pdf/L9-imagesearch.pdf) | [PDF](./handouts/pdf/L9-imagesearch.pdf)
-19/11/15 | L10. Image classification and auto-annotation | [PDF](./lectures/pdf/L10-classification.pdf) | [PDF](./handouts/pdf/L10-classification.pdf)
-20/11/15 | L11. Towards 3D vision | [PDF](./lectures/pdf/L11-towards3d.pdf) | N/A |
-1/12/15 | Bonus Lecture. Programming for computer vision & other musings related to the coursework | [PDF](./lectures/pdf/bonus-prog-conv.pdf) | N/A |
-5/1/16   | L12. Revision Lecture | [PDF](./lectures/pdf/L12-Revision.pdf) | N/A |
- -->
+1/11/16 | L0. Fork Me! | [PDF](./lectures/pdf/L0-forkme.pdf) | N/A
+1/11/16 | L1. Building machines that see | [PDF](./lectures/pdf/L1-machines-that-see.pdf) | [PDF](./handouts/pdf/L1-machines-that-see.pdf)
+2/11/16 | L2. Machine learning for Pattern Recognition | [PDF](./lectures/pdf/L2-machine-learning.pdf) | [PDF](./handouts/pdf/L2-machine-learning.pdf)
+03/11/16 | L3. Covariance and Principal Components | [PDF](./lectures/pdf/L3-covariance.pdf) | [PDF](./handouts/pdf/L3-covariance.pdf)
+08/11/16 | L4. Types of image feature and segmentation | [PDF](./lectures/pdf/L4-imagefeatures.pdf) | [PDF](./handouts/pdf/L4-imagefeatures.pdf)
+09/11/16 | L5. Shape description and modelling | [PDF](./lectures/pdf/L5-shapedescription.pdf) | [PDF](./handouts/pdf/L5-shapedescription.pdf)
+10/11/16 | L6. Local interest points | [PDF](./lectures/pdf/L6-interestpoints.pdf) | [PDF](./handouts/pdf/L6-interestpoints.pdf)
+15/11/16 | L7. Local features and matching | [PDF](./lectures/pdf/L7-matching.pdf) | [PDF](./handouts/pdf/L7-matching.pdf)
+16/11/16 | L8. Consistent matching | [PDF](./lectures/pdf/L8-consistency.pdf) | [PDF](./handouts/pdf/L8-consistency.pdf)
+17/11/16 | L9. Large-scale image search | [PDF](./lectures/pdf/L9-imagesearch.pdf) | [PDF](./handouts/pdf/L9-imagesearch.pdf)
+22/11/16 | L10. Image classification and auto-annotation | [PDF](./lectures/pdf/L10-classification.pdf) | [PDF](./handouts/pdf/L10-classification.pdf)
+23/11/16 | L11. Towards 3D vision | [PDF](./lectures/pdf/L11-towards3d.pdf) | N/A |
+TBC | Bonus Lecture. Programming for computer vision & other musings related to the coursework | | N/A |
+TBC | Bonus Lecture. Recent Trends in Computer Vision | | N/A |
+TBC   | L14. Revision Lecture |  | N/A |
