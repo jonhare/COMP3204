@@ -28,6 +28,6 @@ Date     | Title        | Slides                             | Handouts
 17/11/16 | L9. Large-scale image search | [PDF](./lectures/pdf/L9-imagesearch.pdf) | [PDF](./handouts/pdf/L9-imagesearch.pdf)
 22/11/16 | L10. Image classification and auto-annotation | [PDF](./lectures/pdf/L10-classification.pdf) | [PDF](./handouts/pdf/L10-classification.pdf)
 23/11/16 | L11. Towards 3D vision | [PDF](./lectures/pdf/L11-towards3d.pdf) | N/A |
-TBC | Bonus Lecture. Programming for computer vision & other musings related to the coursework | | N/A |
-TBC | Bonus Lecture. Recent Trends in Computer Vision | | N/A |
-TBC   | L14. Revision Lecture |  | N/A |
+19/11/16 | Bonus Lecture. Programming for computer vision & other musings related to the coursework | [PDF](./lectures/pdf/ConvCodingTutorial.pdf) | N/A |
+6/12/16  | Bonus Lecture. Recent Trends in Computer Vision | TBC | N/A |
+10/12/16 | Revision Lecture | TBC | N/A |
