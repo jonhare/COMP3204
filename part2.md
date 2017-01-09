@@ -29,5 +29,5 @@ Date     | Title        | Slides                             | Handouts
 22/11/16 | L10. Image classification and auto-annotation | [PDF](./lectures/pdf/L10-classification.pdf) | [PDF](./handouts/pdf/L10-classification.pdf)
 23/11/16 | L11. Towards 3D vision | [PDF](./lectures/pdf/L11-towards3d.pdf) | N/A |
 19/11/16 | Bonus Lecture. Programming for computer vision & other musings related to the coursework | [PDF](./lectures/pdf/ConvCodingTutorial.pdf) | N/A |
-6/12/16  | Bonus Lecture. Recent Trends in Computer Vision | TBC | N/A |
-10/12/16 | Revision Lecture | TBC | N/A |
+6/12/16  | Bonus Lecture. Recent Trends in Computer Vision | [HTML](./lectures/VisionRetrospective/index.html) [PDF](./lectures/pdf/VisionRetrospective.pdf) | N/A |
+10/12/16 | Revision Lecture | [PDF](./lectures/pdf/Revision.pdf) | N/A |
