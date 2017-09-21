@@ -1,7 +1,7 @@
 ---
 layout: index
 title: "COMP3204/6223 Computer Vision"
-subtitle: "2016-17"
+subtitle: "2017-18"
 githubHeader: "false"
 credits: Maintained by <a href="http://www.ecs.soton.ac.uk/people/msn">Professor Mark Nixon</a> and <a href="http://www.ecs.soton.ac.uk/people/jsh2">Dr Jonathon Hare</a>.
 ---
@@ -17,6 +17,9 @@ The lectures for this course will be given by [Professor Mark Nixon](http://www.
 
 There will be three lectures each week up to around the end of week 8; you'll then have about three weeks to work on your final coursework & Jon will make himself available in his office during the lecture slots for anyone looking for help or guidance. We'll likely throw in a couple of bonus lectures during the last weeks to cover additional material and give feedback. After the Christmas vacation we'll run a revision lecture and also give feedback (and prizes!) for the group coursework. 
 
+The timetable for the module is in the process of being confirmed. Changes might occur because of the large increase in class size this year.
+<!---
+
 The lecture slots are as follows:
 
 Day       | Time | Room   
@@ -24,6 +27,9 @@ Day       | Time | Room
 Mondays   | 5PM  | 54/5025 (Maths 5B)
 Tuesdays  | 5PM  | 35/1001 (David Kiddle/"Old Zepler")
 Thursdays | 10AM | 58/1009 (Murray L/R D)
+
+--->
+
 
 ## Lecture Materials
 Materials to accompany the lectures can be found here:
@@ -36,19 +42,19 @@ The coursework assignments for COMP3204 and COMP6223 are slightly different. The
 
 ### COMP3204
 
-* **Coursework 1**. Set Monday 3rd October. Due Wednesday 30th November, 16:00. Feedback by 16th December : [Specification](cw/coursework1.html) : [Handin Link](https://handin.ecs.soton.ac.uk/handin/1617/COMP3204/1/) : [FAQ](cw/coursework1-faq.html)
+* **Coursework 1**. TBC <!--- Set Monday 3rd October. Due Wednesday 30th November, 16:00. Feedback by 16th December : [Specification](cw/coursework1.html) : [Handin Link](https://handin.ecs.soton.ac.uk/handin/1617/COMP3204/1/) : [FAQ](cw/coursework1-faq.html) --->
 
-* **Coursework 2**. Set Monday 17th October. Due Wednesday 9th November, 16:00. Feedback by 7th December : [Specification](cw/coursework2.html) : [Handin Link](https://handin.ecs.soton.ac.uk/handin/1617/COMP3204/2/)
+* **Coursework 2**. TBC <!--- Set Monday 17th October. Due Wednesday 9th November, 16:00. Feedback by 7th December : [Specification](cw/coursework2.html) : [Handin Link](https://handin.ecs.soton.ac.uk/handin/1617/COMP3204/2/) -->
 
-* **Coursework 3**. Set Monday 21st November. Due Wednesday 14th December, 16:00 Feedback by 12th January : [Specification](cw/coursework3.html) : [Handin Link](https://handin.ecs.soton.ac.uk/handin/1617/COMP3204/3/)
+* **Coursework 3**. TBC <!--- Set Monday 21st November. Due Wednesday 14th December, 16:00 Feedback by 12th January : [Specification](cw/coursework3.html) : [Handin Link](https://handin.ecs.soton.ac.uk/handin/1617/COMP3204/3/) --->
 
 ### COMP6223
 
-* **Coursework 1**. Set Monday 17th October. Due Wednesday 9th November, 16:00. Feedback by 7th December : [Specification](cw/c6223_coursework1.html) : [Handin Link](https://handin.ecs.soton.ac.uk/handin/1617/COMP6223/1/)
+* **Coursework 1**. TBC <!--- Set Monday 17th October. Due Wednesday 9th November, 16:00. Feedback by 7th December : [Specification](cw/c6223_coursework1.html) : [Handin Link](https://handin.ecs.soton.ac.uk/handin/1617/COMP6223/1/) --->
 
-* **Coursework 2**. Set Mon 31st October. Due Wednesday 23rd November, 16:00. Feedback by 14th December : [Specification](cw/c6223_coursework2.html) : [Handin Link](https://handin.ecs.soton.ac.uk/handin/1617/COMP6223/2/)
+* **Coursework 2**. TBC <!--- Set Mon 31st October. Due Wednesday 23rd November, 16:00. Feedback by 14th December : [Specification](cw/c6223_coursework2.html) : [Handin Link](https://handin.ecs.soton.ac.uk/handin/1617/COMP6223/2/) -->
 
-* **Coursework 3**. Set Monday 21st November. Due Wednesday 14th December, 16:00. Feedback by 12th January : [Specification](cw/c6223_coursework3.html) : [Handin Link](https://handin.ecs.soton.ac.uk/handin/1617/COMP6223/3/)
+* **Coursework 3**. TBC <!--- Set Monday 21st November. Due Wednesday 14th December, 16:00. Feedback by 12th January : [Specification](cw/c6223_coursework3.html) : [Handin Link](https://handin.ecs.soton.ac.uk/handin/1617/COMP6223/3/) --->
 
 
 
