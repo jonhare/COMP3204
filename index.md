@@ -55,4 +55,3 @@ The coursework assignments for COMP3204 and COMP6223 are slightly different. The
 * **Coursework 3**. Set Tuesday 21st November. Due Wednesday 13th December, 16:00. Feedback by 12th January <!--- : [Specification](cw/c6223_coursework3.html) : [Handin Link](https://handin.ecs.soton.ac.uk/handin/1718/COMP6223/3/) -->
 
 
-
