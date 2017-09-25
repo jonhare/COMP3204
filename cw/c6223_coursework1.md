@@ -10,9 +10,9 @@ credits: Maintained by <a href="http://www.ecs.soton.ac.uk/people/msn">Professor
 **This coursework is only for students registered on the COMP6223 module**
 
 ## Brief
-Due date: Wednesday 9th November, 16:00.  
+Due date: Wednesday 15th November, 16:00.  
 Sample images: [hybrid-images.zip](./hybrid-images.zip)  
-Handin: [1617/COMP6223/1/](https://handin.ecs.soton.ac.uk/handin/1617/COMP6223/1/)  
+Handin: [1718/COMP6223/1/](https://handin.ecs.soton.ac.uk/handin/1617/COMP6223/1/)  
 Required files: report.pdf; code.zip  
 Credit: 15% of overall module mark  
 
