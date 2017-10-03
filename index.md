@@ -21,9 +21,9 @@ The lecture slots are as follows:
 
 Day       | Time | Room   
 ----------|------|-----------------------
-Tuesdays  | 5PM  | 2/1089 (Music/Law L/T D)
-Fridays   | 10AM | 2/1089 (Music/Law L/T D)
-Fridays   | 1PM  | 2/1089 (Music/Law L/T D)
+Tuesdays  | 5PM  | 2/1089 (Music L/T D)
+Fridays   | 10AM | 2/1089 (Music L/T D)
+Fridays   | 1PM  | 2/1089 (Music L/T D)
 
 ## Lecture Materials
 Materials to accompany the lectures can be found here:
