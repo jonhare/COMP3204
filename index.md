@@ -15,19 +15,15 @@ This course will explore some of the basic principles and techniques from these 
 ## Lectures
 The lectures for this course will be given by [Professor Mark Nixon](http://www.ecs.soton.ac.uk/people/msn) ([email](mailto:msn@ecs.soton.ac.uk)) and <a href="http://www.ecs.soton.ac.uk/people/jsh2">Dr Jonathon Hare</a> ([email](mailto:jsh2@ecs.soton.ac.uk)). Mark will give the lectures for the first part of the course, and Jon will finish with the second half. 
 
-There will be three lectures each week up to around the end of week 8; you'll then have about three weeks to work on your final coursework & Jon will make himself available in his office during the lecture slots for anyone looking for help or guidance. We'll likely throw in a couple of bonus lectures during the last weeks to cover additional material and give feedback. After the Christmas vacation we'll run a revision lecture and also give feedback (and prizes!) for the group coursework. 
+Except for the first week, when there will be a single kick-off lecture on Tuesday afternoon, there will be three lectures each week up to around the end of week 8; you'll then have about three weeks to work on your final coursework & Jon will make himself available in his office during the lecture slots for anyone looking for help or guidance. We'll likely throw in a couple of bonus lectures during the last weeks to cover additional material and give feedback. After the Christmas vacation we'll run a revision lecture and also give feedback (and prizes!) for the group coursework. 
 
-_The timetable for the module is in the process of being confirmed. Changes might occur because of the large increase in class size this year._
-
-<!---
 The lecture slots are as follows:
+
 Day       | Time | Room   
 ----------|------|-----------------------
-Mondays   | 5PM  | 54/5025 (Maths 5B)
-Tuesdays  | 5PM  | 35/1001 (David Kiddle/"Old Zepler")
-Thursdays | 10AM | 58/1009 (Murray L/R D)
--->
-
+Tuesdays  | 5PM  | 2/1089 (Music/Law L/T D)
+Fridays   | 10AM | 2/1089 (Music/Law L/T D)
+Fridays   | 1PM  | 2/1089 (Music/Law L/T D)
 
 ## Lecture Materials
 Materials to accompany the lectures can be found here:
@@ -40,7 +36,7 @@ The coursework assignments for COMP3204 and COMP6223 are slightly different. The
 
 ### COMP3204
 
-* **Coursework 1**. Set Tuesday 3rd October. Due Wednesday 29th November, 16:00. Feedback by 15th December <!--- : [Specification](cw/coursework1.html) : [Handin Link](https://handin.ecs.soton.ac.uk/handin/1718/COMP3204/1/) : [FAQ](cw/coursework1-faq.html) -->
+* **Coursework 1**. Set Tuesday 3rd October. Due Wednesday 29th November, 16:00. Feedback by 15th December : [Specification](cw/coursework1.html) : [Handin Link](https://handin.ecs.soton.ac.uk/handin/1718/COMP3204/1/) : [FAQ](cw/coursework1-faq.html)
 
 * **Coursework 2**. Set Friday 20th October. Due Wednesday 15th November, 16:00. Feedback by 6th December <!--- : [Specification](cw/coursework2.html) : [Handin Link](https://handin.ecs.soton.ac.uk/handin/1718/COMP3204/2/) -->
 
