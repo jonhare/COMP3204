@@ -28,6 +28,10 @@ Lecture Slides:
 * [Lecture 8: Finding Shapes (PDF)](mark/Lecture 8.pdf)
 * [Lecture 9: Finding More Shapes (PDF)](mark/Lecture 9.pdf)
 
+Scanned lecture notes
+
+* [Lecture 3](mark/Lecture_3_DiscreteFT.pdf)
+
 <!---
 * [Lecture 10: xxx (PDF)](mark/Lecture 10.pdf)
 * [Lecture 11: xxx (PDF)](mark/Lecture 11.pdf)
