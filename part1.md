@@ -30,6 +30,8 @@ Lecture Slides:
 
 Scanned lecture notes
 
+* [Lecture 1](mark/Lecture_1_Human_Vision.pdf)
+* [Lecture 2](mark/Lecture_2_Image_formation.pdf)
 * [Lecture 3](mark/Lecture_3_DiscreteFT.pdf)
 
 <!---
