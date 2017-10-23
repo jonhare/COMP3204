@@ -33,9 +33,9 @@ Scanned lecture notes
 * [Lecture 1](mark/Lecture_1_Human_Vision.pdf)
 * [Lecture 2](mark/Lecture_2_Image_formation.pdf)
 * [Lecture 3](mark/Lecture_3_DiscreteFT.pdf)
-* [Lecture 4](mark/Lecture_3_DiscreteFT.pdf)
-* [Lecture 5](mark/Lecture_3_DiscreteFT.pdf)
-* [Lecture 6](mark/Lecture_3_DiscreteFT.pdf)
+* [Lecture 4](mark/Lecture_4_slides_point_operators.pdf)
+* [Lecture 5](mark/Lecture_5_slides_group_operators.pdf)
+* [Lecture 6](mark/Lecture_6_slides_edge_detection1.pdf)
 
 <!---
 * [Lecture 10: xxx (PDF)](mark/Lecture 10.pdf)
