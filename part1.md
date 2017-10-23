@@ -33,6 +33,9 @@ Scanned lecture notes
 * [Lecture 1](mark/Lecture_1_Human_Vision.pdf)
 * [Lecture 2](mark/Lecture_2_Image_formation.pdf)
 * [Lecture 3](mark/Lecture_3_DiscreteFT.pdf)
+* [Lecture 4](mark/Lecture_3_DiscreteFT.pdf)
+* [Lecture 5](mark/Lecture_3_DiscreteFT.pdf)
+* [Lecture 6](mark/Lecture_3_DiscreteFT.pdf)
 
 <!---
 * [Lecture 10: xxx (PDF)](mark/Lecture 10.pdf)
