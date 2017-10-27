@@ -36,6 +36,9 @@ Scanned lecture notes
 * [Lecture 4](mark/Lecture_4_slides_point_operators.pdf)
 * [Lecture 5](mark/Lecture_5_slides_group_operators.pdf)
 * [Lecture 6](mark/Lecture_6_slides_edge_detection1.pdf)
+* [Lecture 7](mark/Lecture_7_slides_further_edge_det.pdf)
+* [Lecture 8](mark/Lecture_8_slides_finding_shapes.pdf)
+* [Lecture 9](mark/Lecture_9_slides_finding_more_shapes.pdf)
 
 <!---
 * [Lecture 10: xxx (PDF)](mark/Lecture 10.pdf)
