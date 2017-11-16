@@ -1,7 +1,5 @@
 package uk.ac.soton.ecs.comp3204.l8;
 
-import gnu.trove.list.array.TIntArrayList;
-
 import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.GridBagLayout;
@@ -32,15 +30,16 @@ import org.openimaj.video.tracking.klt.FeatureTable;
 import org.openimaj.video.tracking.klt.KLTTracker;
 import org.openimaj.video.tracking.klt.TrackingContext;
 
+import Jama.EigenvalueDecomposition;
+import Jama.Matrix;
+import gnu.trove.list.array.TIntArrayList;
 import uk.ac.soton.ecs.comp3204.utils.Simple3D;
 import uk.ac.soton.ecs.comp3204.utils.Simple3D.Point3D;
 import uk.ac.soton.ecs.comp3204.utils.Simple3D.Scene;
 import uk.ac.soton.ecs.comp3204.utils.Utils;
 import uk.ac.soton.ecs.comp3204.utils.annotations.Demonstration;
-import Jama.EigenvalueDecomposition;
-import Jama.Matrix;
 
-@Demonstration(title = "3D structure recovery from matchined 2d points")
+@Demonstration(title = "3D structure recovery from matched 2d points")
 public class SFMDemo implements Slide {
 	private static int NUM_FEATURES = 400;
 
