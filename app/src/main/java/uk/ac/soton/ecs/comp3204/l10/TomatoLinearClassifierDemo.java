@@ -52,7 +52,7 @@ import uk.ac.soton.ecs.comp3204.utils.annotations.Demonstration;
  *
  * @author Jonathon Hare (jsh2@ecs.soton.ac.uk)
  */
-@Demonstration(title = "Perceptron Linear Classification Demo for Tomatoe Ripeness")
+@Demonstration(title = "Perceptron Linear Classification Demo for Tomato Ripeness")
 public class TomatoLinearClassifierDemo implements Slide, ActionListener, VideoDisplayListener<MBFImage> {
 	/**
 	 * A really simple perceptron

@@ -60,7 +60,7 @@ import uk.ac.soton.ecs.comp3204.utils.annotations.Demonstration;
  *
  * @author Jonathon Hare (jsh2@ecs.soton.ac.uk)
  */
-@Demonstration(title = "K-Nearest-Neighbour Classification Demo for Tomatoe ripeness")
+@Demonstration(title = "K-Nearest-Neighbour Classification Demo for Tomato ripeness")
 public class TomatoKNNClassifierDemo implements Slide, ActionListener, VideoDisplayListener<MBFImage>, ChangeListener {
 	private static final int CIRCLE_THICKNESS = 4;
 	private static final int CIRCLE_SIZE = 15;
