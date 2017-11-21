@@ -22,7 +22,7 @@ import uk.ac.soton.ecs.comp3204.utils.annotations.Demonstration;
 
 /**
  * Demonstrate different colour spaces
- * 
+ *
  * @author Jonathon Hare (jsh2@ecs.soton.ac.uk)
  */
 @Demonstration(title = "Colour Spaces Demo")
@@ -58,7 +58,7 @@ public class ColourSpacesDemo extends SimpleCameraDemo implements Slide, VideoDi
 
 	/**
 	 * Create a radio button
-	 * 
+	 *
 	 * @param controlsPanel
 	 *            the panel to add the button too
 	 * @param group
@@ -89,7 +89,7 @@ public class ColourSpacesDemo extends SimpleCameraDemo implements Slide, VideoDi
 	/**
 	 * Convert the colour space of an image, maintaining three bands so it can
 	 * be displayed
-	 * 
+	 *
 	 * @param frame
 	 * @param colourSpace
 	 */

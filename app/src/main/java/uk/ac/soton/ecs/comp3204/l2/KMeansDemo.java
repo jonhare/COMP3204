@@ -43,7 +43,7 @@ import uk.ac.soton.ecs.comp3204.utils.annotations.Demonstration;
 
 /**
  * Demo showing K-Means clustering
- * 
+ *
  * @author Jonathon Hare (jsh2@ecs.soton.ac.uk)
  */
 @Demonstration(title = "K Means Clustering Demo")
@@ -71,7 +71,7 @@ public class KMeansDemo extends MouseAdapter implements Slide, ActionListener {
 		base.setLayout(new BoxLayout(base, BoxLayout.Y_AXIS));
 
 		image = new MBFImage(width, height - 50, ColourSpace.RGB);
-		renderer = image.createRenderer(RenderHints.ANTI_ALIASED);
+		renderer = image.createRenderer(RenderHints.FAST);
 		resetImage();
 
 		ic = new DisplayUtilities.ImageComponent(true, false);
