@@ -26,8 +26,8 @@ Date     | Title        | Slides                             | Handouts
 <!--- 15/11/16 --> | L7. Local features and matching | [PDF](./lectures/pdf/L7-matching.pdf) | [PDF](./handouts/pdf/L7-matching.pdf)
 <!--- 16/11/16 --> | L8. Consistent matching | [PDF](./lectures/pdf/L8-consistency.pdf) | [PDF](./handouts/pdf/L8-consistency.pdf)
 <!--- 17/11/16 --> | L9. Large-scale image search | [PDF](./lectures/pdf/L9-imagesearch.pdf) | [PDF](./handouts/pdf/L9-imagesearch.pdf)
-<!--- 22/11/16 --> | L10. Image classification and auto-annotation | [PDF](./lectures/pdf/L10-classification.pdf) | [PDF](./handouts/pdf/L10-classification.pdf)
-<!--- 23/11/16 --> | L11. Towards 3D vision | [PDF](./lectures/pdf/L11-towards3d.pdf) | N/A |
-<!--- 19/11/16 --> | Bonus Lecture. Programming for computer vision & other musings related to the coursework | [PDF](./lectures/pdf/ConvCodingTutorial.pdf) | N/A |
-<!--- 6/12/16 -->  | Bonus Lecture. Recent Trends in Computer Vision | [HTML](./lectures/VisionRetrospective/index.html) [PDF](./lectures/pdf/VisionRetrospective.pdf) | N/A |
+21/11/17 | L10. Image classification and auto-annotation | [PDF](./lectures/pdf/L10-classification.pdf) | [PDF](./handouts/pdf/L10-classification.pdf)
+24/11/17 | L11. Towards 3D vision | [PDF](./lectures/pdf/L11-towards3d.pdf) | N/A |
+24/11/17 | Bonus Lecture. Programming for computer vision & other musings related to the hybrid images coursework | [PDF](./lectures/pdf/ConvCodingTutorial.pdf) | N/A |
+28/11/17 | Bonus Lecture. Recent Trends in Computer Vision | [HTML](./lectures/VisionRetrospective/index.html) [PDF](./lectures/pdf/VisionRetrospective.pdf) | N/A |
 <!--- 10/12/16 --> | Revision Lecture | [PDF](./lectures/pdf/Revision.pdf) | N/A |
