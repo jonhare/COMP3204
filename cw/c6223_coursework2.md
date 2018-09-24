@@ -10,9 +10,9 @@ credits: Maintained by <a href="http://www.ecs.soton.ac.uk/people/msn">Professor
 **This coursework is only for students registered on the COMP6223 module.**
 
 ## Brief
-Due date: Wednesday 29th November, 16:00.  
+Due date: Thursday 22nd November, 16:00.
 Software tool: [Download](https://github.com/jonhare/SimpleFaceDetector/releases/download/v1.0/SimpleFaceDetector-1.0-tool.jar) | [README](https://github.com/jonhare/SimpleFaceDetector/blob/master/README.md)  
-Handin: [1718/COMP6223/2/](https://handin.ecs.soton.ac.uk/handin/1718/COMP6223/2/)  
+Handin: [1819/COMP6223/2/](https://handin.ecs.soton.ac.uk/handin/1819/COMP6223/2/)  
 Required files: report.pdf  
 Credit: 10% of overall module mark  
 

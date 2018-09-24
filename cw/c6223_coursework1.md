@@ -10,9 +10,9 @@ credits: Maintained by <a href="http://www.ecs.soton.ac.uk/people/msn">Professor
 **This coursework is only for students registered on the COMP6223 module**
 
 ## Brief
-Due date: Wednesday 15th November, 16:00.  
+Due date: Thursday 8th November, 16:00.  
 Sample images: [hybrid-images.zip](./hybrid-images.zip)  
-Handin: [1718/COMP6223/1/](https://handin.ecs.soton.ac.uk/handin/1718/COMP6223/1/)  
+Handin: [1819/COMP6223/1/](https://handin.ecs.soton.ac.uk/handin/1819/COMP6223/1/)  
 Required files: report.pdf; code.zip  
 Credit: 15% of overall module mark  
 
@@ -32,6 +32,8 @@ This project is intended to familiarise you with image filtering and the impleme
 For this assignment, we want you to *hand-code* your own convolution operator function using a programming language or environment of your choice (Matlab, C, C++, etc). You should not make use of any built-in functions or libraries available to you for performing the convolution. 
 
 Your implementation must support arbitrary shaped kernels, as long as both dimensions are odd (e.g. 7x9 kernels but not 4x5 kernels). The border pixels should be set to 0. The implementation must also support convolution of both grey-scale and colour images. Note that colour convolution is achieved by applying the convolution operator to each of the colour bands separately (i.e. treating each band as an independent grey-level image).
+
+Make sure that you implement the convolution operator and not a different (but similar) operator. Check that your implementation works correctly for non-symmetric kernels.
 
 **Hybrid Images.** A hybrid image is the sum of a low-pass filtered version of the one image and a high-pass filtered version of a second image. There is a free parameter, which can be tuned for each image pair, which controls *how much* high frequency to remove from the first image and how much low frequency to leave in the second image. This is called the "cutoff-frequency". In the paper it is suggested to use two cutoff-frequencies (one tuned for each image) and you are free to try that, as well. 
 

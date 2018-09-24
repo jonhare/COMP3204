@@ -10,9 +10,9 @@ credits: Maintained by <a href="http://www.ecs.soton.ac.uk/people/msn">Professor
 **This coursework is only for students registered on the COMP3204 module**
 
 ## Brief
-Due date: Wednesday 15th November, 16:00.  
+Due date: Thursday 8th November, 16:00.  
 Sample images: [hybrid-images.zip](./hybrid-images.zip)  
-Handin: [1718/COMP3204/2/](https://handin.ecs.soton.ac.uk/handin/1718/COMP3204/2/)  
+Handin: [1819/COMP3204/2/](https://handin.ecs.soton.ac.uk/handin/1819/COMP3204/2/)  
 Required files: report.pdf; code.zip  
 Credit: 10% of overall module mark  
 
@@ -54,6 +54,8 @@ OpenIMAJ has numerous built in and highly efficient operators to perform convolu
 You will need to fill in the `processImage` method so that it performs convolution of the image with the kernel/template. Your implementation must support arbitrary shaped kernels, as long as both dimensions are odd (e.g. 7x9 kernels but not 4x5 kernels). The border pixels should be set to 0.
 
 Note that the code you write for template convolution is designed to work on grey-level images (`FImage`), however the images you will process in the next section are colour (`MBFImage`). Convolution of a colour image is performed by separately convolving each of the colour bands. OpenIMAJ will automatically take care of this for you when you pass your `MyConvolution` instance to the `process` method of an `MBFImage`.
+
+Make sure that you implement the convolution operator and not a different (but similar) operator. Check that your implementation works correctly for non-symmetric kernels.
 
 **Hybrid Images.** A hybrid image is the sum of a low-pass filtered version of the one image and a high-pass filtered version of a second image. There is a free parameter, which can be tuned for each image pair, which controls *how much* high frequency to remove from the first image and how much low frequency to leave in the second image. This is called the "cutoff-frequency". In the paper it is suggested to use two cutoff-frequencies (one tuned for each image) and you are free to try that, as well. 
 
