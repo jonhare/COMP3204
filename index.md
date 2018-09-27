@@ -21,9 +21,9 @@ The lecture slots are (currently) as follows -- keep an eye on your timetable as
 
 Day       | Time | Room   
 ----------|------|-----------------------
-Mondays   | 10AM | 2/1089 (Music L/T D)
-Tuesdays  | 9AM  | 2/1089 (Music L/T D)
-Thursdays | 11AM | 2/1089 (Music L/T D)
+Mondays   | 10AM | 46/3001 (Physics A)
+Tuesdays  | 9AM  | 35/1001 
+Thursdays | 11AM | 65/1133 (Avenue A)
 
 ## Lecture Materials
 Materials to accompany the lectures can be found here:
