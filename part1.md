@@ -11,7 +11,9 @@ Welcome to the homepage for the first half of [COMP3204](https://secure.ecs.soto
 Here is a list of materials available to you to complement the lectures in this half of the course:
 
 * [The book's website](https://secure.ecs.soton.ac.uk/notes/comp3204/marks_book_website/)
+<!---
 * [Zipped pdfs](mark/handouts.pdf) of all Mark's handouts, including an Electronics one (#8).
+-->
 
 Lecture Slides:
 
