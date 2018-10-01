@@ -8,9 +8,11 @@ credits: Maintained and taught by <a href="http://www.ecs.soton.ac.uk/people/msn
 
 Welcome to the homepage for the first half of [COMP3204](https://secure.ecs.soton.ac.uk/module/COMP3204) and [COMP6223](https://secure.ecs.soton.ac.uk/module/COMP6223).
 
-Here is a list of materials available to you to complement the lectures in this half of the course:
+Here is a list of materials available to you to complement the lectures in this half of the course. I am currently writing the fourth Edition of my textbook, and am providing draft Chapters here ***for ECS students only*** as I write books to support our courses (OK, it's the only major textbook of its type). The materials are:
 
-* [The book's website](https://secure.ecs.soton.ac.uk/notes/comp3204/marks_book_website/)
+* [The book's (temporary) website](https://secure.ecs.soton.ac.uk/notes/comp3204/marks_book_website/)
+* [Chapter 1](mark/fourth_edition_chap1_draft.pdf)
+
 <!---
 * [Zipped pdfs](mark/handouts.pdf) of all Mark's handouts, including an Electronics one (#8).
 -->
