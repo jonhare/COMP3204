@@ -10,8 +10,7 @@ Welcome to the homepage for the first half of [COMP3204](https://secure.ecs.soto
 
 Here is a list of materials available to you to complement the lectures in this half of the course:
 
-* [The book's website](http://www.ecs.soton.ac.uk/~msn/book/)
-* [The book's worksheets](http://www.ecs.soton.ac.uk/~msn/book/worksheets.html) (pull down the zip file or use the worksheets direct). There's a link to the Explorer programme which runs them, too.
+* [The book's website](https://secure.ecs.soton.ac.uk/notes/comp3204/marks_book_website/)
 * [Zipped pdfs](mark/handouts.pdf) of all Mark's handouts, including an Electronics one (#8).
 
 Lecture Slides:
@@ -46,7 +45,7 @@ Scanned lecture notes
 * [Lecture 12: xxx (PDF)](mark/Lecture 12.pdf) 
 -->
 
-The handout PDFs are also available directly:
+I used to provide handouts for lectures, but the students suggested I need them no more given the ppts which support the course. If you want them they are here:
 
 * [Handout #0 (PDF)](mark/handout 0.pdf)
 * [Handout #1 (PDF)](mark/handout 1.pdf)
