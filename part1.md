@@ -22,15 +22,15 @@ Lecture Slides:
 
 * [Opening lecture material (PDF)](mark/First%20lecture%20comp%203204.pdf)
 * [A Framework for Computer Vision (PDF)](mark/A%20Framework%20for%20Computer%20Vision-i.pdf)
-* [Lecture 1: Eye and Human Vision (PDF)](mark/Lecture 1.pdf)
-* [Lecture 2: Image Formation (PDF)](mark/Lecture 2.pdf)
-* [Lecture 3: Image Sampling (PDF)](mark/Lecture 3.pdf)
-* [Lecture 4: Point Operators (PDF)](mark/Lecture 4.pdf)
-* [Lecture 5: Group Operators (PDF)](mark/Lecture 5.pdf)
-* [Lecture 6: Edge Detection (PDF)](mark/Lecture 6.pdf)
-* [Lecture 7: Further Edge Detection (PDF)](mark/Lecture 7.pdf)
-* [Lecture 8: Finding Shapes (PDF)](mark/Lecture 8.pdf)
-* [Lecture 9: Finding More Shapes (PDF)](mark/Lecture 9.pdf)
+* [Lecture 1: Eye and Human Vision (PDF)](mark/Lecture1.pdf)
+* [Lecture 2: Image Formation (PDF)](mark/Lecture2.pdf)
+* [Lecture 3: Image Sampling (PDF)](mark/Lecture3.pdf)
+* [Lecture 4: Point Operators (PDF)](mark/Lecture4.pdf)
+* [Lecture 5: Group Operators (PDF)](mark/Lecture5.pdf)
+* [Lecture 6: Edge Detection (PDF)](mark/Lecture6.pdf)
+* [Lecture 7: Further Edge Detection (PDF)](mark/Lecture7.pdf)
+* [Lecture 8: Finding Shapes (PDF)](mark/Lecture8.pdf)
+* [Lecture 9: Finding More Shapes (PDF)](mark/Lecture9.pdf)
 
 Scanned lecture notes
 
