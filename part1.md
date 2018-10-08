@@ -14,6 +14,7 @@ Here is a list of materials available to you to complement the lectures in this 
 * [Chapter 1](mark/fourth_edition_chap1_draft.pdf)
 * [Chapter 2](mark/fourth_edition_chap2_draft.pdf)
 * [Chapter 3](mark/fourth_edition_chap3_draft.pdf)
+
 <!---
 * [Zipped pdfs](mark/handouts.pdf) of all Mark's handouts, including an Electronics one (#8).
 -->
