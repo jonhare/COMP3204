@@ -12,6 +12,16 @@ Let us know of any problems you encounter issues or have questions & we'll add t
 ## I've found a bug in the tutorial!
 Try looking in the development version here: http://openimaj.github.io/openimaj/tutorial and see if it has been fixed. If not, let us know via email or create a pull request on GitHub with a fix :)
 
+## Problems loading images in Tutorial Chapter 4
+Unfortunately the URLs to the images in the code no longer work. I'll update the tutorial shortly, but they can be accessed at:
+
+- http://openimaj.org/tutorial/figs/hist1.jpg
+- http://openimaj.org/tutorial/figs/hist2.jpg
+- http://openimaj.org/tutorial/figs/hist3.jpg
+
+## Need to reset the (flickr/Bing) API token?
+`DefaultTokenFactory.delete(FlickrAPIToken.class)` will remove any previously set API token. Next time you run `DefaultTokenFactory.get(FlickrAPIToken.class)` it will prompt you on the command line to enter the API key.
+
 ## Problems with Maven:
 
 ### Error building pom:
