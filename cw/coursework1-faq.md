@@ -13,14 +13,21 @@ Let us know of any problems you encounter issues or have questions & we'll add t
 Try looking in the development version here: http://openimaj.github.io/openimaj/tutorial and see if it has been fixed. If not, let us know via email or create a pull request on GitHub with a fix :)
 
 ## Problems loading images in Tutorial Chapter 4
-Unfortunately the URLs to the images in the code no longer work. I'll update the tutorial shortly, but they can be accessed at:
+Unfortunately the URLs to the images in the code no longer work. If you're following the 1.3.6 version of the tutorial they can be accessed at:
 
 - http://openimaj.org/tutorial/figs/hist1.jpg
 - http://openimaj.org/tutorial/figs/hist2.jpg
 - http://openimaj.org/tutorial/figs/hist3.jpg
 
+(This is fixed in version 1.3.7)
+
 ## Need to reset the (flickr/Bing) API token?
 `DefaultTokenFactory.delete(FlickrAPIToken.class)` will remove any previously set API token. Next time you run `DefaultTokenFactory.get(FlickrAPIToken.class)` it will prompt you on the command line to enter the API key.
+
+## Bing API token URL is wrong
+MS has changed the URL (again!). You can get a free key valid for 7 days from here:  https://azure.microsoft.com/en-us/try/cognitive-services/my-apis/
+
+(You'll only need the key to try that bit of the tutorial & you can skip that part if you like).
 
 ## Problems with Maven:
 
