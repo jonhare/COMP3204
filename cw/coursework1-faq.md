@@ -12,6 +12,17 @@ Let us know of any problems you encounter issues or have questions & we'll add t
 ## I've found a bug in the tutorial!
 Try looking in the development version here: http://openimaj.github.io/openimaj/tutorial and see if it has been fixed. If not, let us know via email or create a pull request on GitHub with a fix :)
 
+## You get an error along the lines of `Could not find artifact jdk.tools:jdk.tools:jar:1.6 at specified path /usr/lib/jvm/java-11-openjdk-amd64/../lib/tools.jar`
+
+There appears to be some incompatibility between newer java versions and the Hadoop dependency. The work-around is to edit your `pom.xml` file and remove the hadoop dependency (it's not actually needed for the tutorial anyway) - you can do this by removing the following block of XML:
+
+    <dependency>
+      <groupId>org.openimaj</groupId>
+      <artifactId>core-hadoop</artifactId>
+      <version>${openimaj.version}</version>
+      <scope>compile</scope>
+    </dependency>
+
 ## Problems loading images in Tutorial Chapter 4
 Unfortunately the URLs to the images in the code no longer work. If you're following the 1.3.6 version of the tutorial they can be accessed at:
 
