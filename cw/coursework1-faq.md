@@ -14,6 +14,8 @@ Try looking in the development version here: http://openimaj.github.io/openimaj/
 
 ## You get an error along the lines of `Could not find artifact jdk.tools:jdk.tools:jar:1.6 at specified path /usr/lib/jvm/java-11-openjdk-amd64/../lib/tools.jar`
 
+__Update 16/10/18__: OpenIMAJ 1.3.8 fixes this by pulling in newer Hadoop jars. Any new project you create with `mvn -DarchetypeGroupId=org.openimaj -DarchetypeArtifactId=openimaj-quickstart-archetype  -DarchetypeVersion=1.3.8 archetype:generate` should fix this issue without any need for further action. 
+
 There appears to be some incompatibility between newer java versions and the Hadoop dependency. The work-around is to edit your `pom.xml` file and remove the hadoop dependency (it's not actually needed for the tutorial anyway) - you can do this by removing the following block of XML:
 
     <dependency>
