@@ -78,6 +78,7 @@ You need to submit to ECS Handin the following items:
 * The report (as a PDF document; max 4 A4 sides)
 * Your code enclosed in a zip file (including everything required build/run you software and to train and use your classifiers; please don't include binaries or any of the images!)
 * The run prediction files for your three runs (named "run1.txt", "run2.txt" and "run3.txt").
+* A plain text file listing the user ids (e.g. xx1g18) of the members of your team; one per line.
 
 ## Marking and feedback
 Marks will be awarded for:
