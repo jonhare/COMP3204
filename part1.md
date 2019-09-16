@@ -45,6 +45,9 @@ Scanned lecture notes
 * [Lecture 8](mark/Lecture_8_slides_finding_shapes.pdf)
 * [Lecture 9](mark/Lecture_9_slides_finding_more_shapes.pdf)
 
+Revision Lecture
+* [Jan 2019](mark/revision_lecture.pdf)
+
 <!---
 * [Lecture 10: xxx (PDF)](mark/Lecture 10.pdf)
 * [Lecture 11: xxx (PDF)](mark/Lecture 11.pdf)
