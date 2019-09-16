@@ -1,7 +1,7 @@
 ---
 layout: index
 title: "COMP3204/6223 Computer Vision"
-subtitle: "Notes, Slides and Demos for COMP3204/COMP6223 Part II 2018-19"
+subtitle: "Notes, Slides and Demos for COMP3204/COMP6223 Part II 2019-20"
 githubHeader: "true"
 credits: Maintained and taught by <a href="http://www.ecs.soton.ac.uk/people/jsh2">Dr Jonathon Hare</a> (<a href="https://github.com/jonhare">jonhare</a>)
 ---
