@@ -38,7 +38,7 @@ This is a split exam and coursework module. The assessment weightings are slight
 The coursework assignments for COMP3204 and COMP6223 are slightly different. The schedule for each coursework is shown below, and details will become available below as each coursework is set. Deadline dates are currently provisional as deadlines might be moved by the Director of Programmes to minimise conflicts with other assignments from different modules:
 
 Coursework details will be updated soon!
-<!---
+{% comment %} 
 #### COMP3204
 
 * **Coursework 1**. Set Tuesday 1st October. Due Wednesday 27th November, 16:00. Feedback by 13th December : [Specification](cw/coursework1.html) : [Handin Link](https://handin.ecs.soton.ac.uk/handin/1819/COMP3204/1/) : [FAQ](cw/coursework1-faq.html)
@@ -54,4 +54,4 @@ Coursework details will be updated soon!
 * **Coursework 2**. Set Thursday 17th October. Due Thursday 22nd November, 16:00. Feedback by 13th December : [Specification](cw/c6223_coursework2.html) : [Handin Link](https://handin.ecs.soton.ac.uk/handin/1819/COMP6223/2/)
 
 * **Coursework 3**. Set Tuesday 14th November. Due Friday 13th December, 16:00. Feedback by 10th January : [Specification](cw/c6223_coursework3.html) : [Handin Link](https://handin.ecs.soton.ac.uk/handin/1819/COMP6223/3/)
---->
+{% endcomment %} 
