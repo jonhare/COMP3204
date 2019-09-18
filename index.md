@@ -32,7 +32,7 @@ Materials to accompany the lectures can be found here:
 * [Part 2](part2.html) taught by Jon.
 
 ## Assessment
-This is a split exam and coursework module. The assessment weightings are slightly different for the UG and MSc variants of the module to reflect the different learning outcomes. Past exam papers can be (found on the web)[ https://www.adminservices.soton.ac.uk/adminweb/jsp/pastPapers/pastPapers.jsp] (hint search for "Computer Vision" rather than the module code to see a long list of historic, but largely still relevant, past papers).
+This is a split exam and coursework module. The assessment weightings are slightly different for the UG and MSc variants of the module to reflect the different learning outcomes. Past exam papers can be [found on the web](https://www.adminservices.soton.ac.uk/adminweb/jsp/pastPapers/pastPapers.jsp) (hint search for "Computer Vision" rather than the module code to see a long list of historic, but largely still relevant, past papers).
 
 ### Coursework
 The coursework assignments for COMP3204 and COMP6223 are slightly different. The schedule for each coursework is shown below, and details will become available below as each coursework is set. Deadline dates are currently provisional as deadlines might be moved by the Director of Programmes to minimise conflicts with other assignments from different modules:
