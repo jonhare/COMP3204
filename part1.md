@@ -26,6 +26,7 @@ Lecture Slides:
 * [Lecture 10: State of Art/ Deep Learning (PDF)](mark/Lecture 10.pdf)
 
 Scanned lecture notes
+
 <!---
 * [Lecture 1](mark/Lecture_1_Human_Vision.pdf)
 * [Lecture 2](mark/Lecture_2_Image_formation.pdf)
