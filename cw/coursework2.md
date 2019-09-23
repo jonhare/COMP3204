@@ -52,7 +52,7 @@ OpenIMAJ has numerous built in and highly efficient operators to perform convolu
 		}
 	}
 
-You will need to fill in the `processImage` method so that it performs convolution of the image with the kernel/template. Your implementation must support arbitrary shaped kernels, as long as both dimensions are odd (e.g. 7x9 kernels but not 4x5 kernels). You should utilise (_possibly implicit_) zero-padding of the input image to ensure that the output image retains the same size as the input image.
+You will need to fill in the `processImage` method so that it performs convolution of the image with the kernel/template. Your implementation must support arbitrary shaped kernels, as long as both dimensions are odd (e.g. 7x9 kernels but not 4x5 kernels). You should utilise (_possibly implicit_) zero-padding of the input image to ensure that the output image retains the same size as the input image and that the kernel can reach into the image edges and corners.
 
 Note that the code you write for template convolution is designed to work on grey-level images (`FImage`), however the images you will process in the next section are colour (`MBFImage`). Convolution of a colour image will be performed by separately convolving each of the colour bands with the same kernel. OpenIMAJ will automatically take care of this for you when you pass your `MyConvolution` instance to the `process` method of an `MBFImage`.
 
@@ -111,11 +111,12 @@ The OpenIMAJ [Image#drawImage](http://openimaj.org/apidocs/org/openimaj/image/Im
 You can use the convolution functions built in to OpenIMAJ for testing (e.g. [FGaussianConvolve](http://openimaj.org/apidocs/org/openimaj/image/processing/convolution/FGaussianConvolve.html), [FConvolution](http://openimaj.org/apidocs/org/openimaj/image/processing/convolution/FConvolution.html), etc), but do not use them in your implementation. The provided `SubmissionTester.jar` tool will check for usage of these classes and display an error if you do try to use them.
 
 ### What to hand in
-You need to submit to ECS Handin the following items:
+You are required to submit the following items to ECS Handin:
 
 * Your `MyConvolution.java` file
 * Your `MyHybridImages.java` file
-* Optionally: a hybrid image creation of your own (ideally with the progressive downsampling shown above)
+
+For full marks, you also need to submit a hybrid image creation of your own (ideally with the progressive downsampling shown above). Details below.
 
 ## Marking and feedback
 This coursework is primarily automatically marked by a program that compiles and runs your submitted java files with a number of different parameters. This software provides a grade out of 8 (split 4/4 between the convolution and hybrid images parts), and also generates written feedback as it runs. The remaining two marks are available if you upload a novel hybrid image of your own creation; full marks will only be awarded for novel images that are shown with progressive downsampling. A selection of the best images will be shown to the class during a feedback lecture, which will cover a broad range of lessons related to the coursework.
@@ -124,7 +125,7 @@ We have provided a tool in the `SubmissionTester.jar` jar file that is capable o
 
 	java -jar SubmissionTester.jar path/to/MyConvolution.java path/to/MyHybridImages.java
 
-The tool doesn't perform any tests to check your code actually works correctly however, so you should check this yourself before submission of the files to handin!
+The tool doesn't perform any tests to check your code actually works correctly however, so you should check this yourself before submission of the files to handin! Note that when your code runs, it is executed in a restricted sandbox environment, and will throw errors if you try to read or write files, or access the network.
 
 Standard ECS late submission penalties apply.
 
