@@ -12,7 +12,7 @@ credits: Maintained by <a href="http://www.ecs.soton.ac.uk/people/msn">Professor
 ## Brief
 Due date: Friday 8th November, 16:00.  
 Sample images: [hybrid-images.zip](./hybrid-images.zip)  
-Code submission test tool: [SubmissionTester.jar](./SubmissionTester.jar)
+Code submission test tool: [SubmissionTester.jar](./SubmissionTester.jar)  
 Handin: [1920/COMP3204/2/](https://handin.ecs.soton.ac.uk/handin/1920/COMP3204/2/)  
 Required files: `MyConvolution.java`, `MyHybridImages.java`, [hybridimage.png]
 Credit: 10% of overall module mark  
