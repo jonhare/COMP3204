@@ -23,7 +23,7 @@ Day       | Time | Room
 ----------|------|-----------------------
 Tuesdays  | 1PM  | 42/Cinema (SUSU Cinema)
 Wednesdays| 10AM | 42/Cinema (SUSU Cinema)
-Thursdays | 3PM  | 67/1037 (Nightingale)
+Thursdays | 3PM  | 46/3001 (Physics L/T A)
 
 ## Lecture Materials
 Materials to accompany the lectures can be found here:
