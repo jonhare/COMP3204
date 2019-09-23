@@ -10,10 +10,11 @@ credits: Maintained by <a href="http://www.ecs.soton.ac.uk/people/msn">Professor
 **This coursework is only for students registered on the COMP3204 module**
 
 ## Brief
-Due date: Thursday 8th November, 16:00.  
+Due date: Friday 8th November, 16:00.  
 Sample images: [hybrid-images.zip](./hybrid-images.zip)  
-Handin: [1819/COMP3204/2/](https://handin.ecs.soton.ac.uk/handin/1819/COMP3204/2/)  
-Required files: report.pdf; code.zip  
+Code submission test tool: [SubmissionTester.jar](./SubmissionTester.jar)
+Handin: [1920/COMP3204/2/](https://handin.ecs.soton.ac.uk/handin/1920/COMP3204/2/)  
+Required files: `MyConvolution.java`, `MyHybridImages.java`, [hybridimage.png]
 Credit: 10% of overall module mark  
 
 ## Overview
@@ -51,9 +52,9 @@ OpenIMAJ has numerous built in and highly efficient operators to perform convolu
 		}
 	}
 
-You will need to fill in the `processImage` method so that it performs convolution of the image with the kernel/template. Your implementation must support arbitrary shaped kernels, as long as both dimensions are odd (e.g. 7x9 kernels but not 4x5 kernels). The border pixels should be set to 0.
+You will need to fill in the `processImage` method so that it performs convolution of the image with the kernel/template. Your implementation must support arbitrary shaped kernels, as long as both dimensions are odd (e.g. 7x9 kernels but not 4x5 kernels). You should utilise (_possibly implicit_) zero-padding of the input image to ensure that the output image retains the same size as the input image.
 
-Note that the code you write for template convolution is designed to work on grey-level images (`FImage`), however the images you will process in the next section are colour (`MBFImage`). Convolution of a colour image is performed by separately convolving each of the colour bands. OpenIMAJ will automatically take care of this for you when you pass your `MyConvolution` instance to the `process` method of an `MBFImage`.
+Note that the code you write for template convolution is designed to work on grey-level images (`FImage`), however the images you will process in the next section are colour (`MBFImage`). Convolution of a colour image will be performed by separately convolving each of the colour bands with the same kernel. OpenIMAJ will automatically take care of this for you when you pass your `MyConvolution` instance to the `process` method of an `MBFImage`.
 
 Make sure that you implement the convolution operator and not a different (but similar) operator. Check that your implementation works correctly for non-symmetric kernels.
 
@@ -66,7 +67,23 @@ Low pass filtering (removing all the high frequencies) can be achieved by convol
 
 High pass filtering (removing all the low frequencies) can be most easily achieved by subtracting a low-pass version of an image from itself.
 
-We have provided you with 5 pairs of aligned images (in the [hybrid-images.zip](./hybrid-images.zip) file) which can be merged reasonably well into hybrid images. The alignment is important because it affects the perceptual grouping (read the paper for details). We encourage you to create additional examples (e.g. change of expression, morph between different objects, change over time, etc.). See the [hybrid images project page](http://web.archive.org/web/20150321184824/http://cvcl.mit.edu/hybridimage.htm) for some inspiration.
+You should implement your hybrid images functionality by completing the following code skeleton:
+
+	package uk.ac.soton.ecs.comp3204.hybridimages.skeleton;
+
+	import org.openimaj.image.MBFImage;
+
+	public class MyHybridImages {
+		public static MBFImage makeHybrid(MBFImage image1, float sigma1, MBFImage image2, float sigma2) {
+			//implement your hybrid images functionality here. 
+			//Your submitted code must contain this method, but you can add 
+			//additional static methods or implement the functionality through
+			//instance methods on the `MyHybridImages` class of which you'll create 
+			//an instance of here if you so wish.
+		}
+	}
+
+We have provided you with 5 pairs of aligned images (in the [hybrid-images.zip](./hybrid-images.zip) file) which can be merged reasonably well into hybrid images. The alignment is important because it affects the perceptual grouping (read the paper for details). We encourage you to create an additional example (e.g. change of expression, morph between different objects, change over time, etc.) for full marks (see below). See the [hybrid images project page](http://web.archive.org/web/20150321184824/http://cvcl.mit.edu/hybridimage.htm) for some inspiration.
 
 For the example shown at the top of the page, the two original images look like this:
 
@@ -91,30 +108,25 @@ Adding the high and low frequencies together gives you the image at the top of t
 The OpenIMAJ [Image#drawImage](http://openimaj.org/apidocs/org/openimaj/image/Image.html#drawImage(I,%20int,%20int)) methods can be used in combination with the image resizing functionality found in the [ResizeProcessor](http://openimaj.org/apidocs/org/openimaj/image/processing/resize/ResizeProcessor.html) or [BilinearInterpolation](http://openimaj.org/apidocs/org/openimaj/image/processing/resize/BilinearInterpolation.html) classes to construct such a visualisation.
 
 ### Restrictions
-You can use the convolution functions built in to OpenIMAJ for testing (e.g. [FGaussianConvolve](http://openimaj.org/apidocs/org/openimaj/image/processing/convolution/FGaussianConvolve.html), [FConvolution](http://openimaj.org/apidocs/org/openimaj/image/processing/convolution/FConvolution.html), etc), but do not use them in your implementation.
-
-### The report
-You need to prepare a short report (target length is ~2 sides of A4, although there won't be penalties for exceeding this). In the report you need to describe your convolution and hybrid images algorithms (in particular, please include your code for the convolution implementation) and any decisions you made to write your algorithms in a particular way. Then you should show and discuss the results of your algorithm, showing the results of your hybrid images algorithm (showing the image at a range of scales to show the effect) and show some of the intermediate images in the hybrid image pipeline (e.g. the low and high frequency images). Also, discuss anything extra you did. Feel free to add any other information you feel is relevant.
+You can use the convolution functions built in to OpenIMAJ for testing (e.g. [FGaussianConvolve](http://openimaj.org/apidocs/org/openimaj/image/processing/convolution/FGaussianConvolve.html), [FConvolution](http://openimaj.org/apidocs/org/openimaj/image/processing/convolution/FConvolution.html), etc), but do not use them in your implementation. The provided `SubmissionTester.jar` tool will check for usage of these classes and display an error if you do try to use them.
 
 ### What to hand in
 You need to submit to ECS Handin the following items:
 
-* The report (as a PDF document)
-* Your code enclosed in a zip file (include everything we would need to build and run it; please don't include the Maven 'target' directory!)
+* Your `MyConvolution.java` file
+* Your `MyHybridImages.java` file
+* Optionally: a hybrid image creation of your own (ideally with the progressive downsampling shown above)
 
 ## Marking and feedback
-Marks will be awarded for:
+This coursework is primarily automatically marked by a program that compiles and runs your submitted java files with a number of different parameters. This software provides a grade out of 8 (split 4/4 between the convolution and hybrid images parts), and also generates written feedback as it runs. The remaining two marks are available if you upload a novel hybrid image of your own creation; full marks will only be awarded for novel images that are shown with progressive downsampling. A selection of the best images will be shown to the class during a feedback lecture, which will cover a broad range of lessons related to the coursework.
 
-* Successful implementation of the convolution and hybrid images algorithms.
-* Providing a good demonstration of your hybrid images algorithm.
-* Good use of the OpenIMAJ library.
-* Well structured and commented code.
-* Evidence of professionalism in implementation and reporting.
-* Quality and contents of the report.
+We have provided a tool in the `SubmissionTester.jar` jar file that is capable of performing some elementary tests on your java code (like checking that it compiles, that the `MyConvolution` class can be instantiated and that the required methods run. You can run the tool from the commandline (you'll need java>=1.8.0) using:
+
+	java -jar SubmissionTester.jar path/to/MyConvolution.java path/to/MyHybridImages.java
+
+The tool doesn't perform any tests to check your code actually works correctly however, so you should check this yourself before submission of the files to handin!
 
 Standard ECS late submission penalties apply.
-
-Individual feedback will be given covering the above points.
 
 ## Useful links
 * [The OpenIMAJ Tutorial](http://openimaj.org/tutorial)
