@@ -92,7 +92,7 @@ You should implement your hybrid images functionality by completing the followin
 			//implement your hybrid images functionality here. 
 			//Your submitted code must contain this method, but you can add 
 			//additional static methods or implement the functionality through
-			//instance methods on the `MyHybridImages` class of which you'll create 
+			//instance methods on the `MyHybridImages` class of which you can create 
 			//an instance of here if you so wish.
 			//Note that the input images are expected to have the same size, and the output
 			//image will also have the same height & width as the inputs.
