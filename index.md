@@ -36,22 +36,19 @@ This is a split exam and coursework module. The assessment weightings are slight
 
 ### Coursework
 The coursework assignments for COMP3204 and COMP6223 are slightly different. The schedule for each coursework is shown below, and details will become available below as each coursework is set. Deadline dates are currently provisional as deadlines might be moved by the Director of Programmes to minimise conflicts with other assignments from different modules:
-
-Coursework details will be updated soon!
-{% comment %} 
+ 
 #### COMP3204
 
-* **Coursework 1**. Set Tuesday 1st October. Due Wednesday 27th November, 16:00. Feedback by 13th December : [Specification](cw/coursework1.html) : [Handin Link](https://handin.ecs.soton.ac.uk/handin/1819/COMP3204/1/) : [FAQ](cw/coursework1-faq.html)
+* **Coursework 1**. Set Tuesday 1st October. Due Friday 22nd November, 16:00. Feedback by 13th December : [Specification](cw/coursework1.html) : [Handin Link](https://handin.ecs.soton.ac.uk/handin/1920/COMP3204/2/) : [FAQ](cw/coursework1-faq.html)
 
-* **Coursework 2**. Set Thursday 10th October. Due Thursday 7th November, 16:00. Feedback by 5th December : [Specification](cw/coursework2.html) : [Handin Link](https://handin.ecs.soton.ac.uk/handin/1819/COMP3204/2/)
+* **Coursework 2**. Set Tuesday 15th October. Due Friday 8th November, 16:00. Feedback by 6th December : {% comment %}[Specification](cw/coursework2.html) : [Handin Link](https://handin.ecs.soton.ac.uk/handin/1920/COMP3204/1/){% endcomment %} 
 
-* **Coursework 3**. Set Tuesday 15th November. Due Friday 14th December, 16:00. Feedback by 11th January : [Specification](cw/coursework3.html) : [Handin Link](https://handin.ecs.soton.ac.uk/handin/1819/COMP3204/3/)
+* **Coursework 3**. Set Tuesday 19th November. Due Friday 13th December, 16:00. Feedback by 10th January : {% comment %}[Specification](cw/coursework3.html) : [Handin Link](https://handin.ecs.soton.ac.uk/handin/1920/COMP3204/3/){% endcomment %} 
 
 #### COMP6223
 
-* **Coursework 1**. Set Thursday 10th October. Due Thursday 7th November, 16:00. Feedback by 5th December : [Specification](cw/c6223_coursework1.html) : [Handin Link](https://handin.ecs.soton.ac.uk/handin/1819/COMP6223/1/)
+* **Coursework 1**. Set Tuesday 15th October. Due Friday 8th November, 16:00. Feedback by 6th December : {% comment %}[Specification](cw/c6223_coursework1.html) : [Handin Link](https://handin.ecs.soton.ac.uk/handin/1920/COMP6223/1/){% endcomment %} 
 
-* **Coursework 2**. Set Thursday 17th October. Due Thursday 22nd November, 16:00. Feedback by 13th December : [Specification](cw/c6223_coursework2.html) : [Handin Link](https://handin.ecs.soton.ac.uk/handin/1819/COMP6223/2/)
+* **Coursework 2**. Set Thursday 24th October. Due Friday 22nd November, 16:00. Feedback by 13th December : {% comment %}[Specification](cw/c6223_coursework2.html) : [Handin Link](https://handin.ecs.soton.ac.uk/handin/1920/COMP6223/2/){% endcomment %} 
 
-* **Coursework 3**. Set Tuesday 14th November. Due Friday 13th December, 16:00. Feedback by 10th January : [Specification](cw/c6223_coursework3.html) : [Handin Link](https://handin.ecs.soton.ac.uk/handin/1819/COMP6223/3/)
-{% endcomment %} 
+* **Coursework 3**. Set Tuesday 19th November. Due Friday 13th December, 16:00. Feedback by 10th January : {% comment %}[Specification](cw/c6223_coursework3.html) : [Handin Link](https://handin.ecs.soton.ac.uk/handin/1920/COMP6223/3/){% endcomment %} 
