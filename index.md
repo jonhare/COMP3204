@@ -17,7 +17,7 @@ The lectures for this course will be given by [Professor Mark Nixon](http://www.
 
 There will be three lectures each week up to around the end of week 8; you'll then have about three weeks to work on your final coursework & Jon will make himself available in his office during the lecture slots of weeks 9 and 10 for anyone looking for help or guidance. We'll also likely throw in a couple of bonus lectures during the last weeks to cover additional material and give feedback. After the Christmas vacation we'll run a revision lecture and also give feedback (and prizes!) for the group coursework. 
 
-The lecture slots are (currently) as follows -- keep an eye on your timetable as this will likely change:
+The lecture slots are (currently) as follows -- keep an eye on your timetable for any changes:
 
 Day       | Time | Room   
 ----------|------|-----------------------
