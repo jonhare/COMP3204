@@ -27,7 +27,7 @@ Lecture Slides:
 
 Scanned lecture notes
 * [Lecture 1: Eye and Human Vision (PDF)](mark/Lect 1 notes 19-20.pdf)
-* [Lecture 2: Image formation (PDF)](mark/Lect 1 notes 19-20.pdf)
+* [Lecture 2: Image formation (PDF)](mark/Lect 2 notes 19-20.pdf)
 
 <!---
 * [Lecture 1](mark/Lecture_1_Human_Vision.pdf)
