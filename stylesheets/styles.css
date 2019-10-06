@@ -605,7 +605,7 @@ strong {
 }
 
 .wrapper {
-  max-width: 650px;
+  max-width: 850px;
   margin: 0 auto;
   position: relative;
   padding: 0 20px;
@@ -709,7 +709,7 @@ dt {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
 }
 #header nav {
-  max-width: 650px;
+  max-width: 850px;
   margin: 0 auto;
   padding: 0 10px;
   background: blue;
@@ -781,16 +781,19 @@ dt {
 }
 
 section {
-  max-width: 650px;
+  max-width: 850px;
   padding: 30px 0px 50px 0px;
   margin: 20px 0;
   margin-top: 70px;
 }
 section #title {
+  max-width: 650px;
   border: 0;
   outline: none;
   margin: 0 0 50px 0;
   padding: 0 0 5px 0;
+  margin-left: auto;
+  margin-right: auto;
 }
 section #title h1 {
   font-family: 'OpenSansLight', "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -848,4 +851,37 @@ section #title .credits.right {
   nav {
     display: none;
   }
+}
+
+.container{
+  width: 100%;
+  margin: 0 auto;
+}
+
+ul.tabs{
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+ul.tabs li{
+  background: none;
+  /*color: #222;*/
+  display: inline-block;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+ul.tabs li.current{
+  background: #444444;
+  /*color: #222;*/
+}
+
+.tab-content{
+  display: none;
+  background: #444444;
+  padding: 15px;
+}
+
+.tab-content.current{
+  display: inherit;
 }

@@ -33,6 +33,8 @@ This project is intended to familiarise you with image filtering and the impleme
 
 OpenIMAJ has numerous built in and highly efficient operators to perform convolution, but you will be writing your own such function from scratch for this assignment. More specifically, you will implement a class called `MyConvolution` that builds on this skeleton:
 
+	package uk.ac.soton.ecs.<your_username>.hybridimages;
+	
 	import org.openimaj.image.FImage;
 	import org.openimaj.image.processor.SinglebandImageProcessor;
 
@@ -69,7 +71,7 @@ High pass filtering (removing all the low frequencies) can be most easily achiev
 
 You should implement your hybrid images functionality by completing the following code skeleton:
 
-	package uk.ac.soton.ecs.comp3204.hybridimages.skeleton;
+	package uk.ac.soton.ecs.<your_username>.hybridimages;
 
 	import org.openimaj.image.MBFImage;
 
