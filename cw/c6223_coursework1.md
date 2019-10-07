@@ -194,7 +194,7 @@ We have provided a tool in the [`SubmissionTester.jar`](SubmissionTester.jar) ja
 The tool doesn't perform any tests to check your code actually works correctly however, so you should check this yourself before submission of the files to handin! Note that when your code runs, it is executed in a restricted sandbox environment, and will throw errors if you try to read or write files, or access the network.
 
 </div>
-<div id="tab-22" class="tab-content current" markdown="1">
+<div id="tab-22" class="tab-content" markdown="1">
 In a file called `MyHybridImages.py`:
 
 	import math
@@ -246,7 +246,7 @@ You must use your `MyConvolution.convolve` function to perform the convolutions 
 You will need to thoroughly test your implementation, paying attention to each of the three component parts (convolution, gaussian kernel creation and hybrid creation). You will need to implement your own test harness; this should be in a separate file that will not form part of the assessment of the coursework (but is vital to you having a correct implementation!).
 
 </div>
-<div id="tab-23" class="tab-content current" markdown="1">
+<div id="tab-23" class="tab-content" markdown="1">
 In a file called `myhybridimages.m`:
 
 	function hybrid=myhybridimages(lowImage, lowSigma, highImage, highSigma)
