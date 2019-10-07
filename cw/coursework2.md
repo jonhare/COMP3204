@@ -34,7 +34,7 @@ This project is intended to familiarise you with image filtering and the impleme
 OpenIMAJ has numerous built in and highly efficient operators to perform convolution, but you will be writing your own such function from scratch for this assignment. More specifically, you will implement a class called `MyConvolution` that builds on this skeleton:
 
 	package uk.ac.soton.ecs.<your_username>.hybridimages;
-	
+
 	import org.openimaj.image.FImage;
 	import org.openimaj.image.processor.SinglebandImageProcessor;
 
@@ -90,7 +90,7 @@ You should implement your hybrid images functionality by completing the followin
 		 *            high-pass filtered image
 		 * @return the computed hybrid image
 		 */
-		public static MBFImage makeHybrid(MBFImage image1, float sigma1, MBFImage image2, float sigma2) {
+		public static MBFImage makeHybrid(MBFImage lowImage, float lowSigma, MBFImage highImage, float highSigma) {
 			//implement your hybrid images functionality here. 
 			//Your submitted code must contain this method, but you can add 
 			//additional static methods or implement the functionality through

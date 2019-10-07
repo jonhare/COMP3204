@@ -164,7 +164,7 @@ You should implement your hybrid images functionality by completing the code ske
 		 *            high-pass filtered image
 		 * @return the computed hybrid image
 		 */
-		public static MBFImage makeHybrid(MBFImage image1, float sigma1, MBFImage image2, float sigma2) {
+		public static MBFImage makeHybrid(MBFImage lowImage, float lowSigma, MBFImage highImage, float highSigma) {
 			//implement your hybrid images functionality here. 
 			//Your submitted code must contain this method, but you can add 
 			//additional static methods or implement the functionality through
@@ -173,22 +173,109 @@ You should implement your hybrid images functionality by completing the code ske
 			//Note that the input images are expected to have the same size, and the output
 			//image will also have the same height & width as the inputs.
 		}
+
+		public static float[][] makeGaussianKernel(float sigma) {
+			//Use this function to create a 2D gaussian kernel with standard deviation sigma.
+			//The kernel values should sum to 1.0, and the size should be floor(8*sigma+1) or 
+			//floor(8*sigma+1)+1 (whichever is odd) as per the assignment specification.
+		}
 	}
 
 ### Restrictions
-You must use your `MyConvolution` class to perform the convolutions in your makeHybrid method. Do not attempt import or use the OpenIMAJ convolution functions as this will fail during the automatic marking of your code! 
+You must use your `MyConvolution` class to perform the convolutions in your `makeHybrid` method. Do not attempt import or use the OpenIMAJ convolution functions as this will fail during the automatic marking of your code! 
 
 ### Testing your code
-We have provided a tool in the [`SubmissionTester.jar`](SubmissionTester.jar) jar file that is capable of performing some elementary tests on your java code (like checking that it compiles, that the `MyConvolution` class can be instantiated and that the required methods run. You can run the tool from the commandline (you'll need java>=1.8.0) using:
+You will need to thoroughly test your implementation, paying attention to each of the three component parts (convolution, gaussian kernel creation and hybrid creation). You will need to implement your own test harness; this should be in a separate file that will not form part of the assessment of the coursework (but is vital to you having a correct implementation!).
+
+We have provided a tool in the [`SubmissionTester.jar`](SubmissionTester.jar) jar file that is capable of performing some elementary tests on the java code that you will submit (like checking that it compiles, that the `MyConvolution` class can be instantiated and that the required methods run. You can run the tool from the commandline (you'll need java>=1.8.0) using:
 
 	java -jar SubmissionTester.jar path/to/MyConvolution.java path/to/MyHybridImages.java
 
 The tool doesn't perform any tests to check your code actually works correctly however, so you should check this yourself before submission of the files to handin! Note that when your code runs, it is executed in a restricted sandbox environment, and will throw errors if you try to read or write files, or access the network.
 
 </div>
-<div id="tab-21" class="tab-content current" markdown="1">
+<div id="tab-22" class="tab-content current" markdown="1">
+In a file called `MyHybridImages.py`:
+
+	import math
+	import numpy as np
+
+	from MyConvolution import convolve
+
+
+	def myHybridImages(lowImage: np.ndarray, lowSigma: float, highImage: np.ndarray, highSigma: float) -> np.ndarray:
+	    """
+	    Create hybrid images by combining a low-pass and high-pass filtered pair.
+	    
+	    :param lowImage: the image to low-pass filter (either greyscale shape=(rows,cols) or colour shape=(rows,cols,channels))
+	    :type numpy.ndarray
+	    
+	    :param lowSigma: the standard deviation of the Gaussian used for low-pass filtering lowImage
+	    :type float
+	    
+	    :param highImage: the image to high-pass filter (either greyscale shape=(rows,cols) or colour shape=(rows,cols,channels))
+	    :type numpy.ndarray
+	    
+	    :param highSigma: the standard deviation of the Gaussian used for low-pass filtering highImage before subtraction to create the high-pass filtered image
+	    :type float 
+	    
+	    :returns returns the hybrid image created
+	           by low-pass filtering lowImage with a Gaussian of s.d. lowSigma and combining it with 
+	           a high-pass image created by subtracting highImage from highImage convolved with
+	           a Gaussian of s.d. highSigma. The resultant image has the same size as the input images.
+	    :rtype numpy.ndarray
+	    """
+
+	    # Your code here.
+	    
+
+	def makeGaussianKernel(sigma: float) -> np.ndarray:
+	    """
+	    Use this function to create a 2D gaussian kernel with standard deviation sigma.
+	    The kernel values should sum to 1.0, and the size should be floor(8*sigma+1) or 
+	    floor(8*sigma+1)+1 (whichever is odd) as per the assignment specification.
+	    """
+
+	    # Your code here.
+
+
+### Restrictions
+You must use your `MyConvolution.convolve` function to perform the convolutions in your `myHybridImages` function. Do not put any other `import` statements in your file.
+
+### Testing your code
+You will need to thoroughly test your implementation, paying attention to each of the three component parts (convolution, gaussian kernel creation and hybrid creation). You will need to implement your own test harness; this should be in a separate file that will not form part of the assessment of the coursework (but is vital to you having a correct implementation!).
+
 </div>
-<div id="tab-21" class="tab-content current" markdown="1">
+<div id="tab-23" class="tab-content current" markdown="1">
+In a file called `myhybridimages.m`:
+
+	function hybrid=myhybridimages(lowImage, lowSigma, highImage, highSigma)
+	% MYHYBRIDIMAGES  Create hybrid images by combining a low-pass and high-pass filtered pair.
+	%   C = MYHYBRIDIMAGES(lowImage, lowSigma, highImage, highSigma) returns the hybrid image created
+	%       by low-pass filtering lowImage with a Gaussian of s.d. lowSigma and combining it with 
+	%       a high-pass image created by subtracting highImage from highImage convolved with
+	%       a Gaussian of s.d. highSigma
+	%   
+	%   lowImage and highImage should both have size (rows,cols) or (rows,cols,channels). 
+	%   The resultant image also has the same size
+
+	% YOUR CODE HERE
+	end
+
+	function f=makegaussiankernel(sigma)
+    % Use this function to create a 2D gaussian kernel with standard deviation sigma.
+	% The kernel values should sum to 1.0, and the size should be floor(8*sigma+1) or 
+	% floor(8*sigma+1)+1 (whichever is odd) as per the assignment specification.
+
+	% YOUR CODE HERE
+	end
+
+### Restrictions
+You must use your `myconvolution` function to perform the convolutions in your `myhybridimages` function. You must not use any built-in or library functions, except for basic math/matrix commands like `mod`, `sum`, `floor`, and `zeros`.
+
+### Testing your code
+You will need to thoroughly test your implementation, paying attention to each of the three component parts (convolution, gaussian kernel creation and hybrid creation). You will need to implement your own test harness; this should be in a separate file that will not form part of the assessment of the coursework (but is vital to you having a correct implementation!).
+
 </div>
 </div>
 <div>&nbsp;</div>
@@ -234,10 +321,11 @@ Standard ECS late submission penalties apply.
 ## Useful links
 * [SIGGRAPH Hybrid Images Paper](http://cvcl.mit.edu/publications/OlivaTorralb_Hybrid_Siggraph06.pdf)
 * [The Hybrid Images project page](http://web.archive.org/web/20150321184824/http://cvcl.mit.edu/hybridimage.htm)
+
 * **Using Matlab:**
- * [Image processing toolbox tutorials](http://www.mathworks.co.uk/help/images/getting-started-with-image-processing-toolbox.html)
+	+ [Image processing toolbox tutorials](http://www.mathworks.co.uk/help/images/getting-started-with-image-processing-toolbox.html)
 * **Libraries for Java programmers**
- * [OpenIMAJ](http://openimaj.org) 
+	+ [OpenIMAJ](http://openimaj.org) 
 
 ## Questions
 If you have any problems/questions then [email](mailto:jsh2@ecs.soton.ac.uk) or speak to [Jon](http://ecs.soton.ac.uk/people/jsh2) in his office.
