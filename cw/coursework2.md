@@ -30,7 +30,6 @@ This project is intended to familiarise you with image filtering and the impleme
 
 **Template convolution.** Template convolution is a fundamental image processing tool. Mark has covered convolution in detail in the lectures. See section 3.4.1 of Mark's book (Forth Edition) by looking at [this excerpt](template_convolution_4th_edition.pdf) and the lecture materials for more information. 
 
-
 OpenIMAJ has numerous built in and highly efficient operators to perform convolution, but you will be writing your own such function from scratch for this assignment. More specifically, you will implement a class called `MyConvolution` that builds on this skeleton:
 
 	package uk.ac.soton.ecs.<your_username>.hybridimages;
