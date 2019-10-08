@@ -27,13 +27,13 @@ Example hybrid image. Look at image from very close, then from far away.<br /><b
 ## Details
 This project is intended to familiarise you with image filtering and the implementation of a convolution function in one of Java, Python or Matlab. Once you have created an image convolution function, it is relatively straightforward to construct hybrid images. 
 
-**Template convolution.** Template convolution is a fundamental image processing tool. Mark has covered convolution in detail in the lectures. See section 3.4.1 of [Mark's book (Third Edition)](http://ecs.soton.ac.uk/~msn/book/worksheets.html) ("Template Convolution") and the lecture materials for more information. 
+**Template convolution.** Template convolution is a fundamental image processing tool. Mark has covered convolution in detail in the lectures. See section 3.4.1 of Mark's book (Forth Edition) by looking at [this excerpt](template_convolution_4th_edition.pdf) and the lecture materials for more information. 
 
 For this assignment, we want you to *hand-code* your own convolution operator using either Java, Python or Matlab, following the instructions below. You should not make use of any built-in functions or libraries available to you for performing the convolution. 
 
 Your implementation must support arbitrary shaped kernels, as long as both dimensions are odd (e.g. 7x9 kernels but not 4x5 kernels). You should utilise (_possibly implicit_) zero-padding of the input image to ensure that the output image retains the same size as the input image and that the kernel can reach into the image edges and corners. The implementation must also support convolution of both grey-scale and colour images. Note that colour convolution is achieved by applying the convolution operator to each of the colour bands separately (i.e. treating each band as an independent grey-level image).
 
-Make sure that you implement the convolution operator and not a different (but similar) operator. Check that your implementation works correctly for non-symmetric kernels.
+Make sure that you implement the convolution operator and not a different (but similar) operator. Check that your implementation works correctly for non-symmetric kernels. You can try to implement the convolution using the Fourier transform, however please note that the specification asks for __zero-padding__ of the image. Fourier assumes an infinite wrap-around, so you will have make allowances for this with appropriate padding and cropping.
 
 Please select the tab corresponding to the language of your choice for specific instructions on how your function should be written:
 
@@ -58,6 +58,7 @@ OpenIMAJ has numerous built in and highly efficient operators to perform convolu
 		private float[][] kernel;
 
 		public MyConvolution(float[][] kernel) {
+			//note that like the image pixels kernel is indexed by [row][column]
 			this.kernel = kernel;
 		}
 

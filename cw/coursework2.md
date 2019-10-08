@@ -28,7 +28,7 @@ Example hybrid image. Look at image from very close, then from far away.<br /><b
 ## Details
 This project is intended to familiarise you with image filtering and the implementation of a convolution function in OpenIMAJ. Once you have created an image convolution function, it is relatively straightforward to construct hybrid images. You will need to have worked through [Chapter 1](http://www.openimaj.org/tutorial/getting-started-with-openimaj-using-maven.html), [Chapter 2](http://www.openimaj.org/tutorial/processing-your-first-image.html) and [Chapter 7](http://www.openimaj.org/tutorial/processing-video.html) of the [OpenIMAJ tutorial](http://www.openimaj.org/tutorial/) prior to starting this coursework.
 
-**Template convolution.** Template convolution is a fundamental image processing tool. Mark has covered convolution in detail in the lectures. See section 3.4.1 of [Mark's book (Third Edition)](http://ecs.soton.ac.uk/~msn/book/worksheets.html) ("Template Convolution") (or look at [this excerpt from the 4th edition](template_convolution_4th_edition.pdf)) and the lecture materials for more information. 
+**Template convolution.** Template convolution is a fundamental image processing tool. Mark has covered convolution in detail in the lectures. See section 3.4.1 of Mark's book (Forth Edition) by looking at [this excerpt](template_convolution_4th_edition.pdf) and the lecture materials for more information. 
 
 
 OpenIMAJ has numerous built in and highly efficient operators to perform convolution, but you will be writing your own such function from scratch for this assignment. More specifically, you will implement a class called `MyConvolution` that builds on this skeleton:
@@ -42,6 +42,7 @@ OpenIMAJ has numerous built in and highly efficient operators to perform convolu
 		private float[][] kernel;
 
 		public MyConvolution(float[][] kernel) {
+			//note that like the image pixels kernel is indexed by [row][column]
 			this.kernel = kernel;
 		}
 
@@ -58,7 +59,7 @@ You will need to fill in the `processImage` method so that it performs convoluti
 
 Note that the code you write for template convolution is designed to work on grey-level images (`FImage`), however the images you will process in the next section are colour (`MBFImage`). Convolution of a colour image will be performed by separately convolving each of the colour bands with the same kernel. OpenIMAJ will automatically take care of this for you when you pass your `MyConvolution` instance to the `process` method of an `MBFImage`.
 
-Make sure that you implement the convolution operator and not a different (but similar) operator. Check that your implementation works correctly for non-symmetric kernels.
+Make sure that you implement the convolution operator and not a different (but similar) operator. Check that your implementation works correctly for non-symmetric kernels. You can try to implement the convolution using the Fourier transform, however please note that the specification asks for __zero-padding__ of the image. Fourier assumes an infinite wrap-around, so you will have make allowances for this with appropriate padding and cropping.
 
 **Hybrid Images.** A hybrid image is the sum of a low-pass filtered version of the one image and a high-pass filtered version of a second image. There is a free parameter, which can be tuned for each image pair, which controls *how much* high frequency to remove from the first image and how much low frequency to leave in the second image. This is called the "cutoff-frequency". In the paper it is suggested to use two cutoff-frequencies (one tuned for each image) and you are free to try that, as well. 
 
