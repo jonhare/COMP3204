@@ -12,7 +12,7 @@ Here is a list of materials available to you to complement the lectures in this 
 
 Lecture Slides:
 
-* [Opening lecture material (PDF)](mark/Lecture 0.pdf)
+* [Opening lecture material (PDF)](First lecture comp 3204.pdf)
 * [A Framework for Computer Vision (PDF)](mark/A%20Framework%20for%20Computer%20Vision-i.pdf)
 * [Lecture 1: Eye and Human Vision (PDF)](mark/Lecture 1.pdf)
 * [Lecture 2: Image Formation (PDF)](mark/Lecture 2.pdf)
