@@ -10,7 +10,7 @@ credits: Maintained by <a href="http://www.ecs.soton.ac.uk/people/msn">Professor
 **This coursework is only for students registered on the COMP6223 module**
 
 ## Brief
-**This is a group coursework: please work in pairs (teams of two people). Teams of three are permitted (if necessary), but the expectations will be higher.**
+**This is a group coursework: please work in teams of four people.**
 
 Due date: Friday 13th December, 16:00.  
 Development data download: [training.zip](./training.zip)    
