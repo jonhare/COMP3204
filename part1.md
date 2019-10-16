@@ -31,6 +31,7 @@ Scanned lecture notes
 * [Lecture 3: Image sampling (PDF)](mark/Lect 3 notes 19-20.pdf)
 * [Lecture 4: Point operators (PDF)](mark/Lect 4 notes 19-20.pdf)
 * [Lecture 5: Group operators (PDF)](mark/Lect 5 notes 19-20.pdf)
+* [Lecture 6: Edge detection (PDF)](mark/Lect 6 notes 19-20.pdf)
 
 <!---
 * [Lecture 1](mark/Lecture_1_Human_Vision.pdf)
