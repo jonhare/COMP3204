@@ -99,7 +99,7 @@ If you choose to implement the assigment in Python, you'll need to implement the
 As you can see, the images are represented as `numpy` arrays (either 2d or 3d for greyscale and colour repectively). You will need to [vectorise](https://realpython.com/numpy-array-programming/) your implementation to make it run at a sensible speed (even with a 3x3 kernel a naive implementation using four nested loops will be _very_ slow, whereas an implementation with the two inner loops vectorised will be significantly faster). 
 
 ### Restrictions
-You must not use any built-in or library functions for implementing the convolution. Do not put any other `import` statements in your file.
+You must not use any built-in or library functions for implementing the convolution, except for basic math/matrix commands like `np.sum`, and `np.zeros`. Do not put any other `import` statements in your file.
 
 </div>
 <div id="tab-3" class="tab-content" markdown="1">
@@ -120,7 +120,7 @@ If you choose to implement the assigment in Matlab, you'll need to implement the
 As you can see, the images are represented as matrices (either 2d or 3d for greyscale and colour repectively). You probably want to consider [vectorising](https://uk.mathworks.com/help/matlab/matlab_prog/vectorization.html) the two inner loops of your implementation to make it run at a sensible speed with large kernels (needed for the 2nd part of the assignment).
 
 ### Restrictions
-You must not use any built-in or library functions for implementing the convolution. For example, use of the following Matlab functions are forbidden: `imfilter()`, `filter2()`, `conv2()`, `nlfilter()`, `colfilt()`.
+You must not use any built-in or library functions for implementing the convolution, except for basic math/matrix commands like `mod`, `sum`, `floor`, and `zeros`. For example, use of the following Matlab functions are forbidden: `imfilter()`, `filter2()`, `conv2()`, `nlfilter()`, `colfilt()`.
 
 </div>
 </div>
@@ -241,7 +241,7 @@ In a file called `MyHybridImages.py`:
 
 
 ### Restrictions
-You must use your `MyConvolution.convolve` function to perform the convolutions in your `myHybridImages` function. Do not put any other `import` statements in your file.
+You must use your `MyConvolution.convolve` function to perform the convolutions in your `myHybridImages` function. Do not put any other `import` statements in your file. You can use basic math/matrix functions like  `np.zeros`, `np.sum`, etc., as required.
 
 ### Testing your code
 You will need to thoroughly test your implementation, paying attention to each of the three component parts (convolution, gaussian kernel creation and hybrid creation). You will need to implement your own test harness; this should be in a separate file that will not form part of the assessment of the coursework (but is vital to you having a correct implementation!).
