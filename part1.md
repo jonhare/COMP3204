@@ -33,6 +33,8 @@ Scanned lecture notes
 * [Lecture 5: Group operators (PDF)](mark/Lect 5 notes 19-20.pdf)
 * [Lecture 6: Edge detection (PDF)](mark/Lect 6 notes 19-20.pdf)
 * [Lecture 7: Further edge detection (PDF)](mark/Lect 7 notes 19-20.pdf)
+* [Lecture 8: Finding shapes (PDF)](mark/Lect 8 notes 19-20.pdf)
+
 
 <!---
 * [Lecture 1](mark/Lecture_1_Human_Vision.pdf)
