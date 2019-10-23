@@ -11,7 +11,7 @@ credits: Maintained by <a href="http://www.ecs.soton.ac.uk/people/msn">Professor
 
 ## Brief
 Due date: Friday 22nd November, 16:00.  
-Software tool: [Download](https://github.com/jonhare/SimpleFaceDetector/releases/download/v1.0/SimpleFaceDetector-1.0-tool.jar) | [README](https://github.com/jonhare/SimpleFaceDetector/blob/master/README.md)  
+Software tool: [Download](https://github.com/jonhare/SimpleFaceDetector/releases/download/v1.1/SimpleFaceDetector-1.1-tool.jar) | [README](https://github.com/jonhare/SimpleFaceDetector/blob/master/README.md)  
 Handin: [1920/COMP6223/2/](https://handin.ecs.soton.ac.uk/handin/1920/COMP6223/2/)  
 Required files: report.pdf  
 Credit: 10% of overall module mark  
@@ -30,7 +30,7 @@ The aim of this coursework is for you to explore how you might camouflage a face
 ## Details
 The use of Haar-like features coupled with a cascade of classifiers has proved to be an effective approach to object detection. The method was originally proposed by Paul Viola (Paul now works for Amazon and is Vice President of Science for the team that is working on drone deliveries!) and [Michael Jones](http://www.merl.com/people/mjones/) in their 2001 paper, ["Rapid Object Detection using a Boosted Cascade of Simple Features"](viola-cvpr-01.pdf). The technique incorporates a machine learning based approach in which a cascade function is trained from a large number of positive and negative images. The classifier learnt during the training phase is then used to detect objects in other images.
 
-We have written a tool that is capable of using the Viola-Jones method to detect faces in still images and live videos from a web-cam. The tool is available [here](https://github.com/jonhare/SimpleFaceDetector/releases/download/v1.0/SimpleFaceDetector-1.0-tool.jar), and documentation on how to use it is [here](https://github.com/jonhare/SimpleFaceDetector/blob/master/README.md). 
+We have written a tool that is capable of using the Viola-Jones method to detect faces in still images and live videos from a web-cam. The tool is available [here](https://github.com/jonhare/SimpleFaceDetector/releases/download/v1.1/SimpleFaceDetector-1.1-tool.jar), and documentation on how to use it is [here](https://github.com/jonhare/SimpleFaceDetector/blob/master/README.md). 
 
 For this coursework, we want you to explore how the face detector can be tricked into not detecting your face through the application of camouflage. You should take photographs of yourself and run them through the face detector we've provided to see if your face is detected. You might try investigating some of the following:
 
