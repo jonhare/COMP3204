@@ -25,8 +25,6 @@ Lecture Slides:
 * [Lecture 9: Finding More Shapes (PDF)](mark/Lecture 9.pdf)
 * [Lecture 10: State of Art/ Deep Learning (PDF)](mark/Lecture 10.pdf)
 
-[Lecture 11: revision lecture 8 Jan (PDF)](mark/revision lecture.pdf)
-
 Scanned lecture notes
 * [Lecture 1: Eye and Human Vision (PDF)](mark/Lect 1 notes 19-20.pdf)
 * [Lecture 2: Image formation (PDF)](mark/Lect 2 notes 19-20.pdf)
@@ -38,6 +36,8 @@ Scanned lecture notes
 * [Lecture 8: Finding shapes (PDF)](mark/Lect 8 notes 19-20.pdf)
 * [Lecture 8: Finding more shapes (PDF)](mark/Lect 9 notes 19-20.pdf)
 
+
+[Lecture 11: revision lecture 8 Jan (PDF)](mark/revision lecture.pdf)
 
 <!---
 * [Lecture 1](mark/Lecture_1_Human_Vision.pdf)
