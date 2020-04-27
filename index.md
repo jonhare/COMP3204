@@ -12,6 +12,11 @@ The challenge of computer vision is to develop a computer based system with the 
 
 This course will explore some of the basic principles and techniques from these areas which are currently being used in real-world computer vision systems and the research and development of new systems.
 
+The following short video gives an overview of what to expect in the module.
+
+<iframe src="https://southampton.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=3022fca4-3741-40e1-82ec-abaa00df644a&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" width=720 height=405 style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+
+
 ## Lectures
 The lectures for this course will be given by [Professor Mark Nixon](http://www.ecs.soton.ac.uk/people/msn) ([email](mailto:msn@ecs.soton.ac.uk)) and <a href="http://www.ecs.soton.ac.uk/people/jsh2">Dr Jonathon Hare</a> ([email](mailto:jsh2@ecs.soton.ac.uk)). Mark will give the lectures for the first part of the course, and Jon will finish with the second half. 
 
