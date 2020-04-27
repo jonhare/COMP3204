@@ -14,7 +14,10 @@ This course will explore some of the basic principles and techniques from these 
 
 The following short video gives an overview of what to expect in the module.
 
-<iframe src="https://southampton.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=3022fca4-3741-40e1-82ec-abaa00df644a&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" width=720 height=405 style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+
+<figure class="video_container" style="text-align:center">
+	<iframe src="https://southampton.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=3022fca4-3741-40e1-82ec-abaa00df644a&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=none" width="720" height="405" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+</figure>
 
 
 ## Lectures
