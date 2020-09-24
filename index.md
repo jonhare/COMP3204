@@ -1,6 +1,6 @@
 ---
 layout: index
-title: "COMP3204/6223 Computer Vision"
+title: "COMP3204 Computer Vision"
 subtitle: "2020-21"
 githubHeader: "false"
 credits: Maintained by <a href="http://www.ecs.soton.ac.uk/people/jsh2">Dr Jonathon Hare</a> and <a href="http://www.ecs.soton.ac.uk/people/msn">Professor Mark Nixon</a>.

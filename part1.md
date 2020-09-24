@@ -1,12 +1,12 @@
 ---
 layout: index
-title: "COMP3204/6223 Computer Vision"
-subtitle: "Materials for COMP3204/COMP6223 Part I 2020-21"
+title: "COMP3204 Computer Vision"
+subtitle: "Materials for COMP3204 Part I 2020-21"
 githubHeader: "false"
 credits: Maintained and taught by <a href="http://www.ecs.soton.ac.uk/people/msn">Professor Mark Nixon</a>
 ---
 
-Welcome to the homepage for the first half of [COMP3204](https://secure.ecs.soton.ac.uk/module/COMP3204) and [COMP6223](https://secure.ecs.soton.ac.uk/module/COMP6223).
+Welcome to the homepage for the first half of [COMP3204](https://secure.ecs.soton.ac.uk/module/COMP3204).
 
 Here is a list of materials available to you to complement the lectures in this half of the course. We have written the fourth Edition of the course textbook, and are proofreading it now. It should be out by Xmas 2019. There have been many changes, and the lecture notes are from the new edition, and the page numbers will refer to that when we have them. 
 
@@ -26,6 +26,7 @@ Lecture Slides:
 * [Lecture 10: State of Art/ Deep Learning (PDF)](mark/Lecture 10.pdf)
 
 Scanned lecture notes
+
 * [Lecture 1: Eye and Human Vision (PDF)](mark/Lect 1 notes 19-20.pdf)
 * [Lecture 2: Image formation (PDF)](mark/Lect 2 notes 19-20.pdf)
 * [Lecture 3: Image sampling (PDF)](mark/Lect 3 notes 19-20.pdf)

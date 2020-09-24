@@ -1,12 +1,12 @@
 ---
 layout: index
-title: "COMP3204/6223 Computer Vision"
-subtitle: "Notes, Slides and Demos for COMP3204/COMP6223 Part II 2020-21"
+title: "COMP3204 Computer Vision"
+subtitle: "Notes, Slides and Demos for COMP3204 Part II 2020-21"
 githubHeader: "true"
 credits: Maintained and taught by <a href="http://www.ecs.soton.ac.uk/people/jsh2">Dr Jonathon Hare</a> (<a href="https://github.com/jonhare">jonhare</a>)
 ---
 
-Welcome to the homepage for the second half of [COMP3204](https://secure.ecs.soton.ac.uk/module/COMP3204) and [COMP6223](https://secure.ecs.soton.ac.uk/module/COMP6223).
+Welcome to the homepage for the second half of [COMP3204](https://secure.ecs.soton.ac.uk/module/COMP3204).
 
 This half of the course will be taught through a series of lectures presented with a number of interactive slides and demonstrations. The Java source-code of these demonstrations can be downloaded from the [course's github page](http://github.com/jonhare/COMP3204), where you'll find instructions on how they can be compiled. Feel free to create your own fork of the source, and contribute back improvements (or even bug fixes!). The slides are also available in static PDF format - these can be downloaded from the links in the table below, together with PDF copies of the handouts provided in the lecture.
 
