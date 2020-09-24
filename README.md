@@ -1,6 +1,6 @@
-# COMP3204/COMP6223 Interactive Demos, Slides and Handouts
+# COMP3204 Interactive Demos, Slides and Handouts
 
-This Github repository stores the lecture materials for part 2 of the [COMP3204](https://secure.ecs.soton.ac.uk/module/COMP3204) and [COMP6223](https://secure.ecs.soton.ac.uk/module/COMP6223) Computer Vision modules at the [University of Southampton](http://www.soton.ac.uk). The lectures presentations themselves are interactive slidesets created using [OpenIMAJ](http://www.openimaj.org).
+This Github repository stores the lecture materials for part 2 of the [COMP3204](https://secure.ecs.soton.ac.uk/module/COMP3204) Computer Vision module at the [University of Southampton](http://www.soton.ac.uk). The lectures presentations themselves are interactive slidesets created using [OpenIMAJ](http://www.openimaj.org).
 
 From this page you can get the source-code for the presentations, which you can build yourself following the instructions below. If you just want to run the presentations for yourself, you can download the latest version of the pre-compiled runnable jar from [here](http://jenkins.ecs.soton.ac.uk/job/COMP3204/lastSuccessfulBuild/artifact/app/target/COMP3204-1.0-SNAPSHOT-jar-with-dependencies.jar). More details, as well as PDF versions of the handouts and slides, are available [here](http://comp3204.ecs.soton.ac.uk/part2.html).
 
