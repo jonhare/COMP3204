@@ -14,7 +14,7 @@ Lecture Slides:
 
 * [Opening lecture material (PDF)](mark/First%20lecture%20comp%203204.pdf)
 * [A Framework for Computer Vision (PDF)](mark/A%20Framework%20for%20Computer%20Vision-i.pdf)
-* [Lecture 1: Eye and Human Vision (PDF)](mark/Lecture 1 2020.pdf) and there are some animations (mark/Lecture 1 animations 2020.pptx)
+* [Lecture 1: Eye and Human Vision (PDF)](mark/Lecture%201%202020.pdf) and there are some animations (mark/Lecture%201%20animations%202020.pptx)
 * [Lecture 2: Image Formation (PDF)](mark/Lecture 2.pdf)
 * [Lecture 3: Image Sampling (PDF)](mark/Lecture 3.pdf)
 * [Lecture 4: Point Operators (PDF)](mark/Lecture 4.pdf)
