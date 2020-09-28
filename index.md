@@ -21,36 +21,43 @@ The following short video gives an overview of what to expect in the module.
 
 
 ## Lectures
-The lectures for this course will be given by [Professor Mark Nixon](http://www.ecs.soton.ac.uk/people/msn) ([email](mailto:msn@ecs.soton.ac.uk)) and <a href="http://www.ecs.soton.ac.uk/people/jsh2">Dr Jonathon Hare</a> ([email](mailto:jsh2@ecs.soton.ac.uk)). Mark will give the lectures for the first part of the course, and Jon will finish with the second half. 
 
-There will be three lectures each week up to around the end of the eighth teaching week; you'll then have about time to work on your final coursework. Jon will make himself available during the lecture slots of weeks 9 and 10 for anyone looking for help or guidance. We'll also likely throw in a couple of bonus lectures during the last weeks to cover additional material and give feedback. After the Christmas vacation we'll run a revision lecture and also give feedback (and prizes!) for the group coursework. 
+The lectures for this course will be given by [Professor Mark Nixon](http://www.ecs.soton.ac.uk/people/msn) ([email](mailto:msn@ecs.soton.ac.uk)) and <a href="http://www.ecs.soton.ac.uk/people/jsh2">Dr Jonathon Hare</a> ([email](mailto:jsh2@ecs.soton.ac.uk)). Given the situation regarding COVID and the availability of physical space on campus it will not be possible to deliver any of the content in a face-to-face manner this year. 
 
-<!---
+To give you the best possible quality of teaching, Mark and Jon are going to work together on the teaching sessions this year to do our utmost to allow everyone the ability to interact and ask questions. We're planning on livestreaming the lectures via Teams, whilst simultaneously making video recordings. We strongly encourage you to get involved by virtually raising your hand to speak out questions, or type questions into the chat to which we can respond. We've also got some other tricks planned to keep the module as engaging as it has been in previous years.
+
+In terms of content, Mark will lead the lectures for the first part of the course, and Jon will finish with the second half.  There will be three lectures each week up to around the end of the eighth teaching week; you'll then have about time to work on your final coursework. 
+
+Jon will make himself available during the lecture slots of weeks 9 and 10 for anyone looking for help or guidance. We'll also likely throw in a couple of bonus lectures during the last weeks to cover additional material and give feedback. After the Christmas vacation we'll run a revision lecture and also give feedback (and hopefully prizes!) for the group coursework. 
+
 The lecture slots are (currently) as follows -- keep an eye on your timetable for any changes:
 
 Day       | Time | Room   
 ----------|------|-----------------------
-Tuesdays  | 1PM  | 42/Cinema (SUSU Cinema)
-Wednesdays| 10AM | 42/Cinema (SUSU Cinema)
-Thursdays | 3PM  | 46/3001 (Physics L/T A)
--->
+Monday    | 1PM  | Teams
+TBC       | -    | Teams
+Friday    | 3PM  | Teams
+
 
 ## Lecture Materials
+
 Materials to accompany the lectures can be found here:
 
 * [Part 1](part1.html) taught by Mark.
 * [Part 2](part2.html) taught by Jon.
 
+Links to video recordings of the lectures will also be added once
+
 ## Assessment
-This is a split exam and coursework module. The assessment weightings are slightly different for the UG and MSc variants of the module to reflect the different learning outcomes. Past exam papers can be [found on the web](https://www.adminservices.soton.ac.uk/adminweb/jsp/pastPapers/pastPapers.jsp) (hint search for "Computer Vision" rather than the module code to see a long list of historic, but largely still relevant, past papers).
+
+This is a split exam and coursework module. Past exam papers can be [found on the web](https://www.adminservices.soton.ac.uk/adminweb/jsp/pastPapers/pastPapers.jsp) (hint search for "Computer Vision" rather than the module code to see a long list of historic, but largely still relevant, past papers). We're still waiting for guidance on the exact form that the exam paper will take this year.
 
 ### Coursework
-The schedule for each coursework is shown below, and details will become available below as each coursework is set. Deadline dates are currently provisional as deadlines might be moved by the Director of Programmes to minimise conflicts with other assignments from different modules:
+
+The schedule for each coursework is shown below, and details will become available below as each coursework is set. Deadline dates are currently provisional as deadlines might be moved by the Director of Programmes to minimise conflicts with other assignments from different modules. Note the slightly unusual timings (the first coursework to be set is handed in after the second - this is intentional).
  
-<!--- 
-* **Coursework 1**. Set Tuesday 1st October. Due Friday 22nd November, 16:00. Feedback by 13th December : [Specification](cw/coursework1.html) : [Handin Link](https://handin.ecs.soton.ac.uk/handin/2021/COMP3204/2/) : [FAQ](cw/coursework1-faq.html)
+* **Coursework 1**. Set Monday 5th October. Due Friday 27th November, 16:00. Feedback by 11th December : [Specification](cw/coursework1.html) : [Handin Link](https://handin.ecs.soton.ac.uk/handin/2021/COMP3204/2/) : [FAQ](cw/coursework1-faq.html)
 
-* **Coursework 2**. Set Tuesday 15th October. Due Friday 8th November, 16:00. Feedback by 6th December : [Specification](cw/coursework2.html) : [Handin Link](https://handin.ecs.soton.ac.uk/handin/2021/COMP3204/1/)
+* **Coursework 2**. Set Monday 20th October. Due Friday 13th November, 16:00. Feedback by 4th December : <!---[Specification](cw/coursework2.html) : [Handin Link](https://handin.ecs.soton.ac.uk/handin/2021/COMP3204/1/) -->
 
-* **Coursework 3**. Set Tuesday 19th November. Due Friday 13th December, 16:00. Feedback by 10th January : [Specification](cw/coursework3.html) : [Handin Link](https://handin.ecs.soton.ac.uk/handin/2021/COMP3204/3/)
--->
+* **Coursework 3**. Set Tuesday 19th November. Due Wednesday 6th January, 16:00. Feedback by 22th January : <!--- [Specification](cw/coursework3.html) : [Handin Link](https://handin.ecs.soton.ac.uk/handin/2021/COMP3204/3/) -->

@@ -12,10 +12,10 @@ credits: Maintained by <a href="http://www.ecs.soton.ac.uk/people/msn">Professor
 ## Brief
 **This is a group coursework: please work in teams of four people.**
 
-Due date: Friday 13th December, 16:00.  
+Due date: Wednesday 6th January 2021, 16:00.  
 Development data download: [training.zip](./training.zip)    
 Testing data download: [testing.zip](./testing.zip)  
-Handin: [1819/COMP3204/3/](https://handin.ecs.soton.ac.uk/handin/1819/COMP3204/3/)   
+Handin: [2021/COMP3204/3/](https://handin.ecs.soton.ac.uk/handin/2021/COMP3204/3/)   
 Required files: report.pdf; code.zip; run1.txt; run2.txt; run3.txt  
 Credit: 20% of overall module mark  
 
@@ -63,7 +63,7 @@ For example:
 	5.jpg bedroom
 	...
 
-Each image can only appear once, and every test image *must* be present.
+Each image can only appear once, and every test image *must* be present. Be aware that the test images are not numbered continuously!
 
 ## Restrictions
 * You are not allowed to use the testing images for anything other than producing the final predictions.**They must not be used for either training or learning feature encoding.**
