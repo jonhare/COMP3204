@@ -20,7 +20,7 @@ The following short video gives an overview of what to expect in the module.
 </figure>
 
 
-## Lectures
+## Lectures & Teaching
 
 The lectures for this course will be given by [Professor Mark Nixon](http://www.ecs.soton.ac.uk/people/msn) ([email](mailto:msn@ecs.soton.ac.uk)) and <a href="http://www.ecs.soton.ac.uk/people/jsh2">Dr Jonathon Hare</a> ([email](mailto:jsh2@ecs.soton.ac.uk)). Given the situation regarding COVID and the availability of physical space on campus it will not be possible to deliver any of the content in a face-to-face manner this year. 
 
