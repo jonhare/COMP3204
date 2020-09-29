@@ -8,22 +8,22 @@ credits: Maintained and taught by <a href="http://www.ecs.soton.ac.uk/people/msn
 
 Welcome to the homepage for the first half of [COMP3204](https://secure.ecs.soton.ac.uk/module/COMP3204).
 
-Here is a list of materials available to you to complement the lectures in this half of the course. We have written the fourth Edition of the course textbook, and are proofreading it now. It should be out by Xmas 2019. There have been many changes, and the lecture notes are from the new edition, and the page numbers will refer to that when we have them. 
+Here is a list of materials available to you to complement the lectures in this half of the course. We are now using the fourth Edition of the course textbook which was published late last year. There have been many changes: the lecture notes are from the new edition, and the page numbers refer to that. We have highlighted a proof version of the book showing material covered in Mark's lectures [Highlighted proof of book (not highlighted = not covered by Mark (PDF)](mark/Sections_of_proof_of_textbook_highlighted.pdf). We have highlighted the whole of Chapter 1, as it is background material for the whole course.
 
 Lecture Slides:
 
 * [Opening lecture material (PDF)](mark/First%20lecture%20comp%203204.pdf)
 * [A Framework for Computer Vision (PDF)](mark/A%20Framework%20for%20Computer%20Vision-i.pdf)
-* [Lecture 1: Eye and Human Vision (PDF)](mark/Lecture%201%202020.pdf) and there are some animations [Lecture 1: Animations (PPT)](mark/Lecture%201%20animations%202020.pptx)
+* [Lecture 1: Eye and Human Vision (PDF)](mark/Lecture_1_2020.pdf) and there are some animations [Lecture_1:_Animations (PPT)](mark/Lecture%201%20animations%202020.pptx)
 * [Lecture 2: Image Formation (PDF)](mark/Lecture_2_2020.pdf)
-* [Lecture 3: Image Sampling (PDF)](mark/Lecture 3.pdf)
-* [Lecture 4: Point Operators (PDF)](mark/Lecture 4.pdf)
-* [Lecture 5: Group Operators (PDF)](mark/Lecture 5.pdf)
-* [Lecture 6: Edge Detection (PDF)](mark/Lecture 6.pdf)
-* [Lecture 7: Further Edge Detection (PDF)](mark/Lecture 7.pdf)
-* [Lecture 8: Finding Shapes (PDF)](mark/Lecture 8.pdf)
-* [Lecture 9: Finding More Shapes (PDF)](mark/Lecture 9.pdf)
-* [Lecture 10: State of Art/ Deep Learning (PDF)](mark/Lecture 10.pdf)
+* [Lecture 3: Image Sampling (PDF)](mark/Lecture_3_2020.pdf)
+* [Lecture 4: Point Operators (PDF)](mark/Lecture_4_2020.pdf)
+* [Lecture 5: Group Operators (PDF)](mark/Lecture_5_2020.pdf)
+* [Lecture 6: Edge Detection (PDF)](mark/Lecture_6_2020.pdf)
+* [Lecture 7: Further Edge Detection (PDF)](mark/Lecture_7_2020.pdf)
+* [Lecture 8: Finding Shapes (PDF)](mark/Lecture_8_2020.pdf)
+* [Lecture 9: Finding More Shapes (PDF)](mark/Lecture_9_2020.pdf)
+* [Lecture 10: State of Art/ Deep Learning (PDF)](mark/Lecture_10_2020.pdf)
 
 Scanned lecture notes
 
