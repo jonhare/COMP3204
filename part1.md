@@ -25,7 +25,7 @@ Lecture Slides:
 * [Lecture 9: Finding More Shapes (PDF)](mark/Lecture_9_2020.pdf)
 * [Lecture 10: State of Art/ Deep Learning (PDF)](mark/Lecture_10_2020.pdf)
 
-Scanned lecture notes
+Scanned lecture notes, from 2019-2020. Mark used to write notes in a lecture theatre! If they help, here they are
 
 * [Lecture 1: Eye and Human Vision (PDF)](mark/Lect 1 notes 19-20.pdf)
 * [Lecture 2: Image formation (PDF)](mark/Lect 2 notes 19-20.pdf)
