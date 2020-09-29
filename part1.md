@@ -8,7 +8,7 @@ credits: Maintained and taught by <a href="http://www.ecs.soton.ac.uk/people/msn
 
 Welcome to the homepage for the first half of [COMP3204](https://secure.ecs.soton.ac.uk/module/COMP3204).
 
-Here is a list of materials available to you to complement the lectures in this half of the course. We are now using the fourth Edition of the course textbook which was published late last year. There have been many changes: the lecture notes are from the new edition, and the page numbers refer to that. We have highlighted a proof version of the book showing material covered in Mark's lectures [Highlighted proof of book (not highlighted = not covered by Mark) (PDF)](mark/Sections_of_proof_of_textbook_highlighted.pdf). We have highlighted the whole of Chapter 1, as it is background material for the whole course.
+Here is a list of materials available to you to complement the lectures in this half of the course. We are now using the fourth Edition of the course textbook which was published late last year. There have been many changes: the lecture notes are from the new edition, and the page numbers refer to that. We have highlighted a proof version of the book showing material covered in Mark's lectures [Highlighted proof of book (PDF)](mark/Sections_of_proof_of_textbook_highlighted.pdf) (not highlighted = not covered by Mark). We have highlighted the whole of Chapter 1, as it is background material for the whole course.
 
 Lecture Slides:
 
