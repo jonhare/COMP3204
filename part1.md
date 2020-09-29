@@ -27,15 +27,15 @@ Lecture Slides:
 
 Scanned lecture notes, from 2019-2020. Mark used to write notes in a lecture theatre! If they help, here they are
 
-* [Lecture 1: Eye and Human Vision (PDF)](mark/Lect 1 notes 19-20.pdf)
-* [Lecture 2: Image formation (PDF)](mark/Lect 2 notes 19-20.pdf)
-* [Lecture 3: Image sampling (PDF)](mark/Lect 3 notes 19-20.pdf)
-* [Lecture 4: Point operators (PDF)](mark/Lect 4 notes 19-20.pdf)
-* [Lecture 5: Group operators (PDF)](mark/Lect 5 notes 19-20.pdf)
-* [Lecture 6: Edge detection (PDF)](mark/Lect 6 notes 19-20.pdf)
-* [Lecture 7: Further edge detection (PDF)](mark/Lect 7 notes 19-20.pdf)
-* [Lecture 8: Finding shapes (PDF)](mark/Lect 8 notes 19-20.pdf)
-* [Lecture 8: Finding more shapes (PDF)](mark/Lect 9 notes 19-20.pdf)
+* [Lecture 1: Eye and Human Vision (PDF)](mark/Lect%201%20notes%2019-20.pdf)
+* [Lecture 2: Image formation (PDF)](mark/Lect%202%20notes%2019-20.pdf)
+* [Lecture 3: Image sampling (PDF)](mark/Lect%203%20notes%2019-20.pdf)
+* [Lecture 4: Point operators (PDF)](mark/Lect%204%20notes%2019-20.pdf)
+* [Lecture 5: Group operators (PDF)](mark/Lect%205%20notes%2019-20.pdf)
+* [Lecture 6: Edge detection (PDF)](mark/Lect%206%20notes%2019-20.pdf)
+* [Lecture 7: Further edge detection (PDF)](mark/Lect%207%20notes%2019-20.pdf)
+* [Lecture 8: Finding shapes (PDF)](mark/Lect%208%20notes%2019-20.pdf)
+* [Lecture 8: Finding more shapes (PDF)](mark/Lect%209%20notes%2019-20.pdf)
 
 
 [Lecture 11: revision lecture 8 Jan (PDF)](mark/revision lecture.pdf)
