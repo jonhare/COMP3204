@@ -56,7 +56,7 @@ Scanned lecture notes, from 2019-2020. Mark used to write notes in a lecture the
 Revision Lecture
 * [Jan 2019](mark/revision_lecture.pdf)
 -->
-
+<!---
 I used to provide handouts for lectures, and they relate to the book's third edition, but the students suggested I need them no longer given the ppts which support the course. If you want them they are here:
 
 * [Handout #0 (PDF)](mark/handout 0.pdf)
@@ -73,3 +73,4 @@ I used to provide handouts for lectures, and they relate to the book's third edi
 * [Handout #13 (PDF)](mark/handout13.pdf)
 * [Handout #14 (PDF)](mark/handout14.pdf)
  
+-->
