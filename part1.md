@@ -8,7 +8,7 @@ credits: Maintained and taught by <a href="http://www.ecs.soton.ac.uk/people/msn
 
 Welcome to the homepage for the first half of [COMP3204](https://secure.ecs.soton.ac.uk/module/COMP3204).
 
-Here is a list of materials available to you to complement the lectures in this half of the course. We are now using the fourth Edition of the course textbook which was published late last year. There have been many changes: the lecture notes are from the new edition, and the page numbers refer to that. We have highlighted a proof version of the book showing material covered in Mark's lectures [Highlighted proof of book (PDF)](mark/Sections_of_proof_of_textbook_highlighted.pdf) (not highlighted = not covered by Mark). We have highlighted the whole of Chapter 1, as it is background material for the whole course.
+Here is a list of materials available to you to complement the lectures in this half of the course. We are now using the fourth Edition of the course textbook which was published late last year. There have been many changes: the lecture notes are from the new edition, and the page numbers refer to that. We have highlighted a proof version of the book showing material covered in Mark's lectures [Highlighted proof of book (PDF)](mark/Sections_of_proof_of_textbook_highlighted.pdf) (not highlighted = not covered by Mark). We have highlighted the whole of Chapter 1, as it is background material for the whole course. There is also demonstration material which is largely derived from the book's website (https://www.southampton.ac.uk/~msn/book/). It's not pretty and is not aimed to be: it's just working software. 
 
 Lecture Slides:
 
@@ -24,6 +24,10 @@ Lecture Slides:
 * [Lecture 8: Finding Shapes (PDF)](mark/Lecture_8_2020.pdf)
 * [Lecture 9: Finding More Shapes (PDF)](mark/Lecture_9_2020.pdf)
 * [Lecture 10: State of Art/ Deep Learning (PDF)](mark/Lecture_10_2020.pdf)
+
+Demonstration material:
+
+* [Worksheets (zipped Matlab)](mark/Marks_matlab.zip)
 
 Scanned lecture notes, from 2019-2020. Mark used to write notes in a lecture theatre! If they help, here they are
 
