@@ -27,7 +27,7 @@ Lecture Slides:
 
 Demonstration material:
 
-* [Worksheets (zipped Matlab)](mark/Marks_matlab.zip)
+* [Worksheets (zipped Matlab)](mark/Marks_matlab.zip) These are download only.
 
 Scanned lecture notes, from 2019-2020. Mark used to write notes in a lecture theatre! If they help, here they are
 
