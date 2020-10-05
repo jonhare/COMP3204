@@ -12,7 +12,7 @@ Here is a list of materials available to you to complement the lectures in this 
 
 Lecture Slides:
 
-* [Opening lecture material (PDF)](mark/First%20lecture%20comp%203204.pdf)
+* [Opening lecture material (PDF)](mark/First%20lecture.pdf)
 * [A Framework for Computer Vision (PDF)](mark/A%20Framework%20for%20Computer%20Vision-i.pdf)
 * [Lecture 1: Eye and Human Vision (PDF)](mark/Lecture_1_2020.pdf) and there are some animations [Lecture_1:_Animations (PPT)](mark/Lecture_1_animations_2020.pptx)
 * [Lecture 2: Image Formation (PDF)](mark/Lecture_2_2020.pdf)
