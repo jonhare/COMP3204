@@ -35,8 +35,8 @@ The lecture slots are (currently) as follows -- keep an eye on your timetable fo
 Day       | Time | Room   
 ----------|------|-----------------------
 Monday    | 1PM  | Teams
-TBC       | -    | Teams
-Friday    | 3PM  | Teams
+Friday    | 11AM | Teams
+Friday    | 1PM  | Teams
 
 Direct links to the video recordings below:
 
