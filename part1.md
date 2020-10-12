@@ -16,7 +16,7 @@ Lecture Slides:
 * [A Framework for Computer Vision (PDF)](mark/A%20Framework%20for%20Computer%20Vision-i.pdf)
 * [Lecture 1: Eye and Human Vision (PDF)](mark/Lecture_1_2020.pdf) and there are some animations [Lecture_1:_Animations (PPT)](mark/Lecture_1_animations_2020.pptx) [recording](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=9a64be1f-2572-4ca2-8c12-ac4f00e64eba)
 * [Lecture 2: Image Formation (PDF)](mark/Lecture_2_2020.pdf) [recording](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=53777333-e297-4b2c-bd7e-ac4f00e89916)
-* [Lecture 3: Image Sampling (PDF)](mark/Lecture_3_2020.pdf)
+* [Lecture 3: Image Sampling (PDF)](mark/Lecture_3_2020.pdf) [recording](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=dc0154f9-4345-4a53-9219-ac5200e306b7)
 * [Lecture 4: Point Operators (PDF)](mark/Lecture_4_2020.pdf)
 * [Lecture 5: Group Operators (PDF)](mark/Lecture_5_2020.pdf)
 * [Lecture 6: Edge Detection (PDF)](mark/Lecture_6_2020.pdf)

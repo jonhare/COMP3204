@@ -44,6 +44,7 @@ Name                      | Video
 --------------------------|---------------
 1: The Eye & Human Vision | [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=9a64be1f-2572-4ca2-8c12-ac4f00e64eba)
 2: Image Formation        | [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=53777333-e297-4b2c-bd7e-ac4f00e89916)
+3: Image Samping          | [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=dc0154f9-4345-4a53-9219-ac5200e306b7)
 
 ## Lecture Materials
 
