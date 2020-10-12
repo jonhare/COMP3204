@@ -64,6 +64,6 @@ The schedule for each coursework is shown below, and details will become availab
  
 * **Coursework 1**. Set Monday 5th October. Due Friday 27th November, 16:00. Feedback by 11th December : [Specification](cw/coursework1.html) : [Handin Link](https://handin.ecs.soton.ac.uk/handin/2021/COMP3204/2/) : [FAQ](cw/coursework1-faq.html)
 
-* **Coursework 2**. Set Monday 20th October. Due Friday 13th November, 16:00. Feedback by 4th December : <!---[Specification](cw/coursework2.html) : [Handin Link](https://handin.ecs.soton.ac.uk/handin/2021/COMP3204/1/) -->
+* **Coursework 2**. Set Monday 19th October. Due Friday 13th November, 16:00. Feedback by 4th December : <!---[Specification](cw/coursework2.html) : [Handin Link](https://handin.ecs.soton.ac.uk/handin/2021/COMP3204/1/) -->
 
 * **Coursework 3**. Set Tuesday 19th November. Due Wednesday 6th January, 16:00. Feedback by 22th January : <!--- [Specification](cw/coursework3.html) : [Handin Link](https://handin.ecs.soton.ac.uk/handin/2021/COMP3204/3/) -->
