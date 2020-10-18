@@ -31,7 +31,7 @@ Demonstration material:
 
 PPTX files - your wish is my command! These will be updated as we go along.
 
-* [Lecture 1: Eye and Human Vision (PPT)](mark/Lecture%201.pptx
+* [Lecture 1: Eye and Human Vision (PPT)](mark/Lecture%201.pptx)
 * [Lecture 2: Image Formation (PPT)](mark/Lecture%202.pptx)
 * [Lecture 3: Image Sampling(PPT)](mark/Lecture%203.pptx)
 * [Lecture 4: Point Operators (PPT)](mark/Lecture%204.pptx)
