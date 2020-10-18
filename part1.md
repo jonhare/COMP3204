@@ -29,9 +29,21 @@ Demonstration material:
 
 * [Worksheets (zipped Matlab)](mark/Marks_matlab.zip) These are download only.
 
+PPTX files - your wish is my command! These will be updated as we go along.
+
+* [Lecture 1: Eye and Human Vision (PPT)](mark/Lecture%201.pptx
+* [Lecture 2: Image Formation (PPT)](mark/Lecture%202.pptx)
+* [Lecture 3: Image Sampling(PPT)](mark/Lecture%203.pptx)
+* [Lecture 4: Point Operators (PPT)](mark/Lecture%204.pptx)
+* [Lecture 5: Group Operators (PPT)](mark/Lecture%205.pptx)
+* [Lecture 6: Edge Detection (PPT)](mark/Lecture%206.pptx)
+* [Lecture 7: Further Edge Detection (PPT)](mark/Lecture%207.pptx)
+* [Lecture 8: Finding Shapes (PPT)](mark/Lecture%208.pptx)
+* [Lecture 9: Finding More Shapes (PPT)](mark/Lecture%209.pptx)
+
 Scanned lecture notes, from 2019-2020. Mark used to write notes in a lecture theatre! If they help, here they are
 
-* [Lecture 1: Eye and Human Vision (PDF)](mark/Lect%201%20notes%2019-20.pdf)
+* [Lecture 1: Eye and Human Vision (PDF)](mark/L20notes%2019-20.pdf)
 * [Lecture 2: Image formation (PDF)](mark/Lect%202%20notes%2019-20.pdf)
 * [Lecture 3: Image sampling (PDF)](mark/Lect%203%20notes%2019-20.pdf)
 * [Lecture 4: Point operators (PDF)](mark/Lect%204%20notes%2019-20.pdf)
