@@ -88,6 +88,7 @@ public class VideoCaptureComponent extends Box implements ItemListener, Closeabl
 		} else {
 			for (final Device s : devices)
 				sources.addItem(s.getNameStr());
+			sources.setSelectedItem(currentDevice.getNameStr());
 		}
 
 		sources.addItemListener(this);
