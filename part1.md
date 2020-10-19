@@ -19,7 +19,7 @@ Lecture Slides:
 * [Lecture 3: Image Sampling (PDF)](mark/Lecture_3_2020.pdf) [recording](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=dc0154f9-4345-4a53-9219-ac5200e306b7)
 * [Lecture 4: Point Operators (PDF)](mark/Lecture_4_2020.pdf) [recording](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=803c26de-a504-4d38-a3fb-ac5600e051ce)
 * [Lecture 5: Group Operators (PDF)](mark/Lecture_5_2020.pdf) [recording](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=a146ecac-cdc8-4a62-a21c-ac5600e4e95e)
-* [Lecture 6: Edge Detection (PDF)](mark/Lecture_6_2020.pdf)
+* [Lecture 6: Edge Detection (PDF)](mark/Lecture_6_2020.pdf) [recording](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=7e16fefa-fb77-4f33-af33-ac5900f1f400)
 * [Lecture 7: Further Edge Detection (PDF)](mark/Lecture_7_2020.pdf)
 * [Lecture 8: Finding Shapes (PDF)](mark/Lecture_8_2020.pdf)
 * [Lecture 9: Finding More Shapes (PDF)](mark/Lecture_9_2020.pdf)
