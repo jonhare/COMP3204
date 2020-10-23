@@ -48,6 +48,8 @@ Name                      | Video
 4: Point Operators        | [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=803c26de-a504-4d38-a3fb-ac5600e051ce)
 5: Group Operators        | [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=a146ecac-cdc8-4a62-a21c-ac5600e4e95e)
 6: Edge Detection         | [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=7e16fefa-fb77-4f33-af33-ac5900f1f400)
+7: Further Edge Detection | [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=6918a84a-f3ae-4682-8e39-ac5d010116f3)
+8: Finding Shapes         | [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=105a32af-14a8-44ce-8ede-ac5d0103c375)
 
 ## Lecture Materials
 
