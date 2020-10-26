@@ -22,8 +22,8 @@ Lecture Slides:
 * [Lecture 6: Edge Detection (PDF)](mark/Lecture_6_2020.pdf) [recording](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=7e16fefa-fb77-4f33-af33-ac5900f1f400)
 * [Lecture 7: Further Edge Detection (PDF)](mark/Lecture_7_2020.pdf) [recording](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=6918a84a-f3ae-4682-8e39-ac5d010116f3)
 * [Lecture 8: Finding Shapes (PDF)](mark/Lecture_8_2020.pdf) [recording](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=105a32af-14a8-44ce-8ede-ac5d0103c375)
-* [Lecture 9: Finding More Shapes (PDF)](mark/Lecture_9_2020.pdf)
-* [Lecture 10: State of Art/ Deep Learning (PDF)](mark/Lecture_10_2020.pdf)
+* [Lecture 9: Finding More Shapes (PDF)](mark/Lecture_9_2020.pdf) [recording](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=54b3d80f-634c-4d75-82bb-ac6000ebe406)
+* [Lecture 10: State of Art/Deep Learning (PDF)](mark/Lecture_10_2020.pdf)
 
 Demonstration material:
 
