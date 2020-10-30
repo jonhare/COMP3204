@@ -51,6 +51,10 @@ Name                      | Video
 7: Further Edge Detection | [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=6918a84a-f3ae-4682-8e39-ac5d010116f3)
 8: Finding Shapes         | [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=105a32af-14a8-44ce-8ede-ac5d0103c375)
 9: Finding More Shapes    | [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=54b3d80f-634c-4d75-82bb-ac6000ebe406)
+10: Building machines that see | [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=a729c8de-fad7-48e8-9b32-ac6400f45779)
+11: Machine learning for Pattern Recognition | [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=bd958aa4-d526-47bb-b5d9-ac6400fd0970)
+
+
 ## Lecture Materials
 
 Materials to accompany the lectures can be found here:
