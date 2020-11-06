@@ -53,6 +53,9 @@ Name                      | Video
 9: Finding More Shapes    | [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=54b3d80f-634c-4d75-82bb-ac6000ebe406)
 10: Building machines that see | [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=a729c8de-fad7-48e8-9b32-ac6400f45779)
 11: Machine learning for Pattern Recognition | [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=bd958aa4-d526-47bb-b5d9-ac6400fd0970)
+12: Covariance and Principal Components | [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=70e0701a-f34c-49e2-afb4-ac6700ee9268)
+13: Types of image feature and segmentation | [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=91e2ff24-cdef-46c7-96a1-ac6b00ef64a3)
+14: Shape description and modelling | [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=8e8fbf01-fbaf-4437-9223-ac6b00f8b0b7)
 
 
 ## Lecture Materials

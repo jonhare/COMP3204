@@ -19,9 +19,9 @@ Title        | Slides                             | Handouts | Recording
 L0. Fork Me! | [PDF](./lectures/pdf/L0-forkme.pdf) | N/A     | N/A
 L1. Building machines that see | [PDF](./lectures/pdf/L1-machines-that-see.pdf) | [PDF](./handouts/pdf/L1-machines-that-see.pdf) | [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=a729c8de-fad7-48e8-9b32-ac6400f45779)
 L2. Machine learning for Pattern Recognition | [PDF](./lectures/pdf/L2-machine-learning.pdf) | [PDF](./handouts/pdf/L2-machine-learning.pdf) | [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=bd958aa4-d526-47bb-b5d9-ac6400fd0970)
-L3. Covariance and Principal Components | [PDF](./lectures/pdf/L3-covariance.pdf) | [PDF](./handouts/pdf/L3-covariance.pdf)|
-L4. Types of image feature and segmentation | [PDF](./lectures/pdf/L4-imagefeatures.pdf) | [PDF](./handouts/pdf/L4-imagefeatures.pdf) |
-L5. Shape description and modelling | [PDF](./lectures/pdf/L5-shapedescription.pdf) | [PDF](./handouts/pdf/L5-shapedescription.pdf) |
+L3. Covariance and Principal Components | [PDF](./lectures/pdf/L3-covariance.pdf) | [PDF](./handouts/pdf/L3-covariance.pdf)| [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=70e0701a-f34c-49e2-afb4-ac6700ee9268) 
+L4. Types of image feature and segmentation | [PDF](./lectures/pdf/L4-imagefeatures.pdf) | [PDF](./handouts/pdf/L4-imagefeatures.pdf) | [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=91e2ff24-cdef-46c7-96a1-ac6b00ef64a3)
+L5. Shape description and modelling | [PDF](./lectures/pdf/L5-shapedescription.pdf) | [PDF](./handouts/pdf/L5-shapedescription.pdf) | [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=8e8fbf01-fbaf-4437-9223-ac6b00f8b0b7)
 L6. Local interest points | [PDF](./lectures/pdf/L6-interestpoints.pdf) | [PDF](./handouts/pdf/L6-interestpoints.pdf) |
 L7. Local features and matching | [PDF](./lectures/pdf/L7-matching.pdf) | [PDF](./handouts/pdf/L7-matching.pdf) |
 L8. Consistent matching | [PDF](./lectures/pdf/L8-consistency.pdf) | [PDF](./handouts/pdf/L8-consistency.pdf) |
