@@ -56,6 +56,7 @@ Name                      | Video
 12: Covariance and Principal Components | [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=70e0701a-f34c-49e2-afb4-ac6700ee9268)
 13: Types of image feature and segmentation | [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=91e2ff24-cdef-46c7-96a1-ac6b00ef64a3)
 14: Shape description and modelling | [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=8e8fbf01-fbaf-4437-9223-ac6b00f8b0b7)
+15: Local interest points | [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=46e90dbb-4945-4419-9f64-ac6e00f12c5f)
 
 
 ## Lecture Materials
