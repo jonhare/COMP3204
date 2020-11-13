@@ -57,7 +57,8 @@ Name                      | Video
 13: Types of image feature and segmentation | [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=91e2ff24-cdef-46c7-96a1-ac6b00ef64a3)
 14: Shape description and modelling | [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=8e8fbf01-fbaf-4437-9223-ac6b00f8b0b7)
 15: Local interest points | [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=46e90dbb-4945-4419-9f64-ac6e00f12c5f)
-
+16: Local features and matching | [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=c1cbed2e-1a98-4512-8c15-ac7200f6dd60)
+17: Consistent matching | [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=9d93d9d2-255a-41c0-967e-ac720107e2d5)
 
 ## Lecture Materials
 
