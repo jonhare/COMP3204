@@ -25,7 +25,7 @@ L5. Shape description and modelling | [PDF](./lectures/pdf/L5-shapedescription.p
 L6. Local interest points | [PDF](./lectures/pdf/L6-interestpoints.pdf) | [PDF](./handouts/pdf/L6-interestpoints.pdf) | [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=46e90dbb-4945-4419-9f64-ac6e00f12c5f)
 L7. Local features and matching | [PDF](./lectures/pdf/L7-matching.pdf) | [PDF](./handouts/pdf/L7-matching.pdf) | [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=c1cbed2e-1a98-4512-8c15-ac7200f6dd60)
 L8. Consistent matching | [PDF](./lectures/pdf/L8-consistency.pdf) | [PDF](./handouts/pdf/L8-consistency.pdf) | [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=9d93d9d2-255a-41c0-967e-ac720107e2d5)
-L9. Large-scale image search | [PDF](./lectures/pdf/L9-imagesearch.pdf) | [PDF](./handouts/pdf/L9-imagesearch.pdf) |
+L9. Large-scale image search | [PDF](./lectures/pdf/L9-imagesearch.pdf) | [PDF](./handouts/pdf/L9-imagesearch.pdf) | [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=ff5d11a7-47ed-43e8-9d6c-ac7500ef47d8)
 L10. Image classification and auto-annotation | [PDF](./lectures/pdf/L10-classification.pdf) | [PDF](./handouts/pdf/L10-classification.pdf) |
 L11. Towards 3D vision | [PDF](./lectures/pdf/L11-towards3d.pdf) | N/A | |
 Bonus Lecture. Programming for computer vision & other musings related to the hybrid images coursework | [PDF](./lectures/pdf/ConvCodingTutorial.pdf) | N/A | |

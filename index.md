@@ -59,6 +59,8 @@ Name                      | Video
 15: Local interest points | [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=46e90dbb-4945-4419-9f64-ac6e00f12c5f)
 16: Local features and matching | [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=c1cbed2e-1a98-4512-8c15-ac7200f6dd60)
 17: Consistent matching | [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=9d93d9d2-255a-41c0-967e-ac720107e2d5)
+18: Large-scale image search | [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=ff5d11a7-47ed-43e8-9d6c-ac7500ef47d8)
+
 
 ## Lecture Materials
 
@@ -81,4 +83,4 @@ The schedule for each coursework is shown below, and details will become availab
 
 * **Coursework 2**. Set Monday 19th October. Due Friday 13th November, 16:00. Feedback by 4th December : [Specification](cw/coursework2.html) : [Handin Link](https://handin.ecs.soton.ac.uk/handin/2021/COMP3204/1/)
 
-* **Coursework 3**. Set Tuesday 19th November. Due Wednesday 6th January, 16:00. Feedback by 22th January : <!--- [Specification](cw/coursework3.html) : [Handin Link](https://handin.ecs.soton.ac.uk/handin/2021/COMP3204/3/) -->
+* **Coursework 3**. Set Friday 20th November. Due Wednesday 6th January, 16:00. Feedback by 22th January : <!--- [Specification](cw/coursework3.html) : [Handin Link](https://handin.ecs.soton.ac.uk/handin/2021/COMP3204/3/) -->

@@ -7,8 +7,6 @@ githubHeader: "false"
 credits: Maintained by <a href="http://www.ecs.soton.ac.uk/people/msn">Professor Mark Nixon</a> and <a href="http://www.ecs.soton.ac.uk/people/jsh2">Dr Jonathon Hare</a>.
 ---
 
-**This coursework is only for students registered on the COMP3204 module**
-
 ## Brief
 **This is a group coursework: please work in teams of four people.**
 
