@@ -28,7 +28,7 @@ L8. Consistent matching | [PDF](./lectures/pdf/L8-consistency.pdf) | [PDF](./han
 L9. Large-scale image search | [PDF](./lectures/pdf/L9-imagesearch.pdf) | [PDF](./handouts/pdf/L9-imagesearch.pdf) | [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=ff5d11a7-47ed-43e8-9d6c-ac7500ef47d8)
 L10. Image classification and auto-annotation | [PDF](./lectures/pdf/L10-classification.pdf) | [PDF](./handouts/pdf/L10-classification.pdf) | [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=0e4b2de3-98d3-44d1-8034-ac7900fe94e7)
 L11. Towards 3D vision | [PDF](./lectures/pdf/L11-towards3d.pdf) | N/A | | [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=b5fbad46-ce6e-469f-b921-ac79010285e6)
-Bonus Lecture. Programming for computer vision & other musings related to the hybrid images coursework | [PDF](./lectures/pdf/ConvCodingTutorial.pdf) | N/A | |
+Bonus Lecture. Programming for computer vision & other musings related to the hybrid images coursework | [PDF](./lectures/pdf/ConvCodingTutorial.pdf) | N/A | | [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=20ae6776-3901-4be7-8132-ac7c00ed93f3)
 Bonus Lecture. Recent Trends in Computer Vision | [HTML](./lectures/VisionRetrospective/index.html) [PDF](./lectures/pdf/VisionRetrospective.pdf) | N/A | 
 Revision Lecture | <!--- [PDF](./lectures/pdf/Revision.pdf) --> | N/A | |
 

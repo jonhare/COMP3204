@@ -62,6 +62,8 @@ Name                      | Video
 18: Large-scale image search | [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=ff5d11a7-47ed-43e8-9d6c-ac7500ef47d8)
 19: Image classification and auto-annotation | [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=0e4b2de3-98d3-44d1-8034-ac7900fe94e7)
 20: Towards 3D vision | [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=b5fbad46-ce6e-469f-b921-ac79010285e6)
+21: Programming for computer vision & other musings related to the hybrid images coursework | [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=20ae6776-3901-4be7-8132-ac7c00ed93f3)
+
 
 
 ## Lecture Materials
