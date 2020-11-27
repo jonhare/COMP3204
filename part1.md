@@ -41,7 +41,7 @@ PPTX files - your wish is my command! These will be updated as we go along.
 * [Lecture 7: Further Edge Detection (PPT)](mark/Lecture%207.pptx)
 * [Lecture 8: Finding Shapes (PPT)](mark/Lecture%208.pptx)
 * [Lecture 9: Finding More Shapes (PPT)](mark/Lecture%209.pptx)
-* [Lecture 11: Survey of gaits (PPT)](mark/ACCV%202020%20gait%20nixon%20s.pptx)
+* [Lecture 11: Survey of gait (PPT)](mark/ACCV%202020%20gait%20nixon%20s.pptx)
 
 Scanned lecture notes, from 2019-2020. Mark used to write notes in a lecture theatre! If they help, here they are
 
