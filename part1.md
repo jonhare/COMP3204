@@ -24,6 +24,7 @@ Lecture Slides:
 * [Lecture 8: Finding Shapes (PDF)](mark/Lecture_8_2020.pdf) [recording](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=105a32af-14a8-44ce-8ede-ac5d0103c375)
 * [Lecture 9: Finding More Shapes (PDF)](mark/Lecture_9_2020.pdf) [recording](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=54b3d80f-634c-4d75-82bb-ac6000ebe406)
 * [Lecture 10: State of Art/Deep Learning (PDF)](mark/Lecture_10_2020.pdf)
+* [Lecture 11: Survey of gait (PDF)](mark/ACCV%202020%20gait%20nixon%20s.pdf)
 
 Demonstration material:
 
@@ -40,6 +41,7 @@ PPTX files - your wish is my command! These will be updated as we go along.
 * [Lecture 7: Further Edge Detection (PPT)](mark/Lecture%207.pptx)
 * [Lecture 8: Finding Shapes (PPT)](mark/Lecture%208.pptx)
 * [Lecture 9: Finding More Shapes (PPT)](mark/Lecture%209.pptx)
+* [Lecture 11: Survey of gaits (PPT)](mark/ACCV%202020%20gait%20nixon%20s.pptx)
 
 Scanned lecture notes, from 2019-2020. Mark used to write notes in a lecture theatre! If they help, here they are
 
