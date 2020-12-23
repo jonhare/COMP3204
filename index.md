@@ -44,7 +44,7 @@ Name                      | Video
 --------------------------|---------------
 1: The Eye & Human Vision | [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=9a64be1f-2572-4ca2-8c12-ac4f00e64eba)
 2: Image Formation        | [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=53777333-e297-4b2c-bd7e-ac4f00e89916)
-3: Image Samping          | [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=dc0154f9-4345-4a53-9219-ac5200e306b7)
+3: Image Sampling          | [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=dc0154f9-4345-4a53-9219-ac5200e306b7)
 4: Point Operators        | [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=803c26de-a504-4d38-a3fb-ac5600e051ce)
 5: Group Operators        | [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=a146ecac-cdc8-4a62-a21c-ac5600e4e95e)
 6: Edge Detection         | [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=7e16fefa-fb77-4f33-af33-ac5900f1f400)
