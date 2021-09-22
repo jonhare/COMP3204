@@ -13,7 +13,7 @@ credits: Maintained by <a href="http://www.ecs.soton.ac.uk/people/msn">Professor
 Due date: Wednesday 6th January 2021, 16:00.  
 Development data download: [training.zip](./training.zip)    
 Testing data download: [testing.zip](./testing.zip)  
-Handin: [2021/COMP3204/3/](https://handin.ecs.soton.ac.uk/handin/2021/COMP3204/3/)   
+Handin: [2122/COMP3204/3/](https://handin.ecs.soton.ac.uk/handin/2122/COMP3204/3/)   
 Required files: report.pdf; code.zip; run1.txt; run2.txt; run3.txt  
 Credit: 20% of overall module mark  
 

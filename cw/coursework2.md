@@ -7,13 +7,11 @@ githubHeader: "false"
 credits: Maintained by <a href="http://www.ecs.soton.ac.uk/people/msn">Professor Mark Nixon</a> and <a href="http://www.ecs.soton.ac.uk/people/jsh2">Dr Jonathon Hare</a>. <br /> This coursework is based on the excellent <a href="http://cs.brown.edu/courses/cs143/proj1/">coursework for the CS143 Introduction to Computer Vision module</a> taught by James Hays at Brown University, but has been adapted to use OpenIMAJ.
 ---
 
-**This coursework is only for students registered on the COMP3204 module**
-
 ## Brief
 Due date: Friday 13th November, 16:00.  
 Sample images: [hybrid-images.zip](./hybrid-images.zip)  
 Code submission test tool: [SubmissionTester.jar](./SubmissionTester.jar)  
-Handin: [2021/COMP3204/1/](https://handin.ecs.soton.ac.uk/handin/2021/COMP3204/1/)  
+Handin: [2122/COMP3204/1/](https://handin.ecs.soton.ac.uk/handin/2122/COMP3204/1/)  
 Required files: `MyConvolution.java`, `MyHybridImages.java`, `[hybridimage.png]`  
 Credit: 10% of overall module mark  
 

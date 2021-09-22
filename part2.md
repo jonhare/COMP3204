@@ -1,7 +1,7 @@
 ---
 layout: index
 title: "COMP3204 Computer Vision"
-subtitle: "Notes, Slides and Demos for COMP3204 Part II 2020-21"
+subtitle: "Notes, Slides and Demos for COMP3204 Part II 2021-22"
 githubHeader: "true"
 credits: Maintained and taught by <a href="http://www.ecs.soton.ac.uk/people/jsh2">Dr Jonathon Hare</a> (<a href="https://github.com/jonhare">jonhare</a>)
 ---

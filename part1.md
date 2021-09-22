@@ -1,9 +1,9 @@
 ---
 layout: index
 title: "COMP3204 Computer Vision"
-subtitle: "Materials for COMP3204 Part I 2020-21"
+subtitle: "Materials for COMP3204 Part I 2021-22"
 githubHeader: "false"
-credits: Maintained and taught by <a href="http://www.ecs.soton.ac.uk/people/msn">Professor Mark Nixon</a>
+credits: Maintained and taught by <a href="http://www.ecs.soton.ac.uk/people/msn">Dr Xiaohao Cai</a>
 ---
 
 Welcome to the homepage for the first half of [COMP3204](https://secure.ecs.soton.ac.uk/module/COMP3204).
