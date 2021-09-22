@@ -10,7 +10,7 @@ credits: Maintained by <a href="http://www.ecs.soton.ac.uk/people/msn">Professor
 ## Brief
 **This is a group coursework: please work in teams of four people.**
 
-Due date: Wednesday 6th January 2021, 16:00.  
+Due date: Thursday 16th December 2021, 16:00.  
 Development data download: [training.zip](./training.zip)    
 Testing data download: [testing.zip](./testing.zip)  
 Handin: [2122/COMP3204/3/](https://handin.ecs.soton.ac.uk/handin/2122/COMP3204/3/)   

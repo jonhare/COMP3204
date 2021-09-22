@@ -8,7 +8,7 @@ credits: Maintained by <a href="http://www.ecs.soton.ac.uk/people/msn">Professor
 ---
 
 ## Brief
-Due date: Friday 13th November, 16:00.  
+Due date: Friday 12th November, 16:00.  
 Sample images: [hybrid-images.zip](./hybrid-images.zip)  
 Code submission test tool: [SubmissionTester.jar](./SubmissionTester.jar)  
 Handin: [2122/COMP3204/1/](https://handin.ecs.soton.ac.uk/handin/2122/COMP3204/1/)  
@@ -26,7 +26,7 @@ Example hybrid image. Look at image from very close, then from far away.<br /><b
 ## Details
 This project is intended to familiarise you with image filtering and the implementation of a convolution function in OpenIMAJ. Once you have created an image convolution function, it is relatively straightforward to construct hybrid images. You will need to have worked through [Chapter 1](http://www.openimaj.org/tutorial/getting-started-with-openimaj-using-maven.html), [Chapter 2](http://www.openimaj.org/tutorial/processing-your-first-image.html) and [Chapter 7](http://www.openimaj.org/tutorial/processing-video.html) of the [OpenIMAJ tutorial](http://www.openimaj.org/tutorial/) prior to starting this coursework.
 
-**Template convolution.** Template convolution is a fundamental image processing tool. Mark has covered convolution in detail in the lectures. See section 3.4.1 of Mark's book (Fourth Edition) by looking at [this excerpt](template_convolution_4th_edition.pdf) and the lecture materials for more information. 
+**Template convolution.** Template convolution is a fundamental image processing tool. Mark has covered convolution in detail in the lectures. See section 3.4.1 of Mark Nixon's book (Fourth Edition) by looking at [this excerpt](template_convolution_4th_edition.pdf) and the lecture materials for more information. 
 
 OpenIMAJ has numerous built in and highly efficient operators to perform convolution, but you will be writing your own such function from scratch for this assignment. More specifically, you will implement a class called `MyConvolution` that builds on this skeleton:
 

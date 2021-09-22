@@ -8,7 +8,7 @@ credits: Maintained by <a href="http://www.ecs.soton.ac.uk/people/msn">Professor
 ---
 
 ## Brief
-Due date: Friday 27nd November, 16:00.  
+Due date: Friday 26th November, 16:00.  
 Link to the tutorial: [html](http://www.openimaj.org/tutorial) or [pdf](http://www.openimaj.org/tutorial-pdf.pdf)  
 Handin: [2122/COMP3204/2/](https://handin.ecs.soton.ac.uk/handin/2122/COMP3204/2/)  
 Required files: code.zip  
