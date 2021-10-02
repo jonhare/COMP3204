@@ -10,6 +10,22 @@ Welcome to the homepage for the first half of [COMP3204](https://secure.ecs.soto
 
 Here is a list of materials available to you to complement the lectures in this half of the course. We are now using the fourth Edition of the course textbook which was published by Mark S. Nixon and Alberto S. Aguado late 2019. There have been many changes: the lecture notes are from the new edition, and the page numbers refer to that. We have highlighted a proof version of the book showing material covered in lectures [Highlighted proof of book (PDF)](mark/Sections_of_proof_of_textbook_highlighted.pdf) (not highlighted = supplementary to the lectures). We have highlighted the whole of Chapter 1, as it is background material for the whole course. There is also demonstration material which is largely derived from the book's website (https://www.southampton.ac.uk/~msn/book/). It's not pretty and is not aimed to be: it's just working software. 
 
+
+Title        | Slides                            | Recording
+------------ | ----------------------------------| --------- 
+Opening lecture material | [PDF](mark/First%20lecture.pdf) | N/A
+A Framework for Computer Vision | [PDF](mark/A%20Framework%20for%20Computer%20Vision-i.pdf) | N/A
+Lecture 1: Eye and Human Vision | [PDF](mark/Lecture_1_2020.pdf) [Animations](mark/Lecture_1_animations_2020.pptx) | [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=9a64be1f-2572-4ca2-8c12-ac4f00e64eba)
+Lecture 2: Image Formation      | [PDF](mark/Lecture_3_2020.pdf) | [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=53777333-e297-4b2c-bd7e-ac4f00e89916)
+Lecture 3: Image Sampling       | [PDF](mark/Lecture_3_2020.pdf) | [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=dc0154f9-4345-4a53-9219-ac5200e306b7)
+Lecture 5: Group Operators      | [PDF](mark/Lecture_5_2020.pdf) | [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=a146ecac-cdc8-4a62-a21c-ac5600e4e95e)
+Lecture 6: Edge Detection       | [PDF](mark/Lecture_6_2020.pdf) | [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=7e16fefa-fb77-4f33-af33-ac5900f1f400)
+Lecture 7: Further Edge Detection | [PDF](mark/Lecture_7_2020.pdf) | [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=6918a84a-f3ae-4682-8e39-ac5d010116f3)
+Lecture 8: Finding Shapes       | [PDF](mark/Lecture_8_2020.pdf) | [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=105a32af-14a8-44ce-8ede-ac5d0103c375)
+Lecture 9: Finding More Shapes  | [PDF](mark/Lecture_9_2020.pdf) | [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=54b3d80f-634c-4d75-82bb-ac6000ebe406)
+Lecture 10: State of Art/Deep Learning (Topic will be replaced) | PDF](mark/Lecture_10_2020.pdf) | N/A
+Lecture 11: Survey of gait (Topic will be replaced) | [PDF](mark/ACCV%202020%20gait%20nixon%20s.pdf) | [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=196e5e30-adee-48b8-b87b-ac8000f21d63)
+
 Lecture Slides:
 
 * [Opening lecture material (PDF)](mark/First%20lecture.pdf)
