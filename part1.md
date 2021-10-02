@@ -27,8 +27,7 @@ Lecture 10: State of Art/Deep Learning (Topic will be replaced) | [PDF](mark/Lec
 Lecture 11: Survey of gait (Topic will be replaced) | [PDF](mark/ACCV%202020%20gait%20nixon%20s.pdf) | [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=196e5e30-adee-48b8-b87b-ac8000f21d63)
 
 
-> Demonstration material:
-> 
+> Demonstration material: 
 > * [Worksheets (zipped Matlab)](mark/Marks_matlab.zip) These are download only.
 
 PPTX files - your wish is my command! These will be updated as we go along.
