@@ -16,7 +16,7 @@ Title        | Slides                            |Handouts     | Recording
 A Framework for Computer Vision | [PDF](mark/A%20Framework%20for%20Computer%20Vision-i.pdf) | N/A  | N/A
 Lecture 1: Eye and Human Vision | [PDF](mark/Lecture_1_21-22.pdf) | [Animations](mark/Lecture_1_animations_2020.pptx) | [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=9a64be1f-2572-4ca2-8c12-ac4f00e64eba)
 Lecture 2: Image Formation      | [PDF](mark/Lecture_2_21-22.pdf) | [PDF](mark/FourierTransform.pdf) | [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=53777333-e297-4b2c-bd7e-ac4f00e89916)
-Lecture 3: Image Sampling       | [PDF](mark/Lecture_3_2020.pdf) | N/A | [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=dc0154f9-4345-4a53-9219-ac5200e306b7)
+Lecture 3: Image Sampling       | [PDF](mark/Lecture_3_21-22.pdf) | N/A | [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=dc0154f9-4345-4a53-9219-ac5200e306b7)
 Lecture 4: Point Operators      | [PDF](mark/Lecture_4_2020.pdf) | N/A | [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=803c26de-a504-4d38-a3fb-ac5600e051ce)
 Lecture 5: Group Operators      | [PDF](mark/Lecture_5_2020.pdf) | N/A | [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=a146ecac-cdc8-4a62-a21c-ac5600e4e95e)
 Lecture 6: Edge Detection       | [PDF](mark/Lecture_6_2020.pdf) | N/A | [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=7e16fefa-fb77-4f33-af33-ac5900f1f400)
@@ -37,7 +37,7 @@ PPTX files - your wish is my command! These will be updated as we go along.
 
 * [Lecture 1: Eye and Human Vision (PPT)](mark/Lecture_1_21-22.pptx)
 * [Lecture 2: Image Formation (PPT)](mark/Lecture_2_21-22.pptx)
-* [Lecture 3: Image Sampling(PPT)](mark/Lecture%203.pptx)
+* [Lecture 3: Image Sampling(PPT)](mark/Lecture_3_21-22.pptx)
 * [Lecture 4: Point Operators (PPT)](mark/Lecture%204.pptx)
 * [Lecture 5: Group Operators (PPT)](mark/Lecture%205.pptx)
 * [Lecture 6: Edge Detection (PPT)](mark/Lecture%206.pptx)
