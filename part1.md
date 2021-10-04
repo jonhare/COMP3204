@@ -8,31 +8,35 @@ credits: Maintained and taught by <a href="http://www.ecs.soton.ac.uk/people/msn
 
 Welcome to the homepage for the first half of [COMP3204](https://secure.ecs.soton.ac.uk/module/COMP3204).
 
-Here is a list of materials available to you to complement the lectures in this half of the course. We are now using the fourth Edition of the course textbook which was published late last year. There have been many changes: the lecture notes are from the new edition, and the page numbers refer to that. We have highlighted a proof version of the book showing material covered in Mark's lectures [Highlighted proof of book (PDF)](mark/Sections_of_proof_of_textbook_highlighted.pdf) (not highlighted = not covered by Mark). We have highlighted the whole of Chapter 1, as it is background material for the whole course. There is also demonstration material which is largely derived from the book's website (https://www.southampton.ac.uk/~msn/book/). It's not pretty and is not aimed to be: it's just working software. 
+Here is a list of materials available to you to complement the lectures in this half of the course. We are now using the 4th Edition of the course textbook which was published by Mark S. Nixon and Alberto S. Aguado late 2019; 3rd Edition is available - [library link](https://ebookcentral.proquest.com/lib/soton-ebooks/detail.action?docID=998617&query=Feature+Extraction+and+Image+Processing+for+Computer+Vision). There have been many changes: the lecture notes are from the new edition. We have highlighted a proof version of the book showing material covered in lectures [Highlighted proof of book (PDF)](mark/Sections_of_proof_of_textbook_highlighted.pdf) (not highlighted = supplementary to the lectures), and the *page numbers* refer to that. We have highlighted the whole of Chapter 1, as it is background material for the whole course. There is also demonstration material which is largely derived from the book's website [link](https://www.southampton.ac.uk/~msn/book/). It's not pretty and is not aimed to be: it's just working software. 
 
-Lecture Slides:
 
-* [A Framework for Computer Vision (PDF)](mark/A%20Framework%20for%20Computer%20Vision-i.pdf)
-* [Lecture 1: Eye and Human Vision (PDF)](mark/Lecture_1_2020.pdf) and there are some animations [Lecture_1:_Animations (PPT)](mark/Lecture_1_animations_2020.pptx) [recording](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=9a64be1f-2572-4ca2-8c12-ac4f00e64eba)
-* [Lecture 2: Image Formation (PDF)](mark/Lecture_2_2020.pdf) [recording](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=53777333-e297-4b2c-bd7e-ac4f00e89916)
-* [Lecture 3: Image Sampling (PDF)](mark/Lecture_3_2020.pdf) [recording](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=dc0154f9-4345-4a53-9219-ac5200e306b7)
-* [Lecture 4: Point Operators (PDF)](mark/Lecture_4_2020.pdf) [recording](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=803c26de-a504-4d38-a3fb-ac5600e051ce)
-* [Lecture 5: Group Operators (PDF)](mark/Lecture_5_2020.pdf) [recording](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=a146ecac-cdc8-4a62-a21c-ac5600e4e95e)
-* [Lecture 6: Edge Detection (PDF)](mark/Lecture_6_2020.pdf) [recording](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=7e16fefa-fb77-4f33-af33-ac5900f1f400)
-* [Lecture 7: Further Edge Detection (PDF)](mark/Lecture_7_2020.pdf) [recording](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=6918a84a-f3ae-4682-8e39-ac5d010116f3)
-* [Lecture 8: Finding Shapes (PDF)](mark/Lecture_8_2020.pdf) [recording](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=105a32af-14a8-44ce-8ede-ac5d0103c375)
-* [Lecture 9: Finding More Shapes (PDF)](mark/Lecture_9_2020.pdf) [recording](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=54b3d80f-634c-4d75-82bb-ac6000ebe406)
-* [Lecture 10: State of Art/Deep Learning (PDF)](mark/Lecture_10_2020.pdf)
-* [Lecture 11: Survey of gait (PDF)](mark/ACCV%202020%20gait%20nixon%20s.pdf)  [recording](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=196e5e30-adee-48b8-b87b-ac8000f21d63)
+Title        | Slides                            |Handouts     | Recording
+------------ | ----------------------------------|-------------| --------- 
+A Framework for Computer Vision | [PDF](mark/A%20Framework%20for%20Computer%20Vision-i.pdf) | N/A  | N/A
+Lecture 1: Eye and Human Vision | [PDF](mark/Lecture_1_21-22.pdf) | [Animations](mark/Lecture_1_animations_2020.pptx) | [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=9a64be1f-2572-4ca2-8c12-ac4f00e64eba)
+Lecture 2: Image Formation      | [PDF](mark/Lecture_2_21-22.pdf) | [PDF](mark/FourierTransform.pdf) | [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=53777333-e297-4b2c-bd7e-ac4f00e89916)
+Lecture 3: Image Sampling       | [PDF](mark/Lecture_3_2020.pdf) | N/A | [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=dc0154f9-4345-4a53-9219-ac5200e306b7)
+Lecture 4: Point Operators      | [PDF](mark/Lecture_4_2020.pdf) | N/A | [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=803c26de-a504-4d38-a3fb-ac5600e051ce)
+Lecture 5: Group Operators      | [PDF](mark/Lecture_5_2020.pdf) | N/A | [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=a146ecac-cdc8-4a62-a21c-ac5600e4e95e)
+Lecture 6: Edge Detection       | [PDF](mark/Lecture_6_2020.pdf) | N/A | [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=7e16fefa-fb77-4f33-af33-ac5900f1f400)
+Lecture 7: Further Edge Detection | [PDF](mark/Lecture_7_2020.pdf) | [link](https://homepages.inf.ed.ac.uk/rbf/HIPR2/canny.htm) | [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=6918a84a-f3ae-4682-8e39-ac5d010116f3)
+Lecture 8: Finding Shapes       | [PDF](mark/Lecture_8_2020.pdf) | N/A | [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=105a32af-14a8-44ce-8ede-ac5d0103c375)
+Lecture 9: Finding More Shapes  | [PDF](mark/Lecture_9_2020.pdf) | [link](https://homepages.inf.ed.ac.uk/rbf/HIPR2/hough.htm) | [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=54b3d80f-634c-4d75-82bb-ac6000ebe406)
+Lecture 10: State of Art/Deep Learning (Topic will be replaced) | [PDF](mark/Lecture_10_2020.pdf) | N/A | N/A
+Lecture 11: Survey of gait (Topic will be replaced) | [PDF](mark/ACCV%202020%20gait%20nixon%20s.pdf) | N/A | [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=196e5e30-adee-48b8-b87b-ac8000f21d63)
 
-Demonstration material:
 
-* [Worksheets (zipped Matlab)](mark/Marks_matlab.zip) These are download only.
+> Demonstration material (download only): [Worksheets (zipped Matlab)](mark/Marks_matlab.zip)
+
+
+&nbsp;
+
 
 PPTX files - your wish is my command! These will be updated as we go along.
 
-* [Lecture 1: Eye and Human Vision (PPT)](mark/Lecture%201.pptx)
-* [Lecture 2: Image Formation (PPT)](mark/Lecture%202.pptx)
+* [Lecture 1: Eye and Human Vision (PPT)](mark/Lecture_1_21-22.pptx)
+* [Lecture 2: Image Formation (PPT)](mark/Lecture_2_21-22.pptx)
 * [Lecture 3: Image Sampling(PPT)](mark/Lecture%203.pptx)
 * [Lecture 4: Point Operators (PPT)](mark/Lecture%204.pptx)
 * [Lecture 5: Group Operators (PPT)](mark/Lecture%205.pptx)
@@ -40,7 +44,7 @@ PPTX files - your wish is my command! These will be updated as we go along.
 * [Lecture 7: Further Edge Detection (PPT)](mark/Lecture%207.pptx)
 * [Lecture 8: Finding Shapes (PPT)](mark/Lecture%208.pptx)
 * [Lecture 9: Finding More Shapes (PPT)](mark/Lecture%209.pptx)
-* [Lecture 11: Survey of gait (PPT)](mark/ACCV%202020%20gait%20nixon%20s.pptx)
+* [Lecture 11: Survey of gait (PPT) - Topic will be replaced](mark/ACCV%202020%20gait%20nixon%20s.pptx)
 
 Scanned lecture notes, from 2019-2020. Mark used to write notes in a lecture theatre! If they help, here they are
 
@@ -52,10 +56,8 @@ Scanned lecture notes, from 2019-2020. Mark used to write notes in a lecture the
 * [Lecture 6: Edge detection (PDF)](mark/Lect%206%20notes%2019-20.pdf)
 * [Lecture 7: Further edge detection (PDF)](mark/Lect%207%20notes%2019-20.pdf)
 * [Lecture 8: Finding shapes (PDF)](mark/Lect%208%20notes%2019-20.pdf)
-* [Lecture 8: Finding more shapes (PDF)](mark/Lect%209%20notes%2019-20.pdf)
-
-
-[Lecture 11: revision lecture 8 Jan (PDF)](mark/revision lecture.pdf)
+* [Lecture 9: Finding more shapes (PDF)](mark/Lect%209%20notes%2019-20.pdf)
+* [Lecture 11: revision lecture 8 Jan (PDF) - Topic will be replaced](mark/revision lecture.pdf)
 
 <!---
 * [Lecture 1](mark/Lecture_1_Human_Vision.pdf)
