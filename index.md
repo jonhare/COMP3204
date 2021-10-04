@@ -41,6 +41,7 @@ Fridays   | 4PM  | 58/1067 (Murray L/T)
 
 Materials to accompany the lectures can be found here:
 
+* [Opening lecture material (PDF)](mark/First%20lecture.pdf)	
 * [Part 1](part1.html) taught by Xiaohao.
 * [Part 2](part2.html) taught by Jon.
 
