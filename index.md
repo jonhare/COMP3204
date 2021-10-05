@@ -33,7 +33,7 @@ The lecture slots are (currently) as follows -- keep an eye on your timetable fo
 Day       | Time | Room   
 ----------|------|-----------------------
 Mondays   | 12PM | 42/Cinema (SUSU Cinema)
-Tuesdays  | 2PM  | 2A/2064 (Arts Annex L/T H)
+Tuesdays  | 2PM  | 2A/2065 (Arts Annex L/T H)
 Fridays   | 4PM  | 58/1067 (Murray L/T)
 
 
