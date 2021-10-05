@@ -41,7 +41,7 @@ Fridays   | 4PM  | 58/1067 (Murray L/T)
 
 Materials to accompany the lectures can be found here:
 
-* [Opening lecture material (PDF)](mark/First%20lecture.pdf)	
+* [Opening lecture material (PDF)](mark/First%20lecture.pdf); [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=d92320bd-3e74-42de-a68a-adb700b522ff)	
 * [Part 1](part1.html) taught by Xiaohao.
 * [Part 2](part2.html) taught by Jon.
 
