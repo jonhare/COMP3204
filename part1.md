@@ -14,7 +14,7 @@ Here is a list of materials available to you to complement the lectures in this 
 Title        | Slides                            |Handouts     | Recording
 ------------ | ----------------------------------|-------------| --------- 
 A Framework for Computer Vision | [PDF](mark/A%20Framework%20for%20Computer%20Vision-i.pdf) | N/A  | N/A
-Lecture 1: Eye and Human Vision | [PDF](mark/Lecture_1_21-22.pdf) | [Animations](mark/Lecture_1_animations_2020.pptx) | [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=9a64be1f-2572-4ca2-8c12-ac4f00e64eba)
+Lecture 1: Eye and Human Vision | [PDF](mark/Lecture_1_21-22.pdf) | [Animations](mark/Lecture_1_animations_2020.pptx) | [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=9a64be1f-2572-4ca2-8c12-ac4f00e64eba); [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=4b527945-ad2f-43d9-8eaf-adb800d5991b)
 Lecture 2: Image Formation      | [PDF](mark/Lecture_2_21-22.pdf) | [PDF](mark/FourierTransform.pdf) | [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=53777333-e297-4b2c-bd7e-ac4f00e89916)
 Lecture 3: Image Sampling       | [PDF](mark/Lecture_3_21-22.pdf) | N/A | [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=dc0154f9-4345-4a53-9219-ac5200e306b7)
 Lecture 4: Point Operators      | [PDF](mark/Lecture_4_21-22.pdf) | N/A | [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=803c26de-a504-4d38-a3fb-ac5600e051ce)
