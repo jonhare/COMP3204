@@ -23,7 +23,7 @@ Lecture 6: Edge Detection       | [PDF](mark/Lecture_6_21-22.pdf) | N/A | [link]
 Lecture 7: Further Edge Detection | [PDF](mark/Lecture_7_21-22.pdf) | [link](https://homepages.inf.ed.ac.uk/rbf/HIPR2/canny.htm) | [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=6918a84a-f3ae-4682-8e39-ac5d010116f3); [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=65887bc0-2d74-4603-bd21-adc600d598e2)
 Lecture 8: Finding Shapes       | [PDF](mark/Lecture_8_21-22.pdf) | N/A | [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=105a32af-14a8-44ce-8ede-ac5d0103c375); [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=c6d479f2-c2d4-4ff2-8b52-adc900f74722)
 Lecture 9: Finding More Shapes  | [PDF](mark/Lecture_9_21-22.pdf) | [link](https://homepages.inf.ed.ac.uk/rbf/HIPR2/hough.htm) | [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=54b3d80f-634c-4d75-82bb-ac6000ebe406); [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=2ff1b728-e648-4569-b450-adcc00b5035f)
-Lecture 10: Data-driven & Model-driven Methods in Computer Vision | [PDF](mark/Lecture_10_special-topic_21-22.pdf) | N/A | N/A
+Lecture 10: Data-driven & Model-driven Methods in Computer Vision | [PDF](mark/Lecture_10_special-topic_21-22.pdf) | N/A | [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=86501ed2-0d39-4115-b11c-ade900e6378f)
 Bonus Lecture by Mark (20-21): State of Art/Deep Learning | [PDF](mark/Lecture_10_2020.pdf) | N/A | N/A
 Bonus Lecture by Mark (20-21): Survey of Gait | [PDF](mark/ACCV%202020%20gait%20nixon%20s.pdf) | N/A | [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=196e5e30-adee-48b8-b87b-ac8000f21d63)
 
