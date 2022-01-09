@@ -26,7 +26,7 @@ Lecture 9: Finding More Shapes  | [PDF](mark/Lecture_9_21-22.pdf) | [link](https
 Lecture 10: Data-driven & Model-driven Methods in Computer Vision | [PDF](mark/Lecture_10_special-topic_21-22.pdf) | N/A | [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=86501ed2-0d39-4115-b11c-ade900e6378f)
 Bonus Lecture by Mark (20-21): State of Art/Deep Learning | [PDF](mark/Lecture_10_2020.pdf) | N/A | N/A
 Bonus Lecture by Mark (20-21): Survey of Gait | [PDF](mark/ACCV%202020%20gait%20nixon%20s.pdf) | N/A | [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=196e5e30-adee-48b8-b87b-ac8000f21d63)
-
+Revision Lecture | [PDF](mark/Lecture_11_revision_21-22.pdf) | N/A | N/A
 
 > Demonstration material (download only): [Worksheets (zipped Matlab)](mark/Marks_matlab.zip)
 
@@ -59,7 +59,7 @@ Scanned lecture notes, from 2019-2020. Mark used to write notes in a lecture the
 * [Lecture 7: Further edge detection (PDF)](mark/Lect%207%20notes%2019-20.pdf)
 * [Lecture 8: Finding shapes (PDF)](mark/Lect%208%20notes%2019-20.pdf)
 * [Lecture 9: Finding more shapes (PDF)](mark/Lect%209%20notes%2019-20.pdf)
-* [Lecture 11: revision lecture 8 Jan (PDF) - Topic will be replaced](mark/revision lecture.pdf)
+
 
 <!---
 * [Lecture 1](mark/Lecture_1_Human_Vision.pdf)
