@@ -14,19 +14,19 @@ Here is a list of materials available to you to complement the lectures in this 
 Title        | Slides                            |Handouts     | Recording
 ------------ | ----------------------------------|-------------| --------- 
 A Framework for Computer Vision | [PDF](mark/A%20Framework%20for%20Computer%20Vision-i.pdf) | N/A  | N/A
-Lecture 1: Eye and Human Vision | [PDF](mark/Lecture_1_21-22.pdf) | [Animations](mark/Lecture_1_animations_2020.pptx) | [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=9a64be1f-2572-4ca2-8c12-ac4f00e64eba)
-Lecture 2: Image Formation      | [PDF](mark/Lecture_2_21-22.pdf) | [PDF](mark/FourierTransform.pdf) | [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=53777333-e297-4b2c-bd7e-ac4f00e89916)
-Lecture 3: Image Sampling       | [PDF](mark/Lecture_3_21-22.pdf) | [link](https://en.wikipedia.org/wiki/Nyquist%E2%80%93Shannon_sampling_theorem); [link](https://en.wikipedia.org/wiki/Dirac_comb) | [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=dc0154f9-4345-4a53-9219-ac5200e306b7)
-Lecture 4: Point Operators      | [PDF](mark/Lecture_4_21-22.pdf) | N/A | [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=803c26de-a504-4d38-a3fb-ac5600e051ce)
-Lecture 5: Group Operators      | [PDF](mark/Lecture_5_21-22.pdf) | N/A | [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=a146ecac-cdc8-4a62-a21c-ac5600e4e95e)
-Lecture 6: Edge Detection       | [PDF](mark/Lecture_6_21-22.pdf) | N/A | [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=7e16fefa-fb77-4f33-af33-ac5900f1f400)
-Lecture 7: Further Edge Detection | [PDF](mark/Lecture_7_21-22.pdf) | [link](https://homepages.inf.ed.ac.uk/rbf/HIPR2/canny.htm) | [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=6918a84a-f3ae-4682-8e39-ac5d010116f3)
-Lecture 8: Finding Shapes       | [PDF](mark/Lecture_8_21-22.pdf) | N/A | [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=105a32af-14a8-44ce-8ede-ac5d0103c375)
-Lecture 9: Finding More Shapes  | [PDF](mark/Lecture_9_21-22.pdf) | [link](https://homepages.inf.ed.ac.uk/rbf/HIPR2/hough.htm) | [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=54b3d80f-634c-4d75-82bb-ac6000ebe406)
-Lecture 10: Data-driven & Model-driven Methods in Computer Vision | [PDF](mark/Lecture_10_special-topic_21-22.pdf) | N/A | [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=86501ed2-0d39-4115-b11c-ade900e6378f)
+Lecture 1: Eye and Human Vision | [PDF](mark/Lecture_1_21-22.pdf) | [Animations](mark/Lecture_1_animations_2020.pptx) | N/A
+Lecture 2: Image Formation      | [PDF](mark/Lecture_2_21-22.pdf) | [PDF](mark/FourierTransform.pdf) | N/A
+Lecture 3: Image Sampling       | [PDF](mark/Lecture_3_21-22.pdf) | [link](https://en.wikipedia.org/wiki/Nyquist%E2%80%93Shannon_sampling_theorem); [link](https://en.wikipedia.org/wiki/Dirac_comb) | N/A
+Lecture 4: Point Operators      | [PDF](mark/Lecture_4_21-22.pdf) | N/A | N/A
+Lecture 5: Group Operators      | [PDF](mark/Lecture_5_21-22.pdf) | N/A | N/A
+Lecture 6: Edge Detection       | [PDF](mark/Lecture_6_21-22.pdf) | N/A | N/A
+Lecture 7: Further Edge Detection | [PDF](mark/Lecture_7_21-22.pdf) | [link](https://homepages.inf.ed.ac.uk/rbf/HIPR2/canny.htm) | N/A
+Lecture 8: Finding Shapes       | [PDF](mark/Lecture_8_21-22.pdf) | N/A | N/A
+Lecture 9: Finding More Shapes  | [PDF](mark/Lecture_9_21-22.pdf) | [link](https://homepages.inf.ed.ac.uk/rbf/HIPR2/hough.htm) | N/A
+Lecture 10: Data-driven & Model-driven Methods in Computer Vision | [PDF](mark/Lecture_10_special-topic_21-22.pdf) | N/A | N/A
 Bonus Lecture by Mark (20-21): State of Art/Deep Learning | [PDF](mark/Lecture_10_2020.pdf) | N/A | N/A
 Bonus Lecture by Mark (20-21): Survey of Gait | [PDF](mark/ACCV%202020%20gait%20nixon%20s.pdf) | N/A | [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=196e5e30-adee-48b8-b87b-ac8000f21d63)
-Revision Lecture | [PDF](mark/Lecture_11_revision_21-22.pdf) | N/A | [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=c37f93f0-fb50-4a93-93f8-ae1a00e6f132)
+Revision Lecture | N/A | N/A | N/A
 
 > Demonstration material (download only): [Worksheets (zipped Matlab)](mark/Marks_matlab.zip)
 
